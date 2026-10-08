@@ -1,0 +1,70 @@
+on(construct){
+   loop1:
+   while(true)
+   {
+      while(true)
+      {
+         while(true)
+         {
+            if(!(true or true))
+            {
+               if(false)
+               {
+                  break;
+               }
+            }
+            else
+            {
+               §§push(692757421);
+            }
+            if(§§pop() - 1)
+            {
+               if(!getTimer())
+               {
+                  setProperty(§§pop(), _X, §§pop());
+                  return;
+               }
+               break loop1;
+            }
+            §§goto(addr22cc);
+         }
+         §§goto(addr22d4);
+      }
+      return;
+   }
+   addr22ff:
+   set("{invalid_utf8=150}\x05","\x07{invalid_utf8=173}{invalid_utf8=163}J)Q{invalid_utf8=157}\x02");
+   set("{","\x07{invalid_utf8=173}{invalid_utf8=163}J)Q{invalid_utf8=157}\x02");
+   set("{invalid_utf8=136}\x07",true);
+   set("\x02",true);
+   §§push("{invalid_utf8=197}");
+   §§push(true);
+   if(ord("\x07"))
+   {
+      set(§§pop(),§§pop());
+      §§push(§§constant(6));
+      §§push(§§constant(7));
+      while(true)
+      {
+         set(§§pop(),§§pop());
+         set("\b\x06\b\x07\x1d{invalid_utf8=150}\x07",1);
+         set("\b\b\x07\x01",0);
+         §§push("");
+         §§push(false);
+         if(!ord("\n"))
+         {
+            §§goto(addr22ff);
+            §§push(getProperty(§§pop(), _X));
+         }
+         addr2333:
+         set(§§pop(),§§pop());
+         set("","\x1d{invalid_utf8=150}\x07");
+         return;
+         set(§§pop(),§§pop());
+         §§push(§§constant(6));
+         §§push(§§constant(7));
+      }
+      addr22d4:
+   }
+   §§goto(addr2333);
+}

@@ -1,0 +1,18 @@
+ConstantPool "%O"
+Push true
+PushDuplicate
+Or
+If loc0028
+Push 76529593
+PushDuplicate
+BitAnd
+If loc0047
+Jump loc0077
+loc0028:Push "ank.gapi.controls.DataGrid"
+loc0047:GetVariable
+Push "DataGrid", 2, "Object"
+GetVariable
+Push "registerClass"
+CallMethod
+Pop
+loc0077:

@@ -1,0 +1,35 @@
+onClipEvent(load){
+   while(true)
+   {
+      if(false)
+      {
+         if(!(0x03E23C52 & 0x03E23C52))
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push(902568535);
+      }
+      if(§§pop())
+      {
+         function §\x1e\x11\n§(eventObj)
+         {
+            _parent.dblClickItem({target:this});
+         }
+         if(false)
+         {
+            duplicateMovieClip(§§pop(),§§pop(),§§pop());
+            §§goto(addr360a);
+         }
+      }
+      §§push(eval("\x1e\x11\n"));
+      §§push("dblClick");
+      §§push(2);
+      §§push(this);
+      break;
+   }
+   §§pop()["\x15\x1d\x15"]();
+   addr360a:
+}

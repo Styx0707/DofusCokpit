@@ -1,0 +1,748 @@
+ConstantPool "h{invalid_utf8=157}", "{invalid_utf8=194}{invalid_utf8=202}"
+Push "\n"
+CharToAscii
+If loc0f81
+Push false
+Not
+If loc0f89
+ConstantPool "{invalid_utf8=150}\x05", "\x07{invalid_utf8=212} T\fQ{invalid_utf8=157}\x02", "\x1f\n{invalid_utf8=136}\x0b", "\x03", "{invalid_utf8=155}v", "A{invalid_utf8=192}", "{invalid_utf8=159}{invalid_utf8=191}", "{invalid_utf8=150}\x0b", "\b]\x07\x03", "", "", "\x04\x01\b^R\x17{invalid_utf8=150}\x0f", "\x07\x01", "", "", "\x02\x04\x01\x07\x03", "", "", "\b_=\x17{invalid_utf8=150}\x06", "\x04", "\b\x0e\b\x04O", "{invalid_utf8=142}\b", "", "", "", "\x02)", "{invalid_utf8=152}\x01{invalid_utf8=150}\x04", "\x04\x01\b\x15N{invalid_utf8=150}\r", "\b\x16\b\x17\x07\x01", "", "", "\x04\x01\b\x18N{invalid_utf8=150}\x02", "\b\x19N{invalid_utf8=150}\x02", "\b\x1aRO{invalid_utf8=150}\x04", "\x04\x01\b\x1bN{invalid_utf8=150}\r", "\b\x16\b\x1c\x07\x01", "", "", "\x04\x01\b\x184{invalid_utf8=157}\x02", "{invalid_utf8=206}", "<N{invalid_utf8=150}\x02", "\b\x19N{invalid_utf8=150}\x02", "\b\x1aRO{invalid_utf8=150}\x04", "\x04\x01\b\"N{invalid_utf8=150}\r", "\b\x16\b#\x07\x01", "", "", "\x04\x01\b\x18N{invalid_utf8=150}\x02", "\b\x19N{invalid_utf8=150}\x02", "\b\x1a{invalid_utf8=150}\x03", "", "\n", "2{invalid_utf8=157}\x02", "{invalid_utf8=204}", "ORO{invalid_utf8=150}\x04", "\x04\x01\b\x1fN{invalid_utf8=150}\r", "\b\x16\b \x07\x01", "", "", "\x04\x01\b\x18N{invalid_utf8=150}\x02", "\b\x19N{invalid_utf8=150}\x02", "\b\x1aRO{invalid_utf8=150}\x04", "\x04\x01\b!N{invalid_utf8=150}\r", "\b\x16\b\x1e\x07\x01", "", "", "\x04\x01\b\x18{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "w{invalid_utf8=255}\"N{invalid_utf8=150}\r", "\b\x16\b\'\x07\x01", "", "", "\x04\x01\b\x18N{invalid_utf8=150}\x02", "\b\x19N{invalid_utf8=150}\x02", "\b\x1aRO{invalid_utf8=150}\x04", "\x04\x01\b(N{invalid_utf8=150}\r", "\b)\b*\x07\x01", "", "", "\x04\x01\b\x18{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "y", "\'N{invalid_utf8=150}\x02", "\b\x19N{invalid_utf8=150}\x02", "\b\x1aRO{invalid_utf8=150}\x04", "\x04\x01\b\x1dN{invalid_utf8=150}\r", "\b\x16\b\x1e\x07\x01", "", "", "\x04\x01\b\x18N{invalid_utf8=150}\x02", "\b\x19N{invalid_utf8=150}\x02", "\b\x1a{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "6{invalid_utf8=255}+RO{invalid_utf8=150}\x04", "\x04\x01\b$N{invalid_utf8=150}\r", "\b\x16\b%\x07\x01", "", "", "\x04\x01\b\x18N{invalid_utf8=150}\x02", "\b\x19N{invalid_utf8=150}\x02", "\b\x1aRO{invalid_utf8=150}\x04", "\x04\x01\b&{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "F{invalid_utf8=255}<N{invalid_utf8=150}\x02", "\b\x19N{invalid_utf8=150}\x02", "\b\x1aRO4{invalid_utf8=157}\x02", "E", "<O{invalid_utf8=150}\x02", "\b\x05\x1c{invalid_utf8=150}\x02", "\b", "N{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\x02N{invalid_utf8=150}\x02", "\b\x03N{invalid_utf8=150}\x02", "\b\x04{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "{invalid_utf8=152}\x05<O{invalid_utf8=150}\x04", "\x04\x01\b\r{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "{invalid_utf8=233}\x06$O{invalid_utf8=150}\x04", "\x04\x01\b\x14{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "!\x03\'{invalid_utf8=142}\r", "", "\x01", "\x03)", "\x02\x17\x0b\n", "\x10", "{invalid_utf8=150}\x04", "\x04\x01\b,N{invalid_utf8=150}\x04", "\b/\x04\x02O{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "{invalid_utf8=210}\x02#{invalid_utf8=142}\r", "", "\x01", "\x06)", "\x02\x19\x12\x1d", "{invalid_utf8=186}\x02{invalid_utf8=150}\x06", "\x04\x01\b0\b", "\x1c{invalid_utf8=150}\x02", "\b1N{invalid_utf8=150}\x02", "\b2N{invalid_utf8=150}\x04", "\x04\x02\b3N{invalid_utf8=150}\x02", "\b4N+O{invalid_utf8=150}\x04", "\x04\x01\b5N{invalid_utf8=150}\x06", "\b\x16\x04\x01\b04P{invalid_utf8=157}\x02", "{invalid_utf8=245}\x01iN{invalid_utf8=150}\x07", "\x07\x01", "", "", "\b\x05\x1c{invalid_utf8=150}\x02", "\bER\x12\x12{invalid_utf8=157}\x02", "{invalid_utf8=222}", "{invalid_utf8=150}\x06", "\bD\x04\x05\bDN{invalid_utf8=150}\x06", "\b)\x04\x05\bFN{invalid_utf8=150}\x05", "\x07\x02", "", "", "C{invalid_utf8=150}\t", "\x07\x01", "", "", "\x04\x03\bG4P{invalid_utf8=157}\x02", "{invalid_utf8=172}", "$O{invalid_utf8=150}\x07", "\x07", "", "", "", "\b>\x1c{invalid_utf8=150}\x02", "\b?N{invalid_utf8=150}\x02", "\b@S{invalid_utf8=135}\x01", "\x03\x17{invalid_utf8=150}\x05", "\x07", "", "", "", "{invalid_utf8=135}\x01", "\x04\x17{invalid_utf8=153}\x02", "Q", "{invalid_utf8=150}\x02", "\x04\x044P{invalid_utf8=157}\x02", "?", "\'N{invalid_utf8=150}\x02", "\bJRO{invalid_utf8=150}\x04", "\x04\x01\b(N{invalid_utf8=150}\x04", "\bK\b", "\x1c{invalid_utf8=150}\x02", "\b1N{invalid_utf8=150}\x02", "\b2N{invalid_utf8=150}\x02", "\bLN{invalid_utf8=150}\t", "\x07\x01", "", "", "\x04\x01\b04P{invalid_utf8=157}\x02", "\x02\x01\"P{invalid_utf8=135}\x01", "\x04\x17{invalid_utf8=150}\x06", "\x04\x04\x04\x01\b0N{invalid_utf8=150}\x02", "\bAN{invalid_utf8=150}\x02", "\bBNH\x12{invalid_utf8=157}\x02", "\x15", "{invalid_utf8=150}\x04", "\x04\x01\b04{invalid_utf8=157}\x02", "c", "#R\x17{invalid_utf8=153}\x02", "}{invalid_utf8=255}{invalid_utf8=150}\x04", "\x04\x01\bHN{invalid_utf8=150}\x04", "\b/\x04\x03O{invalid_utf8=150}\x04", "\x04\x01\bIN{invalid_utf8=150}\x0b", "\b/\x07", "", "", "", "\x04\x01\b04{invalid_utf8=157}\x02", "^{invalid_utf8=255},N{invalid_utf8=150}\x02", "\b8N{invalid_utf8=150}\x02", "\b;NGO{invalid_utf8=150}\x04", "\x04\x01\b<N{invalid_utf8=150}\x06", "\b\x16\x04\x01\b0N{invalid_utf8=150}\x02", "\b=N4{invalid_utf8=157}\x02", "{invalid_utf8=244}{invalid_utf8=254}{invalid_utf8=34}{invalid_utf8=78}{invalid_utf8=150}\x02", "\bAN{invalid_utf8=150}\x02", "\x04\x04N{invalid_utf8=150}\x07", "\x07\x01", "", "", "\b", "\x1c{invalid_utf8=150}\x02", "\b1N{invalid_utf8=150}\x02", "\bCS{invalid_utf8=135}\x01", "\x05\x17{invalid_utf8=150}\x04", "\x04\x05\bD4{invalid_utf8=157}\x02", "s{invalid_utf8=254}ON{invalid_utf8=150}\x02", "\bON\x12\x12{invalid_utf8=157}\x02", "{invalid_utf8=184}", "{invalid_utf8=150}\x04", "\x04\x01\bNN{invalid_utf8=150}\x04", "\bO\x05\x01O{invalid_utf8=150}\x04", "\x04\x01\bNN{invalid_utf8=150}\x06", "\bP\x04\x01\bN4P{invalid_utf8=157}\x02", "p", "\'N{invalid_utf8=150}\x02", "\bMRO{invalid_utf8=150}\x04", "\x04\x01\b(N{invalid_utf8=150}\x02", "\bKN\x12\x12{invalid_utf8=157}\x02", "r", "{invalid_utf8=150}\x04", "\x04\x01\bN{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "{invalid_utf8=155}{invalid_utf8=255},N{invalid_utf8=150}\x02", "\b6NO{invalid_utf8=150}\x04", "\x04\x01\b7N{invalid_utf8=150}\x06", "\b\x16\x04\x01\b0N{invalid_utf8=150}\x02", "\b8N{invalid_utf8=150}\x02", "\b9N{invalid_utf8=150}\x02", "\b:G{invalid_utf8=150}\x04", "\x04\x01\b0{invalid_utf8=150}\x03", "", "\b", "2{invalid_utf8=157}\x02", "{invalid_utf8=246}{invalid_utf8=254}{invalid_utf8=35}{invalid_utf8=78}{invalid_utf8=150}\x02", "\bPN{invalid_utf8=150}\x04", "\x04\x01\b(N{invalid_utf8=150}\x02", "\bQN{invalid_utf8=150}\x05", "\x07\x02", "", "", "\rGO{invalid_utf8=150}\x04", "\x04\x01\bRN{invalid_utf8=150}\x04", "\bK\x05", "4{invalid_utf8=157}\x02", "\x01", "\'O{invalid_utf8=150}\x04", "\x04\x01\b&N{invalid_utf8=150}\x04", "\bK\x05", "O4{invalid_utf8=157}\x02", "\x10", "\"O{invalid_utf8=150}\x04", "\x04\x01\b+4{invalid_utf8=157}\x02", "!{invalid_utf8=253}iO{invalid_utf8=150}\x04", "\x04\x01\b.{invalid_utf8=150}\x03", "", "\t", "2{invalid_utf8=157}\x02", "{invalid_utf8=187}", "#{invalid_utf8=142}\b", "", "", "", "\x02)", "0", "{invalid_utf8=150}\r", "\x04\x01\b+\x07\x02", "", "", "\x04\x01\b,N{invalid_utf8=150}\x02", "\b-R\x17{invalid_utf8=150}\r", "\x04\x01\b.\x07\x02", "", "", "\x04\x01\b(N{invalid_utf8=150}\x02", "\b-R\x174{invalid_utf8=157}\x02", "p\x04\"\x1c{invalid_utf8=150}\x02", "\b", "N{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\x02N{invalid_utf8=150}\t", "\b\x03\x07", "", "", "", "\b\x06@{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "\x1c{invalid_utf8=252}<O{invalid_utf8=150}\x04", "\x04\x01\b\nN4P{invalid_utf8=157}\x02", " \x04,{invalid_utf8=150}\x02", "\b", "\x1c\x12\x12{invalid_utf8=157}\x02", "{invalid_utf8=233}\x03{invalid_utf8=150}\x02", "\b\x05\x1c{invalid_utf8=150}\t", "\b", "\x07", "", "", "", "\b\x06{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "{invalid_utf8=202}\x03#O{invalid_utf8=150}\x04", "\x04\x01\b\x124P{invalid_utf8=157}\x02", "&{invalid_utf8=250}\"{invalid_utf8=142}\r", "", "\x01", "\x03)", "\x02\x19\x12\x1d", "{invalid_utf8=206}", "{invalid_utf8=150}\x04", "\x04\x02\bSN{invalid_utf8=135}\x01", "", "{invalid_utf8=150}\x04", "\x04\x01\b(Nf{invalid_utf8=157}\x02", "\x05", "{invalid_utf8=153}\x02", "{invalid_utf8=175}", "{invalid_utf8=150}\x04", "\x04\x01\b0N{invalid_utf8=150}\x01", "\x02I\x12{invalid_utf8=157}\x02", "D", "{invalid_utf8=150}\x01", "\x03{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "5", "@{invalid_utf8=150}\x01", "\x03>{invalid_utf8=150}\x04", "\x04\x01\b0N{invalid_utf8=150}\x02", "\bTN{invalid_utf8=150}\x04", "\x04\x01\b0N{invalid_utf8=150}\x02", "\bDN{invalid_utf8=150}\t", "\x07\x02", "", "", "\x04\x01\b\x184{invalid_utf8=157}\x02", "A", "\">{invalid_utf8=150}\x02", "\b", "\x1c{invalid_utf8=150}\x02", "\b1N{invalid_utf8=150}\x02", "\b2N{invalid_utf8=150}\x02", "\bLN{invalid_utf8=150}\t", "\x07\x01", "", "", "\x04\x01\b0N{invalid_utf8=150}\x02", "\bMR\x12\x12{invalid_utf8=157}\x02", "{invalid_utf8=158}{invalid_utf8=255}{invalid_utf8=150}\x03", "", "\x07", "2{invalid_utf8=157}\x02", "{invalid_utf8=141}{invalid_utf8=255}=N{invalid_utf8=150}\x02", "\bUN{invalid_utf8=150}\x02", "\bVN{invalid_utf8=150}\x02", "\bWR\x17{invalid_utf8=153}\x02", "", "", "{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "{invalid_utf8=155}", "<{invalid_utf8=142}\b", "", "", "", "\x02)", "R", "{invalid_utf8=150}\n", "\b\x10\x04\x01\b\x11\x04\x01\b\x12N{invalid_utf8=150}\x05", "\x07\x02", "", "", "C{invalid_utf8=150}\t", "\x07\x01", "", "", "\x04\x01\b\x13R\x17{invalid_utf8=150}\n", "\b\x10\x04\x01\b\x11\x04\x01\b\x14N{invalid_utf8=150}\x05", "\x07\x02", "", "", "C{invalid_utf8=150}\t", "\x07\x01", "", "", "\x04\x01\b\x134P{invalid_utf8=157}\x02", "\x01", "<R\x174P{invalid_utf8=157}\x02", "{invalid_utf8=163}{invalid_utf8=254}={invalid_utf8=142}\r", "", "\x01", "\x03)", "\x02\x17\x0b\n", "\x1e", "{invalid_utf8=150}\x0b", "\x04\x02\x07\x01", "", "", "\x04\x01\b\x0bR\x17{invalid_utf8=150}\t", "\x07", "", "", "", "\x04\x01\b\fR>4{invalid_utf8=157}\x02", "}{invalid_utf8=250}<O{invalid_utf8=150}\x04", "\x04\x01\bX{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "{invalid_utf8=172}\x01#{invalid_utf8=142}\b", "", "", "", "\x03\x19", "\r", "{invalid_utf8=150}\b", "\x07", "", "", "", "\x04\x02\x03R\x17{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "{invalid_utf8=167}", "\'O{invalid_utf8=150}\x04", "\x04\x01\b\x0f{invalid_utf8=150}\x03", "", "\x05", "2{invalid_utf8=157}\x02", "\x1b{invalid_utf8=255}=\x1c{invalid_utf8=150}\x02", "\b", "N{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\t", "\b\x02\x07", "", "", "", "\b\x06@O{invalid_utf8=150}\x02", "\b", "4{invalid_utf8=157}\x02", "{invalid_utf8=220}", ",{invalid_utf8=142}\r", "", "\x01", "\x03)", "\x02\x19\x12\x1d", "\x14", "{invalid_utf8=150}\t", "\x07", "", "", "", "\x04\x01\b\x02N{invalid_utf8=150}\x02", "\b\\R\x17{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "{invalid_utf8=143}{invalid_utf8=253}$N{invalid_utf8=150}\t", "\b\x01\x07", "", "", "", "\b\x06@O{invalid_utf8=150}\x02", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\x02N\x12\x12{invalid_utf8=157}\x02", "{invalid_utf8=156}{invalid_utf8=255}{invalid_utf8=150}\x02", "\b\x05{invalid_utf8=150}\x03", "", "\x02", "2{invalid_utf8=157}\x02", "p{invalid_utf8=255}\'{invalid_utf8=135}\x01", "", "O{invalid_utf8=150}\x04", "\x04", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\x02N{invalid_utf8=150}\x02", "\b\x07N{invalid_utf8=150}\x02", "\b\b4P{invalid_utf8=157}\x02", "{invalid_utf8=229}\x03\"O{invalid_utf8=150}\x04", "\x04\x01\b[{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "X{invalid_utf8=255}#{invalid_utf8=150}\x02", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\x02N{invalid_utf8=150}\x02", "\b\x03N{invalid_utf8=150}\x02", "\b\x04N\x12\x12{invalid_utf8=157}\x02", "`{invalid_utf8=247}{invalid_utf8=150}\x03", "", "\x05", "2{invalid_utf8=157}\x02", "{invalid_utf8=245}{invalid_utf8=252}{invalid_utf8=44}{invalid_utf8=28}{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\x02N{invalid_utf8=150}\x02", "\b\x03N\x12\x12{invalid_utf8=157}\x02", "{invalid_utf8=229}{invalid_utf8=248}{invalid_utf8=150}\x02", "\b\x05{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "{invalid_utf8=142}{invalid_utf8=252}\'{invalid_utf8=142}\b", "", "", "", "\x03\x19", "4", "{invalid_utf8=150}\x02", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\x02N{invalid_utf8=150}\x02", "\b\x03N{invalid_utf8=150}\x02", "\b\x04N{invalid_utf8=150}\x02", "\b\x0eN{invalid_utf8=150}\x0b", "\x05", "\x07\x02", "", "", "\x04\x02\b\rR\x174{invalid_utf8=157}\x02", "z{invalid_utf8=254}\"{invalid_utf8=142}\r", "", "\x01", "\x03)", "\x02\x19\x12\x1d", "`", "{invalid_utf8=150}\x04", "\x04\x02\bSN{invalid_utf8=135}\x01", "", "{invalid_utf8=150}\x04", "\x04\x01\b(Nf{invalid_utf8=157}\x02", "\x05", "{invalid_utf8=153}\x02", "A", "{invalid_utf8=150}\x0b", "\bY\x07\x01", "", "", "\x04\x01\b\x18N{invalid_utf8=150}\x02", "\b\x19{invalid_utf8=150}\x03", "", "\x03", "2{invalid_utf8=157}\x02", "\x01", "$N{invalid_utf8=150}\x02", "\b\x1aR{invalid_utf8=150}\t", "\x07\x01", "", "", "\x04\x01\b\x02N{invalid_utf8=150}\x02", "\bZR\x17{invalid_utf8=153}\x02", "", "", "4P{invalid_utf8=157}\x02", "{invalid_utf8=212}{invalid_utf8=254}\'@O{invalid_utf8=150}\x02", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01N\x12\x12{invalid_utf8=157}\x02", "g{invalid_utf8=254}{invalid_utf8=150}\x02", "\b\x05\x1c{invalid_utf8=150}\x02", "\b", "{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "C{invalid_utf8=254}\"{invalid_utf8=155}\x05", "", "", "", "", "", "{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "", "{invalid_utf8=246}<O{invalid_utf8=150}\x04", "\x04\x01\b\x0b4P{invalid_utf8=157}\x02", " {invalid_utf8=248}${invalid_utf8=136}_\x02`", "dofus", "\x18\x03\x17", "gapi", "\x17\x01\x0e", "GuildHousesViewer", "_global", "Object", "\x17\x01\x17", "\x17\t\x11", "prototype", "\x14\x15", "\x1b\x14\x15", "\x1e\x1b\x1a", "\x18\t\x0b", "\x16\x1b\x18", "\x17\x02\x13", "object", "method", "\x18\n\x1c", "\x16\x01\x0e", "\x15\x1e\b", "\x1c\x16\x17", "text", "GUILD_HOUSES_LIST", "api", "lang", "getText", "\x1c\x18\x1a", "HOUSE_WORD", "\x1c\x1c\r", "OWNER_WORD", "\x1c\x15\x15", "COORDINATES", "\x1c\x1c\x0e", "\x1d\x01\x15", "SKILLS", "\x1c\x1e\x11", "RIGHTS", "\x1d\x01\b", "SELECT_A_HOUSE", "\x1c\x0b\b", "label", "JOIN_SMALL", "itemSelected", "\x1d\x06\x16", "\x15\x1d\x15", "click", "dataProvider", "_hSelectedHouse", "\x17\x05\x03", "\x18\x07\x18", "row", "item", "\x1c\x18\x1d", "name", "\x1c\x18\x1c", "\x17\x01\x15", "x", ";", "y", "\x1c\x19\x01", "\x1a\x03\f", "\x16\x04\t", "\x1b\x17\x07", "\x17\x0e\x13", "skills", "length", "\x1b\x02\r", "id", "isNaN", "description", "push", "\x1d\x07\x03", "\x1d\x06\x1d", "\x17\x19\x05", "_visible", "\x18\x04\x19", "\x18\x05\x17", "\x1d\f\b", "moved", "_y", "_height", "_mcMask", "target", "instanceID", "\x19\x06\x1c", "Guild", "\x1b\x0f\t", "over", "GUILD_HOUSE_TELEPORT_TOOLTIP", "\x1b\x01\x11", "out", "\x18\x07\n", "houses", "addProperty", "ASSetPropFlags", "4{invalid_utf8=157}\x02", "0{invalid_utf8=252}<Ni{invalid_utf8=150}\x04", "\x04", "\b\tN{invalid_utf8=135}\x01", "\x01\x17{invalid_utf8=150}\x04", "\x04\x01\b\n4{invalid_utf8=157}\x02", "{invalid_utf8=194}{invalid_utf8=250}#{invalid_utf8=198}\taP\x01", "", "", "*\x0e\x01", "aP__Packages.dofus.\x18\x03\x17.gapi.ui.MainMenu", "{invalid_utf8=255}\x0ep\x10", "", "aP{invalid_utf8=150}\x03", "", "\x07", "2{invalid_utf8=157}\x02", "\x11", "{invalid_utf8=150}\x03", "", "\x07", "2{invalid_utf8=157}\x02", "\n", "{invalid_utf8=136}\x0e", "_k{invalid_utf8=150}\x02", "\x05\x01L\x10{invalid_utf8=157}\x02", "{invalid_utf8=157}\r{invalid_utf8=136}\x05", "\x01", "{invalid_utf8=142}\x03", "O{invalid_utf8=150}\x04", "\x04\x01\b\nN{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "l\t<N\x12\x12{invalid_utf8=157}\x02", "x\r{invalid_utf8=150}\x02", "\b", "\x1c\x12\x12{invalid_utf8=157}\x02", "{invalid_utf8=197}", "{invalid_utf8=150}\x02", "\b\x05{invalid_utf8=150}\x03", "", "\x0b", "2{invalid_utf8=157}\x02", "{invalid_utf8=165}", "<O{invalid_utf8=150}\x04", "\x04\x01\b\x1e4{invalid_utf8=157}\x02", "{invalid_utf8=197}", "={invalid_utf8=150}\x02", "\b\x05\x1c{invalid_utf8=150}\x02", "\b", "N{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\x02N{invalid_utf8=150}\t", "\b\x03\x07", "", "", "", "\b\x064{invalid_utf8=157}\x02", "\\\x06\"\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\x02N{invalid_utf8=150}\x02", "\b\x03N\x12\x12{invalid_utf8=157}\x02", "C\x06{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "{invalid_utf8=176}{invalid_utf8=255}+\x1c{invalid_utf8=150}\x02", "\b", "N{invalid_utf8=150}\t", "\b\x01\x07", "", "", "", "\b\x06@O{invalid_utf8=150}\x02", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\x02N\x12\x124{invalid_utf8=157}\x02", "{\x04#O{invalid_utf8=150}\x04", "\x04\x01\b\r{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "{invalid_utf8=156}\x04#\x1c{invalid_utf8=150}\t", "\b", "\x07", "", "", "", "\b\x06@O{invalid_utf8=150}\x02", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01N\x12\x12{invalid_utf8=157}\x02", "{invalid_utf8=175}{invalid_utf8=255}{invalid_utf8=150}\x02", "\b\x054P{invalid_utf8=157}\x02", "{invalid_utf8=142}{invalid_utf8=255}#{invalid_utf8=142}\r", "", "\x01", "\x03)", "\x02\x19\x12\x1d", "B\x02{invalid_utf8=150}\x04", "\x04\x02\b.N{invalid_utf8=135}\x01", "", "{invalid_utf8=150}\x04", "\x04\x01\b\x1aNf{invalid_utf8=157}\x02", "{invalid_utf8=201}\x01{invalid_utf8=150}\x06", "\x04", "\x04\x01\b\x1cNf{invalid_utf8=157}\x02", "{invalid_utf8=251}\x01{invalid_utf8=150}\x06", "\x04", "\x04\x01\b\x1d{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "z\x01ON{invalid_utf8=150}\x02", "\b\x03N{invalid_utf8=150}\x02", "\b=R{invalid_utf8=150}\x01", "\x03I\x12\x12{invalid_utf8=157}\x02", "", "\x01{invalid_utf8=150}\x0b", "\bK\x07\x01", "", "", "\x04\x01\b\'{invalid_utf8=150}\x03", "", "\x0b", "2{invalid_utf8=157}\x02", "{invalid_utf8=186}", "i{invalid_utf8=150}\x0b", "\bM\x07\x01", "", "", "\x04\x01\b\'N{invalid_utf8=150}\x02", "\bAN{invalid_utf8=150}\x02", "\bHR{invalid_utf8=150}\t", "\x07\x01", "", "", "\x04\x01\b\'N{invalid_utf8=150}\x02", "\b\x03N{invalid_utf8=150}\x02", "\bIR\x17{invalid_utf8=153}\x02", "{invalid_utf8=150}\x01{invalid_utf8=150}\x0b", "\bN\x07\x01", "", "", "\x04\x01\b\'{invalid_utf8=150}\x03", "", "\x07", "2{invalid_utf8=157}\x02", "4", "@N{invalid_utf8=150}\x02", "\bAN{invalid_utf8=150}\x02", "\bHR{invalid_utf8=150}\t", "\x07\x01", "", "", "\x04\x01\b\'N{invalid_utf8=150}\x02", "\b\x03N{invalid_utf8=150}\x02", "\bIR\x17{invalid_utf8=153}\x02", "O\x014{invalid_utf8=157}\x02", "y{invalid_utf8=255}<N{invalid_utf8=150}\x02", "\bAN{invalid_utf8=150}\x02", "\bHR{invalid_utf8=150}\t", "\x07\x01", "", "", "\x04\x01\b\'N{invalid_utf8=150}\x02"
+Jump loc0f9d
+loc0f81:Push 206840020
+loc0f89:Decrement
+If loc19b2
+ConstantPool "{invalid_utf8=155}v", "A{invalid_utf8=192}", "{invalid_utf8=159}{invalid_utf8=191}"
+loc0f9d:Push "\x05\x01{invalid_utf8=157}\x02", 3, register1, "6{invalid_utf8=255}+RO{invalid_utf8=150}\x04"
+CallMethod
+Pop
+Push 1, null, register1, 3, "\x04\x01\b$N{invalid_utf8=150}\r"
+CallFunction
+Pop
+Push register0, "", "{invalid_utf8=155}v"
+SetMember
+loc0fcb:Jump loc1c38
+loc0fd0:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "\x1c\x16\x17"
+GetMember
+Push "text", "GUILD_HOUSES_LIST", 1, register1, "api"
+GetMember
+Push "lang"
+GetMember
+Push "getText"
+CallMethod
+SetMember
+Push register1, "\x1c\x18\x1a"
+GetMember
+Push "text", "HOUSE_WORD", 1, register1, "api"
+GetTime
+If loc10ed
+DefineLocal
+loc1020:GetMember
+Push "lang"
+GetMember
+Push "getText"
+CallMethod
+SetMember
+Push register1, "\x1d\x01\x15"
+GetMember
+Push "text", "SKILLS", 1, register1, "api"
+GetMember
+Push "lang"
+GetMember
+Push "getText"
+Push "\n"
+CharToAscii
+If loc112a
+SetMember
+loc105f:CallMethod
+SetMember
+Push register1, "\x1c\x15\x15"
+GetMember
+Push "text", "COORDINATES", 1, register1, "api"
+GetMember
+Push "lang"
+GetMember
+Push "getText"
+CallMethod
+SetMember
+Push register1, "\x1c\x1c\x0e"
+GetMember
+Push "text", "OWNER_WORD", 1, register1, "api"
+Push true
+If loc1020
+GetProperty
+loc10aa:GetMember
+Push "text", "SELECT_A_HOUSE", 1, register1, "api"
+GetMember
+Push "lang"
+GetMember
+Push "getText"
+CallMethod
+SetMember
+Push register1, "\x1c\x0b\b"
+GetMember
+Push "label", "JOIN_SMALL", 1, register1, "api"
+Push false
+Not
+If loc1165
+StartDrag
+loc10ed:GetMember
+Push "lang"
+GetMember
+Push "getText"
+CallMethod
+SetMember
+Push register1, "\x1c\x1c\r"
+GetMember
+Push "text", "OWNER_WORD", 1, register1, "api"
+GetMember
+Push "lang"
+GetMember
+Push "getText"
+Push true
+If loc105f
+CastOp
+loc112a:CallMethod
+SetMember
+Push register1, "\x1c\x1e\x11"
+GetMember
+Push "text", "RIGHTS", 1, register1, "api"
+GetMember
+Push "lang"
+GetMember
+Push "getText"
+CallMethod
+SetMember
+Push register1, "\x1d\x01\b"
+Push false
+Not
+If loc10aa
+DefineLocal
+loc1165:GetMember
+Push "lang"
+GetMember
+Push "getText"
+CallMethod
+SetMember
+}
+GetTime
+If loc11be
+DefineLocal
+loc117a:SetMember
+loc117b:Push "_global"
+GetVariable
+Push "dofus"
+GetMember
+Push "\x18\x03\x17"
+GetMember
+Push "gapi"
+GetMember
+Push "\x17\x01\x0e"
+GetMember
+Push "GuildHousesViewer"
+Push false
+Not
+If loc1741
+DefineLocal
+loc11aa:SetMember
+Push register1, "\x18\t\x0b"
+Push false
+Not
+If loc18a6
+CloneSprite
+loc11be:SetMember
+Push register1, "\x15\x1e\b"
+Push true
+If loc14f1
+StartDrag
+loc11d1:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x17\x0b\n" {
+Push register1, "\x1d\x06\x16"
+GetMember
+Push "dataProvider", register2
+SetMember
+}
+Push true
+If loc14cd
+SetProperty
+loc11fc:DefineFunction2 "", 1, 6, false, false, true, false, true, false, false, true, false, 2, "\x19\x12\x1d" {
+Push register1, "_hSelectedHouse", "dofus"
+GetVariable
+Push "\x17\x05\x03"
+GetMember
+Push "\x18\x07\x18"
+GetMember
+Push register2, "row"
+GetMember
+Push "item"
+GetMember
+CastOp
+SetMember
+Push register1, "\x1c\x18\x1d"
+GetMember
+Push "text", register1, "_hSelectedHouse"
+GetTime
+Increment
+If loc143f
+Extends
+loc124b:GetMember
+Push 1, "_global"
+GetVariable
+Push "isNaN"
+CallMethod
+Not
+Not
+If loc1342
+Push "id", register5, "id"
+GetMember
+Push "label", register5, "description"
+GetMember
+Push 2
+InitObject
+Push 1, register3, "push"
+GetTime
+Increment
+If loc1340
+CloneSprite
+loc1295:SetMember
+Push 0, "\x16\x04\t"
+GetVariable
+Push "\x1b\x17\x07"
+GetMember
+Push "\x17\x0e\x13"
+NewMethod
+StoreRegister 3
+Pop
+Push 0
+StoreRegister 4
+Pop
+Jump loc1315
+loc12c4:Push register4
+GetTime
+Increment
+If loc130f
+StartDrag
+loc12d1:GetMember
+Push "\x17\x19\x05"
+CallMethod
+SetMember
+Push register1, "\x1c\x0b\b"
+GetMember
+Push "_visible", "dofus"
+GetVariable
+Push "\x17\x05\x03"
+GetMember
+Push "\x18\x07\x18"
+GetMember
+Push "\x18\x04\x19"
+GetMember
+Push 1, register1, "_hSelectedHouse"
+GetTime
+Increment
+If loc1410
+GetProperty
+loc130f:Increment
+StoreRegister 4
+Pop
+loc1315:Push register4, register1, "_hSelectedHouse"
+GetMember
+Push "skills"
+GetMember
+Push "length"
+GetMember
+Less2
+Not
+If loc1347
+Push register1, "_hSelectedHouse"
+GetTime
+If loc13a2
+SetProperty
+loc1340:CallMethod
+Pop
+loc1342:Jump loc12c4
+loc1347:Push register1, "\x1d\x07\x03"
+GetMember
+Push "dataProvider", register3
+SetMember
+Push register1, "\x1d\x06\x1d"
+GetMember
+Push "dataProvider", 0, register1, "_hSelectedHouse"
+GetTime
+If loc12d1
+ImplementsOp
+loc1374:GetMember
+Push "\x17\x01\x15"
+GetMember
+Push "y"
+GetMember
+Add2
+SetMember
+Push register1, "\x1c\x19\x01"
+GetMember
+Push "text", register1, "_hSelectedHouse"
+GetMember
+Push "\x1a\x03\f"
+GetMember
+GetTime
+If loc1295
+GetProperty
+loc13a2:GetMember
+Push "skills"
+GetMember
+Push register4
+GetMember
+Push 1, "dofus"
+GetVariable
+Push "\x17\x05\x03"
+GetMember
+Push "\x1b\x02\r"
+NewMethod
+StoreRegister 5
+Pop
+Push register5, "id"
+GetTime
+If loc124b
+SetMember
+loc13d9:GetMember
+Push "moved"
+GetMember
+Not
+Not
+If loc149f
+Push register1, "\x1d\f\b"
+GetMember
+Push "moved", true
+SetMember
+Push register1, "\x1d\f\b"
+GetMember
+Push "_y", register1, "\x1d\f\b"
+GetTime
+Increment
+If loc147f
+StartDrag
+loc1410:GetMember
+Push "\x18\x05\x17"
+CallMethod
+SetMember
+Push register1, "\x1c\x0b\b"
+GetMember
+Push "_visible"
+GetMember
+Not
+Not
+If loc149f
+Push register1, "\x1d\f\b"
+Push true
+If loc13d9
+ImplementsOp
+loc143f:GetMember
+Push "name"
+GetMember
+SetMember
+Push register1, "\x1c\x18\x1c"
+GetMember
+Push "text", register1, "_hSelectedHouse"
+GetMember
+Push "\x17\x01\x15"
+GetMember
+Push "x"
+GetMember
+Push ";"
+Add2
+Push register1, "_hSelectedHouse"
+Push "\b"
+CharToAscii
+If loc1374
+SetProperty
+loc147f:GetMember
+Push "_y"
+GetMember
+Push register1, "\x1c\x0b\b"
+GetMember
+Push "_height"
+GetMember
+Push 2
+Divide
+Add2
+SetMember
+loc149f:Push register1, "_mcMask"
+GetMember
+Push "_visible", false
+GetTime
+If loc14b5
+StartDrag
+loc14b5:SetMember
+Push register1, "\x1d\x01\b"
+GetMember
+Push "_visible", false
+SetMember
+}
+GetTime
+If loc14dc
+GetProperty
+loc14cd:SetMember
+Push register1, "itemSelected"
+GetTime
+If loc11fc
+Extends
+loc14dc:SetMember
+Push register1, "click"
+Push "\t"
+CharToAscii
+If loc15ab
+SetProperty
+loc14f1:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "itemSelected", 2, register1, "\x1d\x06\x16"
+GetMember
+Push "\x15\x1d\x15"
+CallMethod
+Pop
+Push register1, "click", 2, register1, "\x1c\x0b\b"
+GetMember
+Push "\x15\x1d\x15"
+CallMethod
+Pop
+}
+GetTime
+If loc19a2
+GetProperty
+loc1533:GetVariable
+Push "dofus"
+GetMember
+Push "\x18\x03\x17"
+GetMember
+Push "gapi"
+GetMember
+Push "\x17\x01\x0e", 0, "Object"
+NewObject
+Push false
+Not
+If loc117a
+DefineLocal
+loc155f:SetMember
+Push register1, "\x14\x15"
+GetMember
+GetTime
+Increment
+If loc198f
+ImplementsOp
+loc1570:Push "dofus"
+GetVariable
+Not
+Not
+If loc1966
+Push "_global"
+GetVariable
+Push "dofus", 0, "Object"
+Push false
+Not
+If loc1964
+SetProperty
+loc159b:SetMember
+Push register1, "\x18\n\x1c"
+GetTime
+Increment
+If loc0fd0
+GetProperty
+loc15ab:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x19\x12\x1d" {
+Push register2, "target"
+GetMember
+StoreRegister 0
+Push register1, "\x1c\x0b\b"
+GetMember
+StrictEquals
+If loc15da
+Jump loc1689
+loc15da:Push register1, "_hSelectedHouse"
+GetMember
+Push null
+Equals2
+Not
+If loc1631
+Push undefined
+Push true
+If loc1630
+NewObject
+loc15fc:Push undefined
+Return
+loc1601:Push register1, "_hSelectedHouse"
+GetMember
+Push "instanceID"
+GetMember
+Push register1, "_hSelectedHouse"
+GetMember
+Push "id"
+GetMember
+Push 2, register1, "api"
+GetTime
+If loc1670
+GetProperty
+loc1630:Return
+loc1631:Push "dofus"
+GetVariable
+Push "\x17\x05\x03"
+GetMember
+Push "\x18\x07\x18"
+GetMember
+Push "\x18\x04\x19"
+GetMember
+Push 1, register1, "_hSelectedHouse"
+GetMember
+Push "\x18\x05\x17"
+CallMethod
+Not
+Not
+If loc1601
+Push "\x07"
+CharToAscii
+If loc15fc
+CallFunction
+loc1670:GetMember
+Push "\x19\x06\x1c"
+GetMember
+Push "Guild"
+GetMember
+Push "\x1b\x0f\t"
+CallMethod
+Pop
+Jump loc1689
+}
+loc1689:Push true
+If loc172e
+DefineLocal
+loc1694:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push "object", register1, "method", register1, "\x18\n\x1c"
+GetMember
+Push 2
+InitObject
+Push 1, register1, "\x16\x01\x0e"
+CallMethod
+Pop
+Push "object", register1, "method", register1, "\x15\x1e\b"
+GetMember
+Push 2
+InitObject
+Push 1, register1, "\x16\x01\x0e"
+GetTime
+Increment
+If loc16ef
+DefineLocal
+loc16ef:CallMethod
+Pop
+}
+GetTime
+Increment
+If loc159b
+CallFunction
+loc16f9:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x17\x0b\n" {
+Push register2, 1, register1, "\x1b\x14\x15"
+CallMethod
+Pop
+Push 0, register1, "\x1e\x1b\x1a"
+CallMethod
+Return
+}
+GetTime
+If loc11aa
+DefineLocal
+loc172e:SetMember
+Push register1, "over"
+Push true
+If loc18ec
+SetProperty
+loc1741:DefineFunction2 "", 0, 3, false, false, false, true, true, false, false, true, false {
+Push 0, register2, undefined
+CallMethod
+Pop
+}
+Push false
+Not
+If loc180b
+StartDrag
+loc1765:SetMember
+Push register1, "\x17\x02\x13"
+Push "\x05"
+CharToAscii
+If loc1694
+CallFunction
+loc177a:GetVariable
+Push "dofus"
+GetMember
+Push "\x18\x03\x17"
+GetMember
+Push "gapi", 0, "Object"
+NewObject
+SetMember
+loc1795:Push "dofus"
+GetTime
+If loc187c
+ImplementsOp
+loc17a1:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x19\x12\x1d" {
+Push 0, register1, "gapi"
+GetMember
+Push "\x18\x07\n"
+CallMethod
+Pop
+}
+Push false
+Not
+If loc155f
+CloneSprite
+loc17d1:GetMember
+Push "\x18\x03\x17", 0, "Object"
+NewObject
+SetMember
+loc17e0:Push "dofus"
+GetVariable
+Push "\x18\x03\x17"
+GetMember
+Push "gapi"
+GetMember
+Not
+Not
+If loc1795
+Push "_global"
+Push "\x02"
+CharToAscii
+If loc177a
+StartDrag
+loc180b:StoreRegister 0
+SetMember
+Push register0, "dofus"
+GetVariable
+Push "\x18\x03\x17"
+GetMember
+Push "gapi"
+GetMember
+Push "\x17\x01\x17"
+GetMember
+Push "\x17\t\x11"
+GetTime
+Increment
+If loc1c1b
+GetProperty
+loc1837:SetMember
+Push register1, "out"
+Push true
+If loc17a1
+SetProperty
+loc184a:Push "dofus"
+GetVariable
+Push "\x18\x03\x17"
+GetMember
+Push "gapi"
+GetMember
+Push "\x17\x01\x0e"
+GetMember
+Push "GuildHousesViewer"
+GetMember
+Not
+Not
+If loc0fcb
+Push "\x05"
+CharToAscii
+If loc1570
+ImplementsOp
+loc187c:GetVariable
+Push "\x18\x03\x17"
+GetMember
+Push "gapi"
+GetMember
+Push "\x17\x01\x0e"
+GetMember
+Not
+Not
+If loc117b
+Push "_global"
+Push true
+If loc1533
+StartDrag
+loc18a6:DefineFunction2 "", 0, 3, false, false, false, true, true, false, false, true, false {
+Push "dofus"
+GetVariable
+Push "\x18\x03\x17"
+GetMember
+Push "gapi"
+GetMember
+Push "\x17\x01\x0e"
+GetMember
+Push "GuildHousesViewer"
+GetMember
+Push "\x16\x1b\x18"
+GetMember
+Push false, 2, register2, "\x18\t\x0b"
+CallMethod
+Pop
+}
+GetTime
+If loc1765
+GetProperty
+loc18ec:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x19\x12\x1d" {
+Push register2, "target"
+GetMember
+StoreRegister 0
+Push register1, "\x1c\x0b\b"
+GetMember
+StrictEquals
+If loc191b
+Jump loc195c
+loc191b:Push "GUILD_HOUSE_TELEPORT_TOOLTIP", 1, register1, "api"
+GetMember
+Push "lang"
+Push "\x03"
+CharToAscii
+If loc193c
+CloneSprite
+loc193c:GetMember
+Push "getText"
+CallMethod
+Push 1, register1, "gapi"
+GetMember
+Push "\x1b\x01\x11"
+CallMethod
+Pop
+Jump loc195c
+}
+loc195c:GetTime
+Increment
+If loc1837
+StartDrag
+loc1964:NewObject
+SetMember
+loc1966:Push "dofus"
+GetVariable
+Push "\x18\x03\x17"
+GetMember
+Not
+Not
+If loc17e0
+Push "_global"
+GetVariable
+Push "dofus"
+Push true
+If loc17d1
+GetProperty
+loc198f:DefineFunction "", 0 {
+}
+Push true
+If loc0f9d
+DefineLocal
+loc19a2:SetMember
+Push register1, "\x1b\x14\x15"
+GetTime
+Increment
+If loc11d1
+CloneSprite
+loc19b2:ConstantPool "dofus", "\x18\x03\x17", "gapi", "\x17\x01\x0e", "GuildHousesViewer", "_global", "Object", "\x17\x01\x17", "\x17\t\x11", "prototype", "\x14\x15", "\x1b\x14\x15", "\x1e\x1b\x1a", "\x18\t\x0b", "\x16\x1b\x18", "\x17\x02\x13", "object", "method", "\x18\n\x1c", "\x16\x01\x0e", "\x15\x1e\b", "\x1c\x16\x17", "text", "GUILD_HOUSES_LIST", "api", "lang", "getText", "\x1c\x18\x1a", "HOUSE_WORD", "\x1c\x1c\r", "OWNER_WORD", "\x1c\x15\x15", "COORDINATES", "\x1c\x1c\x0e", "\x1d\x01\x15", "SKILLS", "\x1c\x1e\x11", "RIGHTS", "\x1d\x01\b", "SELECT_A_HOUSE", "\x1c\x0b\b", "label", "JOIN_SMALL", "itemSelected", "\x1d\x06\x16", "\x15\x1d\x15", "click", "dataProvider", "_hSelectedHouse", "\x17\x05\x03", "\x18\x07\x18", "row", "item", "\x1c\x18\x1d", "name", "\x1c\x18\x1c", "\x17\x01\x15", "x", ";", "y", "\x1c\x19\x01", "\x1a\x03\f", "\x16\x04\t", "\x1b\x17\x07", "\x17\x0e\x13", "skills", "length", "\x1b\x02\r", "id", "isNaN", "description", "push", "\x1d\x07\x03", "\x1d\x06\x1d", "\x17\x19\x05", "_visible", "\x18\x04\x19", "\x18\x05\x17", "\x1d\f\b", "moved", "_y", "_height", "_mcMask", "target", "instanceID", "\x19\x06\x1c", "Guild", "\x1b\x0f\t", "over", "GUILD_HOUSE_TELEPORT_TOOLTIP", "\x1b\x01\x11", "out", "\x18\x07\n", "houses", "addProperty", "ASSetPropFlags"
+GetTime
+If loc184a
+DefineLocal
+loc1c1b:GetMember
+Extends
+Push register0, "prototype"
+GetMember
+StoreRegister 1
+Pop
+Push register1, "\x14\x15"
+GetTime
+If loc16f9
+SetProperty
+loc1c38:

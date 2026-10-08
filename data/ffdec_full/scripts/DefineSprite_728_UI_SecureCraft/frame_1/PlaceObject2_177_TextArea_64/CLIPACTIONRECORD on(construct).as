@@ -1,0 +1,64 @@
+on(construct){
+   while(true)
+   {
+      if(!ord("\x0b"))
+      {
+         if(!ord("\x0b"))
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push("\x02");
+      }
+      if(!ord(§§pop()))
+      {
+         break;
+      }
+      while(true)
+      {
+         if(!(getTimer() + 1))
+         {
+            §§pop() implements ;
+         }
+         else
+         {
+            addr16b8b:
+            set("\x0e",false);
+            c = false;
+            set("{invalid_utf8=194}>",false);
+            set(§§constant(3),true);
+            set(§§constant(4),true);
+            §§push(§§constant(5));
+            §§push(-7);
+            if(false)
+            {
+               startDrag(§§pop(),§§pop(),§§pop(),§§pop(),§§pop(),§§pop());
+               break;
+            }
+         }
+         set(§§pop(),§§pop());
+         set(§§constant(6),§§constant(7));
+         set(§§constant(8),0);
+         set(§§constant(9),true);
+         set(§§constant(10),false);
+         §§push(§§constant(11));
+         §§push(§§constant(12));
+         if(!getTimer())
+         {
+            setProperty(§§pop(), _X, §§pop());
+            §§goto(addr16cb3);
+         }
+         break;
+      }
+      set(§§pop(),§§pop());
+      set(§§constant(13),§§constant(14));
+      set(§§constant(15),§§constant(14));
+      set(§§constant(16),§§constant(14));
+      set(§§constant(17),true);
+      addr16cb3:
+      return;
+   }
+   §§goto(addr16b8b);
+}

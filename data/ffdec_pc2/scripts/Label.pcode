@@ -1,0 +1,17 @@
+Push true
+PushDuplicate
+And
+If loc001d
+Push true
+PushDuplicate
+And
+If loc0039
+Jump loc0066
+loc001d:Push "ank.gapi.controls.Label"
+loc0039:GetVariable
+Push "Label", 2, "Object"
+GetVariable
+Push "registerClass"
+CallMethod
+Pop
+loc0066:

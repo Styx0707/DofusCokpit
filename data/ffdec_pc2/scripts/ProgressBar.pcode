@@ -1,0 +1,16 @@
+Push false
+Not
+If loc001c
+Push true
+PushDuplicate
+And
+If loc003e
+Jump loc0071
+loc001c:Push "ank.gapi.controls.ProgressBar"
+loc003e:GetVariable
+Push "ProgressBar", 2, "Object"
+GetVariable
+Push "registerClass"
+CallMethod
+Pop
+loc0071:

@@ -1,0 +1,1758 @@
+Push true
+PushDuplicate
+And
+If loc0080
+Push 245572720
+PushDuplicate
+BitAnd
+If loc0088
+ConstantPool "{invalid_utf8=150}\x05", "\x07m${invalid_utf8=199}6L`{invalid_utf8=157}\x02", "{invalid_utf8=243}\x19{invalid_utf8=136}\x04", "\x01", "\x19", "O{invalid_utf8=150}\x0f", "\x07\x01", "", "", "\x02\x04\x01\x07\x03", "", "", "\b{invalid_utf8=135}=\x17", "{invalid_utf8=142}\b", "", "", "", "\x02)", "\x18", "{invalid_utf8=150}\r", "\x05", "\b\x11\x07\x02", "", "", "\x04\x01\b\x01N{invalid_utf8=150}\x02", "\b\nR\x174P{invalid_utf8=157}\x02", "]\t#\x1c{invalid_utf8=150}\x02"
+Jump loc0096
+loc0080:Push 919020653
+loc0088:PushDuplicate
+BitAnd
+If loc1a7a
+ConstantPool "\x19"
+loc0096:SetMember
+Push 1, null, register1, 3, constant135
+CallFunction
+Pop
+loc00ab:Jump loc1da1
+loc00b0:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push false, "CIV", 2, register1, "\x16\x02\x11"
+GetMember
+Push "send"
+CallMethod
+Pop
+}
+GetTime
+Increment
+If loc0a2b
+SetProperty
+loc00db:GetVariable
+Push "dofus"
+GetMember
+Push "\x16\x02\x11"
+GetMember
+Push "Conquest"
+Push true
+If loc182f
+SetMember
+loc00f8:SetMember
+Push register1, "\x19\x1b\x13"
+GetTime
+Increment
+If loc11b1
+Extends
+loc0108:SetMember
+Push register1, "\x1b\r\x04"
+Push "\x03"
+CharToAscii
+If loc15c2
+ImplementsOp
+loc011d:StoreRegister 0
+SetMember
+Push register0, "dofus"
+GetVariable
+Push "\x16\x02\x11"
+GetMember
+Push "Handler"
+GetMember
+Extends
+Push register0, "prototype"
+GetTime
+Increment
+If loc09c1
+GetProperty
+loc0146:DefineFunction2 "", 1, 8, false, false, true, false, true, false, false, true, false, 2, "\x1a\x1b\x11" {
+Push ";", 1, register2, "split"
+CallMethod
+StoreRegister 3
+Pop
+Push ",", 1, register3, 0
+GetMember
+ToString
+Push "split"
+CallMethod
+StoreRegister 4
+Pop
+Push 0, "dofus"
+Push "\b"
+CharToAscii
+If loc0318
+NewObject
+loc019f:SetMember
+Push register1, "api"
+GetMember
+Push "\x17\x05\x03"
+GetMember
+Push "Conquest"
+GetMember
+Push "\x1a\n\x01", register6
+SetMember
+Push register1, "api"
+GetMember
+Push "\x17\x05\x03"
+GetMember
+Push "Conquest"
+GetTime
+Increment
+If loc0354
+GetProperty
+loc01d7:GetVariable
+Push "\x17\x05\x03"
+GetMember
+Push "\x16\x1e\x19"
+NewMethod
+StoreRegister 7
+Pop
+Push register7, "xp", register4, 0
+GetMember
+ToNumber
+SetMember
+Push register7, "drop", register4, 1
+GetTime
+If loc02dd
+CallFunction
+loc020f:Push 0, "dofus"
+GetVariable
+Push "\x17\x05\x03"
+GetMember
+Push "\x16\x1e\x19"
+NewMethod
+StoreRegister 6
+Pop
+Push register6, "xp", register4, 0
+GetMember
+ToNumber
+SetMember
+Push register6, "drop", register4, 1
+Push "\t"
+CharToAscii
+If loc0295
+GetProperty
+loc0257:GetMember
+ToNumber
+SetMember
+Push register5, "\x1a\n\x12", register4, 2
+GetMember
+ToNumber
+SetMember
+Push ",", 1, register3, 1
+GetMember
+ToString
+Push "split"
+CallMethod
+StoreRegister 4
+Pop
+Push false
+Not
+If loc020f
+GetProperty
+loc0295:GetMember
+ToNumber
+SetMember
+Push register6, "\x1a\n\x12", register4, 2
+GetMember
+ToNumber
+SetMember
+Push ",", 1, register3, 2
+GetMember
+ToString
+Push "split"
+CallMethod
+StoreRegister 4
+Pop
+Push 0, "dofus"
+Push false
+Not
+If loc01d7
+GetProperty
+loc02dd:GetMember
+ToNumber
+SetMember
+Push register7, "\x1a\n\x12", register4, 2
+GetMember
+ToNumber
+SetMember
+Push register1, "api"
+GetMember
+Push "\x17\x05\x03"
+GetMember
+Push "Conquest"
+GetMember
+Push "\x16\x03\x06", register5
+Push false
+Not
+If loc019f
+GetProperty
+loc0318:GetVariable
+Push "\x17\x05\x03"
+GetMember
+Push "\x16\x1e\x19"
+NewMethod
+StoreRegister 5
+Pop
+Push register5, "xp", register4, 0
+GetMember
+ToNumber
+SetMember
+Push register5, "drop", register4, 1
+Push true
+If loc0257
+StartDrag
+loc0354:GetMember
+Push "\x16\x03\x07", register7
+SetMember
+}
+Push true
+If loc0680
+SetProperty
+loc0368:GetVariable
+Not
+Not
+If loc0384
+Push "_global"
+GetVariable
+Push "dofus", 0, "Object"
+NewObject
+SetMember
+loc0384:Push "dofus"
+GetVariable
+Push "\x16\x02\x11"
+Push "\x0b"
+CharToAscii
+If loc09fd
+CastOp
+loc039c:DefineFunction2 "", 1, 13, false, false, true, false, true, false, false, true, false, 2, "\x1a\x1b\x11" {
+Push 0, 1, register2, "charAt"
+CallMethod
+Push "+"
+Equals2
+StoreRegister 3
+Pop
+Push "|", 1, 1, 1, register2, "substr"
+CallMethod
+Push "split"
+CallMethod
+StoreRegister 4
+Pop
+Push "\x07"
+CharToAscii
+If loc056c
+ImplementsOp
+loc03fa:GetMember
+StoreRegister 6
+Pop
+Push 1
+StoreRegister 7
+Pop
+Jump loc041d
+loc0412:Push register7
+Increment
+StoreRegister 7
+Pop
+loc041d:Push register7, register4, "length"
+Push "\x03"
+CharToAscii
+If loc0538
+Extends
+loc0433:Push 36, register8, 0
+GetMember
+Push 2, "_global"
+GetVariable
+Push "parseInt"
+CallMethod
+StoreRegister 11
+Pop
+Push register11, "id", 2, register6, "\x17\x11\x10"
+CallMethod
+StoreRegister 12
+Pop
+Push false
+Not
+If loc04b8
+DefineLocal
+loc047b:GetMember
+SetMember
+Push register9, "level", register8, 2
+GetMember
+ToNumber
+SetMember
+Push register9, "id"
+GetMember
+Push "id", 2, register6, "\x17\x11\x10"
+CallMethod
+StoreRegister 10
+Pop
+Push register10, "index"
+GetTime
+If loc04f5
+GetProperty
+loc04b8:Push register12, "index"
+GetMember
+Push -1
+Equals2
+Not
+Not
+If loc0603
+Push 1, register12, "index"
+GetMember
+Push 2, register6, "\x1a\f\x11"
+Push false
+Not
+If loc0601
+DefineLocal
+loc04f5:GetMember
+Push -1
+Equals2
+Not
+Not
+If loc0523
+Push register9, register10, "index"
+GetMember
+Push 2, register6, "\x1b\x15\x06"
+CallMethod
+Pop
+Jump loc0533
+loc0523:Push register9, 1, register6, "push"
+CallMethod
+Pop
+loc0533:Jump loc0603
+loc0538:GetMember
+Less2
+Not
+If loc0608
+Push ";", 1, register4, register7
+GetMember
+Push "split"
+CallMethod
+StoreRegister 8
+Pop
+Push register3
+Not
+If loc0433
+GetTime
+If loc05b2
+Extends
+loc056c:Push 36, register4, 0
+GetMember
+Push 2, "_global"
+GetVariable
+Push "parseInt"
+CallMethod
+StoreRegister 5
+Pop
+Push register1, "api"
+GetMember
+Push "\x17\x05\x03"
+GetMember
+Push "Conquest"
+GetMember
+Push "\x16\x07\x07"
+GetTime
+If loc03fa
+ImplementsOp
+loc05b2:Push 0
+InitObject
+StoreRegister 9
+Pop
+Push register9, "id", 36, register8, 0
+GetMember
+Push 2, "_global"
+GetVariable
+Push "parseInt"
+CallMethod
+SetMember
+Push register9, "name", register8, 1
+Push "\x03"
+CharToAscii
+If loc047b
+Extends
+loc0601:CallMethod
+Pop
+loc0603:Jump loc0412
+}
+loc0608:Push false
+Not
+If loc0096
+StartDrag
+loc0614:SetMember
+Push register1, "\x19\x1b\x11"
+GetTime
+If loc0885
+ImplementsOp
+loc0623:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push 0, register1, "api"
+GetMember
+Push "\x17\x05\x03"
+GetMember
+Push "Conquest"
+GetMember
+Push "clear"
+CallMethod
+Pop
+Push true, "CIJ", 2, register1, "\x16\x02\x11"
+GetMember
+Push "send"
+CallMethod
+Pop
+}
+Push true
+If loc0a3a
+SetMember
+loc0671:SetMember
+Push register1, "\x19\x1e\x19"
+GetTime
+If loc0a49
+NewObject
+loc0680:SetMember
+Push register1, "\x19\x16\x04"
+GetTime
+Increment
+If loc102a
+NewObject
+loc0690:DefineFunction2 "", 1, 10, false, false, true, false, true, false, false, true, false, 2, "\x1a\x1b\x11" {
+Push "|", 1, register2, "split"
+CallMethod
+StoreRegister 3
+Pop
+Push register3, 0
+GetMember
+ToNumber
+StoreRegister 4
+Pop
+Push register3, 1
+GetMember
+StoreRegister 5
+Pop
+Push register3, 2
+GetTime
+If loc07d5
+SetProperty
+loc06e6:GetMember
+Push "lang"
+GetMember
+Push "getMapSubAreaName"
+CallMethod
+StoreRegister 9
+Pop
+Push register8, register1, "api"
+GetMember
+Push "\x17\x05\x03"
+GetMember
+Push "\x16\t\x0f"
+GetTime
+If loc0814
+CastOp
+loc0714:GetMember
+Push "lang"
+GetMember
+Push "\x17\x1b\x18"
+CallMethod
+Push "sa"
+GetMember
+ToNumber
+StoreRegister 8
+Pop
+Push register8, 1, register1, "api"
+Push "\x03"
+CharToAscii
+If loc06e6
+SetMember
+loc0748:GetMember
+Push "\x1a\x1e\x0e"
+CallMethod
+Pop
+Push 0, register1, "api"
+GetMember
+Push "\x1b\x04\x1a"
+GetMember
+Push "\x17\x0e\r"
+GetMember
+Push "\x19\x1d\x1c"
+CallMethod
+Pop
+Jump loc087d
+loc0775:Push "PVP_CHAT", register7, register9, 2
+InitArray
+Push "\x05"
+CharToAscii
+If loc0847
+StartDrag
+loc0791:CallMethod
+Push register7, register9, 2
+InitArray
+Push "PRISM_ATTACKED", 2, register1, "api"
+GetMember
+Push "lang"
+GetMember
+Push "getText"
+CallMethod
+Add2
+Push undefined, 3, register1, "api"
+GetMember
+Push "\x18\x12\x03"
+GetTime
+If loc0748
+SetMember
+loc07d5:GetMember
+StoreRegister 6
+Pop
+Push "[", register5
+Add2
+Push ", "
+Add2
+Push register6
+Add2
+Push "]"
+Add2
+StoreRegister 7
+Pop
+Push register4, 1, register1, "api"
+Push false
+Not
+If loc0714
+SetProperty
+loc0814:GetMember
+Push "gfx_lastSubarea"
+GetMember
+Equals2
+Not
+If loc0775
+Push "PVP_CHAT", 0, register1, "api"
+GetMember
+Push "electron"
+GetMember
+Push "getCautionIcon"
+Push true
+If loc0791
+NewObject
+loc0847:Push "PRISM_ATTACKED", 2, register1, "api"
+GetMember
+Push "lang"
+GetMember
+Push "getText"
+CallMethod
+Push undefined, 3, register1, "api"
+GetMember
+Push "\x18\x12\x03"
+GetMember
+Push "\x1a\x1e\x0e"
+CallMethod
+Pop
+}
+loc087d:GetTime
+Increment
+If loc17e7
+NewObject
+loc0885:DefineFunction2 "", 1, 10, false, false, true, false, true, false, false, true, false, 2, "\x1a\x1b\x11" {
+Push "|", 1, register2, "split"
+CallMethod
+StoreRegister 3
+Pop
+Push register3, 0
+GetMember
+ToNumber
+StoreRegister 4
+Pop
+Push register3, 1
+GetTime
+Increment
+If loc0983
+DefineLocal
+loc08cc:Add2
+Push register6
+Add2
+Push "]"
+Add2
+StoreRegister 7
+Pop
+Push register4, 1, register1, "api"
+GetMember
+Push "lang"
+GetMember
+Push "\x17\x1b\x18"
+CallMethod
+Push "sa"
+Push false
+Not
+If loc0955
+SetMember
+loc090a:Push "PVP_CHAT", register7, register9, 2
+InitArray
+Push "PRISM_ATTACKED_DIED", 2, register1, "api"
+GetMember
+Push "lang"
+GetMember
+Push "getText"
+CallMethod
+Push undefined, 3, register1, "api"
+GetMember
+Push "\x18\x12\x03"
+GetMember
+Push "\x1a\x1e\x0e"
+GetTime
+Increment
+If loc09b3
+SetProperty
+loc0955:GetMember
+ToNumber
+StoreRegister 8
+Pop
+Push register8, 1, register1, "api"
+GetMember
+Push "lang"
+GetMember
+Push "getMapSubAreaName"
+CallMethod
+StoreRegister 9
+Pop
+GetTime
+If loc090a
+ImplementsOp
+loc0983:GetMember
+StoreRegister 5
+Pop
+Push register3, 2
+GetMember
+StoreRegister 6
+Pop
+Push "[", register5
+Add2
+Push ", "
+Push "\t"
+CharToAscii
+If loc08cc
+DefineLocal
+loc09b3:CallMethod
+Pop
+}
+Push false
+Not
+If loc00f8
+GetProperty
+loc09c1:GetMember
+StoreRegister 1
+Pop
+Push register1, "\x17\x14\x02"
+Push true
+If loc10ce
+GetProperty
+loc09d9:SetMember
+Push register1, "\x19\x1b\x15"
+Push "\x02"
+CharToAscii
+If loc0ded
+StartDrag
+loc09ee:SetMember
+Push register1, "\x1b\x19\x10"
+GetTime
+If loc1126
+Extends
+loc09fd:GetMember
+Not
+Not
+If loc0a1f
+Push "_global"
+GetVariable
+Push "dofus"
+GetMember
+Push "\x16\x02\x11", 0, "Object"
+NewObject
+SetMember
+loc0a1f:Push "_global"
+GetTime
+If loc00db
+StartDrag
+loc0a2b:SetMember
+Push register1, "\x1a\x07\x0b"
+GetTime
+If loc17b8
+NewObject
+loc0a3a:SetMember
+Push register1, "\x1a\x07\x0e"
+GetTime
+If loc00b0
+GetProperty
+loc0a49:DefineFunction2 "", 1, 13, false, false, true, false, true, false, false, true, false, 2, "\x1a\x1b\x11" {
+Push "|", 1, register2, "split"
+CallMethod
+StoreRegister 3
+Pop
+Push 0, "dofus"
+GetVariable
+Push "\x17\x05\x03"
+GetMember
+Push "\x16\x1e\x1c"
+NewMethod
+StoreRegister 4
+Pop
+Push register4, "\x1a\x03\n", register3, 0
+GetTime
+If loc0cd0
+StartDrag
+loc0a9e:GetMember
+ToNumber
+Push register7, 2
+GetMember
+ToNumber
+Push 1
+Equals2
+Push register7, 1
+GetMember
+ToNumber
+Push register7, 0
+GetMember
+ToNumber
+Push 5, "dofus"
+GetTime
+If loc0c1f
+CastOp
+loc0ade:GetMember
+ToNumber
+SetMember
+Push register3, 6
+GetMember
+StoreRegister 9
+Pop
+Push ";", 1, register9, "split"
+CallMethod
+StoreRegister 10
+Pop
+Push register4, "\x1b\x17\x1b", 0, "\x16\x04\t"
+GetVariable
+Push "\x1b\x17\x07"
+Push false
+Not
+If loc0c52
+StartDrag
+loc0b25:Push ";", 1, register5, "split"
+CallMethod
+StoreRegister 6
+Pop
+Push register4, "\x16\x05\t", 0, "\x16\x04\t"
+GetVariable
+Push "\x1b\x17\x07"
+GetMember
+Push "\x17\x0e\x13"
+NewMethod
+SetMember
+Push register6
+Enumerate2
+loc0b5b:StoreRegister 0
+Push "\x05"
+CharToAscii
+If loc0c90
+GetProperty
+loc0b6c:GetMember
+Push 5
+Less2
+Not
+If loc0b81
+Jump loc0b5b
+loc0b81:Push register7, 4
+GetMember
+ToNumber
+Push 1
+Equals2
+Push register7, 3
+Push "\x02"
+CharToAscii
+If loc0a9e
+StartDrag
+loc0bad:CallMethod
+Pop
+Jump loc0b5b
+loc0bb4:Push "areaName", 1, register4, "\x16\x05\t"
+GetMember
+Push "sortOn"
+CallMethod
+Pop
+Push register4, "\x1a\x03\x0b", register3, 4
+GetMember
+ToNumber
+SetMember
+Push register4, "\x1b\x11\x07", register3, 5
+Push true
+If loc0ade
+Extends
+loc0bf4:GetMember
+ToString
+Push "split"
+CallMethod
+StoreRegister 11
+Pop
+Push register11, "length"
+GetMember
+Push 4
+Equals2
+Not
+Not
+Push true
+If loc0d50
+GetProperty
+loc0c1f:GetVariable
+Push "\x17\x05\x03"
+GetMember
+Push "\x16\x1e\x1d"
+NewMethod
+StoreRegister 8
+Pop
+Push register8, 1, register4, "\x16\x05\t"
+GetMember
+Push "push"
+Push "\x0b"
+CharToAscii
+If loc0bad
+SetProperty
+loc0c52:GetMember
+Push "\x17\x0e\x13"
+NewMethod
+SetMember
+Push register10
+Enumerate2
+loc0c60:StoreRegister 0
+Push null
+Equals2
+If loc0da2
+Push "i", register0
+DefineLocal
+Push ",", 1, register10, "i"
+GetVariable
+Push true
+If loc0bf4
+ImplementsOp
+loc0c90:Push null
+Equals2
+If loc0bb4
+Push "i", register0
+DefineLocal
+Push ",", 1, register6, "i"
+GetVariable
+GetMember
+ToString
+Push "split"
+CallMethod
+StoreRegister 7
+Pop
+Push register7, "length"
+Push true
+If loc0b6c
+StartDrag
+loc0cd0:GetMember
+ToNumber
+SetMember
+Push register4, "\x1b\x11\x04", register3, 1
+GetMember
+ToNumber
+SetMember
+Push register4, "\x1a\x06\x19", register3, 2
+GetMember
+ToNumber
+SetMember
+Push register3, 3
+GetMember
+StoreRegister 5
+Pop
+GetTime
+Increment
+If loc0b25
+SetProperty
+loc0d0d:GetMember
+ToNumber
+Push register11, 0
+GetMember
+ToNumber
+Push 4, "dofus"
+GetVariable
+Push "\x17\x05\x03"
+GetMember
+Push "\x16\x1e\x1b"
+NewMethod
+StoreRegister 12
+Pop
+Push register12, 1, register4, "\x1b\x17\x1b"
+Push true
+If loc0d95
+GetProperty
+loc0d50:If loc0d5a
+Jump loc0c60
+loc0d5a:Push register11, 3
+GetMember
+ToNumber
+Push 1
+Equals2
+Push register11, 2
+GetMember
+ToNumber
+Push 1
+Equals2
+Push register11, 1
+GetTime
+If loc0d0d
+SetProperty
+loc0d95:GetMember
+Push "push"
+CallMethod
+Pop
+Jump loc0c60
+loc0da2:Push "areaName", 1, register4, "\x1b\x17\x1b"
+GetMember
+Push "sortOn"
+CallMethod
+Pop
+Push register1, "api"
+GetMember
+Push "\x17\x05\x03"
+Push false
+Not
+If loc0dd1
+DefineLocal
+loc0dd1:GetMember
+Push "Conquest"
+GetMember
+Push "\x1b\x19\x0f", register4
+SetMember
+}
+Push "\x05"
+CharToAscii
+If loc09d9
+StartDrag
+loc0ded:DefineFunction2 "", 1, 11, false, false, true, false, true, false, false, true, false, 2, "\x1a\x1b\x11" {
+Push ";", 1, register2, "split"
+CallMethod
+StoreRegister 3
+Pop
+Push register3, 0
+GetMember
+ToNumber
+StoreRegister 4
+Pop
+Push "dofus"
+GetVariable
+Push "\x18\x03\x17"
+Push true
+If loc0f57
+GetProperty
+loc0e38:GetMember
+ToNumber
+StoreRegister 7
+Pop
+Push register3, 3
+GetMember
+ToNumber
+StoreRegister 8
+Pop
+Push 0
+InitObject
+StoreRegister 9
+Pop
+Push register9, "error", 0
+GetTime
+If loc0f05
+DefineLocal
+loc0e71:InitObject
+StoreRegister 10
+Pop
+Push register4
+StoreRegister 0
+Push -1
+StrictEquals
+If loc0eb3
+Push register0, -2
+StrictEquals
+If loc0eb3
+Push register0, -3
+StrictEquals
+If loc0eb3
+Jump loc0f91
+loc0eb3:Push register10, "error", register4
+Push true
+If loc0f8b
+SetMember
+loc0ec7:CallMethod
+CastOp
+StoreRegister 5
+Pop
+Push register4, 0
+Equals2
+Not
+If loc0f42
+Push register3, 1
+GetMember
+ToNumber
+StoreRegister 6
+Pop
+Push register3, 2
+Push true
+If loc0e38
+CallFunction
+loc0f05:SetMember
+Push register9, "timer", register6
+SetMember
+Push register9, "\x18\x1a\t", register7
+SetMember
+Push register9, "\x1b\x10\x07"
+GetTime
+SetMember
+Push register9, "\x18\x1a\b", register8
+SetMember
+Push register9, 1, register5, "\x1a\x1c\r"
+CallMethod
+Pop
+Jump loc0fa1
+loc0f42:Push 0
+Push "\t"
+CharToAscii
+If loc0e71
+NewObject
+loc0f57:GetMember
+Push "gapi"
+GetMember
+Push "ui"
+GetMember
+Push "Conquest"
+GetMember
+Push "Conquest", 1, register1, "api"
+GetMember
+Push "ui"
+GetMember
+Push "\x18\x02\f"
+GetTime
+If loc0ec7
+CloneSprite
+loc0f8b:SetMember
+Jump loc0f91
+loc0f91:Push register10, 1, register5, "\x1a\x1c\r"
+CallMethod
+Pop
+}
+loc0fa1:Push "\n"
+CharToAscii
+If loc11a1
+DefineLocal
+loc0fae:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "api"
+GetMember
+Push "\x17\x05\x03"
+GetMember
+Push "\x16\t\x0f"
+GetMember
+Push "isSubscribedConquestFeed"
+GetMember
+Not
+Not
+If loc0fdf
+Push undefined
+Return
+loc0fdf:Push false, "CWV", 2, register1, "\x16\x02\x11"
+Push true
+If loc0ffa
+Extends
+loc0ffa:GetMember
+Push "send"
+CallMethod
+Pop
+Push register1, "api"
+GetMember
+Push "\x17\x05\x03"
+GetMember
+Push "\x16\t\x0f"
+GetMember
+Push "isSubscribedConquestFeed", false
+SetMember
+}
+Push false
+Not
+If loc0108
+CloneSprite
+loc102a:DefineFunction2 "", 1, 5, false, false, true, false, true, false, false, true, false, 2, "\x1a\x1b\x11" {
+Push "dofus"
+GetVariable
+Push "\x18\x03\x17"
+GetMember
+Push "gapi"
+GetMember
+Push "ui"
+GetMember
+Push "Conquest"
+GetMember
+Push "Conquest", 1, register1, "api"
+GetMember
+Push "ui"
+GetTime
+If loc1073
+GetProperty
+loc1073:GetMember
+Push "\x18\x02\f"
+CallMethod
+CastOp
+StoreRegister 3
+Pop
+Push ";", 1, register2, "split"
+CallMethod
+StoreRegister 4
+Pop
+Push register4, 1
+GetMember
+ToNumber
+Push register4, 0
+GetTime
+If loc10b1
+DefineLocal
+loc10b1:GetMember
+ToNumber
+Push 2, register3, "\x1a\x15\x07"
+CallMethod
+Pop
+}
+Push "\x06"
+CharToAscii
+If loc0671
+StartDrag
+loc10ce:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push true, "CB", 2, register1, "\x16\x02\x11"
+GetMember
+Push "send"
+CallMethod
+Pop
+}
+Push true
+If loc17f6
+ImplementsOp
+loc10fc:Push "dofus"
+GetVariable
+Push "\x16\x02\x11"
+GetMember
+Push "Conquest"
+GetMember
+Not
+Not
+If loc00ab
+Push "dofus"
+Push false
+Not
+If loc0368
+GetProperty
+loc1126:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "api"
+GetMember
+Push "\x17\x05\x03"
+GetMember
+Push "\x16\t\x0f"
+GetMember
+Push "isSubscribedConquestFeed"
+GetMember
+Not
+If loc1156
+Push undefined
+Return
+loc1156:Push false, "CWJ", 2, register1, "\x16\x02\x11"
+Push true
+If loc1171
+DefineLocal
+loc1171:GetMember
+Push "send"
+CallMethod
+Pop
+Push register1, "api"
+GetMember
+Push "\x17\x05\x03"
+GetMember
+Push "\x16\t\x0f"
+GetMember
+Push "isSubscribedConquestFeed", true
+SetMember
+}
+Push false
+Not
+If loc15b3
+SetMember
+loc11a1:SetMember
+Push register1, "\x19\x1b\x14"
+GetTime
+Increment
+If loc19aa
+Extends
+loc11b1:DefineFunction2 "", 1, 12, false, false, true, false, true, false, false, true, false, 2, "\x1a\x1b\x11" {
+Push 0, 1, register2, "charAt"
+CallMethod
+Push "+"
+Equals2
+StoreRegister 3
+Pop
+Push "|", 1, 1, 1, register2, "substr"
+CallMethod
+Push "split"
+CallMethod
+StoreRegister 4
+Pop
+Push 36, register4, 0
+Push "\b"
+CharToAscii
+If loc1410
+NewObject
+loc121e:Increment
+StoreRegister 6
+Pop
+loc1224:Push register6, register4, "length"
+GetMember
+Less2
+Not
+If loc1564
+Push ";", 1, register4, register6
+GetMember
+Push "split"
+GetTime
+Increment
+If loc129f
+StartDrag
+loc1251:GetMember
+Push register7, 2
+GetMember
+Add2
+Push ".swf"
+Add2
+SetMember
+Push register8, "level", register7, 3
+GetMember
+ToNumber
+SetMember
+Push register8, "color1", 36, register7, 4
+GetMember
+Push 2, "_global"
+Push true
+If loc138f
+SetProperty
+loc129f:CallMethod
+StoreRegister 7
+Pop
+Push register3
+Not
+If loc14e6
+Push 0
+InitObject
+StoreRegister 8
+Pop
+Push register8, "id", 36, register7, 0
+GetMember
+Push 2, "_global"
+GetTime
+Increment
+If loc1449
+SetMember
+loc12e4:GetMember
+Push "id", 2, register1, "api"
+GetMember
+Push "\x17\x05\x03"
+GetMember
+Push "Conquest"
+GetMember
+Push "\x1a\x05\x1c"
+GetMember
+Push "\x17\x11\x10"
+CallMethod
+StoreRegister 9
+Pop
+Push register9, "index"
+GetTime
+If loc13dc
+Extends
+loc131f:GetMember
+Push 2, "_global"
+GetVariable
+Push "parseInt"
+CallMethod
+SetMember
+Push register8, "reservist", register7, 7
+GetMember
+Push "1"
+Equals2
+SetMember
+Push register8, "id"
+Push "\x02"
+CharToAscii
+If loc12e4
+DefineLocal
+loc135c:GetMember
+Push "Conquest"
+GetMember
+Push "\x1a\x05\x1c"
+GetMember
+Push "\x1b\x15\x06"
+CallMethod
+Pop
+Jump loc14e1
+loc1375:Push register8, 1, register1, "api"
+Push false
+Not
+If loc14c7
+SetMember
+loc138f:GetVariable
+Push "parseInt"
+CallMethod
+SetMember
+Push register8, "color2", 36, register7, 5
+GetMember
+Push 2, "_global"
+GetVariable
+Push "parseInt"
+CallMethod
+SetMember
+Push register8, "color3", 36, register7, 6
+Push false
+Not
+If loc131f
+StartDrag
+loc13dc:GetMember
+Push -1
+Equals2
+Not
+Not
+If loc1375
+Push register8, register9, "index"
+GetMember
+Push 2, register1, "api"
+GetMember
+Push "\x17\x05\x03"
+GetTime
+If loc135c
+SetMember
+loc1410:GetMember
+Push 2, "_global"
+GetVariable
+Push "parseInt"
+CallMethod
+StoreRegister 5
+Pop
+Push 1
+StoreRegister 6
+Pop
+Jump loc1224
+loc1439:Push register6
+Push true
+If loc121e
+StartDrag
+loc1449:GetVariable
+Push "parseInt"
+CallMethod
+SetMember
+Push register8, "name", register7, 1
+GetMember
+SetMember
+Push register8, "gfxFile", "dofus"
+GetVariable
+Push "\x17\x01\x06"
+GetMember
+Push "\x16\x1d\x05"
+Push false
+Not
+If loc1251
+DefineLocal
+loc1482:GetMember
+Push 2, "_global"
+GetVariable
+Push "parseInt"
+CallMethod
+StoreRegister 10
+Pop
+Push register10, "id", 2, register1, "api"
+GetMember
+Push "\x17\x05\x03"
+GetMember
+Push "Conquest"
+GetMember
+Push "\x1a\x05\x1c"
+Push false
+Not
+If loc1500
+CloneSprite
+loc14c7:GetMember
+Push "\x17\x05\x03"
+GetMember
+Push "Conquest"
+GetMember
+Push "\x1a\x05\x1c"
+GetMember
+Push "push"
+CallMethod
+Pop
+loc14e1:Jump loc155f
+loc14e6:Push 36, register7, 0
+Push true
+If loc1482
+SetProperty
+loc1500:GetMember
+Push "\x17\x11\x10"
+CallMethod
+StoreRegister 11
+Pop
+Push register11, "index"
+GetMember
+Push -1
+Equals2
+Not
+Not
+If loc155f
+Push 1, register11, "index"
+GetMember
+Push 2, register1, "api"
+GetTime
+Increment
+If loc1545
+DefineLocal
+loc1545:GetMember
+Push "\x17\x05\x03"
+GetMember
+Push "Conquest"
+GetMember
+Push "\x1a\x05\x1c"
+GetMember
+Push "\x1a\f\x11"
+CallMethod
+Pop
+loc155f:Jump loc1439
+}
+loc1564:Push "\x02"
+CharToAscii
+If loc181b
+GetProperty
+loc1571:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push false, "CFL", 2, register1, "\x16\x02\x11"
+GetMember
+Push "send"
+CallMethod
+Pop
+}
+Push false
+Not
+If loc09ee
+DefineLocal
+loc15a0:SetMember
+Push register1, "\x19\x14\x0b"
+Push true
+If loc15fd
+StartDrag
+loc15b3:SetMember
+Push register1, "\x1b\x19\x11"
+GetTime
+If loc0fae
+NewObject
+loc15c2:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x18\b\x13" {
+Push true, "CFS", register2
+Add2
+Push 2, register1, "\x16\x02\x11"
+GetMember
+Push "send"
+CallMethod
+Pop
+}
+Push "\b"
+CharToAscii
+If loc1806
+Extends
+loc15fd:DefineFunction2 "", 1, 8, false, false, true, false, true, false, false, true, false, 2, "\x1a\x1b\x11" {
+Push "|", 1, register2
+ToString
+Push "split"
+CallMethod
+StoreRegister 3
+Pop
+Push register3, 0
+GetMember
+ToNumber
+StoreRegister 4
+Pop
+Push register3, 1
+GetMember
+ToNumber
+StoreRegister 5
+Pop
+Push true
+If loc16d3
+StartDrag
+loc1652:InitArray
+Push "AREA_ALIGNMENT_PRISM_REMOVED", 2, register1, "api"
+GetMember
+Push "lang"
+GetMember
+Push "getText"
+CallMethod
+Add2
+Push "</b>"
+Add2
+Push undefined, 3, register1, "api"
+Push "\x07"
+CharToAscii
+If loc1714
+GetProperty
+loc168f:GetMember
+Push "lang"
+GetMember
+Push "\x17\x14\x03"
+CallMethod
+Push "n"
+GetMember
+StoreRegister 7
+Pop
+Push register5, -1
+Equals2
+Not
+If loc1727
+Push "PVP_CHAT", "<b>", register6, 1
+Push "\n"
+CharToAscii
+If loc1652
+CallFunction
+loc16d3:Push register4, 1, register1, "api"
+GetMember
+Push "lang"
+GetMember
+Push "\x17\x1b\r"
+CallMethod
+Push "n"
+GetMember
+StoreRegister 6
+Pop
+Push register5, 1, register1, "api"
+Push "\x02"
+CharToAscii
+If loc168f
+ImplementsOp
+loc1714:GetMember
+Push "\x18\x12\x03"
+GetMember
+Push "\x1a\x1e\x0e"
+CallMethod
+Pop
+Jump loc1781
+loc1727:Push "PVP_CHAT", "<b>", register7, register6, 2
+InitArray
+Push "AREA_ALIGNMENT_IS", 2, register1, "api"
+GetMember
+Push "lang"
+Push false
+Not
+If loc1758
+GetProperty
+loc1758:GetMember
+Push "getText"
+CallMethod
+Add2
+Push "</b>"
+Add2
+Push undefined, 3, register1, "api"
+GetMember
+Push "\x18\x12\x03"
+GetMember
+Push "\x1a\x1e\x0e"
+CallMethod
+Pop
+}
+loc1781:Push "\x0b"
+CharToAscii
+If loc1a51
+Extends
+loc178e:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push true, "Cb", 2, register1, "\x16\x02\x11"
+GetMember
+Push "send"
+CallMethod
+Pop
+}
+GetTime
+If loc15a0
+DefineLocal
+loc17b8:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push true, "CFJ", 2, register1, "\x16\x02\x11"
+GetMember
+Push "send"
+CallMethod
+Pop
+}
+Push false
+Not
+If loc1a66
+SetProperty
+loc17e7:SetMember
+Push register1, "\x19\x1b\x17"
+GetTime
+If loc1871
+NewObject
+loc17f6:SetMember
+Push register1, "\x1a\x07\r"
+GetTime
+Increment
+If loc0623
+SetMember
+loc1806:SetMember
+Push register1, "\x1a\r\x1a"
+Push "\x0b"
+CharToAscii
+If loc178e
+DefineLocal
+loc181b:SetMember
+Push register1, "\x19\x1b\x12"
+Push false
+Not
+If loc039c
+StartDrag
+loc182f:DefineFunction2 "", 2, 5, false, false, false, true, true, false, false, true, false, 3, "\x19\x11\x14", 4, "oAPI" {
+Push register4, register3, 2, register2, "initialize"
+CallMethod
+Pop
+}
+GetTime
+If loc011d
+DefineLocal
+loc185e:SetMember
+Push register1, "\x19\x1b\x0f"
+Push true
+If loc0690
+StartDrag
+loc1871:DefineFunction2 "", 1, 10, false, false, true, false, true, false, false, true, false, 2, "\x1a\x1b\x11" {
+Push "|", 1, register2, "split"
+CallMethod
+StoreRegister 3
+Pop
+Push register3, 0
+GetMember
+ToNumber
+StoreRegister 4
+Pop
+Push register3, 1
+Push false
+Not
+If loc18ff
+DefineLocal
+loc18bc:Add2
+StoreRegister 7
+Pop
+Push register4, 1, register1, "api"
+GetMember
+Push "lang"
+GetMember
+Push "\x17\x1b\x18"
+CallMethod
+Push "sa"
+GetMember
+ToNumber
+StoreRegister 8
+Pop
+Push register8, 1, register1, "api"
+GetTime
+Increment
+If loc1939
+GetProperty
+loc18ff:GetMember
+StoreRegister 5
+Pop
+Push register3, 2
+GetMember
+StoreRegister 6
+Pop
+Push "[", register5
+Add2
+Push ", "
+Add2
+Push register6
+Add2
+Push "]"
+Push true
+If loc18bc
+Extends
+loc1939:GetMember
+Push "lang"
+GetMember
+Push "getMapSubAreaName"
+CallMethod
+StoreRegister 9
+Pop
+Push "PVP_CHAT", register7, register9, 2
+InitArray
+Push "PRISM_ATTACKED_SUVIVED", 2, register1, "api"
+GetMember
+Push "lang"
+Push "\x03"
+CharToAscii
+If loc197b
+SetProperty
+loc197b:GetMember
+Push "getText"
+CallMethod
+Push undefined, 3, register1, "api"
+GetMember
+Push "\x18\x12\x03"
+GetMember
+Push "\x1a\x1e\x0e"
+CallMethod
+Pop
+}
+Push "\t"
+CharToAscii
+If loc0614
+CloneSprite
+loc19aa:DefineFunction2 "", 1, 4, false, false, true, false, true, false, false, true, false, 2, "\x1a\x1b\x11" {
+Push "dofus"
+GetVariable
+Push "\x18\x03\x17"
+GetMember
+Push "gapi"
+GetMember
+Push "ui"
+GetMember
+Push "Conquest"
+GetMember
+Push "Conquest", 1, register1, "api"
+Push false
+Not
+If loc19f2
+GetProperty
+loc19f2:GetMember
+Push "ui"
+GetMember
+Push "\x18\x02\f"
+CallMethod
+CastOp
+StoreRegister 3
+Pop
+Push "noUnsubscribe", true, 1
+InitObject
+Push 1, register3, "\x1a\x1c\r"
+GetTime
+Increment
+If loc1a26
+StartDrag
+loc1a26:CallMethod
+Pop
+Push "Conquest", 1, register1, "api"
+GetMember
+Push "ui"
+GetMember
+Push "\x1b\x13\x15"
+CallMethod
+Pop
+}
+Push "\t"
+CharToAscii
+If loc185e
+SetProperty
+loc1a51:SetMember
+Push register1, "\x19\x16\x05"
+Push "\x05"
+CharToAscii
+If loc0146
+GetProperty
+loc1a66:SetMember
+Push register1, "\x1a\x07\f"
+Push false
+Not
+If loc1571
+SetProperty
+loc1a7a:ConstantPool "dofus", "\x16\x02\x11", "Conquest", "_global", "Object", "initialize", "Handler", "prototype", "\x17\x14\x02", "CB", "send", "\x1a\x07\r", "api", "\x17\x05\x03", "clear", "CIJ", "\x1a\x07\x0e", "CIV", "\x1a\x07\x0b", "CFJ", "\x1a\x07\f", "CFL", "\x1b\x19\x10", "\x16\t\x0f", "isSubscribedConquestFeed", "CWJ", "\x1b\x19\x11", "CWV", "\x1b\r\x04", "CFS", "\x1a\r\x1a", "Cb", "\x19\x14\x0b", "|", "split", "lang", "\x17\x1b\r", "n", "\x17\x14\x03", "PVP_CHAT", "<b>", "AREA_ALIGNMENT_PRISM_REMOVED", "getText", "</b>", "\x18\x12\x03", "\x1a\x1e\x0e", "AREA_ALIGNMENT_IS", "\x19\x16\x05", ";", ",", "\x16\x1e\x19", "xp", "drop", "\x1a\n\x12", "\x16\x03\x06", "\x1a\n\x01", "\x16\x03\x07", "\x19\x16\x04", "\x18\x03\x17", "gapi", "ui", "\x18\x02\f", "\x1a\x15\x07", "\x19\x1e\x19", "\x16\x1e\x1c", "\x1a\x03\n", "\x1b\x11\x04", "\x1a\x06\x19", "\x16\x05\t", "\x16\x04\t", "\x1b\x17\x07", "\x17\x0e\x13", "i", "length", "\x16\x1e\x1d", "push", "areaName", "sortOn", "\x1a\x03\x0b", "\x1b\x11\x07", "\x1b\x17\x1b", "\x16\x1e\x1b", "\x1b\x19\x0f", "\x19\x1b\x15", "error", "timer", "\x18\x1a\t", "\x1b\x10\x07", "\x18\x1a\b", "\x1a\x1c\r", "\x19\x1b\x14", "noUnsubscribe", "\x1b\x13\x15", "\x19\x1b\x0f", "[", ", ", "]", "\x17\x1b\x18", "sa", "getMapSubAreaName", "gfx_lastSubarea", "electron", "getCautionIcon", "PRISM_ATTACKED", "\x1b\x04\x1a", "\x17\x0e\r", "\x19\x1d\x1c", "\x19\x1b\x17", "PRISM_ATTACKED_SUVIVED", "\x19\x1b\x11", "PRISM_ATTACKED_DIED", "\x19\x1b\x13", "charAt", "+", "substr", "parseInt", "id", "name", "gfxFile", "\x17\x01\x06", "\x16\x1d\x05", ".swf", "level", "color1", "color2", "color3", "reservist", "1", "\x1a\x05\x1c", "\x17\x11\x10", "index", "\x1b\x15\x06", "\x1a\f\x11", "\x19\x1b\x12", "\x16\x07\x07", "ASSetPropFlags"
+Push "\x06"
+CharToAscii
+If loc10fc
+Extends
+loc1da1:

@@ -1,0 +1,16 @@
+ConstantPool "{invalid_utf8=171}B"
+Push "\x0b"
+CharToAscii
+If loc0024
+Push false
+Not
+If loc0047
+Jump loc007b
+loc0024:Push "ank.gapi.controls.VolumeSlider"
+loc0047:GetVariable
+Push "VolumeSlider", 2, "Object"
+GetVariable
+Push "registerClass"
+CallMethod
+Pop
+loc007b:

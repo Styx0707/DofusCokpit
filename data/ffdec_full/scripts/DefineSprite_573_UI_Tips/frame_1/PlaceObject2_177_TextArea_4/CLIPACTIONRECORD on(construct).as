@@ -1,0 +1,90 @@
+on(construct){
+   loop2:
+   while(true)
+   {
+      loop3:
+      while(true)
+      {
+         while(true)
+         {
+            if(!ord("\x04"))
+            {
+               if(!ord("\x04"))
+               {
+                  §§goto(addrf0a8);
+               }
+            }
+            else
+            {
+               §§push(false);
+            }
+            if(§§pop())
+            {
+               break;
+            }
+            if(false)
+            {
+               break loop3;
+            }
+            break loop2;
+         }
+         §§goto(addrf09f);
+      }
+      setProperty(§§pop(), _X, §§pop());
+      §§goto(addrf1ce);
+   }
+   set("{invalid_utf8=150}\x02",false);
+   set("\x05",false);
+   set("\x12{invalid_utf8=157}\x02",false);
+   set("{invalid_utf8=156}",true);
+   §§push("{invalid_utf8=136}\x04");
+   §§push(true);
+   if(getTimer())
+   {
+      loop1:
+      while(true)
+      {
+         set(§§pop(),§§pop());
+         set("\x01",-1);
+         q = "\x1d{invalid_utf8=150}\x04";
+         set("\b\r\b\x0e\x1d{invalid_utf8=150}\x04",0);
+         set("\b\x0f\b\x0e\x1d{invalid_utf8=150}\x04",true);
+         set("\b\x10\b\x0e\x1d{invalid_utf8=150}\x04",false);
+         §§push("\b\x11\x05\x014P{invalid_utf8=157}\x02");
+         §§push("l");
+         if(!getTimer())
+         {
+            duplicateMovieClip(§§pop(),§§pop(),§§pop());
+            §§goto(addrf104);
+         }
+         else
+         {
+            set(§§pop(),§§pop());
+            set(§§constant(13),§§constant(14));
+            while(true)
+            {
+               set("\b\x06\b\x07\x1d{invalid_utf8=150}\x07","\b\x05\x07{invalid_utf8=255}{invalid_utf8=255}{invalid_utf8=255}{invalid_utf8=255}\x1d{invalid_utf8=150}\x04");
+               set("\b\b\x01","\b\x05\x07{invalid_utf8=255}{invalid_utf8=255}{invalid_utf8=255}{invalid_utf8=255}\x1d{invalid_utf8=150}\x04");
+               §§push("");
+               §§push(true);
+               if(!(getTimer() + 1))
+               {
+                  startDrag(§§pop(),§§pop(),§§pop(),§§pop(),§§pop(),§§pop());
+                  continue loop1;
+               }
+               set(§§pop(),§§pop());
+               set(§§constant(13),§§constant(14));
+            }
+            addrf131:
+            §§push(§§pop()());
+            addrf0a8:
+         }
+         set(§§pop(),§§pop());
+         addrf1ce:
+         return;
+         addrf104:
+      }
+      break loop3;
+   }
+   §§goto(addrf131);
+}

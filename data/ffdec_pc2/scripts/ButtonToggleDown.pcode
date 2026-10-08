@@ -1,0 +1,15 @@
+Push false
+Not
+If loc001c
+Push "\x07"
+CharToAscii
+If loc004a
+Jump loc0082
+loc001c:Push "ank.gapi.controls.button.ButtonBackground"
+loc004a:GetVariable
+Push "ButtonToggleDown", 2, "Object"
+GetVariable
+Push "registerClass"
+CallMethod
+Pop
+loc0082:

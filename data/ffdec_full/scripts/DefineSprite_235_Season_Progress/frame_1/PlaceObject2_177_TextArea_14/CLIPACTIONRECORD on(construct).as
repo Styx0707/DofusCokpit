@@ -1,0 +1,66 @@
+on(construct){
+   while(true)
+   {
+      if(false)
+      {
+         if(!ord("\x0b"))
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push(false);
+      }
+      if(!§§pop())
+      {
+         if(!getTimer())
+         {
+            §§pop() extends §§pop();
+            §§goto(addr1ada);
+         }
+      }
+      La = false;
+      break;
+   }
+   set("\x05",false);
+   set("\x12{invalid_utf8=157}\x02",false);
+   e = true;
+   set("{invalid_utf8=136}\x07",false);
+   set("\x02",-7);
+   while(true)
+   {
+      §§push("La");
+      §§push("{invalid_utf8=137}");
+      if(!getTimer())
+      {
+         startDrag(§§pop(),§§pop(),§§pop(),§§pop(),§§pop(),§§pop());
+      }
+      else
+      {
+         addr1ada:
+         set(§§pop(),§§pop());
+         set(§§constant(8),1);
+         set(§§constant(9),true);
+         set(§§constant(10),false);
+         set(§§constant(11),§§constant(12));
+         §§push(§§constant(13));
+         §§push(§§constant(14));
+         if(!(getTimer() + 1))
+         {
+            setProperty(§§pop(), _X, §§pop());
+         }
+         else
+         {
+            addr1a2b:
+            set(§§pop(),§§pop());
+            set("\x1d{invalid_utf8=150}\x04","\b\x02\x05");
+            set("\b\x03\x05\x01\x1d{invalid_utf8=150}\x04","\b\x02\x05");
+            set("\b\x04\x05",true);
+         }
+         §§goto(addr1b0d);
+      }
+      §§goto(addr1a2b);
+   }
+   addr1b0d:
+}

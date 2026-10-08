@@ -1,0 +1,15 @@
+Push false
+Not
+If loc001b
+Push false
+Not
+If loc003b
+Jump loc006c
+loc001b:Push "ank.gapi.controls.TextInput"
+loc003b:GetVariable
+Push "TextInput", 2, "Object"
+GetVariable
+Push "registerClass"
+CallMethod
+Pop
+loc006c:

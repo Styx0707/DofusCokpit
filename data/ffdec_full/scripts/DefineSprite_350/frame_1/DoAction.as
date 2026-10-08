@@ -1,0 +1,39 @@
+while(true)
+{
+   if(false)
+   {
+      if(!(true and true))
+      {
+         break;
+      }
+   }
+   else
+   {
+      §§push(false);
+   }
+   if(§§pop())
+   {
+      break;
+   }
+   if(!ord("\t"))
+   {
+      §§push(§§pop()(§§pop()));
+   }
+   GAC.applyColor(cIop_R_Jambe00,1);
+   §§push(3);
+   §§push(cIop_R_JambeBas00);
+   §§push(2);
+   §§push(GAC);
+   §§push("applyColor");
+   if(false)
+   {
+      var §§pop() = §§pop();
+   }
+   else
+   {
+      addr26abf:
+      §§pop()[§§pop()]();
+   }
+   return;
+}
+§§goto(addr26abf);

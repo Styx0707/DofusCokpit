@@ -1,0 +1,10 @@
+if(false)
+{
+   if(ord("\x04"))
+   {
+   }
+}
+else
+{
+   stop();
+}

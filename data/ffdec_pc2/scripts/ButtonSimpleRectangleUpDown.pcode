@@ -1,0 +1,18 @@
+ConstantPool "{invalid_utf8=176}", "Ȕ"
+Push true
+PushDuplicate
+Or
+If loc0027
+Push true
+PushDuplicate
+And
+If loc0055
+Jump loc0098
+loc0027:Push "ank.gapi.controls.button.ButtonBackground"
+loc0055:GetVariable
+Push "ButtonSimpleRectangleUpDown", 2, "Object"
+GetVariable
+Push "registerClass"
+CallMethod
+Pop
+loc0098:

@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dofus Retro — Comptes</title>
+    <link rel="icon" type="image/svg+xml" href="/ui/favicon.svg">
+    <style>
+        :root {
+            --plane: #f9f9f7;
+            --surface: #fcfcfb;
+            --ink: #0b0b0b;
+            --ink2: #52514e;
+            --muted: #898781;
+            --grid: #e1e0d9;
+            --line: #c3c2b7;
+            --accent: #2a78d6;
+            --accent-soft: #cde2fb;
+            --chip: #f0efec;
+            --border: rgba(11, 11, 11, 0.10);
+            --shadow: rgba(11, 11, 11, 0.18);
+            --good: #0ca30c;
+            --warn: #d98a00;
+            --bad: #d6392a;
+        }
+
+        :root[data-theme="dark"] {
+            --plane: #0d0d0d;
+            --surface: #1a1a19;
+            --ink: #ffffff;
+            --ink2: #c3c2b7;
+            --muted: #898781;
+            --grid: #2c2c2a;
+            --line: #383835;
+            --accent: #3987e5;
+            --accent-soft: #184f95;
+            --chip: #242422;
+            --border: rgba(255, 255, 255, 0.10);
+            --shadow: rgba(0, 0, 0, 0.5);
+            --good: #2fbf2f;
+            --warn: #f0a728;
+            --bad: #f0584a;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--plane);
+            color: var(--ink);
+            font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+            font-size: 14px;
+            line-height: 1.45;
+        }
+
+        .wrap {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 20px 18px 60px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: 20px;
+            margin: 0;
+            font-weight: 650;
+        }
+
+        .spacer {
+            flex: 1;
+        }
+
+        a.nav {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 13px;
+            margin-right: 6px;
+        }
+
+        .sub {
+            color: var(--muted);
+            font-size: 12.5px;
+        }
+
+        button {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            color: var(--ink2);
+            border-radius: 8px;
+            padding: 6px 10px;
+            font-size: 13px;
+            font-family: inherit;
+            cursor: pointer;
+        }
+
+        .bar {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            align-items: center;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 10px 14px;
+            margin-bottom: 14px;
+        }
+
+        .kv {
+            font-size: 13px;
+        }
+
+        .kv b {
+            font-size: 16px;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            display: inline-block;
+            background: var(--muted);
+            vertical-align: middle;
+        }
+
+        .cols {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        @media (max-width: 900px) {
+            .cols {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .col {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 12px 14px;
+            min-height: 120px;
+        }
+
+        .col.arene {
+            border-top: 3px solid var(--warn);
+        }
+
+        .col.farm {
+            border-top: 3px solid var(--accent);
+        }
+
+        .col.none {
+            border-top: 3px solid var(--grid);
+            margin-top: 14px;
+        }
+
+        .col.order {
+            border-top: 3px solid var(--good);
+            margin-top: 14px;
+        }
+
+        .orow {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 5px 8px;
+            border-bottom: 1px solid var(--grid);
+            font-size: 13px;
+        }
+
+        .orow .idx {
+            color: var(--muted);
+            min-width: 22px;
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .orow .onm {
+            flex: 1;
+        }
+
+        .orow .off {
+            color: var(--muted);
+            font-style: italic;
+        }
+
+        .orow button {
+            padding: 2px 9px;
+            font-size: 13px;
+        }
+
+        .orow[draggable=true] {
+            cursor: grab;
+        }
+
+        .orow .grip {
+            color: var(--muted);
+            cursor: grab;
+        }
+
+        .orow.dragover {
+            outline: 2px dashed var(--accent);
+            outline-offset: -2px;
+            background: color-mix(in srgb, var(--accent) 10%, transparent);
+        }
+
+        .col > h2 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin: 0 0 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .col .count {
+            color: var(--muted);
+            font-weight: 400;
+            font-size: 12px;
+        }
+
+        .tiles {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+            gap: 9px;
+        }
+
+        .tile {
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 9px 10px;
+            background: var(--plane);
+            cursor: pointer;
+            position: relative;
+            transition: border-color .1s;
+        }
+
+        .tile:hover {
+            border-color: var(--accent);
+        }
+
+        .tile.active {
+            box-shadow: 0 0 0 2px var(--accent) inset;
+            border-color: var(--accent);
+        }
+
+        .tile.stale {
+            opacity: 0.5;
+        }
+
+        .tile.playing {
+            border-color: var(--good);
+            box-shadow: 0 0 0 2px var(--good) inset;
+            opacity: 1;
+        }
+
+        .flag.play {
+            background: var(--good);
+            color: #0b0b0b;
+        }
+
+        .tname {
+            font-weight: 650;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .tmeta {
+            color: var(--muted);
+            font-size: 12px;
+            margin-top: 2px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            align-items: center;
+        }
+
+        .flag {
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+            padding: 0 6px;
+            border-radius: 999px;
+            font-size: 11px;
+            font-weight: 600;
+            background: var(--chip);
+        }
+
+        .flag.tgt {
+            background: color-mix(in srgb, var(--bad) 22%, transparent);
+        }
+
+        .flag.arc {
+            background: color-mix(in srgb, var(--warn) 24%, transparent);
+        }
+
+        .flag.grp {
+            background: var(--accent-soft);
+        }
+
+        .assign {
+            display: flex;
+            gap: 4px;
+            margin-top: 8px;
+        }
+
+        .assign button {
+            padding: 2px 8px;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        .assign button.on {
+            background: var(--accent);
+            color: #fff;
+            border-color: transparent;
+        }
+
+        .assign button.on.arene {
+            background: var(--warn);
+            color: #0b0b0b;
+        }
+
+        .empty {
+            color: var(--muted);
+            font-size: 12.5px;
+            font-style: italic;
+            padding: 6px 2px;
+        }
+
+        .note {
+            margin-top: 14px;
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        code {
+            background: var(--chip);
+            padding: 1px 5px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <header>
+        <h1>🎛 Comptes</h1>
+        <span class="spacer"></span>
+        <a class="nav" href="/ui/">Persos</a>
+        <a class="nav" href="/ui/turn.html" target="_blank">▶ Pop-up qui joue</a>
+        <a class="nav" href="/ui/live.html">Repop live</a>
+        <a class="nav" href="/ui/dungeon.html">Donjons</a>
+        <a class="nav" href="/ui/build.html">Build</a>
+        <button id="theme">◐</button>
+    </header>
+
+    <div class="bar">
+        <span class="kv"><span class="dot" id="walkerdot"></span> walker <span id="walkerst">…</span></span>
+        <span class="kv"><b id="n-total">0</b> <span class="sub">en ligne</span></span>
+        <span class="kv">⚔️ <b id="n-arene">0</b> <span class="sub">arène</span></span>
+        <span class="kv">🏰 <b id="n-farm">0</b> <span class="sub">farm</span></span>
+        <span class="kv">— <b id="n-none">0</b> <span class="sub">non assignés</span></span>
+        <span class="kv">▶ <b id="n-play">0</b> <span class="sub">à jouer</span></span>
+        <span class="spacer"></span>
+        <span class="kv sub">Actif : <b id="focusname">—</b></span>
+    </div>
+
+    <div class="cols">
+        <div class="col arene">
+            <h2>⚔️ Arène <span class="count" id="c-arene"></span>
+                <span class="spacer" style="flex:1"></span>
+                <button data-cycle="arene" title="activer le compte suivant du groupe">▶ suivant</button>
+            </h2>
+            <div class="tiles" id="g-arene"></div>
+        </div>
+        <div class="col farm">
+            <h2>🏰 Farm scara <span class="count" id="c-farm"></span>
+                <span class="spacer" style="flex:1"></span>
+                <button data-cycle="farm" title="activer le compte suivant du groupe">▶ suivant</button>
+            </h2>
+            <div class="tiles" id="g-farm"></div>
+        </div>
+    </div>
+
+    <div class="col none">
+        <h2>— Non assignés <span class="count" id="c-none"></span></h2>
+        <div class="tiles" id="g-none"></div>
+    </div>
+
+    <div class="col order">
+        <h2>↕ Ordre de balayage (pop-up « Tout activer »)</h2>
+        <div id="orderlist"></div>
+        <div class="sub" style="margin-top:6px">Glisse ⠿ pour ranger (ou ↑/↓) — 1ʳᵉ ligne = activée en 1ᵉʳ. Enregistré
+            auto.
+        </div>
+    </div>
+
+    <div class="note">
+        Clic sur un compte = <b>activer sa fenêtre</b> (WinActivate via le walker — <b>il doit tourner</b> ;
+        une page web ne peut pas activer une fenêtre elle-même). « ▶ suivant » enchaîne les fenêtres d'un
+        groupe (jongler en arène). Les boutons <code>⚔️ 🏰 —</code> rangent chaque compte ; l'assignation
+        est mémorisée.<br>
+        La liste des comptes vient du <b>walker</b> (fenêtres Dofus ouvertes) — tous les clients
+        apparaissent, même immobiles. Une tuile grisée « fenêtre ouverte » = pas encore vue bouger
+        par le sniffer (map/zone inconnues tant qu'elle ne se déplace pas). <b>Walker éteint</b> → seuls
+        les comptes vus bouger apparaissent.<br>
+        <b>Tour de jeu en combat</b> : pas encore affiché — le protocole de combat n'est pas décodé.
+        Capture un combat (dumpcap pendant un tour) et je branche le « c'est à qui » ici.
+    </div>
+</div>
+
+<script>
+    const $ = id => document.getElementById(id);
+    const esc = s => (s ?? "").toString().replace(/[&<>"]/g, c => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;'
+    }[c]));
+
+    let ACCOUNTS = [];          // /live/state accounts (overlay map/zone/combat)
+    let WINDOWS = [];           // fenêtres Dofus ouvertes (walker) = liste réelle
+    let GMAP = {};              // name -> group (assignation MANUELLE)
+    let RULES = [];             // règles d'auto-rangement par motif de nom
+    let TURNS = new Set();      // noms des persos dont c'est le tour (combat)
+    let ORDER = [];             // ordre de balayage personnalisé (pop-up « Tout activer »)
+    let orderSig = "";          // signature du dernier rendu (anti-scintillement)
+    let dragging = false, dragName = null;   // drag & drop de l'ordre
+    let focusName = "";         // dernier compte activé
+    let cycleIdx = {arene: -1, farm: -1};
+
+    function keyOf(a) {
+        return a.name || a.label;
+    }
+
+    // nom sans le tag de guilde "-[Gal]" -> pour appliquer les règles
+    function baseName(name) {
+        return (name || "").replace(/\s*-?\s*\[[^\]]*]\s*$/, "").trim().toLowerCase();
+    }
+
+    function matchRules(name) {
+        const b = baseName(name);
+        for (const r of RULES) {
+            if (r.prefix && b.startsWith(r.prefix.toLowerCase())) return r.group;
+            if (r.suffix && b.endsWith(r.suffix.toLowerCase())) return r.group;
+            if (r.contains && b.includes(r.contains.toLowerCase())) return r.group;
+        }
+        return "";
+    }
+
+    // groupe effectif : assignation manuelle sinon règle automatique
+    function groupOf(name) {
+        return GMAP[name] || matchRules(name);
+    }
+
+    // Liste des comptes à afficher. Si le walker rapporte des fenêtres, elles font
+    // FOI (liste réelle des clients) et le sniffer ne sert qu'à enrichir map/zone ;
+    // sinon on retombe sur ce que le sniffer a vu bouger.
+    function mergedAccounts() {
+        const live = {};
+        for (const a of ACCOUNTS) if (a.name) live[a.name] = a;
+        if (WINDOWS.length) {
+            return WINDOWS.map(nm => live[nm]
+                ? {...live[nm], _live: true, _win: true}
+                : {
+                    name: nm, label: nm, map_id: null, coord: null, zone: null,
+                    groups: 0, target: false, archi: false, _win: true, _live: false
+                });
+        }
+        return ACCOUNTS.map(a => ({...a, _live: true}));
+    }
+
+    async function focus(name) {
+        if (!name) return;
+        focusName = name;
+        $("focusname").textContent = name;
+        try {
+            await fetch("/walk/focus", {
+                method: "POST", headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({name}),
+            });
+        } catch (e) {
+        }
+        render();
+    }
+
+    async function assign(name, group) {
+        if (!name) return;
+        const cur = GMAP[name] || "";
+        const next = cur === group ? "" : group;   // reclic sur le groupe courant = retire
+        GMAP[name] = next;                          // optimiste
+        try {
+            await fetch("/board/groups", {
+                method: "PUT", headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({name, group: next}),
+            });
+        } catch (e) {
+        }
+        render();
+    }
+
+    function cycle(group) {
+        const list = mergedAccounts().filter(a => a.name && groupOf(a.name) === group)
+            .sort((a, b) => a.name.localeCompare(b.name));
+        if (!list.length) return;
+        cycleIdx[group] = (cycleIdx[group] + 1) % list.length;
+        focus(list[cycleIdx[group]].name);
+    }
+
+    // --- ordre de balayage (pop-up « Tout activer ») ------------------------
+    function effectiveOrder() {
+        const open = WINDOWS.slice();
+        const out = ORDER.filter(n => open.includes(n));
+        for (const n of open) if (!out.includes(n)) out.push(n);   // nouvelles à la fin
+        return out;
+    }
+
+    async function saveOrder() {
+        try {
+            await fetch("/board/order", {
+                method: "PUT", headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({order: ORDER}),
+            });
+        } catch (e) {
+        }
+    }
+
+    function moveOrder(name, dir) {
+        const list = effectiveOrder();
+        const i = list.indexOf(name), j = i + dir;
+        if (i < 0 || j < 0 || j >= list.length) return;
+        [list[i], list[j]] = [list[j], list[i]];
+        ORDER = list;
+        orderSig = "";
+        saveOrder();
+        renderOrder();
+    }
+
+    // déplace `name` juste avant `target` (drag & drop)
+    function reorderTo(name, target) {
+        if (!name || name === target) return;
+        const list = effectiveOrder();
+        const from = list.indexOf(name);
+        if (from < 0) return;
+        list.splice(from, 1);
+        let to = target ? list.indexOf(target) : list.length;
+        if (to < 0) to = list.length;
+        list.splice(to, 0, name);
+        ORDER = list;
+        orderSig = "";
+        saveOrder();
+        renderOrder();
+    }
+
+    function renderOrder() {
+        const box = $("orderlist");
+        if (!box || dragging) return;                 // pas de re-rendu pendant un glisser
+        const list = effectiveOrder();
+        const sig = list.join("|");
+        if (sig === orderSig && box.children.length) return;   // rien de neuf -> pas de rebuild (anti-scintillement)
+        orderSig = sig;
+        const open = new Set(WINDOWS);
+        box.innerHTML = list.length ? list.map((n, i) => {
+            const g = groupOf(n), tag = g === "farm" ? "🏰" : (g === "arene" ? "⚔️" : "·");
+            const off = open.has(n) ? "" : ` <span class="off">(fermé)</span>`;
+            return `<div class="orow" draggable="true" data-name="${esc(n)}">
+                <span class="grip" title="glisser pour ranger">⠿</span>
+                <span class="idx">${i + 1}</span><span>${tag}</span>
+                <span class="onm">${esc(n)}${off}</span>
+                <button data-omove="-1" data-name="${esc(n)}" ${i === 0 ? "disabled" : ""}>↑</button>
+                <button data-omove="1" data-name="${esc(n)}" ${i === list.length - 1 ? "disabled" : ""}>↓</button>
+            </div>`;
+        }).join("") : `<div class="empty">aucune fenêtre (lance le walker)</div>`;
+    }
+
+    function tileHtml(a) {
+        const name = keyOf(a), grp = groupOf(name);
+        const noLive = !a._live;              // fenêtre ouverte mais pas (encore) vue bouger
+        const playing = TURNS.has(name);      // c'est son tour en combat
+        const flags = [];
+        if (playing) flags.push(`<span class="flag play">▶ joue</span>`);
+        if (a.groups) flags.push(`<span class="flag grp">${a.groups} grp</span>`);
+        if (a.target) flags.push(`<span class="flag tgt">⚔ cible</span>`);
+        if (a.archi) flags.push(`<span class="flag arc">✦ archi</span>`);
+        const where = noLive ? "fenêtre ouverte" : (a.zone ? esc(a.zone) : (a.map_id != null ? "map " + a.map_id : "—"));
+        const co = a.coord ? `[${a.coord[0]},${a.coord[1]}]` : "";
+        return `<div class="tile ${name === focusName ? 'active' : ''} ${noLive ? 'stale' : ''} ${playing ? 'playing' : ''}" data-name="${esc(name)}">
+            <div class="tname">${esc(name)}</div>
+            <div class="tmeta"><span>${where}</span> <span class="sub">${co}</span> ${flags.join("")}</div>
+            <div class="assign">
+                <button class="${grp === 'arene' ? 'on arene' : ''}" data-set="arene" data-name="${esc(name)}">⚔️</button>
+                <button class="${grp === 'farm' ? 'on' : ''}" data-set="farm" data-name="${esc(name)}">🏰</button>
+                <button class="${grp === '' ? '' : ''}" data-set="" data-name="${esc(name)}" title="retirer du groupe">—</button>
+            </div>
+        </div>`;
+    }
+
+    function render() {
+        const present = mergedAccounts().sort((a, b) => keyOf(a).localeCompare(keyOf(b)));
+        const buckets = {arene: [], farm: [], none: []};
+        for (const a of present) {
+            const g = groupOf(a.name);
+            (buckets[g] || buckets.none).push(a);
+        }
+        $("g-arene").innerHTML = buckets.arene.map(tileHtml).join("") || `<div class="empty">aucun compte ici</div>`;
+        $("g-farm").innerHTML = buckets.farm.map(tileHtml).join("") || `<div class="empty">aucun compte ici</div>`;
+        $("g-none").innerHTML = buckets.none.map(tileHtml).join("") || `<div class="empty">tout est rangé 👍</div>`;
+        $("n-total").textContent = present.length;
+        $("n-play").textContent = present.filter(a => TURNS.has(keyOf(a))).length;
+        $("n-arene").textContent = buckets.arene.length;
+        $("n-farm").textContent = buckets.farm.length;
+        $("n-none").textContent = buckets.none.length;
+        $("c-arene").textContent = buckets.arene.length ? `(${buckets.arene.length})` : "";
+        $("c-farm").textContent = buckets.farm.length ? `(${buckets.farm.length})` : "";
+        $("c-none").textContent = buckets.none.length ? `(${buckets.none.length})` : "";
+        renderOrder();
+    }
+
+    // clics délégués : assignation (boutons) ou focus (corps de tuile)
+    document.querySelector(".wrap").addEventListener("click", e => {
+        const setBtn = e.target.closest("[data-set]");
+        if (setBtn) {
+            assign(setBtn.dataset.name, setBtn.dataset.set);
+            e.stopPropagation();
+            return;
+        }
+        const cyc = e.target.closest("[data-cycle]");
+        if (cyc) {
+            cycle(cyc.dataset.cycle);
+            return;
+        }
+        const mv = e.target.closest("[data-omove]");
+        if (mv) {
+            moveOrder(mv.dataset.name, parseInt(mv.dataset.omove, 10));
+            return;
+        }
+        const tile = e.target.closest(".tile");
+        if (tile) focus(tile.dataset.name);
+    });
+
+    $("theme").onclick = () => {
+        const r = document.documentElement;
+        r.dataset.theme = r.dataset.theme === "dark" ? "light" : "dark";
+    };
+
+    // --- drag & drop de l'ordre de balayage ---------------------------------
+    (function wireDrag() {
+        const box = $("orderlist");
+        if (!box) return;
+        const clearHi = () => box.querySelectorAll(".orow.dragover").forEach(x => x.classList.remove("dragover"));
+        box.addEventListener("dragstart", e => {
+            const r = e.target.closest(".orow");
+            if (!r) return;
+            dragName = r.dataset.name;
+            dragging = true;
+            e.dataTransfer.effectAllowed = "move";
+            try {
+                e.dataTransfer.setData("text/plain", dragName);
+            } catch (_) {
+            }
+        });
+        box.addEventListener("dragover", e => {
+            if (!dragName) return;
+            e.preventDefault();
+            e.dataTransfer.dropEffect = "move";
+            const r = e.target.closest(".orow");
+            clearHi();
+            if (r) r.classList.add("dragover");
+        });
+        box.addEventListener("drop", e => {
+            e.preventDefault();
+            const r = e.target.closest(".orow");
+            const tgt = r ? r.dataset.name : null, nm = dragName;
+            dragging = false;
+            dragName = null;
+            clearHi();
+            if (nm) reorderTo(nm, tgt); else renderOrder();
+        });
+        box.addEventListener("dragend", () => {
+            dragging = false;
+            dragName = null;
+            clearHi();
+            renderOrder();
+        });
+    })();
+
+    async function poll() {
+        try {
+            const s = await (await fetch("/live/state")).json();
+            ACCOUNTS = s.accounts || [];
+            TURNS = new Set(s.turn_names || []);
+            $("walkerdot").style.background = (s.last_event_ago_s != null && s.last_event_ago_s < 15) ? "var(--good)" : "var(--muted)";
+        } catch (e) {
+            $("walkerdot").style.background = "var(--bad)";
+        }
+        try {
+            GMAP = await (await fetch("/board/groups")).json() || {};
+        } catch (e) {
+        }
+        try {
+            RULES = await (await fetch("/board/rules")).json() || [];
+        } catch (e) {
+        }
+        try {
+            WINDOWS = (await (await fetch("/board/windows")).json()).windows || [];
+        } catch (e) {
+            WINDOWS = [];
+        }
+        try {
+            ORDER = await (await fetch("/board/order")).json() || [];
+        } catch (e) {
+        }
+        try {
+            const ws = await (await fetch("/walk/state")).json();
+            $("walkerst").textContent = ws.walker_online
+                ? `en ligne · ${WINDOWS.length} fenêtre(s)` : "hors ligne";
+        } catch (e) {
+            $("walkerst").textContent = "?";
+        }
+        render();
+    }
+
+    poll();
+    setInterval(poll, 1000);
+</script>
+<script src="/ui/nav.js"></script>
+</body>
+</html>

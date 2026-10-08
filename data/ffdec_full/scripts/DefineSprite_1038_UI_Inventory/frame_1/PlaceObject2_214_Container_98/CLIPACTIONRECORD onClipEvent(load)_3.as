@@ -1,0 +1,32 @@
+onClipEvent(load){
+   while(true)
+   {
+      if(!ord("\n"))
+      {
+         if(!(true or true))
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push(false);
+      }
+      if(!§§pop())
+      {
+         function §\x1e\x11\x0b§(eventObj)
+         {
+            _parent.dragItem({target:this});
+         }
+         if(!ord("\x05"))
+         {
+            §§goto(addr069c);
+         }
+      }
+      §§push(eval("\x1e\x11\x0b"));
+      break;
+   }
+   this["\x15\x1d\x15"]("drag",§§pop());
+   addr069c:
+   §§pop()(§§pop());
+}

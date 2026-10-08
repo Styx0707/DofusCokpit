@@ -1,0 +1,86 @@
+on(construct){
+   loop2:
+   while(true)
+   {
+      loop3:
+      while(true)
+      {
+         if(!(true or true))
+         {
+            if(false)
+            {
+               while(true)
+               {
+                  set("\b\x12\b\x064{invalid_utf8=157}\x02",true);
+                  set("=","<{invalid_utf8=150}\x04");
+                  set("\b","\x05");
+                  §§push("\x1d{invalid_utf8=150}\x04");
+                  §§push("\x17$");
+                  if(!getTimer())
+                  {
+                     var §§pop() = §§pop();
+                     §§goto(addr24d0);
+                  }
+                  §§goto(addr250c);
+                  break loop3;
+               }
+               §§goto(addr250b);
+               addr24aa:
+            }
+         }
+         else
+         {
+            §§push(462398092);
+         }
+         if(!§§pop())
+         {
+            break;
+         }
+         break loop2;
+      }
+      set(§§pop(),§§pop());
+      set(§§constant(12),false);
+      §§goto(addr24aa);
+   }
+   if(ord("\t"))
+   {
+      do
+      {
+         set("{invalid_utf8=150}\x05",false);
+         set("\x07{invalid_utf8=140}{invalid_utf8=162}{invalid_utf8=143}\x1b{invalid_utf8=157}\x02",false);
+         set("{invalid_utf8=204}",false);
+         set("{invalid_utf8=136}\x07","\x02");
+         set("\n","\x17$");
+         §§push("\x1d{invalid_utf8=150}\x04");
+         §§push(false);
+         if(!ord("\x0b"))
+         {
+            addr250b:
+            §§pop() implements ;
+            addr250c:
+            set(§§pop(),§§pop());
+            set("\b\x01\x05","\x17$");
+            set("\x1d{invalid_utf8=150}\x04",false);
+            set("\b\x02\x05",false);
+            set("\x1d{invalid_utf8=150}\x04",false);
+            set("\b\x03\b\x04\x1d{invalid_utf8=150}\x04",false);
+            §§goto(addr2678);
+         }
+         set(§§pop(),§§pop());
+         set(§§constant(8),true);
+         set(§§constant(9),false);
+         set(§§constant(10),§§constant(6));
+         §§push(§§constant(11));
+         §§push(§§constant(6));
+         if(ord("\x07"))
+         {
+            break loop3;
+         }
+         §§push(getProperty(§§pop(), _X));
+      }
+      while(ord("\t"));
+      addr24d0:
+   }
+   startDrag(§§pop(),§§pop(),§§pop(),§§pop(),§§pop(),§§pop());
+   addr2678:
+}

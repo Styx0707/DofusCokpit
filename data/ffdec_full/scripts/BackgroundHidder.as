@@ -1,0 +1,16 @@
+while(true)
+{
+   if(false)
+   {
+      if(!ord("\b"))
+      {
+         break;
+      }
+   }
+   else
+   {
+      §§push("ank.gapi.controls.BackgroundHidder");
+   }
+   Object.registerClass("BackgroundHidder",eval(§§pop()));
+   break;
+}

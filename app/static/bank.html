@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dofus Retro — Banque</title>
+    <link rel="icon" type="image/svg+xml" href="/ui/favicon.svg">
+    <style>
+        :root {
+            --plane: #f9f9f7;
+            --surface: #fcfcfb;
+            --ink: #0b0b0b;
+            --ink2: #52514e;
+            --muted: #898781;
+            --grid: #e1e0d9;
+            --accent: #2a78d6;
+            --accent-soft: #cde2fb;
+            --good: #0ca30c;
+            --gold: #b8860b;
+            --chip: #f0efec;
+            --border: rgba(11, 11, 11, 0.10);
+        }
+
+        :root[data-theme="dark"] {
+            --plane: #0d0d0d;
+            --surface: #1a1a19;
+            --ink: #ffffff;
+            --ink2: #c3c2b7;
+            --muted: #898781;
+            --grid: #2c2c2a;
+            --accent: #3987e5;
+            --accent-soft: #184f95;
+            --good: #0ca30c;
+            --gold: #e0b544;
+            --chip: #242422;
+            --border: rgba(255, 255, 255, 0.10);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--plane);
+            color: var(--ink);
+            font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+            font-size: 14px;
+            line-height: 1.45;
+        }
+
+        .wrap {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 24px 20px 60px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 20px;
+            margin: 0;
+            font-weight: 650;
+        }
+
+        a.nav {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .spacer {
+            flex: 1;
+        }
+
+        button, select, input[type="search"] {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            color: var(--ink2);
+            border-radius: 8px;
+            padding: 8px 11px;
+            cursor: pointer;
+            font-size: 13px;
+            font-family: inherit;
+        }
+
+        input[type="search"] {
+            cursor: text;
+            min-width: 220px;
+            color: var(--ink);
+        }
+
+        input:focus, select:focus {
+            outline: 2px solid var(--accent-soft);
+            border-color: var(--accent);
+        }
+
+        .kpis {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .tile {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px 16px;
+        }
+
+        .tile .v {
+            font-size: 25px;
+            font-weight: 680;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .tile .l {
+            color: var(--muted);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-top: 2px;
+        }
+
+        .tile .v.gold {
+            color: var(--gold);
+        }
+
+        .panel {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 6px 4px;
+            margin-bottom: 18px;
+        }
+
+        .panel h2 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--ink2);
+            margin: 12px 14px 8px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .panel h2 .spacer {
+            flex: 1;
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 0 14px 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 7px 14px;
+            font-size: 13.5px;
+            border-top: 1px solid var(--grid);
+        }
+
+        th {
+            color: var(--muted);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            font-weight: 600;
+            border-top: none;
+            cursor: pointer;
+            user-select: none;
+            white-space: nowrap;
+        }
+
+        th.num, td.num {
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+        }
+
+        tbody tr:hover {
+            background: color-mix(in srgb, var(--accent) 6%, transparent);
+        }
+
+        .iname {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .iname img {
+            width: 26px;
+            height: 26px;
+            object-fit: contain;
+        }
+
+        .ph {
+            width: 26px;
+            height: 26px;
+            border-radius: 6px;
+            background: var(--chip);
+            display: inline-block;
+            flex: none;
+        }
+
+        .sub {
+            color: var(--muted);
+            font-size: 11.5px;
+        }
+
+        .src {
+            font-size: 10px;
+            border-radius: 5px;
+            padding: 0 5px;
+            margin-left: 6px;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+
+        .src.market {
+            color: var(--good);
+            border: 1px solid color-mix(in srgb, var(--good) 45%, transparent);
+        }
+
+        .src.vendor {
+            color: var(--muted);
+            border: 1px solid var(--border);
+        }
+
+        .bar {
+            position: relative;
+            height: 14px;
+            background: var(--grid);
+            border-radius: 5px;
+            overflow: hidden;
+            min-width: 90px;
+        }
+
+        .bar > span {
+            position: absolute;
+            inset: 0 auto 0 0;
+            background: var(--accent);
+            border-radius: 5px;
+        }
+
+        .catrow {
+            display: grid;
+            grid-template-columns: 180px 1fr 120px;
+            gap: 10px;
+            align-items: center;
+            padding: 4px 14px;
+        }
+
+        .catrow .nm {
+            color: var(--ink2);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .catrow .val {
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+            color: var(--ink2);
+        }
+
+        .catbar {
+            height: 16px;
+            background: var(--grid);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .catbar > span {
+            display: block;
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), var(--accent-soft));
+        }
+
+        .foot {
+            color: var(--muted);
+            font-size: 12px;
+            margin-top: 20px;
+        }
+
+        .foot code {
+            background: var(--chip);
+            padding: 1px 5px;
+            border-radius: 5px;
+        }
+
+        .empty {
+            color: var(--muted);
+            padding: 10px 14px;
+        }
+
+        .warn {
+            background: color-mix(in srgb, var(--gold) 12%, var(--surface));
+            border: 1px solid color-mix(in srgb, var(--gold) 40%, transparent);
+            border-radius: 10px;
+            padding: 10px 14px;
+            margin-bottom: 18px;
+            font-size: 13px;
+            color: var(--ink2);
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <header>
+        <div><h1>Banque</h1><a class="nav" href="./">← Persos &amp; stuff</a>
+            &nbsp; <a class="nav" href="build.html">Suivi ressources</a></div>
+        <div class="spacer"></div>
+        <button id="refresh">↻ Rafraîchir</button>
+        <button id="theme">◐ Thème</button>
+    </header>
+
+    <div class="warn" id="pricewarn" style="display:none"></div>
+
+    <section class="kpis" id="kpis"></section>
+
+    <section class="panel"><h2>Valeur par catégorie
+        <span class="spacer"></span>
+        <span class="sub" id="catnote"></span>
+    </h2>
+        <div id="cats"></div>
+    </section>
+
+    <section class="panel"><h2>Contenu de la banque
+        <span class="spacer"></span>
+        <span class="sub" id="count"></span>
+    </h2>
+        <div class="controls">
+            <input type="search" id="q" placeholder="Rechercher un objet…">
+            <select id="type"></select>
+            <label class="sub"><input type="checkbox" id="unpriced"> sans prix marché</label>
+        </div>
+        <table>
+            <thead>
+            <tr>
+                <th data-sort="name">Objet</th>
+                <th data-sort="type">Type</th>
+                <th class="num" data-sort="level">Niv.</th>
+                <th class="num" data-sort="quantity">Quantité</th>
+                <th class="num" data-sort="unit_price">Prix u.</th>
+                <th class="num" data-sort="line_value">Valeur</th>
+                <th>Part</th>
+            </tr>
+            </thead>
+            <tbody id="rows"></tbody>
+        </table>
+    </section>
+
+    <div class="foot">
+        Valeur = <b>prix effectif</b> × quantité. Prix effectif = prix <b>marché</b> (badge vert, récupéré via dump HDV)
+        s'il existe, sinon prix <b>vendeur</b> PNJ (badge gris, souvent peu représentatif). La banque se met à jour
+        toute seule à l'ouverture en jeu (watcher <code>dumpcap</code>).
+    </div>
+</div>
+
+<script>
+    const $ = (s) => document.querySelector(s);
+    let DATA = [];
+    let sortKey = "line_value", sortDir = -1;
+
+    function esc(s) {
+        return (s ?? "").toString().replace(/[&<>"]/g, c => ({
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;'
+        }[c]));
+    }
+
+    function fmt(n) {
+        return (n || 0).toLocaleString("fr-FR");
+    }
+
+    function compact(n) {
+        n = n || 0;
+        if (Math.abs(n) >= 1e9) return (n / 1e9).toFixed(2) + " G";
+        if (Math.abs(n) >= 1e6) return (n / 1e6).toFixed(2) + " M";
+        if (Math.abs(n) >= 1e3) return (n / 1e3).toFixed(1) + " k";
+        return fmt(n);
+    }
+
+    function ico(x) {
+        return x.icon ? `<img src="${esc(x.icon)}" alt="" loading="lazy">` : `<span class="ph"></span>`;
+    }
+
+    async function load() {
+        DATA = await fetch("../bank/detail").then(r => r.json());
+        buildTypeFilter();
+        renderKpis();
+        renderCats();
+        renderRows();
+    }
+
+    function renderKpis() {
+        const kinds = DATA.length;
+        const qty = DATA.reduce((s, r) => s + r.quantity, 0);
+        const value = DATA.reduce((s, r) => s + r.line_value, 0);
+        const pricedVal = DATA.filter(r => r.priced).reduce((s, r) => s + r.line_value, 0);
+        const unpriced = DATA.filter(r => !r.priced).length;
+        const pct = value ? Math.round(100 * pricedVal / value) : 0;
+        const tiles = [
+            ["Objets distincts", fmt(kinds), ""],
+            ["Quantité totale", compact(qty), ""],
+            ["Valeur estimée", compact(value) + " k", "gold"],
+            ["Valorisé au marché", pct + " %", ""],
+            ["Sans prix marché", fmt(unpriced), ""],
+        ];
+        $("#kpis").innerHTML = tiles.map(([l, v, c]) =>
+            `<div class="tile"><div class="v ${c}">${v}</div><div class="l">${l}</div></div>`).join("");
+
+        const warn = $("#pricewarn");
+        if (unpriced === kinds && kinds > 0) {
+            warn.style.display = "";
+            warn.innerHTML = "⚠️ Aucun <b>prix marché</b> connu pour l'instant : la valeur ci-dessous utilise le prix " +
+                "vendeur PNJ (peu fiable). Les prix marché arriveront via le dump de l'hôtel de vente.";
+        } else {
+            warn.style.display = "none";
+        }
+    }
+
+    function renderCats() {
+        const by = {};
+        for (const r of DATA) {
+            const t = r.type || "(sans type)";
+            (by[t] = by[t] || {value: 0, qty: 0, kinds: 0});
+            by[t].value += r.line_value;
+            by[t].qty += r.quantity;
+            by[t].kinds += 1;
+        }
+        const cats = Object.entries(by).map(([t, d]) => ({t, ...d})).sort((a, b) => b.value - a.value);
+        const max = cats.length ? cats[0].value : 0;
+        const top = cats.slice(0, 12);
+        $("#catnote").textContent = `${cats.length} catégories`;
+        $("#cats").innerHTML = top.map(c => `
+      <div class="catrow">
+        <div class="nm" title="${esc(c.t)}">${esc(c.t)} <span class="sub">(${c.kinds})</span></div>
+        <div class="catbar"><span style="width:${max ? (100 * c.value / max) : 0}%"></span></div>
+        <div class="val">${compact(c.value)} k</div>
+      </div>`).join("") || `<div class="empty">Banque vide.</div>`;
+    }
+
+    function buildTypeFilter() {
+        const cur = $("#type").value;
+        const types = [...new Set(DATA.map(r => r.type || "(sans type)"))].sort((a, b) => a.localeCompare(b, "fr"));
+        $("#type").innerHTML = `<option value="">Tous les types</option>` +
+            types.map(t => `<option value="${esc(t)}">${esc(t)}</option>`).join("");
+        if (cur) $("#type").value = cur;
+    }
+
+    function currentRows() {
+        const q = $("#q").value.trim().toLowerCase();
+        const type = $("#type").value;
+        const unpriced = $("#unpriced").checked;
+        let rows = DATA.filter(r => {
+            if (q && !(r.name || "").toLowerCase().includes(q)) return false;
+            if (type && (r.type || "(sans type)") !== type) return false;
+            if (unpriced && r.priced) return false;
+            return true;
+        });
+        rows.sort((a, b) => {
+            let x = a[sortKey], y = b[sortKey];
+            if (sortKey === "name" || sortKey === "type") {
+                x = (x || "").toString().toLowerCase();
+                y = (y || "").toString().toLowerCase();
+                return x < y ? -sortDir : x > y ? sortDir : 0;
+            }
+            return ((x || 0) - (y || 0)) * sortDir;
+        });
+        return rows;
+    }
+
+    function renderRows() {
+        const rows = currentRows();
+        const total = DATA.reduce((s, r) => s + r.line_value, 0) || 1;
+        $("#count").textContent = `${rows.length} ligne(s) affichée(s)`;
+        $("#rows").innerHTML = rows.map(r => {
+            const srcBadge = r.priced
+                ? `<span class="src market" title="prix marché (dump HDV)">marché</span>`
+                : `<span class="src vendor" title="prix vendeur PNJ">vendeur</span>`;
+            const part = Math.min(100, 100 * r.line_value / total);
+            return `<tr>
+        <td><span class="iname">${ico(r)}<span>${esc(r.name)}</span></span></td>
+        <td class="sub">${esc(r.type || "")}</td>
+        <td class="num">${r.level ?? ""}</td>
+        <td class="num">${fmt(r.quantity)}</td>
+        <td class="num">${r.unit_price != null ? fmt(r.unit_price) : "—"}${srcBadge}</td>
+        <td class="num">${compact(r.line_value)} k</td>
+        <td><div class="bar"><span style="width:${part}%"></span></div></td>
+      </tr>`;
+        }).join("") || `<tr><td colspan="7" class="empty">Aucun objet.</td></tr>`;
+    }
+
+    // --- interactions ---
+    $("#q").addEventListener("input", renderRows);
+    $("#type").addEventListener("change", renderRows);
+    $("#unpriced").addEventListener("change", renderRows);
+    $("#refresh").addEventListener("click", load);
+    document.querySelectorAll("th[data-sort]").forEach(th => th.addEventListener("click", () => {
+        const k = th.dataset.sort;
+        if (sortKey === k) sortDir = -sortDir;
+        else {
+            sortKey = k;
+            sortDir = (k === "name" || k === "type") ? 1 : -1;
+        }
+        renderRows();
+    }));
+    $("#theme").addEventListener("click", () => {
+        const r = document.documentElement;
+        r.dataset.theme = r.dataset.theme === "dark" ? "light" : "dark";
+    });
+    if (window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches) document.documentElement.dataset.theme = "dark";
+    load();
+</script>
+<script src="/ui/nav.js"></script>
+</body>
+</html>

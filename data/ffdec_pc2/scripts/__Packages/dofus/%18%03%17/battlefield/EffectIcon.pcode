@@ -1,0 +1,329 @@
+Push true
+PushDuplicate
+Or
+If loc001c
+Push false
+Not
+If loc0021
+Jump loc05eb
+loc001c:Push false
+loc0021:Not
+If loc04e5
+ConstantPool "{invalid_utf8=181}", "\x10"
+loc0030:SetMember
+loc0031:Jump loc05eb
+loc0036:SetMember
+Push register1, "initialize"
+Push "\x03"
+CharToAscii
+If loc01a1
+CloneSprite
+loc004b:DefineFunction "", 0 {
+}
+Push "\x04"
+CharToAscii
+If loc0070
+SetProperty
+loc0060:SetMember
+Push register1, "\x1a\x17"
+GetMember
+GetTime
+If loc004b
+SetProperty
+loc0070:Push "\x1a\b\x1c", 3, register1, "addProperty"
+CallMethod
+Pop
+Push register1, "\x19\x16"
+GetMember
+Push "\x03"
+CharToAscii
+If loc010e
+CloneSprite
+loc0095:DefineFunction2 "", 0, 3, false, false, false, true, true, false, false, true, false {
+Push 0, register2, undefined
+CallMethod
+Pop
+Push "yahoo", 1, "_global"
+GetVariable
+Push "\x1b\f\x03"
+CallMethod
+Pop
+Push register1, "\x1d\x1b\x10"
+GetMember
+Push register1, "\x1e\x0b\x11"
+GetTime
+If loc00d7
+CloneSprite
+loc00d7:GetMember
+Push 2, register1, "initialize"
+CallMethod
+Pop
+}
+Push true
+If loc03e2
+SetMember
+loc00f1:NewObject
+SetMember
+loc00f3:Push "dofus"
+GetVariable
+Push "\x18\x03\x17"
+GetMember
+Push "battlefield"
+GetMember
+Not
+Not
+GetTime
+If loc0166
+ImplementsOp
+loc010e:DefineFunction "", 0 {
+}
+GetTime
+If loc042f
+GetProperty
+loc011d:SetMember
+Push register1, "\x1a\x17"
+Push "\x07"
+CharToAscii
+If loc04b5
+CastOp
+loc0132:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x1b\x04\x14" {
+Push register1, "\x1e\x0b\x11", register2
+SetMember
+Push 0, register1, "\x05\x13"
+CallMethod
+Return
+}
+Push false
+Not
+If loc011d
+GetProperty
+loc0166:If loc018b
+Push "_global"
+GetVariable
+Push "dofus"
+GetMember
+Push "\x18\x03\x17"
+GetMember
+Push "battlefield", 0, "Object"
+NewObject
+SetMember
+loc018b:Push "_global"
+GetVariable
+Push "dofus"
+Push true
+If loc0410
+DefineLocal
+loc01a1:DefineFunction2 "", 2, 7, false, false, true, false, true, false, false, true, false, 2, "\x1b\x04\x14", 3, "\x19\f\x1a" {
+Push register2
+StoreRegister 0
+Push "-"
+StrictEquals
+If loc01e9
+Push register0, "+"
+StrictEquals
+If loc0264
+Push register0, "*"
+StrictEquals
+If loc02c0
+Jump loc0380
+loc01e9:Push "_x", 1, "_y", 1, 2
+InitObject
+Push 10, "_mcOp", "Icon-", 4, register1, "attachMovie"
+Push false
+Not
+If loc02fd
+SetProperty
+loc0221:GetMember
+Push 1, "Color"
+NewObject
+StoreRegister 5
+Pop
+Push "dofus"
+GetVariable
+Push "\x18\x03\x17"
+GetMember
+Push "battlefield"
+GetTime
+If loc02a0
+StartDrag
+loc024a:GetMember
+Push "\x16\x1d\x17"
+GetMember
+Push 1, register4, "setRGB"
+CallMethod
+Pop
+Jump loc0380
+loc0264:Push "_x", 1, "_y", 1, 2
+InitObject
+Push 10, "_mcOp", "Icon+", 4, register1, "attachMovie"
+CallMethod
+Pop
+Push register1, "_mcbackground"
+GetTime
+If loc0221
+GetProperty
+loc02a0:GetMember
+Push "EffectIcon"
+GetMember
+Push "\x16\x1d\x18"
+GetMember
+Push 1, register5, "setRGB"
+CallMethod
+Pop
+Jump loc0380
+loc02c0:Push "_x", 1, "_y", 1, 2
+InitObject
+Push 10, "_mcOp", "Icon*", 4, register1, "attachMovie"
+CallMethod
+Pop
+Push register1, "_mcbackground"
+GetTime
+Increment
+If loc0336
+SetProperty
+loc02fd:CallMethod
+Pop
+Push register1, "_mcbackground"
+GetMember
+Push 1, "Color"
+NewObject
+StoreRegister 4
+Pop
+Push "dofus"
+GetVariable
+Push "\x18\x03\x17"
+GetMember
+Push "battlefield"
+GetMember
+Push "EffectIcon"
+GetTime
+Increment
+If loc024a
+ImplementsOp
+loc0336:GetMember
+Push 1, "Color"
+NewObject
+StoreRegister 6
+Pop
+Push "dofus"
+GetVariable
+Push "\x18\x03\x17"
+GetMember
+Push "battlefield"
+GetMember
+Push "EffectIcon"
+GetMember
+Push "\x16\x1d\x16"
+GetTime
+Increment
+If loc036c
+StartDrag
+loc036c:GetMember
+Push 1, register6, "setRGB"
+CallMethod
+Pop
+Jump loc0380
+}
+loc0380:GetTime
+Increment
+If loc0060
+CloneSprite
+loc0388:GetVariable
+Not
+Not
+If loc03a4
+Push "_global"
+GetVariable
+Push "dofus", 0, "Object"
+NewObject
+SetMember
+loc03a4:Push "dofus"
+GetTime
+Increment
+If loc0484
+Extends
+loc03b1:Push "dofus"
+GetVariable
+Push "\x18\x03\x17"
+GetMember
+Push "battlefield"
+GetMember
+Push "EffectIcon"
+GetMember
+Not
+Not
+If loc0031
+Push "dofus"
+Push "\x0b"
+CharToAscii
+If loc0388
+SetMember
+loc03e2:StoreRegister 0
+SetMember
+Push register0, "MovieClip"
+GetVariable
+Extends
+Push register0, "prototype"
+GetMember
+StoreRegister 1
+Pop
+Push register1, "\x19\x16"
+Push false
+Not
+If loc0132
+StartDrag
+loc0410:GetMember
+Push "\x18\x03\x17"
+GetMember
+Push "battlefield"
+GetMember
+Push "EffectIcon"
+Push "\x03"
+CharToAscii
+If loc0095
+ImplementsOp
+loc042f:Push "operator", 3, register1, "addProperty"
+CallMethod
+Pop
+Push 1, null, register1, 3, "ASSetPropFlags"
+CallFunction
+Pop
+Push register0, "\x16\x1d\x18", 255
+SetMember
+Push register0, "\x16\x1d\x17", 16711680
+SetMember
+Push register0, "\x16\x1d\x16", 65280
+Push true
+If loc0030
+StartDrag
+loc0484:GetVariable
+Push "\x18\x03\x17"
+GetMember
+Not
+Not
+If loc00f3
+Push "_global"
+GetVariable
+Push "dofus"
+GetMember
+Push "\x18\x03\x17", 0, "Object"
+Push true
+If loc00f1
+GetProperty
+loc04b5:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x19\f\x1a" {
+Push register1, "\x1d\x1b\x10", register2
+SetMember
+Push 0, register1, "__get__qte"
+CallMethod
+Return
+}
+GetTime
+Increment
+If loc0036
+SetProperty
+loc04e5:ConstantPool "dofus", "\x18\x03\x17", "battlefield", "EffectIcon", "_global", "Object", "yahoo", "\x1b\f\x03", "\x1d\x1b\x10", "\x1e\x0b\x11", "initialize", "MovieClip", "prototype", "\x19\x16", "\x05\x13", "\x1a\x17", "__get__qte", "-", "+", "*", "_x", "_y", "_mcOp", "Icon-", "attachMovie", "_mcbackground", "Color", "\x16\x1d\x17", "setRGB", "Icon+", "\x16\x1d\x18", "Icon*", "\x16\x1d\x16", "\x1a\b\x1c", "addProperty", "operator", "ASSetPropFlags"
+Push "\t"
+CharToAscii
+If loc03b1
+NewObject
+loc05eb:

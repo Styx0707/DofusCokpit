@@ -1,0 +1,51 @@
+while(true)
+{
+   if(false)
+   {
+      if(!(true or true))
+      {
+         break;
+      }
+   }
+   else
+   {
+      §§push("\x05");
+   }
+   if(ord(§§pop()))
+   {
+      while(true)
+      {
+         if(!getTimer())
+         {
+            §§push(§§pop()(§§pop()));
+            break;
+         }
+         §§push(1);
+         §§push(color1);
+         §§push(2);
+         §§push(_global.API.gfx.mapHandler);
+         §§push("applyTacticColor");
+         if(getTimer() + 1)
+         {
+            break;
+         }
+         setProperty(§§pop(), _X, §§pop());
+      }
+      §§pop()[§§pop()]();
+      §§push(2);
+      §§push(color2);
+      §§push(2);
+      §§push(_global.API);
+      §§push("gfx");
+      if(false)
+      {
+         §§goto(addr185c8);
+      }
+   }
+   §§push(§§pop()[§§pop()]);
+   §§push(§§constant(4));
+   break;
+}
+§§pop()[§§pop()]["{invalid_utf8=136}\x0b"]();
+addr185c8:
+new §\§\§pop()§();

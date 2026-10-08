@@ -1,0 +1,71 @@
+on(construct){
+   while(true)
+   {
+      if(!(true and true))
+      {
+         if(!ord("\b"))
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push("\x06");
+      }
+      if(!ord(§§pop()))
+      {
+         break;
+      }
+      loop2:
+      while(true)
+      {
+         if(false)
+         {
+            set(§§pop(),§§pop()(§§pop()));
+            set(§§constant(8),§§constant(9));
+            set(§§constant(10),true);
+            set(§§constant(11),false);
+            set(§§constant(12),0);
+            §§push(§§constant(13));
+            §§push(4);
+            while(true)
+            {
+               set(§§pop(),§§pop());
+               set(§§constant(14),0);
+               set(§§constant(15),0);
+               set(§§constant(16),4);
+               set(§§constant(17),4);
+               §§push(§§constant(18));
+               §§push(§§constant(19));
+               break loop2;
+               duplicateMovieClip(§§pop(),§§pop(),§§pop());
+               set("\x075","!");
+               set(§§constant(2),§§constant(3));
+               set(§§constant(4),§§constant(3));
+               set(§§constant(5),§§constant(6));
+               §§push(§§constant(7));
+               §§push(20);
+               if(false)
+               {
+                  §§push(§§pop()());
+                  break loop2;
+               }
+               §§goto(addre6ec);
+               addre6ec:
+            }
+            addre726:
+            return;
+            addre55b:
+            var §§pop() = §§pop();
+            §§goto(addre726);
+         }
+         §§goto(addre59a);
+      }
+      set(§§pop(),§§pop());
+      set(§§constant(20),10);
+      set(§§constant(21),20);
+      set(§§constant(22),§§constant(23));
+      §§goto(addre726);
+   }
+   §§goto(addre55b);
+}

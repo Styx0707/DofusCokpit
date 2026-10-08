@@ -1,0 +1,16 @@
+Push false
+Not
+If loc001f
+Push 116431877
+PushDuplicate
+BitOr
+If loc004d
+Jump loc0085
+loc001f:Push "ank.gapi.controls.common.DefaultHighlight"
+loc004d:GetVariable
+Push "DefaultHighlight", 2, "Object"
+GetVariable
+Push "registerClass"
+CallMethod
+Pop
+loc0085:

@@ -1,0 +1,18 @@
+while(true)
+{
+   if(false)
+   {
+      if(false)
+      {
+         break;
+      }
+   }
+   else
+   {
+      §§push("TCHAK");
+      §§push(1);
+      §§push("SOMA");
+   }
+   eval(§§pop()).playSound();
+   break;
+}

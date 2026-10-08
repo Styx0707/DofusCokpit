@@ -1,0 +1,1281 @@
+Push false
+Not
+If loc001c
+Push true
+PushDuplicate
+Or
+If loc0024
+Jump loc19e5
+loc001c:Push 13307315
+loc0024:Decrement
+If loc1282
+ConstantPool "o3", "{invalid_utf8=136}", "{invalid_utf8=191}"
+loc0036:GetMember
+Push register1, constant41
+GetMember
+Push constant109, 3, register1, constant153
+CallMethod
+Pop
+Push register1, constant26
+GetMember
+Push register1, constant24
+Push "\t"
+CharToAscii
+If loc0916
+DefineLocal
+loc006b:SetMember
+Push register1, constant51
+GetTime
+Increment
+If loc1154
+StartDrag
+loc007b:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "jobId" {
+Push register1, constant64
+GetMember
+Push register2, constant65
+SetMember
+Push register1, constant60
+GetMember
+Push register2, constant61, 1, constant62, 200, 2
+InitObject
+SetMember
+Push register1, constant57
+GetMember
+Push register2, false
+SetMember
+Push register1, constant55
+GetTime
+If loc00dd
+DefineLocal
+loc00dd:GetMember
+Push register2, true, true, true, true, true, true, true, true, 8
+InitArray
+SetMember
+}
+Push true
+If loc07c7
+ImplementsOp
+loc0105:SetMember
+Push register1, constant18
+Push "\x0b"
+CharToAscii
+If loc0528
+Extends
+loc011a:DefineFunction2 "", 1, 6, false, false, true, false, true, false, false, true, false, 2, "\x19\b\x01" {
+Push register2, 1, constant3
+GetVariable
+Push constant146
+CallMethod
+Not
+If loc0156
+Push register1, constant25, 0
+InitArray
+SetMember
+Jump loc01bf
+loc0156:Push 0
+InitArray
+StoreRegister 3
+Pop
+Push 0
+GetTime
+If loc0257
+SetProperty
+loc0173:GetMember
+Push constant34
+CallMethod
+Pop
+Push 0, register5, constant35
+GetMember
+Push constant36
+GetMember
+Push constant34
+CallMethod
+Pop
+Push 0, register5, constant35
+Push "\x07"
+CharToAscii
+If loc0297
+StartDrag
+loc01ae:CallMethod
+Pop
+loc01b0:Jump loc0261
+loc01b5:Push register1, constant25, register3
+SetMember
+loc01bf:Push "o3"
+GetVariable
+Push constant27
+GetMember
+Push constant28
+GetMember
+Push constant29
+GetMember
+Push constant30
+GetTime
+If loc0222
+ImplementsOp
+loc01e3:GetMember
+Push register4
+GetMember
+Push constant12
+GetMember
+Push register2
+Equals2
+Not
+Not
+If loc01b0
+Push register1, constant25
+GetMember
+Push register4
+GetMember
+Push 1, register3, constant50
+Push true
+If loc01ae
+SetProperty
+loc0222:GetMember
+Push constant30, 1, register1, constant31
+GetMember
+Push constant29
+GetMember
+Push constant32
+CallMethod
+CastOp
+StoreRegister 5
+Pop
+Push 0, register5, constant33
+GetTime
+If loc0173
+CloneSprite
+loc0257:StoreRegister 4
+Pop
+Jump loc026c
+loc0261:Push register4
+Increment
+StoreRegister 4
+Pop
+loc026c:Push register4, register1, constant25
+GetMember
+Push constant147
+GetMember
+Less2
+Not
+If loc01b5
+Push register1, constant25
+Push "\x03"
+CharToAscii
+If loc01e3
+GetProperty
+loc0297:GetMember
+Push constant37
+GetMember
+Push constant38
+GetMember
+Push constant34
+CallMethod
+Pop
+}
+Push true
+If loc07a2
+DefineLocal
+loc02b6:SetMember
+Push register1, constant39
+GetTime
+If loc06b0
+GetProperty
+loc02c5:SetMember
+Push register1, constant53
+Push true
+If loc0fd1
+CloneSprite
+loc02d8:Push "o3"
+GetVariable
+Push "{invalid_utf8=136}"
+GetMember
+Push "{invalid_utf8=191}"
+GetMember
+Not
+Not
+If loc09c7
+Push "o3"
+GetVariable
+Not
+Not
+If loc113f
+GetTime
+If loc112b
+CallFunction
+loc0305:DefineFunction2 "", 0, 7, false, false, true, false, true, false, false, true, false {
+Push register1, constant31
+GetMember
+Push "{invalid_utf8=136}"
+GetMember
+Push constant69
+GetMember
+StoreRegister 2
+Pop
+Push false
+StoreRegister 3
+Pop
+Push false
+StoreRegister 4
+Pop
+GetTime
+If loc0386
+GetProperty
+loc0344:Pop
+Push register5
+Not
+loc034b:Not
+If loc0357
+Push constant65
+Return
+loc0357:Push constant71, constant72
+Add2
+Push constant73, 1, register1, constant31
+GetMember
+Push constant74
+GetMember
+Push constant75
+Push "\x0b"
+CharToAscii
+If loc03b5
+GetProperty
+loc0386:Push register2, constant70
+GetMember
+StoreRegister 5
+Pop
+Push register3
+Not
+PushDuplicate
+Not
+If loc034b
+Pop
+Push register4
+Not
+PushDuplicate
+Not
+If loc034b
+GetTime
+If loc0344
+SetProperty
+loc03b5:CallMethod
+Add2
+Push constant76
+Add2
+StoreRegister 6
+Pop
+Push register5
+Not
+If loc03fa
+Push register6, constant77, constant78, 1, register1, constant31
+GetMember
+Push constant74
+GetTime
+If loc03ec
+GetProperty
+loc03ec:GetMember
+Push constant75
+CallMethod
+Add2
+Add2
+StoreRegister 6
+Pop
+loc03fa:Push register6
+Return
+}
+GetTime
+Increment
+If loc0792
+SetProperty
+loc0408:SetMember
+Push register1, constant66
+GetTime
+Increment
+If loc0a20
+CastOp
+loc0418:DefineFunction2 "", 2, 4, false, false, true, false, true, false, false, true, false, 2, "jobId", 3, "\x16\x12\x15" {
+Push register1, constant57
+GetMember
+Push register2, register3
+SetMember
+}
+Push "\x06"
+CharToAscii
+If loc04f7
+SetMember
+loc044c:DefineFunction2 "", 1, 5, false, false, true, false, true, false, false, true, false, 2, "nItemGenericID" {
+Push register1, constant10
+GetMember
+Push undefined
+Equals2
+Not
+If loc0480
+Push false
+Return
+loc0480:Push register2, 1, register1, constant10
+GetMember
+Push constant48
+CallMethod
+StoreRegister 3
+Pop
+Push register3, undefined
+Push false
+Not
+If loc04ac
+GetProperty
+loc04ac:Equals2
+Not
+If loc04b9
+Push false
+Return
+loc04b9:Push "o3"
+GetVariable
+Push "{invalid_utf8=136}"
+GetMember
+Push constant149
+GetMember
+Push constant150
+GetTime
+If loc04d7
+SetProperty
+loc04d7:GetMember
+Push register3
+CastOp
+StoreRegister 4
+Pop
+Push register4, constant151
+GetMember
+Return
+}
+Push true
+If loc0983
+GetProperty
+loc04f7:SetMember
+Push register1, constant59
+Push true
+If loc1175
+GetProperty
+loc050a:SetMember
+Push register1, constant16
+GetTime
+If loc101c
+GetProperty
+loc0519:SetMember
+Push register1, constant56
+GetTime
+If loc08b8
+SetProperty
+loc0528:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "nTemporaryEventID" {
+Push register1, constant17, register2
+SetMember
+Push constant12, constant19, constant14, register2, 2
+InitObject
+Push 1, register1, constant15
+CallMethod
+Pop
+Push 0, register1, constant16
+CallMethod
+Return
+}
+GetTime
+If loc07b7
+DefineLocal
+loc0584:GetMember
+Push "{invalid_utf8=136}"
+GetMember
+Push "{invalid_utf8=191}"
+Push "\x05"
+CharToAscii
+If loc0e86
+SetMember
+loc059d:DefineFunction2 "", 1, 5, false, false, true, false, true, false, false, true, false, 2, "\x19\x0f\x19" {
+Push 0, constant43
+GetVariable
+Push constant6
+GetMember
+Push constant44
+NewMethod
+StoreRegister 3
+Pop
+Push 0, register1, constant31
+GetMember
+Push "{invalid_utf8=136}"
+GetMember
+Push constant45
+Push false
+Not
+If loc062b
+CloneSprite
+loc05ed:If loc0699
+Push constant47
+GetVariable
+Push 1, register1, constant31
+GetMember
+Push "{invalid_utf8=136}"
+GetMember
+Push constant45
+GetMember
+Push constant48
+CallMethod
+Push 1, register3, constant50
+GetTime
+Increment
+If loc0697
+NewObject
+loc062b:GetMember
+Push constant46
+CallMethod
+StoreRegister 4
+Pop
+Push register4
+Enumerate2
+loc063d:StoreRegister 0
+Push null
+Equals2
+If loc069e
+Push constant47, register0
+DefineLocal
+Push constant47
+Push true
+If loc0663
+GetProperty
+loc0663:GetVariable
+Push 1, register1, constant31
+GetMember
+Push "{invalid_utf8=136}"
+GetMember
+Push constant45
+GetMember
+Push constant48
+CallMethod
+Push constant49
+GetMember
+Push register2
+Equals2
+Not
+GetTime
+If loc05ed
+DefineLocal
+loc0697:CallMethod
+Pop
+loc0699:Jump loc063d
+loc069e:Push register3
+Return
+}
+Push false
+Not
+If loc006b
+GetProperty
+loc06b0:DefineFunction2 "", 1, 4, false, false, true, false, true, false, false, true, false, 2, "\x15\x1c\r" {
+Push register1, constant40, register2
+SetMember
+Push "o3"
+GetVariable
+Push constant27
+GetMember
+Push constant28
+GetMember
+Push constant29
+GetMember
+Push constant30
+GetMember
+Push constant30, 1, register1, constant31
+GetMember
+Push constant29
+GetTime
+If loc0744
+ImplementsOp
+loc0703:GetMember
+Push constant34
+CallMethod
+Pop
+Push 0, register3, constant35
+GetMember
+Push constant37
+GetMember
+Push constant38
+GetMember
+Push constant34
+CallMethod
+Pop
+Push 0, register1, constant41
+Push "\b"
+CharToAscii
+If loc0784
+StartDrag
+loc0744:GetMember
+Push constant32
+CallMethod
+CastOp
+StoreRegister 3
+Pop
+Push 0, register3, constant33
+GetMember
+Push constant34
+CallMethod
+Pop
+Push 0, register3, constant35
+GetMember
+Push constant36
+Push "\x07"
+CharToAscii
+If loc0703
+SetMember
+loc0784:CallMethod
+Return
+}
+Push false
+Not
+If loc07d6
+StartDrag
+loc0792:SetMember
+Push register1, constant5
+GetTime
+Increment
+If loc0a56
+ImplementsOp
+loc07a2:SetMember
+Push register1, constant148
+Push "\x0b"
+CharToAscii
+If loc044c
+Extends
+loc07b7:SetMember
+Push register1, constant20
+GetTime
+Increment
+If loc0eeb
+GetProperty
+loc07c7:SetMember
+Push register1, constant68
+GetTime
+If loc0305
+GetProperty
+loc07d6:SetMember
+Push register1, constant41
+GetTime
+If loc0968
+CloneSprite
+loc07e5:DefineFunction2 "", 1, 4, false, false, true, false, true, false, false, true, false, 2, "\x15\x1c\r" {
+Push register1, constant25, register2
+SetMember
+Push "o3"
+GetVariable
+Push constant27
+GetMember
+Push constant28
+GetMember
+Push constant29
+GetMember
+Push constant30
+GetMember
+Push constant30, 1, register1, constant31
+GetTime
+Increment
+If loc0868
+CallFunction
+loc0833:CallMethod
+Pop
+Push 0, register3, constant35
+GetMember
+Push constant36
+GetMember
+Push constant34
+CallMethod
+Pop
+Push 0, register3, constant35
+GetMember
+Push constant37
+GetTime
+If loc0895
+Extends
+loc0868:GetMember
+Push constant29
+GetMember
+Push constant32
+CallMethod
+CastOp
+StoreRegister 3
+Pop
+Push 0, register3, constant33
+GetMember
+Push constant34
+GetTime
+Increment
+If loc0833
+SetMember
+loc0895:GetMember
+Push constant38
+GetMember
+Push constant34
+CallMethod
+Pop
+Push 0, register1, constant24
+CallMethod
+Return
+}
+GetTime
+If loc02b6
+GetProperty
+loc08b8:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "jobId" {
+Push register1, constant57
+GetMember
+Push register2
+GetMember
+Push undefined
+Equals2
+Not
+If loc08f3
+Push register1, constant57
+GetMember
+Push register2, false
+SetMember
+loc08f3:Push register1, constant57
+GetMember
+Push register2
+GetTime
+If loc0907
+CastOp
+loc0907:GetMember
+Return
+}
+Push "\x03"
+CharToAscii
+If loc103d
+DefineLocal
+loc0916:GetMember
+Push constant157, 3, register1, constant153
+CallMethod
+Pop
+Push 1, null, register1, 3, constant158
+CallFunction
+Pop
+Push register1, constant159, constant160
+GetTime
+Increment
+If loc09b2
+ImplementsOp
+loc094c:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, constant25
+GetMember
+Return
+}
+GetTime
+Increment
+If loc100c
+ImplementsOp
+loc0968:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, constant40
+GetMember
+Return
+}
+GetTime
+If loc110b
+Extends
+loc0983:SetMember
+Push register1, constant20
+GetMember
+Push register1, constant23
+GetMember
+Push constant152, 3, register1, constant153
+CallMethod
+Pop
+Push register1, constant53
+GetTime
+If loc1243
+ImplementsOp
+loc09b2:GetVariable
+Push constant161
+GetMember
+SetMember
+Push register1, constant162, -1
+SetMember
+loc09c7:Jump loc19e5
+loc09cc:GetMember
+Push "worldUniqueDropsStates", 3, register1, "addProperty"
+CallMethod
+Pop
+Push register1, "__set__temporaryEventID"
+GetMember
+Push register1, "__get__temporaryEventID"
+GetMember
+Push "temporaryEventID", 3, register1, "addProperty"
+CallMethod
+Pop
+Push register1, "\x0f\x10"
+Push false
+Not
+If loc0036
+NewObject
+loc0a10:SetMember
+Push register1, "\x1e\x11\x16"
+GetTime
+Increment
+If loc094c
+NewObject
+loc0a20:DefineFunction2 "", 2, 4, false, false, true, false, true, false, false, true, false, 2, "jobId", 3, "sSearch" {
+Push register1, "craftViewer_searchByJob"
+GetMember
+Push register2, register3
+SetMember
+}
+Push true
+If loc104c
+SetProperty
+loc0a56:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "connexionKey"
+Delete
+Pop
+Push register1, "lastPingTimer"
+Delete
+Pop
+Push register1, "allowedAdminCommands"
+Delete
+Pop
+Push register1, "_worldUniqueDropsStates"
+Delete
+Pop
+Push register1, "gfx_lastActionTime"
+Push false
+Not
+If loc0c65
+SetMember
+loc0a98:Push register1, "pvpHuntedSpriteID"
+Delete
+Pop
+Push register1, "_nTemporaryEventID"
+Delete
+Pop
+Push register1, "forceFlashChat", false
+SetMember
+Push register1, "exp_lastGained"
+Delete
+Pop
+Push register1, "kamas_lastGained"
+Delete
+Pop
+GetTime
+Increment
+If loc0b89
+StartDrag
+loc0ace:GetMember
+Push undefined
+Equals2
+Not
+If loc0ae4
+Push register1, "\x16\x02\x13", ""
+SetMember
+loc0ae4:Push register1, "\x16\x02\x14", ""
+SetMember
+Push register1, "\x16\x02\x14"
+Push "\x05"
+CharToAscii
+If loc0bc6
+SetProperty
+loc0b02:Pop
+Push register1, "interactionsManager_path"
+Delete
+Pop
+Push register1, "inventory_filter"
+Delete
+Pop
+Push register1, "\x16\t\b"
+Delete
+Pop
+Push register1, "\x1a\x04\x15", true
+SetMember
+Push register1, "quests_lastID"
+Delete
+Pop
+Push true
+If loc0a98
+Extends
+loc0b3c:Push register1, "\x16\x02\x1b", -1
+SetMember
+Push register1, "\x16\x02\x1c", 0, "\x16\x04\t"
+GetVariable
+Push "\x1b\x17\x07"
+GetMember
+Push "\x17\x0e\x13"
+NewMethod
+SetMember
+Push register1, "aks_current_server"
+Delete
+Pop
+Push register1, "aks_identity"
+Delete
+Pop
+Push register1, "\x16\x02\x13"
+Push true
+If loc0ace
+SetMember
+loc0b89:Push register1, "guildExp_lastGained"
+Delete
+Pop
+Push register1, "mountExp_lastGained"
+Delete
+Pop
+Push register1, "achievementButton_position"
+Delete
+Pop
+Push register1, "inDemoMode"
+Delete
+Pop
+Push register1, "craftViewer_filterNb", 0
+InitObject
+Push false
+Not
+If loc0de7
+Extends
+loc0bc6:GetMember
+Push 1, register1, "api"
+GetMember
+Push "electron"
+GetMember
+Push "retroConsoleSetHeaderLabel"
+CallMethod
+Pop
+Push register1, "\x16\x02\x17", ""
+SetMember
+Push register1, "spellManager_errorMsg"
+Delete
+GetTime
+Increment
+If loc0b02
+SetProperty
+loc0bfb:Push register1, "\x1b\x1d\x0f"
+Delete
+Pop
+Push register1, "aks_ticket"
+Delete
+Pop
+Push register1, "aks_gameserver_ip"
+Delete
+Pop
+Push register1, "aks_gameserver_port"
+Delete
+Pop
+Push false
+Not
+If loc0b3c
+SetProperty
+loc0c2b:SetMember
+Push register1, "\x16\x02\x18", 0
+InitArray
+SetMember
+Push register1, "aks_chat_lastActionTime"
+Delete
+Pop
+Push register1, "\x16\x19\x1c", 0
+InitObject
+SetMember
+Push register1, "aks_emote_lastActionTime"
+Delete
+Push false
+Not
+If loc0c97
+SetMember
+loc0c65:Delete
+Pop
+Push register1, "gfx_canLaunch"
+Delete
+Pop
+Push register1, "gfx_lastArea"
+Delete
+Pop
+Push register1, "\x18\x13\x02", -1000000
+SetMember
+Push register1, "\x16\x02\x1d", false
+GetTime
+Increment
+If loc0c2b
+SetProperty
+loc0c97:Pop
+Push register1, "aks_exchange_echangeType"
+Delete
+Pop
+Push register1, "aks_infos_lifeRestoreInterval"
+GetMember
+Push 1, "_global"
+GetVariable
+Push "clearInterval"
+CallMethod
+Pop
+Push register1, "aks_infos_lifeRestoreInterval"
+Delete
+Pop
+Push "\x02"
+CharToAscii
+If loc0bfb
+CastOp
+loc0cd1:GetMember
+Push "isComponentHiddingSprites", false
+SetMember
+Push 0, "_global"
+GetVariable
+Push "API"
+GetMember
+Push "\x18\x12\x03"
+GetMember
+Push "\x1b\x06\x13"
+GetMember
+Push "clear"
+CallMethod
+Pop
+Push register1, 1, "\x19\x03\x02"
+Push false
+Not
+If loc0e42
+CastOp
+loc0d16:SetMember
+Push register1, "\x18\x18\x18", undefined
+SetMember
+Push register1, "\x18\x18\x1a", false
+SetMember
+Push register1, "isSubscribedConquestFeed", false
+SetMember
+Push register1, "\x18\x0f\x02", false
+SetMember
+Push register1, "\x18\t\n", false
+SetMember
+Push register1, "\x1a\x14\x0b", -1
+Push true
+If loc0da5
+StartDrag
+loc0d5f:SetMember
+Push register1, "\x18\b\x1d", 0
+SetMember
+Push register1, "\x17\x11\x15", false
+SetMember
+Push register1, "first_movement", false
+SetMember
+Push register1, "\x16\x17\t", true
+SetMember
+Push register1, "api"
+GetMember
+Push "ui"
+Push "\x05"
+CharToAscii
+If loc0cd1
+GetProperty
+loc0da5:SetMember
+Push register1, "\x17\x02\x12", false
+SetMember
+Push register1, "\x16\x19\x19", 0
+InitObject
+SetMember
+Push register1, "\x16\x02\x16", -1
+SetMember
+Push register1, "\x16\x03\x01", null
+SetMember
+Push register1, "\x16\x03\x02", null
+Push true
+If loc0d5f
+NewObject
+loc0de7:SetMember
+Push register1, "craftViewer_searchByJob", 0
+InitObject
+SetMember
+Push register1, "craftViewer_levelByJob", 0
+InitObject
+SetMember
+Push register1, "craftViewer_filterPossible", 0
+InitObject
+SetMember
+Push register1, "\x18\x18\x19", true, false, true, true, true, true, true, 7
+InitArray
+SetMember
+Push register1, "\x18\x18\x1b", 50
+GetTime
+Increment
+If loc0d16
+CallFunction
+loc0e42:GetVariable
+Push "\x17\x0e\r"
+GetMember
+Push "\x17\x0e\x0b"
+GetMember
+Push "initialize"
+CallMethod
+Pop
+}
+Push false
+Not
+If loc111b
+Extends
+loc0e62:SetMember
+Push register1, "getCraftViewerSearch"
+Push "\t"
+CharToAscii
+If loc11e7
+GetProperty
+loc0e77:SetMember
+Push register1, "getCraftViewerFilterNb"
+GetTime
+If loc105f
+DefineLocal
+loc0e86:DefineFunction2 "", 0, 3, false, false, false, true, true, false, false, true, false {
+Push 0, register2, undefined
+CallMethod
+Pop
+Push 0, register1, "initialize"
+CallMethod
+Pop
+}
+Push "\x04"
+CharToAscii
+If loc10d2
+GetProperty
+loc0eb9:SetMember
+Push register1, "\x02\x17"
+Push true
+If loc0f23
+StartDrag
+loc0ecc:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "_worldUniqueDropsStates"
+GetMember
+Return
+}
+Push true
+If loc1272
+GetProperty
+loc0eeb:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x1b\x03\n" {
+Push register1, "\x1e\n\x1a", 0, register2, "toLowerCase"
+CallMethod
+SetMember
+Push 0, register1, "\x02\x17"
+CallMethod
+Return
+}
+GetTime
+Increment
+If loc0eb9
+ImplementsOp
+loc0f23:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "\x1e\n\x1a"
+GetMember
+Return
+}
+GetTime
+If loc0a10
+CastOp
+loc0f3e:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "worldUniqueDropsStates" {
+Push register1, "_worldUniqueDropsStates", register2
+SetMember
+Push "type", "worldUniqueDropsStatesRefresh", "value", register2, 2
+InitObject
+Push 1, register1, "\x17\b\x03"
+CallMethod
+Pop
+Push 0, register1, "__get__worldUniqueDropsStates"
+CallMethod
+Return
+}
+GetTime
+Increment
+If loc050a
+SetMember
+loc0fa0:If loc0fbf
+Push "_global"
+GetVariable
+Push "dofus"
+GetMember
+Push "\x17\x05\x03", 0, "Object"
+NewObject
+SetMember
+loc0fbf:Push "_global"
+GetVariable
+Push "dofus"
+GetTime
+If loc0584
+CallFunction
+loc0fd1:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "isLimited" {
+Push register1, "bIsLimited", register2
+SetMember
+Push 0, register1, "__get__isCoLimited"
+CallMethod
+Return
+}
+Push "\b"
+CharToAscii
+If loc0e77
+ImplementsOp
+loc100c:SetMember
+Push register1, "\x0e\f"
+GetTime
+Increment
+If loc07e5
+SetProperty
+loc101c:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "_nTemporaryEventID"
+GetMember
+Return
+}
+Push "\x03"
+CharToAscii
+If loc0105
+DefineLocal
+loc103d:SetMember
+Push register1, "setCraftViewerShowOnlyPossibleCraft"
+GetTime
+If loc0418
+SetMember
+loc104c:SetMember
+Push register1, "resetCraftViewerFilters"
+Push true
+If loc007b
+GetProperty
+loc105f:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "jobId" {
+Push register1, "craftViewer_filterNb"
+GetMember
+Push register2
+GetMember
+Push undefined
+Equals2
+Not
+If loc10ae
+Push register1, "craftViewer_filterNb"
+GetMember
+Push register2, true, true, true, true, true, true, true, true, 8
+InitArray
+SetMember
+loc10ae:Push register1, "craftViewer_filterNb"
+Push "\x02"
+CharToAscii
+If loc10c2
+SetProperty
+loc10c2:GetMember
+Push register2
+GetMember
+Return
+}
+GetTime
+Increment
+If loc0519
+SetProperty
+loc10d2:StoreRegister 0
+SetMember
+Push register0, "dofus"
+GetVariable
+Push "\x1b\x17\x07"
+GetMember
+Push "\x16\x04\x10"
+GetMember
+Extends
+Push register0, "prototype"
+GetMember
+StoreRegister 1
+Pop
+Push register1, "__get__worldUniqueDropsStates"
+Push true
+If loc0ecc
+Extends
+loc110b:SetMember
+Push register1, "\x1b\x0e\x16"
+GetTime
+Increment
+If loc059d
+DefineLocal
+loc111b:SetMember
+Push register1, "\x16\x02\x1a"
+GetTime
+Increment
+If loc011a
+ImplementsOp
+loc112b:Push "_global"
+GetVariable
+Push "dofus", 0, "Object"
+NewObject
+SetMember
+loc113f:Push "dofus"
+GetVariable
+Push "\x17\x05\x03"
+GetMember
+Not
+Not
+GetTime
+If loc0fa0
+CastOp
+loc1154:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "bIsLimited"
+GetMember
+Return
+}
+Push "\b"
+CharToAscii
+If loc02c5
+SetProperty
+loc1175:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "jobId" {
+Push register1, "craftViewer_levelByJob"
+GetMember
+Push register2
+GetMember
+Push undefined
+Equals2
+Not
+If loc11cd
+Push register1, "craftViewer_levelByJob"
+GetMember
+Push register2, "min", 1, "max", 200, 2
+InitObject
+Push true
+If loc11cc
+GetProperty
+loc11cc:SetMember
+loc11cd:Push register1, "craftViewer_levelByJob"
+GetMember
+Push register2
+GetMember
+Return
+}
+Push true
+If loc0e62
+SetMember
+loc11e7:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "jobId" {
+Push register1, "craftViewer_searchByJob"
+GetMember
+Push register2
+GetMember
+Push undefined
+Equals2
+Not
+If loc122d
+Push register1, "craftViewer_searchByJob"
+GetMember
+Push register2, ""
+Push true
+If loc122c
+SetMember
+loc122c:SetMember
+loc122d:Push register1, "craftViewer_searchByJob"
+GetMember
+Push register2
+GetMember
+Return
+}
+GetTime
+If loc0408
+CloneSprite
+loc1243:GetMember
+Push register1, "__get__isCoLimited"
+GetMember
+Push "isCoLimited", 3, register1, "addProperty"
+CallMethod
+Pop
+Push register1, "__set__worldUniqueDropsStates"
+GetMember
+Push register1, "__get__worldUniqueDropsStates"
+GetTime
+If loc09cc
+CallFunction
+loc1272:SetMember
+Push register1, "__set__worldUniqueDropsStates"
+GetTime
+Increment
+If loc0f3e
+NewObject
+loc1282:ConstantPool "dofus", "\x17\x05\x03", "\x16\t\x0f", "_global", "Object", "initialize", "\x1b\x17\x07", "\x16\x04\x10", "prototype", "__get__worldUniqueDropsStates", "_worldUniqueDropsStates", "__set__worldUniqueDropsStates", "type", "worldUniqueDropsStatesRefresh", "value", "\x17\b\x03", "__get__temporaryEventID", "_nTemporaryEventID", "__set__temporaryEventID", "updateTemporaryEvent", "\x17\r", "\x1e\n\x1a", "toLowerCase", "\x02\x17", "\x1e\x11\x16", "\x1b\x1d\x0f", "\x0e\f", "\x18\x03\x17", "gapi", "ui", "Banner", "api", "\x18\x02\f", "\x18\b\x19", "\x1b\x14\x1b", "\x16\x19\x13", "miniMapReplacementPanel", "shortcutsReplacementPanel", "miniMap", "\x0f\x10", "\x1c\x01\x1d", "\x1e\x12\x1c", "\x1b\x0e\x16", "\x16\x04\t", "\x17\x0e\x13", "\x1b\x07\x11", "\x17\x19\x1d", "i", "\x17\x19\x16", "\x1b\x0e\x17", "push", "__get__isCoLimited", "bIsLimited", "__set__isCoLimited", "getCraftViewerFilterNb", "craftViewer_filterNb", "getCraftViewerShowOnlyPossibleCraft", "craftViewer_filterPossible", "setCraftViewerShowOnlyPossibleCraft", "getCraftViewerLevelRange", "craftViewer_levelByJob", "min", "max", "getCraftViewerSearch", "craftViewer_searchByJob", "", "setCraftViewerSearch", "resetCraftViewerFilters", "getWarningGainExperienceMessage", "\x1a\x05\x15", "isXpLocked", "\n\n", "<b>", "CAUTION", "lang", "getText", " :</b>", "\n- ", "XP_IS_LOCKED", "connexionKey", "lastPingTimer", "allowedAdminCommands", "gfx_lastActionTime", "gfx_canLaunch", "gfx_lastArea", "\x18\x13\x02", "\x16\x02\x1d", "\x16\x02\x18", "aks_chat_lastActionTime", "\x16\x19\x1c", "aks_emote_lastActionTime", "aks_exchange_echangeType", "aks_infos_lifeRestoreInterval", "clearInterval", "aks_ticket", "aks_gameserver_ip", "aks_gameserver_port", "\x16\x02\x1b", "\x16\x02\x1c", "aks_current_server", "aks_identity", "\x16\x02\x13", "\x16\x02\x14", "electron", "retroConsoleSetHeaderLabel", "\x16\x02\x17", "spellManager_errorMsg", "interactionsManager_path", "inventory_filter", "\x16\t\b", "\x1a\x04\x15", "quests_lastID", "pvpHuntedSpriteID", "forceFlashChat", "exp_lastGained", "kamas_lastGained", "guildExp_lastGained", "mountExp_lastGained", "achievementButton_position", "inDemoMode", "\x18\x18\x19", "\x18\x18\x1b", "\x18\x18\x18", "\x18\x18\x1a", "isSubscribedConquestFeed", "\x18\x0f\x02", "\x18\t\n", "\x1a\x14\x0b", "\x17\x02\x12", "\x16\x19\x19", "\x16\x02\x16", "\x16\x03\x01", "\x16\x03\x02", "\x18\b\x1d", "\x17\x11\x15", "first_movement", "\x16\x17\t", "isComponentHiddingSprites", "API", "\x18\x12\x03", "\x1b\x06\x13", "clear", "\x19\x03\x02", "\x17\x0e\r", "\x17\x0e\x0b", "\x16\x02\x1a", "isNaN", "length", "isWorldUniqueItemAlreadyDropped", "evenemential", "WorldUniqueDropState", "dropped", "login", "addProperty", "isCoLimited", "worldUniqueDropsStates", "temporaryEventID", "\x16\x02\x19", "ASSetPropFlags", "\x16\x02\x15", "Number", "POSITIVE_INFINITY", "currentSessionFightCount"
+Push "\x04"
+CharToAscii
+If loc02d8
+GetProperty
+loc19e5:

@@ -1,0 +1,82 @@
+on(construct){
+   loop1:
+   while(true)
+   {
+      while(true)
+      {
+         if(!ord("\x0b"))
+         {
+            if(false)
+            {
+               break;
+            }
+         }
+         else
+         {
+            §§push(210308953);
+         }
+         while(true)
+         {
+            if(§§pop() - 1)
+            {
+               if(getTimer())
+               {
+                  break loop1;
+               }
+               §§goto(addrd6ee);
+               §§push(new §\§\§pop()§());
+            }
+            §§goto(addrd561);
+         }
+         §§goto(addrd722);
+      }
+      while(true)
+      {
+         set("",0);
+         set("",4);
+         set("",4);
+         set("\x1d{invalid_utf8=150}\x07","\b\x10\x07\x04");
+         §§push("");
+         §§push(10);
+         if(!ord("\x05"))
+         {
+            startDrag(§§pop(),§§pop(),§§pop(),§§pop(),§§pop(),§§pop());
+            break loop1;
+         }
+         §§goto(addrd5e2);
+         set(§§pop(),§§pop());
+         set(§§constant(14),0);
+      }
+      §§goto(addrd5e1);
+   }
+   set("{invalid_utf8=150}\x05","\x07Y\x0f{invalid_utf8=137}\fQ{invalid_utf8=157}\x02");
+   set("{invalid_utf8=162}","{invalid_utf8=136}\t");
+   set("\x03","{invalid_utf8=136}\t");
+   w = "y\x18";
+   §§push("\x17");
+   §§push(20);
+   addrd6ee:
+   set(§§pop(),§§pop());
+   set(§§constant(8),§§constant(9));
+   set(§§constant(10),true);
+   set(§§constant(11),false);
+   set(§§constant(12),0);
+   §§push(§§constant(13));
+   §§push(4);
+   if(getTimer())
+   {
+      addrd561:
+      set(§§pop(),§§pop());
+      set(§§constant(14),0);
+      break loop2;
+   }
+   addrd722:
+   §§pop() extends §§pop();
+   §§goto(addrd723);
+   addrd5e2:
+   set(§§pop(),§§pop()(§§pop()));
+   set("",20);
+   set("\x1d{invalid_utf8=150}\x07","\b\x11\x07\x04");
+   addrd5e1:
+   addrd723:
+}

@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Qui joue</title>
+    <link rel="icon" type="image/svg+xml" href="/ui/favicon.svg">
+    <style id="appstyle">
+        :root {
+            --plane: #0d0d0d;
+            --surface: #1a1a19;
+            --ink: #ffffff;
+            --muted: #898781;
+            --border: rgba(255, 255, 255, 0.12);
+            --good: #2fbf2f;
+            --arene: #f0a728;
+            --farm: #3987e5;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--plane);
+            color: var(--ink);
+            font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        .bar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 10px;
+            border-bottom: 1px solid var(--border);
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .bar b {
+            color: var(--ink);
+        }
+
+        .bar .sp {
+            flex: 1;
+        }
+
+        button {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            color: var(--ink);
+            border-radius: 7px;
+            padding: 5px 9px;
+            font-size: 12px;
+            font-family: inherit;
+            cursor: pointer;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--muted);
+            display: inline-block;
+        }
+
+        #turns {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding: 12px;
+        }
+
+        .who {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            border: 2px solid var(--good);
+            border-radius: 12px;
+            padding: 14px 16px;
+            background: color-mix(in srgb, var(--good) 14%, transparent);
+        }
+
+        .who:active {
+            transform: scale(0.99);
+        }
+
+        .who .ic {
+            font-size: 22px;
+        }
+
+        .who .nm {
+            font-size: 26px;
+            font-weight: 750;
+            letter-spacing: -0.01em;
+            line-height: 1.05;
+        }
+
+        .who.farm {
+            border-color: var(--farm);
+            background: color-mix(in srgb, var(--farm) 16%, transparent);
+        }
+
+        .who.arene {
+            border-color: var(--arene);
+            background: color-mix(in srgb, var(--arene) 16%, transparent);
+        }
+
+        .who .go {
+            margin-left: auto;
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .idle {
+            padding: 22px 14px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        .hint {
+            padding: 0 12px 10px;
+            font-size: 11px;
+            color: var(--muted);
+        }
+
+        #histnav {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0 12px 10px;
+        }
+
+        #hback {
+            flex: 1;
+            padding: 12px;
+            font-size: 15px;
+            font-weight: 700;
+            background: color-mix(in srgb, var(--good) 20%, var(--surface));
+            border-color: var(--good);
+        }
+
+        #hback:disabled {
+            opacity: .4;
+        }
+
+        #histnav .pos {
+            min-width: 92px;
+            text-align: center;
+            font-size: 12px;
+            color: var(--muted);
+            font-variant-numeric: tabular-nums;
+        }
+
+        #cyclers {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            padding: 0 12px 10px;
+        }
+
+        .cyc {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 6px 8px;
+        }
+
+        .cyc.farm {
+            border-left: 4px solid var(--farm);
+        }
+
+        .cyc.arene {
+            border-left: 4px solid var(--arene);
+        }
+
+        .cyc .cl {
+            font-weight: 650;
+            font-size: 13px;
+            white-space: nowrap;
+        }
+
+        .cyc .cur {
+            flex: 1;
+            color: var(--muted);
+            font-size: 12px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .cyc .cur.on {
+            color: var(--ink);
+            font-weight: 600;
+        }
+
+        .cyc button {
+            padding: 6px 10px;
+            font-size: 14px;
+        }
+
+        kbd {
+            background: rgba(255, 255, 255, .14);
+            border-radius: 4px;
+            padding: 0 5px;
+            font-size: 11px;
+            font-family: inherit;
+        }
+    </style>
+</head>
+<body>
+<div class="bar">
+    <span class="dot" id="livedot"></span>
+    <b>▶ Qui joue</b>
+    <span class="sp"></span>
+    <button id="pin" title="Fenêtre flottante toujours au-dessus (Picture-in-Picture)">📌 Épingler</button>
+</div>
+<div id="root">
+    <div id="turns"></div>
+    <div id="histnav">
+        <button id="hback"
+                title="active TOUTES les fenêtres une par une, dans TON ordre défini dans « Comptes » (Flèche droite)">
+            ▶ Tout activer (mon ordre)
+        </button>
+        <span class="pos" id="histpos">—</span>
+        <button id="hfwd" title="idem mais ordre inverse (Flèche gauche)">⏪ inverse</button>
+    </div>
+    <div id="cyclers">
+        <div class="cyc farm" data-g="farm">
+            <span class="cl">🏰 Scara</span>
+            <span class="cur" id="cur-farm">—</span>
+            <button class="prev" title="précédent">◂</button>
+            <button class="next" title="suivant (touche S)">▸ <kbd>S</kbd></button>
+            <button class="sweep"
+                    title="Scara : active les fenêtres de CE groupe dans l'ordre de jeu observé (Alt+Tab suit l'initiative du combat). Maj+clic = ordre inverse. Touche 1">
+                ⏩ jeu <kbd>1</kbd>
+            </button>
+        </div>
+        <div class="cyc arene" data-g="arene">
+            <span class="cl">⚔️ Arène</span>
+            <span class="cur" id="cur-arene">—</span>
+            <button class="prev" title="précédent">◂</button>
+            <button class="next" title="suivant (touche A)">▸ <kbd>A</kbd></button>
+            <button class="sweep"
+                    title="Arène : active les fenêtres de CE groupe dans l'ordre de jeu observé (Alt+Tab suit l'initiative du combat). Maj+clic = ordre inverse. Touche 2">
+                ⏩ jeu <kbd>2</kbd>
+            </button>
+        </div>
+    </div>
+    <div class="hint">Clic = activer la fenêtre. Défile un groupe : boutons ◂ ▸ ou touches <kbd>S</kbd>/<kbd>A</kbd>
+        (Maj = précédent). <b>⏩ jeu</b> (<kbd>1</kbd> Scara / <kbd>2</kbd> Arène) = active les fenêtres de ce groupe
+        dans l'ordre de jeu observé → Alt+Tab suit l'initiative du combat (Maj = ordre inverse). Le walker doit tourner.
+    </div>
+</div>
+
+<script>
+    const $ = id => document.getElementById(id);
+    const esc = s => (s ?? "").toString().replace(/[&<>"]/g, c => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;'
+    }[c]));
+
+    let GMAP = {}, RULES = [];
+    let WINDOWS = [];                 // fenêtres Dofus ouvertes (walker)
+    let ORDER = [];                   // ordre de balayage personnalisé (board.html)
+    let PLAY_ORDER = [];              // ordre de jeu observé (séquence des GTS, serveur)
+    let TURNS = [];                   // « qui joue » maintenant (repli de PLAY_ORDER)
+    let cycleIdx = {farm: -1, arene: -1};
+    let curName = {farm: "", arene: ""};
+    let pipWin = null;
+    const root = () => (pipWin && !pipWin.closed) ? pipWin.document : document;
+
+    function baseName(n) {
+        return (n || "").replace(/\s*-?\s*\[[^\]]*]\s*$/, "").trim().toLowerCase();
+    }
+
+    function groupOf(name) {
+        if (GMAP[name]) return GMAP[name];
+        const b = baseName(name);
+        for (const r of RULES) {
+            if (r.prefix && b.startsWith(r.prefix.toLowerCase())) return r.group;
+            if (r.suffix && b.endsWith(r.suffix.toLowerCase())) return r.group;
+            if (r.contains && b.includes(r.contains.toLowerCase())) return r.group;
+        }
+        return "";
+    }
+
+    async function focus(name) {
+        try {
+            await fetch("/walk/focus", {
+                method: "POST", headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({name}),
+            });
+        } catch (e) {
+        }
+    }
+
+    // --- défilement d'un groupe (rebobiner arène / scara) --------------------
+    function members(g) {
+        return WINDOWS.filter(n => groupOf(n) === g).sort();
+    }
+
+    function cycleGroup(g, dir) {
+        const list = members(g);
+        if (!list.length) return;
+        cycleIdx[g] = ((cycleIdx[g] + dir) % list.length + list.length) % list.length;
+        curName[g] = list[cycleIdx[g]];
+        focus(curName[g]);
+        refreshCur();
+    }
+
+    function refreshCur() {
+        for (const g of ["farm", "arene"]) {
+            const el = root().getElementById("cur-" + g);
+            if (!el) continue;
+            const list = members(g);
+            const idx = cycleIdx[g];
+            el.textContent = (idx >= 0 && curName[g]) ? `${curName[g]} (${idx + 1}/${list.length})`
+                : (list.length ? `${list.length} compte(s)` : "aucun");
+            el.classList.toggle("on", idx >= 0 && !!curName[g]);
+        }
+    }
+
+    // --- balayage : activer TOUTES les fenêtres une par une ------------------
+    // Un seul clic -> le walker active chaque fenêtre dans l'ordre fourni, avec un
+    // petit délai. "reverse" = ordre inverse de la barre des tâches.
+    // ordre effectif = ordre personnalisé (board) limité aux fenêtres ouvertes,
+    // + toute fenêtre ouverte non classée ajoutée à la fin ; défaut = ordre walker.
+    function sweepOrder() {
+        let order = ORDER.filter(n => WINDOWS.includes(n));
+        for (const n of WINDOWS) if (!order.includes(n)) order.push(n);
+        return order.length ? order : WINDOWS.slice();
+    }
+
+    async function sweep(reverse) {
+        let order = sweepOrder();
+        if (reverse) order = order.reverse();
+        if (!order.length) return;
+        try {
+            await fetch("/walk/sweep", {
+                method: "POST", headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({names: order}),
+            });
+        } catch (e) {
+        }
+        const pos = root().getElementById("histpos");
+        if (pos) pos.textContent = `balayage ${reverse ? "⏪ inverse" : "⏩ normal"} · ${order.length} fenêtres…`;
+    }
+
+    // --- balayage dans l'ORDRE DE JEU observé, PAR GROUPE --------------------
+    // arène et scara sont deux combats distincts : on les balaie séparément.
+    // Source d'ordre = play_order (séquence des tours GTS vue par le serveur) ;
+    // turn_names n'est qu'un repli car en combat multi-client les flux voient
+    // le MÊME tour courant -> turn_names ≈ 1 nom, alors que play_order accumule
+    // l'ordre complet. Matching par NOM DE BASE (sans tag de guilde) : les
+    // fenêtres portent « Styxh-[Gal] », le réseau souvent « Styxh ».
+    function combatRank() {
+        const rank = new Map();
+        for (const nm of [...PLAY_ORDER, ...TURNS]) {
+            const b = baseName(nm);
+            if (b && !rank.has(b)) rank.set(b, rank.size);
+        }
+        return rank;
+    }
+
+    function boardRank(n) {
+        const i = ORDER.indexOf(n);
+        return i < 0 ? 1e9 : i;
+    }
+
+    // Fenêtres ouvertes du groupe, triées par ordre de jeu observé ; celles
+    // jamais vues en combat sont renvoyées à la fin (ordre board, puis WINDOWS).
+    function combatOrder(group) {
+        const wins = WINDOWS.filter(n => groupOf(n) === group);
+        const rank = combatRank();
+        const seen = wins.filter(n => rank.has(baseName(n)))
+            .sort((a, b) => rank.get(baseName(a)) - rank.get(baseName(b)));
+        const rest = wins.filter(n => !rank.has(baseName(n)))
+            .sort((a, b) => boardRank(a) - boardRank(b));
+        return [...seen, ...rest];
+    }
+
+    async function sweepGroup(group, reverse) {
+        const tag = group === "farm" ? "🏰 Scara" : "⚔️ Arène";
+        const pos = root().getElementById("histpos");
+        let order = combatOrder(group);
+        if (!order.length) {
+            if (pos) pos.textContent = `${tag} : aucune fenêtre ouverte`;
+            return;
+        }
+        if (reverse) order = order.slice().reverse();
+        try {
+            await fetch("/walk/sweep", {
+                method: "POST", headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({names: order}),
+            });
+        } catch (e) {
+        }
+        if (pos) pos.textContent = `${tag} · ordre de jeu${reverse ? " ⏪" : ""} · ${order.length} fen.`;
+    }
+
+    function updateHist() {
+        const pos = root().getElementById("histpos");
+        const back = root().getElementById("hback");
+        const fwd = root().getElementById("hfwd");
+        if (back) back.disabled = WINDOWS.length === 0;
+        if (fwd) fwd.disabled = WINDOWS.length === 0;
+        if (pos && (!pos.textContent || pos.textContent === "—")) {
+            pos.textContent = WINDOWS.length ? WINDOWS.length + " fenêtres" : "—";
+        }
+    }
+
+    function render(turns) {
+        const box = root().getElementById("turns");
+        if (!box) return;
+        if (!turns.length) {
+            box.innerHTML = `<div class="idle">— aucun combat en cours —</div>`;
+            return;
+        }
+        box.innerHTML = turns.map(n => {
+            const g = groupOf(n);
+            const ic = g === "farm" ? "🏰" : (g === "arene" ? "⚔️" : "▶");
+            return `<div class="who ${g}" data-name="${esc(n)}">
+                <span class="ic">${ic}</span>
+                <span class="nm">${esc(n)}</span>
+                <span class="go">activer ▸</span>
+            </div>`;
+        }).join("");
+    }
+
+    // délégation de clic (fonctionne aussi dans la fenêtre PiP)
+    function onClick(e) {
+        const w = e.target.closest(".who");
+        if (w) {
+            focus(w.dataset.name);
+            return;
+        }
+        if (e.target.closest("#hback")) {
+            sweep(false);   // dans TON ordre (board) : Patriotstyx -> Zhendar
+            return;
+        }
+        if (e.target.closest("#hfwd")) {
+            sweep(true);    // ordre inverse
+            return;
+        }
+        const sw = e.target.closest(".cyc button.sweep");
+        if (sw) {
+            sweepGroup(sw.closest(".cyc").dataset.g, e.shiftKey);   // Maj = ordre inverse
+            return;
+        }
+        const btn = e.target.closest(".cyc button");
+        if (btn) cycleGroup(btn.closest(".cyc").dataset.g, btn.classList.contains("prev") ? -1 : 1);
+    }
+
+    function onKey(e) {
+        const k = (e.key || "").toLowerCase();
+        if (e.key === "ArrowRight") sweep(false);   // ton ordre
+        else if (e.key === "ArrowLeft") sweep(true);   // inverse
+        else if (k === "1") sweepGroup("farm", e.shiftKey);    // Scara, ordre de jeu (Maj = inverse)
+        else if (k === "2") sweepGroup("arene", e.shiftKey);   // Arène, ordre de jeu (Maj = inverse)
+        else if (k === "s") cycleGroup("farm", e.shiftKey ? -1 : 1);
+        else if (k === "a") cycleGroup("arene", e.shiftKey ? -1 : 1);
+        else return;
+        e.preventDefault();
+    }
+
+    document.addEventListener("click", onClick);
+    document.addEventListener("keydown", onKey);
+
+    // --- Picture-in-Picture : fenêtre flottante toujours au-dessus -----------
+    $("pin").addEventListener("click", async () => {
+        if (!("documentPictureInPicture" in window)) {
+            alert("Épinglage non supporté par ce navigateur.\nUtilise Chrome/Edge récent, ou garde cet onglet dans une petite fenêtre à côté.");
+            return;
+        }
+        if (pipWin && !pipWin.closed) {
+            pipWin.close();
+            return;
+        }
+        pipWin = await documentPictureInPicture.requestWindow({width: 300, height: 220});
+        // copie le style + le contenu
+        const st = pipWin.document.createElement("style");
+        st.textContent = $("appstyle").textContent;
+        pipWin.document.head.appendChild(st);
+        const holder = document.getElementById("root");
+        pipWin.document.body.appendChild(holder);
+        pipWin.document.addEventListener("click", onClick);
+        pipWin.document.addEventListener("keydown", onKey);
+        pipWin.addEventListener("pagehide", () => {
+            document.body.appendChild(holder);   // récupère le contenu au retour
+            pipWin = null;
+        });
+        refreshCur();
+    });
+
+    async function poll() {
+        let turns = [];
+        try {
+            const s = await (await fetch("/live/state")).json();
+            turns = s.turn_names || [];
+            TURNS = turns;
+            PLAY_ORDER = s.play_order || [];
+            const d = root().getElementById("livedot");
+            if (d) d.style.background = (s.last_event_ago_s != null && s.last_event_ago_s < 15) ? "var(--good)" : "var(--muted)";
+        } catch (e) {
+            const d = root().getElementById("livedot");
+            if (d) d.style.background = "#d6392a";
+        }
+        try {
+            GMAP = await (await fetch("/board/groups")).json() || {};
+        } catch (e) {
+        }
+        try {
+            RULES = await (await fetch("/board/rules")).json() || [];
+        } catch (e) {
+        }
+        try {
+            WINDOWS = (await (await fetch("/board/windows")).json()).windows || [];
+        } catch (e) {
+        }
+        try {
+            ORDER = await (await fetch("/board/order")).json() || [];
+        } catch (e) {
+        }
+        updateHist();
+        render(turns);
+        refreshCur();
+    }
+
+    poll();
+    setInterval(poll, 700);
+</script>
+<script src="/ui/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; Double-clique ce fichier UNE fois pour autoriser le bouton "Lancer le walker"
+; de live.html. Il enregistre le protocole dofuswalker: -> start_walker.bat.
+; HKCU => pas besoin des droits admin. Adapte le chemin si ton projet est ailleurs.
+
+[HKEY_CURRENT_USER\Software\Classes\dofuswalker]
+@="URL:Dofus Walker"
+"URL Protocol"=""
+
+[HKEY_CURRENT_USER\Software\Classes\dofuswalker\shell\open\command]
+@="\"C:\\Users\\vip19\\PycharmProjects\\PythonProject\\tools\\start_walker.bat\" \"%1\""

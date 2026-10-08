@@ -1,0 +1,35 @@
+onClipEvent(load){
+   while(true)
+   {
+      if(false)
+      {
+         if(false)
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push("\b");
+      }
+      if(ord(§§pop()))
+      {
+         function §\x1e\x11\f§(eventObj)
+         {
+            _parent.dropItem({target:this});
+         }
+         if(!getTimer())
+         {
+            §§goto(addrf4f2);
+         }
+      }
+      §§push(eval("\x1e\x11\f"));
+      §§push("drop");
+      §§push(2);
+      §§push("this");
+      break;
+   }
+   eval(§§pop())["\x15\x1d\x15"]();
+   addrf4f2:
+   getProperty(§§pop(), _X);
+}

@@ -1,0 +1,39 @@
+on(construct){
+   while(true)
+   {
+      if(false)
+      {
+         if(!ord("\x02"))
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push(false);
+      }
+      if(§§pop())
+      {
+         §§goto(addr4a646);
+      }
+      break;
+   }
+   set("\x16\x18\x14",false);
+   contentPath = "none";
+   enabled = true;
+   set("\x18\f\t",false);
+   styleName = "LightBrownWindow";
+   §§push("title");
+   §§push("");
+   if(!getTimer())
+   {
+      startDrag(§§pop(),§§pop(),§§pop(),§§pop(),§§pop(),§§pop());
+   }
+   else
+   {
+      addr4a646:
+      set(§§pop(),§§pop());
+      §§goto(addr4a6bc);
+   }
+   addr4a6bc:
+}

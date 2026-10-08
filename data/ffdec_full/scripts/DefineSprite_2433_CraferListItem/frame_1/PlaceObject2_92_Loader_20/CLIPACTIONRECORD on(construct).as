@@ -1,0 +1,49 @@
+on(construct){
+   loop1:
+   while(true)
+   {
+      while(true)
+      {
+         if(!ord("\t"))
+         {
+            if(false)
+            {
+               §§goto(addr1ad65);
+            }
+         }
+         else
+         {
+            §§push(156353083);
+         }
+         if(!§§pop())
+         {
+            break;
+         }
+         break loop1;
+      }
+      set(§§pop(),§§pop());
+      set(§§constant(8),§§constant(9));
+      §§goto(addr1ae1b);
+   }
+   if(getTimer())
+   {
+      while(true)
+      {
+         set("{invalid_utf8=150}\x05",true);
+         set("\x07;{invalid_utf8=194}Q\t{invalid_utf8=157}\x02",false);
+         T = "{invalid_utf8=136}\x05";
+         set("\x01",false);
+         set("f\x06","{invalid_utf8=136}\x05");
+         set("\x1d{invalid_utf8=150}\x04",false);
+         §§push("\b\b\b\t\x1d");
+         §§push(true);
+         break loop2;
+         §§push(§§pop()(§§pop()));
+      }
+      addr1ae1b:
+      return;
+      addr1ad65:
+   }
+   var §§pop() = §§pop();
+   §§goto(addr1ae1b);
+}

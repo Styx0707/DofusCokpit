@@ -1,0 +1,73 @@
+on(construct){
+   loop1:
+   while(true)
+   {
+      while(true)
+      {
+         while(true)
+         {
+            if(!ord("\x06"))
+            {
+               if(!ord("\x06"))
+               {
+                  break;
+               }
+            }
+            else
+            {
+               §§push(true);
+            }
+            var _temp_1 = §§pop();
+            if(!(_temp_1 or _temp_1))
+            {
+               break;
+            }
+            if(false)
+            {
+               §§push(§§pop()(§§pop()));
+               return;
+            }
+            break loop1;
+         }
+         §§goto(addr6ad1);
+      }
+      return;
+   }
+   set("{invalid_utf8=150}\x02",false);
+   set("\x05\x01L\x11{invalid_utf8=157}\x02",false);
+   set("{invalid_utf8=158}",false);
+   set("{invalid_utf8=136}\n",true);
+   set("\x03",false);
+   §§push("X[");
+   §§push(-1);
+   if(getTimer())
+   {
+      while(true)
+      {
+         set(§§pop(),§§pop());
+         set("{invalid_utf8=135}\x13","{invalid_utf8=151}");
+         set("\x1d{invalid_utf8=150}\x04",0);
+         set("\b\x06\b\x07\x1d{invalid_utf8=150}\x07",true);
+         set("\b\b\x01",false);
+         set("","");
+         §§push("");
+         §§push("\x1d{invalid_utf8=150}\x04");
+         if(false)
+         {
+            §§pop() extends §§pop();
+            §§goto(addr6b0f);
+         }
+         addr6b48:
+         set(§§pop(),§§pop());
+         set("\b\t\x05\x01\x1d{invalid_utf8=150}\x04","\x1d{invalid_utf8=150}\x04");
+         set("\b\n\x05","\x1d{invalid_utf8=150}\x04");
+         set("\x1d{invalid_utf8=150}\x04",true);
+         return;
+         addr6b0f:
+      }
+      return;
+      addr6ad1:
+   }
+   §§pop() implements ;
+   §§goto(addr6b48);
+}

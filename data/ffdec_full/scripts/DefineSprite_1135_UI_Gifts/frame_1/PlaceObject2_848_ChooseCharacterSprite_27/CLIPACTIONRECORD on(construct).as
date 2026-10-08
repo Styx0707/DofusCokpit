@@ -1,0 +1,82 @@
+on(construct){
+   loop2:
+   while(true)
+   {
+      loop3:
+      while(true)
+      {
+         if(!ord("\t"))
+         {
+            if(!(true or true))
+            {
+               while(true)
+               {
+                  set("4{invalid_utf8=157}\x02","E");
+                  set("<{invalid_utf8=150}\x04","\b");
+                  set("\x05","|{invalid_utf8=199}");
+                  set("\x1d{invalid_utf8=150}\x04","|{invalid_utf8=199}");
+                  §§push("\b\x01\x05");
+                  §§push(false);
+                  if(!getTimer())
+                  {
+                     var §§pop() = §§pop();
+                     §§goto(addr1cf25);
+                  }
+                  §§goto(addr1cf69);
+                  break loop3;
+               }
+               §§goto(addr1cf68);
+               addr1cef7:
+            }
+         }
+         else
+         {
+            §§push(199785807);
+         }
+         if(!(§§pop() - 1))
+         {
+            break;
+         }
+         break loop2;
+      }
+      set(§§pop(),§§pop());
+      set(§§constant(13),true);
+      §§goto(addr1cef7);
+   }
+   if(ord("\x04"))
+   {
+      do
+      {
+         set("{invalid_utf8=150}\x05",false);
+         set("\x07O}{invalid_utf8=232}\x0bQ{invalid_utf8=157}\x02",false);
+         set("{invalid_utf8=202}",false);
+         set("{invalid_utf8=136}\x07","\x02");
+         set("7","|{invalid_utf8=199}");
+         set("\x1d{invalid_utf8=150}\x04",false);
+         §§push("\b\r\x05\x01\x1d{invalid_utf8=150}\x04");
+         §§push(true);
+         if(!ord("\x03"))
+         {
+            addr1cf68:
+            setProperty(§§pop(), _X, §§pop());
+            addr1cf69:
+            set(§§pop(),§§pop());
+            set("\x1d{invalid_utf8=150}\x04",false);
+            set("\b\x02\x05",false);
+            set("\x1d{invalid_utf8=150}\x04",false);
+            §§goto(addr1d0c3);
+         }
+         set(§§pop(),§§pop());
+         set(§§constant(9),false);
+         set(§§constant(10),§§constant(6));
+         set(§§constant(11),§§constant(6));
+         §§push(§§constant(12));
+         §§push(false);
+         break loop3;
+         §§push(§§pop()(§§pop()));
+      }
+      while(ord("\x04"));
+      addr1cf25:
+   }
+   addr1d0c3:
+}

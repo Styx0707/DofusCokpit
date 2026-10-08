@@ -1,0 +1,20 @@
+while(true)
+{
+   if(!(true or true))
+   {
+      if(!ord("\x04"))
+      {
+         break;
+      }
+   }
+   else
+   {
+      §§push(2);
+      §§push("cIop_Meche");
+   }
+   §§push(eval(§§pop()));
+   §§push(2);
+   §§push(GAC);
+   break;
+}
+§§pop().applyColor();

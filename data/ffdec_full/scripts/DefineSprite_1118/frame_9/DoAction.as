@@ -1,0 +1,10 @@
+if(false)
+{
+   if(ord("\t"))
+   {
+   }
+}
+else
+{
+   stop();
+}

@@ -1,0 +1,64 @@
+on(construct){
+   while(true)
+   {
+      if(!(0x3081DCB4 | 0x3081DCB4))
+      {
+         if(false)
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push("\x04");
+      }
+      if(!ord(§§pop()))
+      {
+         break;
+      }
+      if(!ord("\x05"))
+      {
+         §§push(§§pop()());
+      }
+      else
+      {
+         set("{invalid_utf8=173}",false);
+         p = false;
+         set("{invalid_utf8=134}6",false);
+         set(§§constant(3),false);
+         set(§§constant(4),true);
+         set(§§constant(5),256);
+         §§push(§§constant(6));
+         §§push(§§constant(7));
+         while(true)
+         {
+            set(§§pop(),§§pop());
+            set(§§constant(8),0);
+            set(§§constant(9),true);
+            set(§§constant(10),true);
+            set(§§constant(11),§§constant(12));
+            §§push(§§constant(13));
+            §§push(§§constant(14));
+            if(!getTimer())
+            {
+               §§goto(addr1d23d);
+               §§push(getProperty(§§pop(), _X));
+            }
+            addr1d282:
+            set(§§pop(),§§pop());
+            set(§§constant(15),§§constant(14));
+            set(§§constant(16),§§constant(14));
+            set(§§constant(17),true);
+            break;
+            addr1d23d:
+         }
+         addr1d333:
+         return;
+         addr1d20b:
+         §§goto(addr1d282);
+         §§push(new §\§\§pop()§());
+      }
+      §§goto(addr1d333);
+   }
+   §§goto(addr1d20b);
+}

@@ -1,0 +1,755 @@
+Push 666380958
+PushDuplicate
+BitOr
+If loc027e
+Push true
+PushDuplicate
+Or
+If loc0286
+ConstantPool "{invalid_utf8=150}\x05", "\x07\x1fhp\nP{invalid_utf8=157}\x02", "{invalid_utf8=141}\n{invalid_utf8=136}\n", "\x03", "&9", "\x1f", "{invalid_utf8=142}{invalid_utf8=168}", "{invalid_utf8=150}\x0b", "\b_\x07\x03", "", "", "\x04\x01\b`R\x17{invalid_utf8=150}\x0f", "\x07\x01", "", "", "\x02\x04\x01\x07\x03", "", "", "\ba=\x17{invalid_utf8=150}\x06", "\x04", "\b\x0f\b\x04O", "N{invalid_utf8=150}\x02", "\b\x02N{invalid_utf8=150}\x02", "\b\x03N{invalid_utf8=150}\x02", "\b\x044{invalid_utf8=157}\x02", "-\t\"O{invalid_utf8=150}\x02", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01N\x12\x12{invalid_utf8=157}\x02", "{invalid_utf8=142}", "{invalid_utf8=150}\x02", "\b\x05\x1c{invalid_utf8=150}\x02", "\b", "4P{invalid_utf8=157}\x02", "m", "={invalid_utf8=135}\x01", "", "O{invalid_utf8=150}\x04", "\x04", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\x02N{invalid_utf8=150}\x02", "\b\x074P{invalid_utf8=157}\x02", "\x1b\x02,O{invalid_utf8=150}\x04", "\x04\x01\b\x0e4{invalid_utf8=157}\x02", "{invalid_utf8=244}\x03\"\x1c\x12\x12{invalid_utf8=157}\x02", "{invalid_utf8=157}{invalid_utf8=255}{invalid_utf8=150}\x02", "\b\x05\x1c{invalid_utf8=150}\t", "\b", "\x07", "", "", "", "\b\x06@4{invalid_utf8=157}\x02", "{invalid_utf8=131}{invalid_utf8=255}#O{invalid_utf8=150}\x04", "\x04\x01\b\x19{invalid_utf8=150}\x03", "", "\x02", "2{invalid_utf8=157}\x02", "A\b\'N{invalid_utf8=150}\t", "\b\x01\x07", "", "", "", "\b\x06@O{invalid_utf8=150}\x02", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\x02N\x12\x12{invalid_utf8=157}\x02", "\x07\x054{invalid_utf8=157}\x02", "{invalid_utf8=225}\x04\'{invalid_utf8=142}\r", "", "\x01", "\x03)", "\x02\x19\x12\x1d", "{invalid_utf8=219}", "{invalid_utf8=150}\x10", "\x07\x03", "", "", "\bW\x07\x01", "", "", "\x04\x01\b!N{invalid_utf8=150}\x02", "\b\"N{invalid_utf8=150}\x02", "\bXR{invalid_utf8=150}\t", "\x07\x02", "", "", "\x04\x01\b\x17N{invalid_utf8=150}\x02", "\bBN{invalid_utf8=150}\x07", "\x07\x01", "", "", "\bY\x1c{invalid_utf8=150}\x02", "\bZ{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", ",", "iN{invalid_utf8=150}\x02", "\b@N{invalid_utf8=150}\x07", "\x07\x01", "", "", "\bY\x1c{invalid_utf8=150}\x02", "\bZN{invalid_utf8=150}\x02", "\b[S{invalid_utf8=150}\x02", "\b\\R4{invalid_utf8=157}\x02", "M", "=N{invalid_utf8=150}\x02", "\b[S{invalid_utf8=150}\x02", "\b\\R{invalid_utf8=150}\x02", "\b-G{invalid_utf8=150}\x10", "\x07\x03", "", "", "\bW\x07\x01", "", "", "\x04\x01\b!N{invalid_utf8=150}\x02", "\b\"N{invalid_utf8=150}\x02", "\bXR{invalid_utf8=150}\t", "\x07\x02", "", "", "\x04\x01\b\x17{invalid_utf8=150}\x03", "", "\x02", "2{invalid_utf8=157}\x02", "{invalid_utf8=138}{invalid_utf8=255}OG{invalid_utf8=150}\t", "\x07\x01", "", "", "\x04\x01\b\x02N{invalid_utf8=150}\x02", "\b]R\x174P{invalid_utf8=157}\x02", "{invalid_utf8=202}{invalid_utf8=254}@O{invalid_utf8=150}\x04", "\x04\x01\b\nN4{invalid_utf8=157}\x02", "", "\x07=O{invalid_utf8=150}\x04", "\x04\x01\b\f4P{invalid_utf8=157}\x02", "w\x07${invalid_utf8=142}\b", "", "", "", "\x02)", "{", "{invalid_utf8=150}\n", "\b\x11\x04\x01\b\x12\x04\x01\b\x13N{invalid_utf8=150}\x05", "\x07\x02", "", ""
+Jump loc02a8
+loc027e:Push 175138847
+loc0286:Increment
+If loc0d12
+ConstantPool "&9", "\x1f", "{invalid_utf8=142}{invalid_utf8=168}"
+loc0299:Push constant95, 3, register1, constant96
+CallMethod
+loc02a8:Pop
+Push 1, null, register1, 3, "\x05"
+CallFunction
+Pop
+Push register0, "\x02\x04\x01\x07\x03", "&9"
+SetMember
+loc02c7:Jump loc0fa8
+loc02cc:GetMember
+Push "gapi"
+GetMember
+Push "\x17\x01\x0e"
+GetMember
+Push "LivingItemsViewer"
+GetTime
+If loc0c06
+GetProperty
+loc02e5:SetMember
+loc02e6:Push "dofus"
+GetVariable
+Push "\x18\x03\x17"
+GetMember
+Not
+Not
+If loc0387
+Push "_global"
+GetVariable
+Push "dofus"
+GetTime
+Increment
+If loc0378
+CallFunction
+loc030c:StoreRegister 0
+SetMember
+Push register0, "dofus"
+GetVariable
+Push "\x18\x03\x17"
+GetMember
+Push "gapi"
+GetMember
+Push "\x17\x01\x17"
+GetTime
+Increment
+If loc054c
+ImplementsOp
+loc0332:SetMember
+Push register1, "\x18\t\x0b"
+GetTime
+If loc0734
+GetProperty
+loc0341:GetVariable
+Not
+Not
+If loc02e6
+Push "_global"
+GetVariable
+Push "dofus", 0, "Object"
+NewObject
+GetTime
+If loc02e5
+SetProperty
+loc0363:SetMember
+Push register1, "out"
+Push "\x02"
+CharToAscii
+If loc0bad
+StartDrag
+loc0378:GetMember
+Push "\x18\x03\x17", 0, "Object"
+NewObject
+SetMember
+loc0387:Push "dofus"
+GetVariable
+Push "\x18\x03\x17"
+GetMember
+Push "gapi"
+GetMember
+Not
+Not
+If loc08a7
+GetTime
+If loc0887
+StartDrag
+loc03a7:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x19\x12\x1d" {
+Push 3, "THOUSAND_SEPARATOR", 1, register1, "api"
+GetMember
+Push "lang"
+GetMember
+Push "\x17\x15\x17"
+CallMethod
+Push 2, register1, "_pbXP"
+GetMember
+Push "value"
+GetMember
+Push 1, "\x16\x04\t"
+GetVariable
+Push "\x1b\x17\x07"
+Push false
+Not
+If loc0431
+Extends
+loc0406:GetMember
+Push "\x18\x19\x18"
+GetMember
+Push 1, "\x16\x04\t"
+GetVariable
+Push "\x1b\x17\x07"
+GetMember
+Push "\x17\x0e\x15"
+NewMethod
+Push "\x15\x1e\x0b"
+CallMethod
+GetTime
+If loc047d
+CallFunction
+loc0431:GetMember
+Push "\x17\x0e\x15"
+NewMethod
+Push "\x15\x1e\x0b"
+CallMethod
+Push " / "
+Add2
+Push 3, "THOUSAND_SEPARATOR", 1, register1, "api"
+GetMember
+Push "lang"
+GetMember
+Push "\x17\x15\x17"
+CallMethod
+Push 2, register1, "_pbXP"
+Push "\x02"
+CharToAscii
+If loc0406
+SetMember
+loc047d:Add2
+Push 1, register1, "gapi"
+GetMember
+Push "\x1b\x01\x11"
+CallMethod
+Pop
+}
+GetTime
+Increment
+If loc0363
+NewObject
+loc049a:SetMember
+Push register1, "\x16\x0b"
+GetMember
+GetTime
+If loc0b9e
+CallFunction
+loc04aa:SetMember
+Push register1, "\x1b\x14\x15"
+GetTime
+Increment
+If loc0c25
+CloneSprite
+loc04ba:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push "object", register1, "method", register1, "\x18\n\x1c"
+GetMember
+Push 2
+InitObject
+Push 1, register1, "\x16\x01\x0e"
+CallMethod
+Pop
+Push "object", register1, "method", register1, "\x1b\x14\x15"
+GetMember
+Push 2
+InitObject
+Push 1, register1, "\x16\x01\x0e"
+CallMethod
+Pop
+Push "object", register1, "method", register1, "\x15\x1e\b"
+Push false
+Not
+If loc0528
+Extends
+loc0528:GetMember
+Push 2
+InitObject
+Push 1, register1, "\x16\x01\x0e"
+CallMethod
+Pop
+}
+Push false
+Not
+If loc0b8b
+StartDrag
+loc054c:GetMember
+Push "\x17\t\x11"
+GetMember
+Extends
+Push register0, "prototype"
+GetMember
+StoreRegister 1
+Pop
+Push register1, "\x16\x0b"
+Push "\x07"
+CharToAscii
+If loc08be
+Extends
+loc0575:SetMember
+Push register1, "\x18\n\x1c"
+GetTime
+If loc090e
+NewObject
+loc0584:SetMember
+Push register1, "\x17\x02\x13"
+Push "\t"
+CharToAscii
+If loc04ba
+Extends
+loc0599:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x19\x12\x1d" {
+Push register2, "target"
+GetMember
+StoreRegister 0
+Push register1, "\x1c\x0b\x04"
+GetMember
+StrictEquals
+If loc06ab
+Push register0, register1, "\x1c\t\x18"
+GetMember
+StrictEquals
+If loc061f
+Push register0, register1, "\x1c\t\x15"
+GetTime
+Increment
+If loc069f
+CallFunction
+loc05e4:GetMember
+Push 1, register1, "api"
+GetMember
+Push "\x18\x12\x03"
+GetMember
+Push "SpeakingItemsManager"
+GetMember
+Push "\x1b\x11\x11"
+CallMethod
+Pop
+Push register1, "\x1e\x03\x19"
+Push false
+Not
+If loc0667
+SetMember
+loc0618:CallMethod
+Pop
+Jump loc0728
+loc061f:Push "itemsType", register1, "\x1e\x03\x19"
+GetMember
+Push "type"
+GetMember
+Push 1
+InitArray
+Push "item", register1, "\x1e\x03\x19"
+GetMember
+Push 2
+InitObject
+Push "ChooseFeed", "ChooseFeed", 3, register1, "api"
+Push false
+Not
+If loc06e6
+Extends
+loc0667:GetMember
+Push "position"
+GetMember
+Push register1, "\x1e\x03\x19"
+GetMember
+Push "ID"
+GetMember
+Push 2, register1, "api"
+GetMember
+Push "\x19\x06\x1c"
+GetMember
+Push "Items"
+Push true
+If loc071b
+SetMember
+loc069f:GetMember
+StrictEquals
+If loc06f9
+Jump loc0728
+loc06ab:Push "item", register1, "\x1e\x03\x19"
+GetMember
+Push 1
+InitObject
+Push "ChooseItemSkin", "ChooseItemSkin", 3, register1, "api"
+GetMember
+Push "ui"
+GetMember
+Push "\x18\x17\x04"
+Push false
+Not
+If loc0618
+ImplementsOp
+loc06e6:GetMember
+Push "ui"
+GetMember
+Push "\x18\x17\x04"
+CallMethod
+Pop
+Jump loc0728
+loc06f9:Push "dofus"
+GetVariable
+Push "\x18\x18\x12"
+GetMember
+Push "SpeakingItemsManager"
+GetMember
+Push "SPEAK_TRIGGER_DISSOCIATE"
+Push true
+If loc05e4
+CallFunction
+loc071b:GetMember
+Push "\x17\t\x03"
+CallMethod
+Pop
+Jump loc0728
+}
+loc0728:Push false
+Not
+If loc08fb
+Extends
+loc0734:DefineFunction2 "", 0, 3, false, false, false, true, true, false, false, true, false {
+Push "dofus"
+GetVariable
+Push "\x18\x03\x17"
+GetMember
+Push "gapi"
+GetMember
+Push "\x17\x01\x0e"
+GetMember
+Push "LivingItemsViewer"
+GetMember
+Push "\x16\x1b\x18"
+GetMember
+Push false, 2, register2, "\x18\t\x0b"
+GetTime
+If loc0778
+CallFunction
+loc0778:CallMethod
+Pop
+}
+Push false
+Not
+If loc0584
+CallFunction
+loc0786:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "over", 2, register1, "_pbXP"
+GetMember
+Push "\x15\x1d\x15"
+CallMethod
+Pop
+Push register1, "out", 2, register1, "_pbXP"
+GetMember
+Push "\x15\x1d\x15"
+CallMethod
+Pop
+Push register1, "click", 2, register1, "\x1c\t\x18"
+GetTime
+If loc07d8
+Extends
+loc07d8:GetMember
+Push "\x15\x1d\x15"
+CallMethod
+Pop
+Push register1, "click", 2, register1, "\x1c\t\x15"
+GetMember
+Push "\x15\x1d\x15"
+CallMethod
+Pop
+Push register1, "click", 2, register1, "\x1c\x0b\x04"
+GetTime
+Increment
+If loc0810
+SetMember
+loc0810:GetMember
+Push "\x15\x1d\x15"
+CallMethod
+Pop
+}
+GetTime
+If loc0575
+SetProperty
+loc081f:Push "dofus"
+GetVariable
+Push "\x18\x03\x17"
+GetMember
+Push "gapi"
+GetMember
+Push "\x17\x01\x0e"
+GetMember
+Push "LivingItemsViewer"
+GetMember
+Not
+Not
+If loc02c7
+Push "dofus"
+Push false
+Not
+If loc0341
+Extends
+loc0855:GetMember
+Push "gapi"
+GetMember
+Push "\x17\x01\x0e", 0, "Object"
+NewObject
+SetMember
+loc086a:Push "_global"
+GetVariable
+Push "dofus"
+GetMember
+Push "\x18\x03\x17"
+Push false
+Not
+If loc02cc
+NewObject
+loc0887:Push "_global"
+GetVariable
+Push "dofus"
+GetMember
+Push "\x18\x03\x17"
+GetMember
+Push "gapi", 0, "Object"
+NewObject
+SetMember
+loc08a7:Push "dofus"
+GetVariable
+Push "\x18\x03\x17"
+Push false
+Not
+If loc0bd9
+Extends
+loc08be:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x19\x11\x12" {
+Push register1, "\x1e\x03\x19", register2
+SetMember
+Push 0, register1, "\x1b\x14\x15"
+CallMethod
+Pop
+Push 0, register1, "\x01\t"
+CallMethod
+Return
+}
+GetTime
+If loc0332
+StartDrag
+loc08fb:SetMember
+Push register1, "over"
+Push true
+If loc03a7
+DefineLocal
+loc090e:DefineFunction2 "", 0, 3, false, false, true, false, true, false, false, true, false {
+Push register1, "\x1d\x02\x07"
+GetMember
+Push "text", "STATE", 1, register1, "api"
+GetMember
+Push "lang"
+GetMember
+Push "getText"
+CallMethod
+SetMember
+Push register1, "_lblState"
+GetMember
+Push "text", register1, "\x1e\x03\x19"
+GetMember
+Push "\x18\x1e\r"
+Push "\x02"
+CharToAscii
+If loc0b0a
+SetMember
+loc0963:GetMember
+Push "getText"
+CallMethod
+SetMember
+Push register1, "\x1c\t\x15"
+GetMember
+Push "label", "DISSOCIATE", 1, register1, "api"
+GetMember
+Push "lang"
+GetMember
+Push "getText"
+Push true
+If loc0a09
+NewObject
+loc099a:Equals2
+If loc0b71
+Push "i", register0
+DefineLocal
+Push register2, "i"
+GetVariable
+GetMember
+Push "type"
+GetMember
+Push 808
+Equals2
+Not
+If loc0b61
+Push register1, "\x1c\x17\f"
+GetTime
+Increment
+If loc0b49
+SetMember
+loc09d5:GetMember
+Push "lang"
+GetMember
+Push "getText"
+CallMethod
+SetMember
+Push register1, "\x1c\x1a\x07"
+GetMember
+Push "text", register1, "\x1e\x03\x19"
+GetMember
+Push "\x18\x1a\x05"
+GetMember
+ToString
+Push " / "
+GetTime
+Increment
+If loc0a93
+CallFunction
+loc0a09:CallMethod
+SetMember
+Push register1, "\x1c\t\x18"
+GetMember
+Push "label", "FEED_WORD", 1, register1, "api"
+GetMember
+Push "lang"
+GetMember
+Push "getText"
+CallMethod
+SetMember
+Push register1, "\x1c\x0b\x04"
+GetMember
+Push "label", "CHOOSE_SKIN", 1, register1, "api"
+Push false
+Not
+If loc0ace
+SetProperty
+loc0a55:Push "SATISFIED_WORD"
+loc0a5a:Push 1, register1, "api"
+GetMember
+Push "lang"
+GetMember
+Push "getText"
+CallMethod
+SetMember
+Push register1, "\x1c\x1a\n"
+GetMember
+Push "text", "LEVEL", 1, register1, "api"
+GetTime
+If loc09d5
+GetProperty
+loc0a93:Add2
+Push register1, "\x1e\x03\x19"
+GetMember
+Push "nbSkin"
+GetMember
+Add2
+SetMember
+Push register1, "\x1d\x04\x19"
+GetMember
+Push "text", "EXPERIMENT", 1, register1, "api"
+GetMember
+Push "lang"
+Push false
+Not
+If loc0963
+DefineLocal
+loc0ace:GetMember
+Push "lang"
+GetMember
+Push "getText"
+CallMethod
+SetMember
+Push register1, "\x1e\x03\x19"
+GetMember
+Push "effects"
+GetMember
+StoreRegister 2
+Pop
+Push register2
+Enumerate2
+loc0af5:StoreRegister 0
+Push null
+Push "\x07"
+CharToAscii
+If loc099a
+GetProperty
+loc0b0a:GetMember
+Push 1
+Equals2
+If loc0a55
+Push register1, "\x1e\x03\x19"
+GetMember
+Push "\x18\x1e\r"
+GetMember
+Push 0
+Equals2
+If loc0b3f
+Push "FAT"
+Jump loc0b44
+loc0b3f:Push "LEAN"
+loc0b44:Jump loc0a5a
+loc0b49:GetMember
+Push "text", register2, "i"
+GetVariable
+GetMember
+Push "description"
+GetMember
+SetMember
+Jump loc0b66
+loc0b61:Jump loc0af5
+loc0b66:Push null
+Equals2
+Not
+If loc0b66
+}
+loc0b71:GetTime
+If loc04aa
+StartDrag
+loc0b78:SetMember
+Push register1, "click"
+Push true
+If loc0599
+Extends
+loc0b8b:SetMember
+Push register1, "\x15\x1e\b"
+Push true
+If loc0786
+CastOp
+loc0b9e:DefineFunction "", 0 {
+}
+GetTime
+If loc0299
+DefineLocal
+loc0bad:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x19\x12\x1d" {
+Push 0, register1, "gapi"
+GetMember
+Push "\x18\x07\n"
+CallMethod
+Pop
+}
+GetTime
+Increment
+If loc049a
+DefineLocal
+loc0bd9:GetMember
+Push "gapi"
+GetMember
+Push "\x17\x01\x0e"
+GetMember
+Not
+Not
+If loc086a
+Push "_global"
+GetVariable
+Push "dofus"
+GetMember
+Push "\x18\x03\x17"
+GetTime
+Increment
+If loc0855
+SetProperty
+loc0c06:DefineFunction2 "", 0, 3, false, false, false, true, true, false, false, true, false {
+Push 0, register2, undefined
+CallMethod
+Pop
+}
+GetTime
+If loc030c
+StartDrag
+loc0c25:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "_ctrItem"
+GetMember
+Push "contentPath", register1, "\x1e\x03\x19"
+GetMember
+Push "gfx"
+GetMember
+SetMember
+Push register1, "_ctrItem"
+GetMember
+Push "\x17\x01\f", register1, "\x1e\x03\x19"
+GetMember
+SetMember
+Push register1, "_pbXP"
+Push "\x05"
+CharToAscii
+If loc0ca5
+SetProperty
+loc0c70:GetMember
+Push "value", register1, "\x1e\x03\x19"
+GetMember
+Push "\x17\x04\x02"
+GetMember
+SetMember
+Push register1, "\x1c\t\x15"
+GetMember
+Push "enabled", register1, "\x1e\x03\x19"
+GetMember
+Push "isAssociateWithLivingItem"
+GetMember
+Push true
+If loc0cde
+StartDrag
+loc0ca5:GetMember
+Push "\x18\x1d\t", register1, "\x1e\x03\x19"
+GetMember
+Push "\x17\x04\x01"
+GetMember
+SetMember
+Push register1, "_pbXP"
+GetMember
+Push "\x18\x19\x18", register1, "\x1e\x03\x19"
+GetMember
+Push "\x17\x03\x1d"
+GetMember
+SetMember
+Push register1, "_pbXP"
+GetTime
+If loc0c70
+CastOp
+loc0cde:SetMember
+Push register1, "\x1c\t\x18"
+GetMember
+Push "enabled", register1, "\x1e\x03\x19"
+GetMember
+Push "isAssociateWithLivingItem"
+GetMember
+SetMember
+Push 0, register1, "\x18\n\x1c"
+CallMethod
+Pop
+}
+Push false
+Not
+If loc0b78
+CastOp
+loc0d12:ConstantPool "dofus", "\x18\x03\x17", "gapi", "\x17\x01\x0e", "LivingItemsViewer", "_global", "Object", "\x17\x01\x17", "\x17\t\x11", "prototype", "\x16\x0b", "\x1e\x03\x19", "\x1b\x14\x15", "\x01\t", "\x18\t\x0b", "\x16\x1b\x18", "\x17\x02\x13", "object", "method", "\x18\n\x1c", "\x16\x01\x0e", "\x15\x1e\b", "over", "_pbXP", "\x15\x1d\x15", "out", "click", "\x1c\t\x18", "\x1c\t\x15", "\x1c\x0b\x04", "\x1d\x02\x07", "text", "STATE", "api", "lang", "getText", "_lblState", "\x18\x1e\r", "FAT", "LEAN", "SATISFIED_WORD", "\x1c\x1a\n", "LEVEL", "\x1c\x1a\x07", "\x18\x1a\x05", " / ", "nbSkin", "\x1d\x04\x19", "EXPERIMENT", "label", "DISSOCIATE", "FEED_WORD", "CHOOSE_SKIN", "effects", "i", "type", "\x1c\x17\f", "description", "_ctrItem", "contentPath", "gfx", "\x17\x01\f", "\x18\x1d\t", "\x17\x04\x01", "\x18\x19\x18", "\x17\x03\x1d", "value", "\x17\x04\x02", "enabled", "isAssociateWithLivingItem", "target", "item", "ChooseItemSkin", "ui", "\x18\x17\x04", "itemsType", "ChooseFeed", "\x18\x18\x12", "SpeakingItemsManager", "SPEAK_TRIGGER_DISSOCIATE", "\x18\x12\x03", "\x1b\x11\x11", "position", "ID", "\x19\x06\x1c", "Items", "\x17\t\x03", "THOUSAND_SEPARATOR", "\x17\x15\x17", "\x16\x04\t", "\x1b\x17\x07", "\x17\x0e\x15", "\x15\x1e\x0b", "\x1b\x01\x11", "\x18\x07\n", "\x18\x11\x01", "addProperty", "ASSetPropFlags"
+GetTime
+Increment
+If loc081f
+SetMember
+loc0fa8:

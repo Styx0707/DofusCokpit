@@ -1,0 +1,32 @@
+onClipEvent(load){
+   while(true)
+   {
+      if(!ord("\x0b"))
+      {
+         if(false)
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push(777793783);
+      }
+      if(§§pop())
+      {
+         function §\x1e\x11\f§(eventObj)
+         {
+            _parent.dropItem({target:this});
+         }
+         if(!ord("\b"))
+         {
+            §§pop() extends §§pop();
+            §§goto(addr1e006);
+         }
+      }
+      §§push(eval("\x1e\x11\f"));
+      break;
+   }
+   this["\x15\x1d\x15"]("drop",§§pop());
+   addr1e006:
+}

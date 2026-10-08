@@ -1,0 +1,16 @@
+while(true)
+{
+   if(false)
+   {
+      if(!ord("\x07"))
+      {
+         break;
+      }
+   }
+   else
+   {
+      §§push("ank.gapi.controls.button.ButtonBackground");
+   }
+   Object.registerClass("ButtonToggleDown",eval(§§pop()));
+   break;
+}

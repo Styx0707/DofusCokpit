@@ -1,0 +1,34 @@
+ConstantPool "\x07", "X", "V"
+Push "\n"
+CharToAscii
+If loc04dc
+Push "\n"
+CharToAscii
+If loc04e4
+ConstantPool "{invalid_utf8=150}\x05", "\x072{invalid_utf8=210};\x10{invalid_utf8=157}\x02", "2", "{invalid_utf8=136}\n", "\x03", "\b{invalid_utf8=159}", "{invalid_utf8=163}}", "\x0f", "\x1d{invalid_utf8=150}\x11", "", "styleName", "", "none", "\x1d{invalid_utf8=150}\n", "", "toggle", "\x05\x01\x1d", "{invalid_utf8=150}!", "", "backgroundDown", "", "ButtonColorDown", "\x1d{invalid_utf8=150}\x1d", "", "backgroundUp", "", "ButtonColorUp", "\x1d{invalid_utf8=150}\x0b", "", "enabled", "\x05\x01\x1d{invalid_utf8=150}\b", "", "icon", "", "", "\x1d{invalid_utf8=150}\x0e", "", "label", "", "Label", "\x1d{invalid_utf8=150}\f", "", "selected", "\x05", "{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "N{invalid_utf8=255}#", "", "", "", "{invalid_utf8=191}\x06 \x01", "", "{invalid_utf8=166}\x0b", ".", "î\x15{invalid_utf8=199}\x1c{invalid_utf8=228}i{invalid_utf8=128}<_btnReset", "", "", "", "", "\x04", "", "", "\x04", "{invalid_utf8=246}", "", "", "{invalid_utf8=150}\x03", "", "\x05", "2{invalid_utf8=157}\x02", "\x11", "{invalid_utf8=150}\x02", "\x05\x01L\x10{invalid_utf8=157}\x02", "\r", "{invalid_utf8=136}\x10", "\x1e\x06{invalid_utf8=150}\x05", "\x07{invalid_utf8=190}W*#P{invalid_utf8=157}\x02", "L", "{invalid_utf8=136}\b", "\x02", "9d", "i\x1f", "\x1d{invalid_utf8=150}\f", "", "selected", "\x05", "\x1d{invalid_utf8=150}\x1d", "", "styleName", "", "BrownCrossButton", "\x1d{invalid_utf8=150}\n", "", "toggle", "\x05", "\x1d", "{invalid_utf8=150}!", "", "backgroundDown", "", "ButtonCrossDown", "\x1d{invalid_utf8=150}\x1d", "", "backgroundUp", "", "ButtonCrossUp", "\x1d{invalid_utf8=150}\x0b", "", "enabled", "\x05\x01\x1d{invalid_utf8=150}\b", "", "icon", "", "", "\x1d{invalid_utf8=150}\x0e", "", "label", "", "Label", "{invalid_utf8=150}\x03", "", "\x07", "2{invalid_utf8=157}\x02", "A{invalid_utf8=255}O", "", "", "", "{invalid_utf8=191}\x06{invalid_utf8=145}", "", "", "{invalid_utf8=166}\f", "g", "̀", "\x19{invalid_utf8=153}{invalid_utf8=163}\x14{invalid_utf8=196}+{invalid_utf8=128}_cpColorPicker", "", "", "", "", "\x04", "", "", "\x04", "a", "", "", "{invalid_utf8=150}\x02", "\x05\x01L\x10{invalid_utf8=157}\x02", "\x11", "{invalid_utf8=150}\x03", "", "\x03", "2{invalid_utf8=157}\x02", "\x13", "{invalid_utf8=136}D", "{invalid_utf8=181}7{invalid_utf8=150}\x0b", "", "enabled", "\x05\x01\x1d{invalid_utf8=150}\n", "", "\x1b\x03\x03", "\x07\n", "", "", "\x1d{invalid_utf8=150}\n", "", "\x1b\x03\x04", "\x07\x1e", "", "", "\x1d{invalid_utf8=150}\x14", "", "styleName", "", "default", "\x1d", "", "", "", "", "{invalid_utf8=158}\x06&\r", "p", "{invalid_utf8=197}{invalid_utf8=194}${invalid_utf8=225}\x12-t\n{invalid_utf8=128}_mcRandomColor1", "{invalid_utf8=158}\x06&\x13", "p", "{invalid_utf8=197}{invalid_utf8=194}${invalid_utf8=225}\x12-t.@_mcRandomColor2", "{invalid_utf8=158}\x06&\x19", "p", "{invalid_utf8=197}{invalid_utf8=194}${invalid_utf8=225}\x120{invalid_utf8=186}\x14{invalid_utf8=160}_mcRandomColor3", "{invalid_utf8=142}\x06&\x1f", "t", "\x1c{invalid_utf8=134}{invalid_utf8=192}/{invalid_utf8=128}\x1d\x0f\x0b", "@", "", "", "\x12\x0e\x01", "u", "ColorSelector", "{invalid_utf8=255}\tN", "", "", "w", "\x01", "(\x03{invalid_utf8=136}\x07", "\x02", "{invalid_utf8=174}F", "{invalid_utf8=172}", "{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "\x11", "{invalid_utf8=150}\x03", "", "\b", "2{invalid_utf8=157}\x02", "\x06", "{invalid_utf8=136}\x04", "ek\x07", "{invalid_utf8=154}\x06&\x01", "\x13", "{invalid_utf8=197}{invalid_utf8=255}{invalid_utf8=254}@", "", "boundingBox_mc", "@", "", "", "\x0e\x0e\x01", "w", "TextInput", "{invalid_utf8=255}\t{invalid_utf8=224}\x0e", "", "x", "\x01", "{invalid_utf8=191}\x06{invalid_utf8=138}", "", "", "{invalid_utf8=134}\x01", "V", "{invalid_utf8=213}{invalid_utf8=218}{invalid_utf8=225}({invalid_utf8=163}{invalid_utf8=212}", "", "", "", "", "\x04", "", "", "\x04", "l", "", "", "{invalid_utf8=136}\x06", "\x02", "{invalid_utf8=169}", "O", "{invalid_utf8=150}\x02", "\x05\x01L\x10{invalid_utf8=157}\x02", "\x11", "{invalid_utf8=150}\x02", "\x05\x01L\x10{invalid_utf8=157}\x02", "\x13", "{invalid_utf8=136}H", "{invalid_utf8=190}\x02{invalid_utf8=150}\x0b", "", "enabled", "\x05\x01\x1d{invalid_utf8=150}\x07", "", "\x18\x05\b", "\x05", "\x1d{invalid_utf8=150}\'", "", "styleName", "", "TranparentBackgroundHidder", "\x1d", "", "", "", "", "{invalid_utf8=191}\x06{invalid_utf8=207}", "", "", "{invalid_utf8=166}\x02", "X", "{invalid_utf8=209}&e{invalid_utf8=138}z{invalid_utf8=204}{invalid_utf8=213}{invalid_utf8=170}\x1b{invalid_utf8=128}\x1e\x10\t", "", "", "", "", "\x04", "", "", "\x04", "{invalid_utf8=170}", "", "", "{invalid_utf8=150}\x05", "\x07{invalid_utf8=242}{invalid_utf8=141}{invalid_utf8=207}{invalid_utf8=35}L`{invalid_utf8=157}\x02", "\x11", "{invalid_utf8=150}\x02", "\x05\x01L\x11{invalid_utf8=157}\x02", "\n", "{invalid_utf8=136}\x15", "{]{invalid_utf8=150}\x02", "\x05\x01L\x11{invalid_utf8=157}\x02", "\t", "{invalid_utf8=136}\x04", "\x01", "{invalid_utf8=189}", "\x1d", "{invalid_utf8=150}\x07", "", "\x16\x18\x14", "\x05", "\x1d{invalid_utf8=150}\x13", "", "contentPath", "", "none", "\x1d{invalid_utf8=150}\x0b", "", "enabled", "\x05\x01\x1d{invalid_utf8=150}\x07", "", "\x18\f\t", "\x05", "\x1d{invalid_utf8=150}\x1d"
+Jump loc050c
+loc04dc:Push 272355890
+loc04e4:If loc051f
+ConstantPool "\b{invalid_utf8=159}", "{invalid_utf8=163}}", "\x0f"
+loc04f6:SetVariable
+Push "styleName", "none"
+SetVariable
+loc050c:Push "toggle", true
+SetVariable
+Jump loc05ad
+loc051f:Push "backgroundDown", "ButtonColorDown"
+SetVariable
+Push "backgroundUp", "ButtonColorUp"
+SetVariable
+Push "enabled", true
+SetVariable
+Push "icon", ""
+SetVariable
+Push "label", "Label"
+SetVariable
+Push "selected", false
+Push false
+Not
+If loc04f6
+SetProperty
+loc05ad:

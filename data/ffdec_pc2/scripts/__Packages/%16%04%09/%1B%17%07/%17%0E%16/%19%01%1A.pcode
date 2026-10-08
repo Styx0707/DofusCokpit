@@ -1,0 +1,437 @@
+Push true
+PushDuplicate
+And
+If loc001d
+Push "\x05"
+CharToAscii
+If loc0025
+Jump loc0732
+loc001d:Push 260971880
+loc0025:If loc0628
+ConstantPool "\x10{invalid_utf8=139}", "{invalid_utf8=130}j"
+loc0035:SetMember
+Push 1, null, register1, 3, constant34
+CallFunction
+Pop
+loc004a:Jump loc0732
+loc004f:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x18\x1b\x12" {
+Push register2, undefined
+Equals2
+Not
+If loc0076
+Push register1
+StoreRegister 2
+Pop
+loc0076:Push 1, 1, register2, "gotoAndStop"
+CallMethod
+Pop
+Push register2
+Enumerate2
+Push true
+If loc009a
+SetMember
+loc009a:StoreRegister 0
+Push null
+Equals2
+If loc00ea
+Push "a", register0
+DefineLocal
+Push register2, "a"
+GetVariable
+GetMember
+Push "MovieClip"
+GetVariable
+InstanceOf
+Not
+If loc00e5
+Push register2, "a"
+GetTime
+Increment
+If loc00d5
+DefineLocal
+loc00d5:GetVariable
+GetMember
+Push 1, register1, "\x1b\n\x1d"
+CallMethod
+Pop
+loc00e5:Jump loc009a
+}
+loc00ea:GetTime
+Increment
+If loc0035
+GetProperty
+loc00f2:DefineFunction2 "", 1, 4, false, false, true, false, true, false, false, true, false, 2, "\x1a\x14\x06" {
+Push "_ACTION", 1, register1, "\x17\x18\x04"
+CallMethod
+StoreRegister 3
+Pop
+Push register2, undefined
+Equals2
+Not
+If loc0130
+Push register3, "sequencer"
+GetMember
+StoreRegister 2
+Pop
+loc0130:Push 0, register2, "onActionEnd"
+CallMethod
+Pop
+}
+Push "\x03"
+CharToAscii
+If loc055f
+NewObject
+loc014b:GetMember
+Not
+Not
+If loc0521
+Push "_global"
+GetVariable
+Push "\x16\x04\t"
+GetMember
+Push "\x1b\x17\x07"
+GetMember
+Push "\x17\x0e\x16", 0, "Object"
+GetTime
+Increment
+If loc051f
+CloneSprite
+loc0179:SetMember
+Push register1, "\x17\x13\x1b"
+GetTime
+If loc0302
+GetProperty
+loc0188:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x18\x1b\x12" {
+Push register2, undefined
+Equals2
+Not
+If loc01af
+Push register1
+StoreRegister 2
+Pop
+loc01af:Push 1, 1, register2, "gotoAndPlay"
+CallMethod
+Pop
+Push register2
+Enumerate2
+Push false
+Not
+If loc01d4
+GetProperty
+loc01d4:StoreRegister 0
+Push null
+Equals2
+If loc0229
+Push "a", register0
+DefineLocal
+Push register2, "a"
+GetVariable
+GetMember
+Push "MovieClip"
+GetVariable
+InstanceOf
+Not
+Push "\x0b"
+CharToAscii
+If loc0208
+SetProperty
+loc0208:If loc0224
+Push register2, "a"
+GetVariable
+GetMember
+Push 1, register1, "\x1a\x05\x10"
+CallMethod
+Pop
+loc0224:Jump loc01d4
+}
+loc0229:GetTime
+Increment
+If loc0581
+GetProperty
+loc0231:DefineFunction2 "", 0, 3, false, false, true, false, true, false, false, true, false {
+Push "x", 0, "y", 0, 2
+InitObject
+StoreRegister 2
+Pop
+Push register2, 1, register1, "localToGlobal"
+CallMethod
+Pop
+Push register2, "x", register2, "x"
+GetMember
+Push 1, "Math"
+GetVariable
+Push "floor"
+Push true
+If loc028f
+Extends
+loc028f:CallMethod
+SetMember
+Push register2, "y", register2, "y"
+GetMember
+Push 1, "Math"
+GetVariable
+Push "floor"
+CallMethod
+SetMember
+Push register2, 1, register1, "globalToLocal"
+CallMethod
+Pop
+Push register1, "_x", register1, "_x"
+GetMember
+Push register2, "x"
+Push true
+If loc02dd
+ImplementsOp
+loc02dd:GetMember
+Subtract
+SetMember
+Push register1, "_y", register1, "_y"
+GetMember
+Push register2, "y"
+GetMember
+Subtract
+SetMember
+}
+Push false
+Not
+If loc034b
+CastOp
+loc0302:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x1b\x18\x0b" {
+Push "_ACTION", 1, register1, "\x17\x18\x04"
+CallMethod
+Return
+}
+GetTime
+Increment
+If loc038d
+CallFunction
+loc032a:GetMember
+Push "\x19\x01\x1a"
+GetTime
+If loc053f
+ImplementsOp
+loc0337:SetMember
+Push register1, "end"
+Push false
+Not
+If loc00f2
+CastOp
+loc034b:SetMember
+Push register1, "\x1a\x06\x01"
+Push false
+Not
+If loc0440
+GetProperty
+loc035f:GetVariable
+Not
+Not
+If loc037b
+Push "_global"
+GetVariable
+Push "\x16\x04\t", 0, "Object"
+NewObject
+SetMember
+loc037b:Push "\x16\x04\t"
+Push "\x05"
+CharToAscii
+If loc03f3
+ImplementsOp
+loc038d:SetMember
+Push register1, "\x1a\x05\x10"
+GetTime
+Increment
+If loc0188
+CallFunction
+loc039d:StoreRegister 0
+SetMember
+Push register0, "MovieClip"
+GetVariable
+Extends
+Push register0, "prototype"
+GetMember
+StoreRegister 1
+Pop
+Push register1, "\x16\x07\x02"
+Push "\n"
+CharToAscii
+If loc04be
+SetMember
+loc03cc:GetMember
+Push "\x1b\x17\x07", 0, "Object"
+NewObject
+SetMember
+loc03db:Push "\x16\x04\t"
+GetVariable
+Push "\x1b\x17\x07"
+GetMember
+Push "\x17\x0e\x16"
+GetTime
+If loc014b
+CloneSprite
+loc03f3:GetVariable
+Push "\x1b\x17\x07"
+GetMember
+Not
+Not
+If loc03db
+Push "_global"
+GetVariable
+Push "\x16\x04\t"
+GetTime
+Increment
+If loc03cc
+GetProperty
+loc0414:Push "\x16\x04\t"
+GetVariable
+Push "\x1b\x17\x07"
+GetMember
+Push "\x17\x0e\x16"
+GetMember
+Push "\x19\x01\x1a"
+GetMember
+Not
+Not
+If loc004a
+Push "\x16\x04\t"
+GetTime
+Increment
+If loc035f
+DefineLocal
+loc0440:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1
+Enumerate2
+loc0451:StoreRegister 0
+Push null
+Equals2
+If loc04b3
+Push "a", register0
+DefineLocal
+Push register1, "a"
+GetVariable
+GetMember
+Push "__proto__"
+Push true
+If loc0480
+SetProperty
+loc0480:GetMember
+Push "MovieClip"
+GetVariable
+Push "prototype"
+GetMember
+Equals2
+Not
+If loc04ae
+Push 1, 1, register1, "a"
+GetVariable
+GetMember
+Push "gotoAndPlay"
+CallMethod
+Pop
+loc04ae:Jump loc0451
+}
+loc04b3:Push true
+If loc0337
+SetProperty
+loc04be:DefineFunction2 "", 4, 7, false, false, true, false, true, false, false, true, false, 2, "\x16\x1b\x17", 3, "\x18\x0b\t", 4, "\x17\x07\x0b", 5, "\x16\x05\x14" {
+Push register4, register3, 2, register1, "createEmptyMovieClip"
+CallMethod
+StoreRegister 6
+Pop
+Push register6, "__proto__", register2, "prototype"
+GetMember
+SetMember
+Push register5, register6, 2, register2, "apply"
+CallMethod
+Pop
+Push register6
+Return
+}
+GetTime
+If loc0572
+StartDrag
+loc051f:NewObject
+SetMember
+loc0521:Push "_global"
+GetVariable
+Push "\x16\x04\t"
+GetMember
+Push "\x1b\x17\x07"
+GetMember
+Push "\x17\x0e\x16"
+GetTime
+If loc032a
+NewObject
+loc053f:DefineFunction2 "", 0, 3, false, false, false, true, true, false, false, true, false {
+Push 0, register2, undefined
+CallMethod
+Pop
+}
+GetTime
+Increment
+If loc039d
+Extends
+loc055f:SetMember
+Push register1, "\x17\x18\x04"
+Push true
+If loc0591
+SetMember
+loc0572:SetMember
+Push register1, "\x16\x03\f"
+GetTime
+If loc0231
+DefineLocal
+loc0581:SetMember
+Push register1, "\x1b\n\x1d"
+GetTime
+Increment
+If loc004f
+GetProperty
+loc0591:DefineFunction2 "", 1, 5, false, false, true, false, true, false, false, true, false, 2, "\x1a\b\x04" {
+Push 20
+StoreRegister 3
+Pop
+Push register1
+StoreRegister 4
+Pop
+loc05b8:Push register3, 0
+Less2
+Not
+Not
+If loc061d
+Push register4, register2
+Push false
+Not
+If loc05dd
+CallFunction
+loc05dd:GetMember
+Push undefined
+Equals2
+Not
+Not
+If loc05f3
+Push register4, register2
+GetMember
+Return
+loc05f3:Push register4, "_parent"
+GetMember
+StoreRegister 4
+Pop
+Push register3
+Decrement
+StoreRegister 3
+Push "\t"
+CharToAscii
+If loc0617
+CallFunction
+loc0617:Pop
+Jump loc05b8
+}
+loc061d:Push true
+If loc0179
+StartDrag
+loc0628:ConstantPool "\x16\x04\t", "\x1b\x17\x07", "\x17\x0e\x16", "\x19\x01\x1a", "_global", "Object", "MovieClip", "prototype", "\x16\x07\x02", "createEmptyMovieClip", "__proto__", "apply", "\x16\x03\f", "x", "y", "localToGlobal", "Math", "floor", "globalToLocal", "_x", "_y", "\x1a\x06\x01", "a", "gotoAndPlay", "end", "_ACTION", "\x17\x18\x04", "sequencer", "onActionEnd", "_parent", "\x17\x13\x1b", "\x1a\x05\x10", "\x1b\n\x1d", "gotoAndStop", "ASSetPropFlags"
+Push "\x04"
+CharToAscii
+If loc0414
+GetProperty
+loc0732:

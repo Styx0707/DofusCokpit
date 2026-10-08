@@ -1,0 +1,47 @@
+ConstantPool "A"
+Push true
+PushDuplicate
+And
+If loc058a
+Push false
+Not
+If loc0592
+ConstantPool "{invalid_utf8=150}\x05", "\x07{invalid_utf8=190}\\{invalid_utf8=138}-La{invalid_utf8=157}\x02", "w", "{invalid_utf8=136}\b", "\x02", "e{invalid_utf8=140}", "{invalid_utf8=181}{invalid_utf8=186}", "\x1d{invalid_utf8=150}\x04", "\b\x06\b\x07\x1d{invalid_utf8=150}\x07", "\b\b\x07\x01", "", "", "\x1d{invalid_utf8=150}\x07", "\b\t\x01", "", "", "", "\x1d{invalid_utf8=150}\x04", "\b\n\x05", "\x1d{invalid_utf8=150}\x04", "\b\x0b\b\f{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "{invalid_utf8=203}", "\"{invalid_utf8=150}\x04", "\b", "\b\x01\x1d{invalid_utf8=150}\x04", "\b\x02\b\x01\x1d{invalid_utf8=150}\x04", "\b\x03\x05\x01\x1d{invalid_utf8=150}\x04", "\b\x04\x05\x01\x1d{invalid_utf8=150}\x04", "\b\x05\x05\x01{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "{invalid_utf8=149}{invalid_utf8=255}\"{invalid_utf8=136}{invalid_utf8=137}", "\r", "backgroundRenderer", "", "\x16\x10\x12", "dragAndDrop", "enabled", "\x18\x07\x0e", "highlightRenderer", "ClassInfosViewerSpellContainerHighlight", "id", "margin", "\x1a\x1e\b", "styleName", "none", "{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "7{invalid_utf8=255}\'\x1d", "", "", "", "", "{invalid_utf8=191}\x06^\x01", "", "{invalid_utf8=166}\f", "{invalid_utf8=214}", "{invalid_utf8=197}", "", "{invalid_utf8=128}", "51\x05{invalid_utf8=220}_ctr4", "", "", "", "", "\x04", "", "", "\x04", "8\x01", "", "{invalid_utf8=136}\t", "\x03", "{invalid_utf8=130}", "D{invalid_utf8=194}", "1", "{invalid_utf8=150}\x03", "", "\x03", "2{invalid_utf8=157}\x02", "\x11", "{invalid_utf8=150}\x02", "\x05\x01L\x11{invalid_utf8=157}\x02", "\x0b", "{invalid_utf8=136} ", "{invalid_utf8=146}\r{invalid_utf8=150}\x03", "", "\b", "2{invalid_utf8=157}\x02", "$", "{invalid_utf8=136}\x04", "\x01", "{invalid_utf8=145}", "\x1d{invalid_utf8=150}\x07", "\b\t\x01", "", "", "", "\x1d{invalid_utf8=150}\x04", "\b\n\x05", "\x1d{invalid_utf8=150}\x04", "\b\x0b\b\f\x1d", "{invalid_utf8=136}{invalid_utf8=137}", "\r", "backgroundRenderer", "", "\x16\x10\x12", "dragAndDrop", "enabled", "\x18\x07\x0e", "highlightRenderer", "ClassInfosViewerSpellContainerHighlight", "id", "margin", "\x1a\x1e\b", "styleName", "none", "{invalid_utf8=150}\x03", "", "\x04", "2{invalid_utf8=157}\x02", "\x01", "${invalid_utf8=150}\x04", "\b", "\b\x01\x1d{invalid_utf8=150}\x04", "\b\x02\b\x01\x1d{invalid_utf8=150}\x04", "\b\x03\x05\x01\x1d{invalid_utf8=150}\x04", "\b\x04\x05\x01\x1d{invalid_utf8=150}\x04", "\b\x05\x05\x01\x1d{invalid_utf8=150}\x04", "\b\x06\b\x07\x1d{invalid_utf8=150}\x07", "\b\b\x07\x01", "", "", "{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "\x05{invalid_utf8=255}=", "", "", "", "{invalid_utf8=191}\x06Q\x01", "", "{invalid_utf8=166}\r", "{invalid_utf8=214}", "{invalid_utf8=197}", "", "{invalid_utf8=128}", "5|\x05{invalid_utf8=220}_ctr5", "", "", "", "", "\x04", "", "", "\x04", "+\x01", "", "{invalid_utf8=150}\x03", "", "\t", "2{invalid_utf8=157}\x02", "\x11", "{invalid_utf8=150}\x02", "\x05\x01L\x11{invalid_utf8=157}\x02", "\n", "{invalid_utf8=136}\x1e", "{invalid_utf8=149}7{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "j", "{invalid_utf8=136}\x05", "\x01", "uY", "\x1d{invalid_utf8=150}\x04", "\b\x06\b\x07\x1d{invalid_utf8=150}\x07", "\b\b\x07\x01", "", "", "\x1d{invalid_utf8=150}\x07", "\b\t\x01", "", "", "", "\x1d{invalid_utf8=150}\x04", "\b\n\x05", "\x1d{invalid_utf8=150}\x04", "\b\x0b\b\f\x1d", "{invalid_utf8=150}\x04", "\b", "\b\x01\x1d{invalid_utf8=150}\x04", "\b\x02\b\x01\x1d{invalid_utf8=150}\x04", "\b\x03\x05\x01\x1d{invalid_utf8=150}\x04", "\b\x04\x05\x01\x1d{invalid_utf8=150}\x04", "\b\x05\x05\x01{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "{invalid_utf8=159}{invalid_utf8=255}\"{invalid_utf8=136}{invalid_utf8=137}", "\r", "backgroundRenderer", "", "\x16\x10\x12", "dragAndDrop", "enabled", "\x18\x07\x0e", "highlightRenderer", "ClassInfosViewerSpellContainerHighlight", "id", "margin", "\x1a\x1e\b", "styleName", "none", "{invalid_utf8=150}\x03", "", "\t", "2{invalid_utf8=157}\x02", "6{invalid_utf8=255}O", "", "", "", "{invalid_utf8=191}\x06O\x01", "", "{invalid_utf8=166}\x0e", "{invalid_utf8=214}", "{invalid_utf8=197}", "", "{invalid_utf8=128}", "5{invalid_utf8=199}\x05{invalid_utf8=220}_ctr6", "", "", "", "", "\x04", "", "", "\x04", ")\x01", "", "{invalid_utf8=150}\x05", "\x07{invalid_utf8=205}\x1dd\x01La{invalid_utf8=157}\x02", "\x11", "{invalid_utf8=150}\x02", "\x05\x01L\x10{invalid_utf8=157}\x02", "\n", "{invalid_utf8=136} ", "Td{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "f", "{invalid_utf8=136}\x04", "\x01", "{invalid_utf8=182}", "\x1d{invalid_utf8=150}\x07", "\b\t\x01", "", "", "", "\x1d{invalid_utf8=150}\x04", "\b\n\x05", "\x1d{invalid_utf8=150}\x04", "\b\x0b\b\f\x1d", "{invalid_utf8=150}\x04", "\b", "\b\x01\x1d{invalid_utf8=150}\x04", "\b\x02\b\x01\x1d{invalid_utf8=150}\x04", "\b\x03\x05\x01\x1d{invalid_utf8=150}\x04", "\b\x04\x05\x01\x1d{invalid_utf8=150}\x04", "\b\x05\x05\x01\x1d{invalid_utf8=150}\x04", "\b\x06\b\x07\x1d{invalid_utf8=150}\x07", "\b\b\x07\x01", "", "", "4P{invalid_utf8=157}\x02", "{invalid_utf8=162}{invalid_utf8=255}@{invalid_utf8=136}{invalid_utf8=137}", "\r", "backgroundRenderer", "", "\x16\x10\x12", "dragAndDrop", "enabled", "\x18\x07\x0e", "highlightRenderer", "ClassInfosViewerSpellContainerHighlight", "id", "margin", "\x1a\x1e\b", "styleName", "none", "{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "\'{invalid_utf8=255}i", "", "", "", "{invalid_utf8=191}\x06O\x01", "", "{invalid_utf8=166}\x0f", "{invalid_utf8=214}", "{invalid_utf8=197}", "", "{invalid_utf8=128}", "9\t\x01w", "_ctr7", "", "", "", "", "\x04", "", "", "\x04", "(\x01", "", "{invalid_utf8=150}\x02", "\x05"
+Jump loc0594
+loc058a:Push 764042430
+loc0592:PushDuplicate
+BitOr
+loc0594:If loc0610
+ConstantPool "e{invalid_utf8=140}", "{invalid_utf8=181}{invalid_utf8=186}"
+loc05a4:SetVariable
+Push constant6, constant7
+SetVariable
+Push constant8, 1
+SetVariable
+Push constant9, 0f
+SetVariable
+Push constant10, false
+SetVariable
+Push constant11, constant12
+Push false
+Not
+If loc06a8
+GetProperty
+loc05de:Push "e{invalid_utf8=140}", "{invalid_utf8=181}{invalid_utf8=186}"
+SetVariable
+Push constant2, "{invalid_utf8=181}{invalid_utf8=186}"
+SetVariable
+Push constant3, true
+SetVariable
+Push constant4, true
+SetVariable
+Push constant5, true
+Push true
+If loc05a4
+GetProperty
+loc0610:ConstantPool "backgroundRenderer", "", "\x16\x10\x12", "dragAndDrop", "enabled", "\x18\x07\x0e", "highlightRenderer", "ClassInfosViewerSpellContainerHighlight", "id", "margin", "\x1a\x1e\b", "styleName", "none"
+Push false
+Not
+If loc05de
+StartDrag
+loc06a8:SetVariable

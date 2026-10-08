@@ -1,0 +1,69 @@
+on(construct){
+   loop1:
+   while(true)
+   {
+      while(true)
+      {
+         while(true)
+         {
+            if(!(true and true))
+            {
+               if(!(0x160D669D & 0x160D669D))
+               {
+                  break;
+               }
+            }
+            else
+            {
+               §§push(true);
+            }
+            var _temp_1 = §§pop();
+            if(!(_temp_1 and _temp_1))
+            {
+               break;
+            }
+            if(false)
+            {
+               startDrag(§§pop(),§§pop(),§§pop(),§§pop(),§§pop(),§§pop());
+               return;
+            }
+            break loop1;
+         }
+         §§goto(addra769);
+      }
+      return;
+   }
+   set("{invalid_utf8=150}\x02",true);
+   set("\x05\x01L\x10{invalid_utf8=157}\x02",false);
+   set("~","{invalid_utf8=136}\x04");
+   set("\x01",false);
+   §§push("{invalid_utf8=167}");
+   §§push("{invalid_utf8=136}\x04");
+   if(getTimer() + 1)
+   {
+      while(true)
+      {
+         set(§§pop(),§§pop());
+         set("\x1d{invalid_utf8=150}\x04",false);
+         set("\b\x06\x05",false);
+         set("\x1d{invalid_utf8=150}\x04","\b\x07\x05");
+         §§push("\x1d{invalid_utf8=150}\x04");
+         §§push(true);
+         if(false)
+         {
+            duplicateMovieClip(§§pop(),§§pop(),§§pop());
+            §§goto(addra794);
+         }
+         addra7c3:
+         set(§§pop(),§§pop());
+         set("\b\b\b\t\x1d{invalid_utf8=150}\x04",true);
+         set("\b\n\x05\x01{invalid_utf8=150}\x02",150);
+         set("\x05\x01{invalid_utf8=157}\x02",false);
+         return;
+         addra794:
+      }
+      return;
+      addra769:
+   }
+   §§goto(addra7c3);
+}

@@ -1,0 +1,18 @@
+ConstantPool "{invalid_utf8=148}", "3{invalid_utf8=142}"
+Push true
+PushDuplicate
+And
+If loc002a
+Push 248716866
+PushDuplicate
+BitOr
+If loc0048
+Jump loc0077
+loc002a:Push "ank.gapi.controls.Compass"
+loc0048:GetVariable
+Push "Compass", 2, "Object"
+GetVariable
+Push "registerClass"
+CallMethod
+Pop
+loc0077:

@@ -1,0 +1,16 @@
+Push true
+PushDuplicate
+Or
+If loc001d
+Push "\x0b"
+CharToAscii
+If loc004c
+Jump loc0085
+loc001d:Push "ank.gapi.controls.common.DefaultBackground"
+loc004c:GetVariable
+Push "DefaultBackground", 2, "Object"
+GetVariable
+Push "registerClass"
+CallMethod
+Pop
+loc0085:

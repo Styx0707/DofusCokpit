@@ -1,0 +1,80 @@
+on(construct){
+   while(true)
+   {
+      if(!ord("\x06"))
+      {
+         if(false)
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push(675550001);
+      }
+      if(!(§§pop() + 1))
+      {
+         break;
+      }
+      if(false)
+      {
+         §§push(getProperty(§§pop(), _X));
+      }
+      else
+      {
+         set("{invalid_utf8=157}{invalid_utf8=188}","{invalid_utf8=172};");
+         t = §§constant(3);
+         set(§§constant(4),§§constant(3));
+         set(§§constant(5),§§constant(6));
+         set(§§constant(7),20);
+         §§push(§§constant(8));
+         §§push(§§constant(9));
+         if(getTimer())
+         {
+            while(true)
+            {
+               set(§§pop(),§§pop());
+               set(§§constant(10),true);
+               set(§§constant(11),false);
+               set(§§constant(12),0);
+               §§push(§§constant(13));
+               §§push(4);
+               if(!(getTimer() + 1))
+               {
+                  §§pop() implements ;
+                  §§goto(addr193c2);
+               }
+               else
+               {
+                  addr19520:
+                  set(§§pop(),§§pop());
+                  set(§§constant(14),0);
+                  set(§§constant(15),0);
+                  set(§§constant(16),4);
+                  §§push(§§constant(17));
+                  §§push(4);
+                  if(!ord("\x05"))
+                  {
+                     setProperty(§§pop(), _X, §§pop());
+                     break;
+                  }
+               }
+               addr193fb:
+               set(§§pop(),§§pop());
+               set(§§constant(18),§§constant(19));
+               set(§§constant(20),5);
+               set(§§constant(21),20);
+               set(§§constant(22),§§constant(23));
+               break;
+               addr193c2:
+            }
+            return;
+            addr19394:
+         }
+         §§goto(addr193fb);
+         §§push(§§pop()(§§pop()));
+      }
+      §§goto(addr19520);
+   }
+   §§goto(addr19394);
+}

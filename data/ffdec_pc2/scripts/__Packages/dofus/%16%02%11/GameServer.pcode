@@ -1,0 +1,212 @@
+Push false
+Not
+If loc001f
+Push 801850953
+PushDuplicate
+BitOr
+If loc0027
+Jump loc03fa
+loc001f:Push 749737765
+loc0027:Increment
+If loc02cf
+ConstantPool "{invalid_utf8=150}", "f", "\ty"
+loc0039:DefineFunction2 "", 1, 8, false, false, true, false, true, false, false, true, false, 2, "\x1a\x1b\x11" {
+Push constant15, 1, register2, constant10
+CallMethod
+StoreRegister 3
+Pop
+Push 0
+StoreRegister 4
+Pop
+Jump loc007a
+loc006f:Push register4
+Increment
+StoreRegister 4
+Pop
+loc007a:Push register4, register3, constant16
+Push true
+If loc00fe
+GetProperty
+loc008e:CallMethod
+Pop
+Jump loc006f
+loc0095:Push 0, "{invalid_utf8=150}"
+GetVariable
+Push constant20
+GetMember
+Push constant21
+GetMember
+Push constant22
+GetMember
+Push constant23
+GetMember
+Push constant24
+Push false
+Not
+If loc0143
+DefineLocal
+loc00c9:GetMember
+Push constant18
+Equals2
+StoreRegister 7
+Pop
+Push register7, register6, 2, register1, constant11
+GetMember
+Push constant12
+GetMember
+Push "\ty"
+GetMember
+Push constant19
+GetTime
+If loc008e
+SetMember
+loc00fe:GetMember
+Less2
+Not
+If loc0095
+Push constant17, 1, register3, register4
+GetMember
+Push constant10
+CallMethod
+StoreRegister 5
+Pop
+Push register5, 0
+GetMember
+ToNumber
+StoreRegister 6
+Pop
+Push register5, 1
+GetTime
+Increment
+If loc00c9
+NewObject
+loc0143:CallMethod
+Pop
+}
+GetTime
+Increment
+If loc01f5
+SetMember
+loc014d:Push "{invalid_utf8=150}"
+GetVariable
+Push "f"
+GetMember
+Push "\ty"
+GetMember
+Not
+Not
+If loc020a
+Push "{invalid_utf8=150}"
+Push true
+If loc023e
+SetMember
+loc0176:DefineFunction2 "", 1, 4, false, false, true, false, true, false, false, true, false, 2, "\x1a\x1b\x11" {
+Push constant9, 1, register2, constant10
+CallMethod
+StoreRegister 3
+Pop
+Push register1, constant11
+GetMember
+Push constant12
+GetMember
+Push "\ty"
+GetMember
+Push constant13, register3, 0
+GetMember
+ToNumber
+GetTime
+Increment
+If loc01c4
+SetProperty
+loc01c4:SetMember
+}
+Push true
+If loc02bb
+Extends
+loc01d0:GetMember
+Push "f"
+GetMember
+Push "\ty"
+Push true
+If loc020f
+DefineLocal
+loc01e7:Push register1, constant8
+GetTime
+If loc0176
+NewObject
+loc01f5:SetMember
+Push 1, null, register1, 3, constant25
+CallFunction
+Pop
+loc020a:Jump loc03fa
+loc020f:DefineFunction2 "", 2, 5, false, false, false, true, true, false, false, true, false, 3, "\x19\x11\x14", 4, "oAPI" {
+Push register4, register3, 2, register2, "initialize"
+CallMethod
+Pop
+}
+GetTime
+If loc0264
+SetMember
+loc023e:GetVariable
+Not
+Not
+If loc0297
+Push "_global"
+GetVariable
+Push "dofus", 0, "Object"
+NewObject
+Push true
+If loc0296
+SetMember
+loc0264:StoreRegister 0
+SetMember
+Push register0, "dofus"
+GetVariable
+Push "\x16\x02\x11"
+GetMember
+Push "Handler"
+GetMember
+Extends
+Push register0, "prototype"
+GetMember
+StoreRegister 1
+Pop
+Push true
+If loc01e7
+StartDrag
+loc0296:SetMember
+loc0297:Push "dofus"
+GetVariable
+Push "\x16\x02\x11"
+GetMember
+Not
+Not
+If loc03e4
+Push "_global"
+Push false
+Not
+If loc03cf
+SetMember
+loc02bb:SetMember
+Push register1, "updateServerStaticCriterions"
+Push false
+Not
+If loc0039
+GetProperty
+loc02cf:ConstantPool "dofus", "\x16\x02\x11", "GameServer", "_global", "Object", "initialize", "Handler", "prototype", "updateServerInformation", "|", "split", "api", "\x17\x05\x03", "dropBonusForServer", "updateServerStaticCriterions", ";", "length", ":", "1", "updateServerStaticCriterion", "\x18\x03\x17", "gapi", "ui", "Encyclopedia", "resetData", "ASSetPropFlags"
+GetTime
+If loc014d
+Extends
+loc03cf:GetVariable
+Push "dofus"
+GetMember
+Push "\x16\x02\x11", 0, "Object"
+NewObject
+SetMember
+loc03e4:Push "_global"
+GetVariable
+Push "dofus"
+Push true
+If loc01d0
+SetMember
+loc03fa:

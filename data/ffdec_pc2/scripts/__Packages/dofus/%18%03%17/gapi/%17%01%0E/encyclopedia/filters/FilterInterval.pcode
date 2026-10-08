@@ -1,0 +1,570 @@
+Push true
+PushDuplicate
+Or
+If loc001d
+Push true
+PushDuplicate
+And
+If loc0023
+Jump loc0966
+loc001d:Push "\x02"
+loc0023:CharToAscii
+If loc078d
+ConstantPool "J"
+loc0030:CallFunction
+Pop
+loc0032:Jump loc0966
+loc0037:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push "FilterIntervalViewer"
+Return
+}
+Push true
+If loc05f7
+Extends
+loc0053:SetMember
+Push register1, "isObjectValid"
+GetTime
+If loc04a8
+ImplementsOp
+loc0062:SetMember
+Push true
+If loc06c2
+Extends
+loc006e:SetMember
+Push register1, "__get__defaultMax"
+Push false
+Not
+If loc02eb
+Extends
+loc0082:GetMember
+Push "filters"
+GetMember
+Push "FilterInterval"
+GetMember
+Not
+Not
+If loc0032
+Push "dofus"
+Push false
+Not
+If loc0638
+SetProperty
+loc00a7:DefineFunction "", 0 {
+}
+Push true
+If loc0182
+DefineLocal
+loc00ba:GetVariable
+Push "dofus"
+GetMember
+Push "\x18\x03\x17"
+GetMember
+Push "gapi"
+GetMember
+Push "\x17\x01\x0e"
+GetMember
+Push "encyclopedia", 0, "Object"
+NewObject
+SetMember
+loc00e1:Push "dofus"
+Push true
+If loc035b
+NewObject
+loc00f1:SetMember
+Push register1, "\x01\x15"
+GetTime
+Increment
+If loc013a
+ImplementsOp
+loc0101:GetMember
+Push "FilterInterval"
+GetTime
+Increment
+If loc01c8
+DefineLocal
+loc010f:GetMember
+Push "\x18\x03\x17"
+GetMember
+Push "gapi", 0, "Object"
+NewObject
+SetMember
+loc0124:Push "dofus"
+GetVariable
+Push "\x18\x03\x17"
+Push true
+If loc060c
+DefineLocal
+loc013a:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "\x1e\n\f"
+GetMember
+Return
+}
+GetTime
+Increment
+If loc006e
+SetMember
+loc0156:GetMember
+Push "\x17\x01\x0e"
+GetMember
+Push "encyclopedia"
+GetMember
+Push "filters", 0, "Object"
+NewObject
+SetMember
+loc0171:Push "_global"
+Push false
+Not
+If loc02bf
+GetProperty
+loc0182:Push register1, "__get__defaultMin"
+GetMember
+Push "defaultMin", 3, register1, "addProperty"
+CallMethod
+Pop
+Push "\b"
+CharToAscii
+If loc05ba
+Extends
+loc01a7:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "_nDefaultMin"
+GetMember
+Return
+}
+Push "\x02"
+CharToAscii
+If loc066b
+SetMember
+loc01c8:DefineFunction2 "", 5, 7, false, false, true, false, true, false, false, true, false, 2, "\x1b\x02\x13", 3, "sPropertyMin", 4, "sPropertyMax", 5, "nDefaultMin", 6, "nDefaultMax" {
+Push register1, "\x1e\n\f", register2
+SetMember
+Push register1, "_sPropertyMin", register3
+SetMember
+Push register1, "_sPropertyMax", register4
+SetMember
+Push register1, "_nDefaultMin", register5
+SetMember
+Push register1, "_nDefaultMax", register6
+SetMember
+Push register1, "\x1d\x19\x1d", register5
+GetTime
+If loc0250
+DefineLocal
+loc0250:SetMember
+Push register1, "\x1d\x19\t", register6
+SetMember
+}
+GetTime
+If loc0444
+SetMember
+loc0262:DefineFunction "", 0 {
+}
+Push false
+Not
+If loc0468
+SetMember
+loc0276:GetMember
+Push "gapi"
+GetMember
+Push "\x17\x01\x0e", 0, "Object"
+NewObject
+SetMember
+loc028b:Push "dofus"
+GetVariable
+Push "\x18\x03\x17"
+Push "\x05"
+CharToAscii
+If loc0593
+SetProperty
+loc02a3:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "\x1d\x19\t"
+GetMember
+Return
+}
+GetTime
+Increment
+If loc06e5
+DefineLocal
+loc02bf:GetVariable
+Push "dofus"
+GetMember
+Push "\x18\x03\x17"
+GetMember
+Push "gapi"
+GetMember
+Push "\x17\x01\x0e"
+GetMember
+Push "encyclopedia"
+GetMember
+Push "filters"
+GetTime
+Increment
+If loc0101
+SetMember
+loc02eb:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "_nDefaultMax"
+GetMember
+Return
+}
+GetTime
+Increment
+If loc05e2
+CallFunction
+loc0307:DefineFunction "", 0 {
+}
+Push "\t"
+CharToAscii
+If loc03a3
+ImplementsOp
+loc031c:SetMember
+Push register1, "__get__propertyMax"
+GetTime
+If loc076c
+Extends
+loc032b:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x19\n\x14" {
+Push register1, "\x1d\x19\x1d", register2
+SetMember
+Push 0, register1, "\x03\x1a"
+CallMethod
+Return
+}
+GetTime
+Increment
+If loc0583
+GetProperty
+loc035b:GetVariable
+Push "\x18\x03\x17"
+GetMember
+Push "gapi"
+GetMember
+Push "\x17\x01\x0e"
+GetMember
+Push "encyclopedia"
+GetTime
+Increment
+If loc03e8
+ImplementsOp
+loc037b:Push "dofus"
+GetVariable
+Push "\x18\x03\x17"
+GetMember
+Push "gapi"
+GetMember
+Push "\x17\x01\x0e"
+GetMember
+Push "encyclopedia"
+Push true
+If loc0082
+GetProperty
+loc03a3:Push register1, "__get__propertyMax"
+GetMember
+Push "propertyMax", 3, register1, "addProperty"
+CallMethod
+Pop
+Push register1, "\x18\x12"
+GetMember
+Push register1, "\x03\x1a"
+GetMember
+Push "min", 3, register1, "addProperty"
+CallMethod
+Pop
+Push "\b"
+CharToAscii
+If loc00a7
+CloneSprite
+loc03e8:GetMember
+Push "filters"
+GetMember
+Not
+Not
+If loc0171
+Push "_global"
+GetVariable
+Push "dofus"
+GetMember
+Push "\x18\x03\x17"
+GetMember
+Push "gapi"
+GetTime
+If loc0156
+StartDrag
+loc0414:Push register1, "__get__propertyMin"
+GetMember
+Push "propertyMin", 3, register1, "addProperty"
+CallMethod
+Pop
+Push "dofus"
+GetVariable
+Push "\x18\x03\x17"
+GetMember
+Push "gapi"
+GetTime
+If loc067f
+CastOp
+loc0444:StoreRegister 0
+SetMember
+Push register0, "prototype"
+GetMember
+StoreRegister 1
+Pop
+Push register1, "__get__composantName"
+Push true
+If loc0037
+ImplementsOp
+loc0468:Push register1, "__get__composantName"
+GetMember
+Push "composantName", 3, register1, "addProperty"
+CallMethod
+Pop
+Push register1, "\x17\x17"
+GetMember
+Push register1, "\x03\x06"
+GetMember
+Push "max", 3, register1, "addProperty"
+CallMethod
+Pop
+GetTime
+Increment
+If loc05ce
+GetProperty
+loc04a8:DefineFunction2 "", 1, 5, false, false, true, false, true, false, false, true, false, 2, "\x1a\x01\x01" {
+Push register2, register1, "propertyMin"
+GetMember
+GetMember
+ToNumber
+StoreRegister 3
+Pop
+Push register2, register1, "propertyMax"
+GetMember
+GetMember
+ToNumber
+StoreRegister 4
+Pop
+GetTime
+If loc04e1
+GetProperty
+loc04e1:Push register3, register1, "\x1d\x19\x1d"
+GetMember
+Less2
+Not
+PushDuplicate
+Not
+If loc0509
+Pop
+Push register4, register1, "\x1d\x19\t"
+GetMember
+Greater
+Not
+GetTime
+Increment
+If loc0509
+GetProperty
+loc0509:Return
+}
+Push false
+Not
+If loc0062
+Extends
+loc0516:Push register1, "\x01\x15"
+GetMember
+Push "label", 3, register1, "addProperty"
+CallMethod
+Pop
+Push false
+Not
+If loc0262
+Extends
+loc053a:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "_sPropertyMin"
+GetMember
+Return
+}
+Push true
+If loc031c
+GetProperty
+loc0559:GetVariable
+Push "\x18\x03\x17"
+GetMember
+Push "gapi"
+GetMember
+Not
+Not
+If loc0124
+Push "_global"
+GetVariable
+Push "dofus"
+Push true
+If loc010f
+GetProperty
+loc0583:SetMember
+Push register1, "\x03\x1a"
+GetTime
+Increment
+If loc074d
+SetProperty
+loc0593:GetMember
+Push "gapi"
+GetMember
+Push "\x17\x01\x0e"
+GetMember
+Push "encyclopedia"
+GetMember
+Not
+Not
+If loc00e1
+Push "_global"
+GetTime
+Increment
+If loc00ba
+StartDrag
+loc05ba:DefineFunction "", 0 {
+}
+Push false
+Not
+If loc0414
+SetProperty
+loc05ce:DefineFunction "", 0 {
+}
+Push false
+Not
+If loc06f5
+GetProperty
+loc05e2:SetMember
+Push register1, "__get__defaultMin"
+Push "\x0b"
+CharToAscii
+If loc01a7
+ImplementsOp
+loc05f7:SetMember
+Push register1, "__get__propertyMin"
+Push "\x07"
+CharToAscii
+If loc053a
+SetMember
+loc060c:GetMember
+Push "gapi"
+GetMember
+Push "\x17\x01\x0e"
+GetMember
+Not
+Not
+If loc028b
+Push "_global"
+GetVariable
+Push "dofus"
+GetMember
+Push "\x18\x03\x17"
+GetTime
+If loc0276
+NewObject
+loc0638:GetVariable
+Not
+Not
+If loc0654
+Push "_global"
+GetVariable
+Push "dofus", 0, "Object"
+NewObject
+SetMember
+loc0654:Push "dofus"
+GetVariable
+Push "\x18\x03\x17"
+Push false
+Not
+If loc0932
+Extends
+loc066b:SetMember
+Push register1, "\x17\x17"
+Push false
+Not
+If loc0718
+SetProperty
+loc067f:GetMember
+Push "\x17\x01\x0e"
+GetMember
+Push "encyclopedia"
+GetMember
+Push "filters"
+GetMember
+Push "IFilterComposant"
+GetMember
+Push 1, register0
+ImplementsOp
+Push 1, null, register1, 3, "ASSetPropFlags"
+Push "\x05"
+CharToAscii
+If loc0030
+Extends
+loc06c2:DefineFunction "", 0 {
+}
+Push false
+Not
+If loc0516
+SetProperty
+loc06d6:SetMember
+Push register1, "\x03\x06"
+GetTime
+If loc02a3
+CallFunction
+loc06e5:SetMember
+Push register1, "\x18\x12"
+GetTime
+Increment
+If loc032b
+Extends
+loc06f5:Push register1, "__get__defaultMax"
+GetMember
+Push "defaultMax", 3, register1, "addProperty"
+CallMethod
+Pop
+Push true
+If loc0307
+Extends
+loc0718:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x19\n\x02" {
+Push register1, "\x1d\x19\t", register2
+SetMember
+Push 0, register1, "\x03\x06"
+CallMethod
+Return
+}
+Push "\b"
+CharToAscii
+If loc06d6
+NewObject
+loc074d:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "\x1d\x19\x1d"
+GetMember
+Return
+}
+Push true
+If loc0053
+SetProperty
+loc076c:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "_sPropertyMax"
+GetMember
+Return
+}
+Push "\x04"
+CharToAscii
+If loc00f1
+SetProperty
+loc078d:ConstantPool "dofus", "\x18\x03\x17", "gapi", "\x17\x01\x0e", "encyclopedia", "filters", "FilterInterval", "_global", "Object", "\x1e\n\f", "_sPropertyMin", "_sPropertyMax", "_nDefaultMin", "_nDefaultMax", "\x1d\x19\x1d", "\x1d\x19\t", "prototype", "__get__composantName", "FilterIntervalViewer", "__get__propertyMin", "__get__propertyMax", "\x01\x15", "__get__defaultMax", "__get__defaultMin", "\x17\x17", "\x03\x06", "\x18\x12", "\x03\x1a", "isObjectValid", "propertyMin", "propertyMax", "label", "addProperty", "composantName", "max", "defaultMax", "min", "defaultMin", "IFilterComposant", "ASSetPropFlags"
+GetTime
+If loc037b
+SetProperty
+loc0932:GetMember
+Not
+Not
+If loc0954
+Push "_global"
+GetVariable
+Push "dofus"
+GetMember
+Push "\x18\x03\x17", 0, "Object"
+NewObject
+SetMember
+loc0954:Push "dofus"
+Push "\x04"
+CharToAscii
+If loc0559
+Extends
+loc0966:

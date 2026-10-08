@@ -1,0 +1,41 @@
+while(true)
+{
+   if(!(true or true))
+   {
+      if(!ord("\x03"))
+      {
+         break;
+      }
+   }
+   else
+   {
+      §§push(129658908);
+   }
+   if(§§pop())
+   {
+      while(true)
+      {
+         if(!ord("\x03"))
+         {
+            duplicateMovieClip(§§pop(),§§pop(),§§pop());
+            break;
+         }
+         GAC.applyColor(cIop_R_Epaulette00,1);
+         §§push(3);
+         §§push(cIop_R_Epaule00);
+         §§push(2);
+         §§push(GAC);
+         §§push("applyColor");
+         if(!ord("\b"))
+         {
+            continue;
+         }
+         setProperty(§§pop(), _X, §§pop());
+      }
+      §§goto(addrfbb7);
+   }
+   §§push(§§pop()[§§pop()]());
+   break;
+}
+§§pop();
+addrfbb7:

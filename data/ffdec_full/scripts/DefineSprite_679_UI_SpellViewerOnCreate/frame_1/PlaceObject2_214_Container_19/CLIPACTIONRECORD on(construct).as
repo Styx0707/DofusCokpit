@@ -1,0 +1,63 @@
+on(construct){
+   while(true)
+   {
+      if(!ord("\x0b"))
+      {
+         if(!(true or true))
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push(839230609);
+      }
+      if(§§pop() + 1)
+      {
+         if(!getTimer())
+         {
+            §§pop()[§§pop()] = §§pop();
+            §§goto(addr5680);
+         }
+      }
+      set("7",§§constant(1));
+      §§push(§§constant(2));
+      §§push(§§constant(1));
+      break;
+   }
+   set(§§pop(),§§pop());
+   set("{invalid_utf8=136}\x04",true);
+   set("\x01",true);
+   while(true)
+   {
+      §§push("7");
+      §§push(true);
+      if(!getTimer())
+      {
+         §§push(new §\§\§pop()§());
+      }
+      else
+      {
+         addr5680:
+         set(§§pop(),§§pop());
+         set(§§constant(6),§§constant(7));
+         set(§§constant(8),1);
+         set(§§constant(9),0);
+         set(§§constant(10),false);
+         §§push(§§constant(11));
+         §§push(§§constant(12));
+         if(false)
+         {
+            §§push(§§pop()());
+         }
+         else
+         {
+            addr55e7:
+            set(§§pop(),§§pop());
+         }
+         §§goto(addr56b9);
+      }
+      §§goto(addr55e7);
+   }
+   addr56b9:
+}

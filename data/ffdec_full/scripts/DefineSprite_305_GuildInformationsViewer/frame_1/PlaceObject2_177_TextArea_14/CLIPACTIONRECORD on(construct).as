@@ -1,0 +1,70 @@
+on(construct){
+   loop1:
+   while(true)
+   {
+      while(true)
+      {
+         if(false)
+         {
+            if(!(true or true))
+            {
+               break;
+            }
+         }
+         else
+         {
+            §§push(true);
+         }
+         var _temp_1 = §§pop();
+         if(!(_temp_1 and _temp_1))
+         {
+            break;
+         }
+         break loop1;
+      }
+      §§goto(addr12eb7);
+   }
+   if(getTimer() + 1)
+   {
+      while(true)
+      {
+         set("{invalid_utf8=144}{invalid_utf8=154}",false);
+         set("<G",false);
+         set(§§constant(2),false);
+         set(§§constant(3),true);
+         set(§§constant(4),true);
+         set(§§constant(5),2560);
+         §§push(§§constant(6));
+         §§push(§§constant(7));
+         if(false)
+         {
+            §§pop() implements ;
+         }
+         else
+         {
+            set(§§pop(),§§pop());
+            set(§§constant(8),0);
+            set(§§constant(9),true);
+            set(§§constant(10),true);
+            set(§§constant(11),§§constant(12));
+            set(§§constant(13),§§constant(14));
+            §§push(§§constant(15));
+            §§push(§§constant(14));
+            if(!ord("\x05"))
+            {
+               §§goto(addr12f53);
+               §§push(§§pop()());
+            }
+         }
+         set(§§pop(),§§pop());
+         set(§§constant(16),§§constant(14));
+         set(§§constant(17),true);
+         break;
+         addr12f53:
+      }
+      addr12fe8:
+      return;
+      addr12eb7:
+   }
+   §§goto(addr12fe8);
+}

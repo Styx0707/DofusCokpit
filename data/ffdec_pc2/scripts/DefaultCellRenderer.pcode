@@ -1,0 +1,16 @@
+ConstantPool "{invalid_utf8=128}{invalid_utf8=132}"
+Push false
+Not
+If loc0024
+Push "\x03"
+CharToAscii
+If loc0053
+Jump loc008e
+loc0024:Push "ank.gapi.controls.list.DefaultCellRenderer"
+loc0053:GetVariable
+Push "DefaultCellRenderer", 2, "Object"
+GetVariable
+Push "registerClass"
+CallMethod
+Pop
+loc008e:

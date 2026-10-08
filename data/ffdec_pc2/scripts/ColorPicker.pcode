@@ -1,0 +1,17 @@
+ConstantPool "t{invalid_utf8=194}", "{invalid_utf8=157}", "Z"
+Push 875156212
+PushDuplicate
+BitAnd
+If loc002b
+Push false
+Not
+If loc004d
+Jump loc0080
+loc002b:Push "ank.gapi.controls.ColorPicker"
+loc004d:GetVariable
+Push "ColorPicker", 2, "Object"
+GetVariable
+Push "registerClass"
+CallMethod
+Pop
+loc0080:

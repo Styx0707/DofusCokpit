@@ -1,0 +1,80 @@
+on(construct){
+   loop1:
+   while(true)
+   {
+      loop2:
+      while(true)
+      {
+         if(!ord("\x04"))
+         {
+            if(!(true and true))
+            {
+               while(true)
+               {
+                  set("\b\b\b\t\x1d{invalid_utf8=150}\x04",true);
+                  set("\b\n\x05\x01\x1d{invalid_utf8=150}\x04",false);
+                  set("\b\x0b\x05",0);
+                  set("\x1d{invalid_utf8=150}\x07",4);
+                  §§push("\b\f\x01");
+                  §§push(0);
+                  if(false)
+                  {
+                     §§goto(addr1e9e);
+                     §§push(getProperty(§§pop(), _X));
+                  }
+                  else
+                  {
+                     set(§§pop(),§§pop());
+                     set(§§constant(15),0);
+                     set(§§constant(16),4);
+                     set(§§constant(17),4);
+                     set(§§constant(18),§§constant(19));
+                     §§push(§§constant(20));
+                     §§push(10);
+                     if(!getTimer())
+                     {
+                        startDrag(§§pop(),§§pop(),§§pop(),§§pop(),§§pop(),§§pop());
+                        break loop1;
+                     }
+                  }
+                  §§goto(addr1ed5);
+                  break loop2;
+               }
+               §§goto(addr201f);
+               addr1e62:
+            }
+         }
+         else
+         {
+            §§push(false);
+         }
+         if(§§pop())
+         {
+            break;
+         }
+         break loop1;
+      }
+      set(§§pop(),§§pop());
+      set(§§constant(8),§§constant(9));
+      §§goto(addr1e62);
+   }
+   addr1e9e:
+   set("{invalid_utf8=150}\x02","\x05");
+   set("\x12{invalid_utf8=157}\x02","{invalid_utf8=215}");
+   set("{invalid_utf8=136}\b","{invalid_utf8=215}");
+   set("\x03","u");
+   §§push("\x07");
+   §§push(20);
+   if(ord("\x02"))
+   {
+      break loop2;
+   }
+   duplicateMovieClip(§§pop(),§§pop(),§§pop());
+   addr1ed5:
+   set(§§pop(),§§pop());
+   set("",20);
+   set("\x1d{invalid_utf8=150}\x07","\b\x0e\x01");
+   §§goto(addr2020);
+   addr201f:
+   addr2020:
+}

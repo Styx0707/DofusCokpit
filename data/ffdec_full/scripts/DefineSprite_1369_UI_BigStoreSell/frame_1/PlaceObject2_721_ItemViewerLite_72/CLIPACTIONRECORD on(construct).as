@@ -1,0 +1,81 @@
+on(construct){
+   loop1:
+   while(true)
+   {
+      while(true)
+      {
+         if(false)
+         {
+            if(!(0x0F9F6883 & 0x0F9F6883))
+            {
+               break;
+            }
+         }
+         else
+         {
+            §§push(80324223);
+         }
+         while(true)
+         {
+            if(§§pop())
+            {
+               if(ord("\x04"))
+               {
+                  break loop1;
+               }
+               §§pop() implements ;
+               §§goto(addr8774);
+            }
+            §§goto(addr860b);
+         }
+         §§goto(addr87a7);
+      }
+      while(true)
+      {
+         set("\b\x14\x05","\x1d{invalid_utf8=150}\x07");
+         set("\b\x15\x07<\x01",false);
+         set("",false);
+         set("{invalid_utf8=150}\x02",false);
+         set("\x05\x01{invalid_utf8=157}\x02",false);
+         §§push(";");
+         §§push(316);
+         if(false)
+         {
+            §§pop() extends §§pop();
+            break loop1;
+         }
+         §§goto(addr8683);
+         set(§§pop(),§§pop());
+      }
+      §§goto(addr8682);
+   }
+   set("{invalid_utf8=150}\x05","\x07{invalid_utf8=166}{invalid_utf8=201}\x04{invalid_utf8=157}\x02");
+   set("{invalid_utf8=155}","\x07{invalid_utf8=166}{invalid_utf8=201}\x04{invalid_utf8=157}\x02");
+   set("{invalid_utf8=136}\x06",true);
+   set("\x02","{invalid_utf8=175}");
+   set("\\","\x1d{invalid_utf8=150}\x04");
+   §§push("\b\x0f\b\x10\x1d{invalid_utf8=150}\x04");
+   §§push(false);
+   addr8774:
+   set(§§pop(),§§pop());
+   set(§§constant(9),§§constant(10));
+   set(§§constant(11),false);
+   set(§§constant(12),false);
+   set(§§constant(13),false);
+   §§push(§§constant(14));
+   §§push(false);
+   addr860b:
+   set(§§pop(),§§pop());
+   break loop2;
+   addr87a7:
+   §§pop() implements ;
+   §§goto(addr87a8);
+   addr8682:
+   startDrag(§§pop(),§§pop(),§§pop(),§§pop(),§§pop(),§§pop());
+   addr8683:
+   set(§§pop(),§§pop());
+   set("i{invalid_utf8=150}\x04",false);
+   set("\b",false);
+   set("\b\x01\x1d{invalid_utf8=150}\x04",false);
+   addr87a8:
+}

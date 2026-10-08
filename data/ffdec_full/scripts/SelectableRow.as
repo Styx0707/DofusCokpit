@@ -1,0 +1,16 @@
+while(true)
+{
+   if(!ord("\x07"))
+   {
+      if(false)
+      {
+         break;
+      }
+   }
+   else
+   {
+      §§push("ank.gapi.controls.list.SelectableRow");
+   }
+   Object.registerClass("SelectableRow",eval(§§pop()));
+   break;
+}

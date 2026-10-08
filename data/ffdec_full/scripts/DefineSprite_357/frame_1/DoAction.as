@@ -1,0 +1,40 @@
+while(true)
+{
+   if(!(0x212D2686 & 0x212D2686))
+   {
+      if(false)
+      {
+         break;
+      }
+   }
+   else
+   {
+      §§push("\x0b");
+   }
+   if(ord(§§pop()))
+   {
+      while(true)
+      {
+         if(!ord("\x0b"))
+         {
+            §§pop() extends §§pop();
+            break;
+         }
+         GAC.applyColor(cIop_R_Epaulette01,1);
+         §§push(3);
+         §§push(cIop_R_Epaule01);
+         §§push(2);
+         §§push("GAC");
+         if(false)
+         {
+            continue;
+         }
+         §§pop() extends §§pop();
+      }
+      §§goto(addr3881a);
+   }
+   §§push(eval(§§pop())["{invalid_utf8=197}"]());
+   break;
+}
+§§pop();
+addr3881a:

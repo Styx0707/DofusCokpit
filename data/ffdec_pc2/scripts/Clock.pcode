@@ -1,0 +1,15 @@
+Push "\x04"
+CharToAscii
+If loc001d
+Push "\x04"
+CharToAscii
+If loc0039
+Jump loc0066
+loc001d:Push "ank.gapi.controls.Clock"
+loc0039:GetVariable
+Push "Clock", 2, "Object"
+GetVariable
+Push "registerClass"
+CallMethod
+Pop
+loc0066:

@@ -1,0 +1,16 @@
+while(true)
+{
+   if(!ord("\x02"))
+   {
+      if(!ord("\x02"))
+      {
+         break;
+      }
+   }
+   else
+   {
+      §§push("ank.gapi.controls.TextArea");
+   }
+   Object.registerClass("TextArea",eval(§§pop()));
+   break;
+}

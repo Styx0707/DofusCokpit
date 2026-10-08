@@ -1,0 +1,16 @@
+while(true)
+{
+   if(!ord("\x05"))
+   {
+      if(!ord("\x05"))
+      {
+         break;
+      }
+   }
+   else
+   {
+      §§push("ank.gapi.controls.button.ButtonBackground");
+   }
+   Object.registerClass("ButtonTransparentUp",eval(§§pop()));
+   break;
+}

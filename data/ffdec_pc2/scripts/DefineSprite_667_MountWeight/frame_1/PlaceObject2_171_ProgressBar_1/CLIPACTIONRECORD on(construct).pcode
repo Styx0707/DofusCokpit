@@ -1,0 +1,45 @@
+Push true
+PushDuplicate
+And
+If loc018f
+Push false
+Not
+If loc0194
+ConstantPool "{invalid_utf8=150}\x02", "\x05\x01L\x11{invalid_utf8=157}\x02", "\x19", "{invalid_utf8=136}\x04", "\x01", "s", "\x1d{invalid_utf8=150}\f", "", "value", "\x01", "", "", "", "\x1d", "{invalid_utf8=150}\x15", "", "disableBackground", "\x05", "\x1d{invalid_utf8=150}\x0b", "", "enabled", "\x05\x01\x1d{invalid_utf8=150}\n", "", "\x18\x19\x18", "\x07d", "", "", "\x1d{invalid_utf8=150}\n", "", "\x18\x1d\t", "\x01", "", "", "", "\x1d{invalid_utf8=150}!", "", "\x1a\r\f", "", "ProgressBarDefaultRenderer", "{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "\x01", "i\x1d{invalid_utf8=150}\x12", "", "showAnimOnLoad", "\x05", "\x1d{invalid_utf8=150}\x10", "", "showGradient", "\x05", "\x1d{invalid_utf8=150}\x14", "", "styleName", "", "default", "\x1d{invalid_utf8=150}\x12", "", "uberMaximum", "\x07d", "", "", "\x1d{invalid_utf8=150}\x12", "", "uberMinimum", "\x01", "", "", "", "{invalid_utf8=150}\x03", "", "\x06", "2{invalid_utf8=157}\x02", "\x01{invalid_utf8=255}O", "", "", "", "@", "", "", "\x10\x0e\x01", "{invalid_utf8=155}\x02MountWeight", "{invalid_utf8=255}\t{invalid_utf8=223}\r", "", "{invalid_utf8=156}\x02\x01", "{invalid_utf8=153}\x06\x0e\x01", "\x0b", "{invalid_utf8=200}{invalid_utf8=230}gf{invalid_utf8=131}\n\n\x1f\x10{invalid_utf8=232}", "", "", "\x04", "{invalid_utf8=218}5{invalid_utf8=139}{invalid_utf8=128}", "{invalid_utf8=158}\x06.\x03", "\x0b", "{invalid_utf8=205}!I\x0333\x1c{invalid_utf8=192}}", "{invalid_utf8=232}", "", "", "\x04", "{invalid_utf8=218}5{invalid_utf8=139}{invalid_utf8=128}"
+Jump loc01a2
+loc018f:Push true
+loc0194:PushDuplicate
+Or
+If loc01b8
+ConstantPool "s"
+loc01a2:SetVariable
+Push "value", 0f
+SetVariable
+Jump loc02a6
+loc01b8:Push "disableBackground", false
+SetVariable
+Push "enabled", true
+SetVariable
+Push "\x18\x19\x18", 100
+SetVariable
+Push "\x18\x1d\t", 0f
+SetVariable
+Push "\x1a\r\f", "ProgressBarDefaultRenderer"
+Push true
+If loc022b
+Extends
+loc022b:SetVariable
+Push "showAnimOnLoad", false
+SetVariable
+Push "showGradient", false
+SetVariable
+Push "styleName", "default"
+SetVariable
+Push "uberMaximum", 100
+SetVariable
+Push "uberMinimum", 0f
+Push "\x06"
+CharToAscii
+If loc01a2
+SetMember
+loc02a6:

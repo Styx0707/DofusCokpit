@@ -1,0 +1,563 @@
+Push false
+Not
+If loc06a9
+Push 323249475
+PushDuplicate
+BitAnd
+If loc06b1
+ConstantPool "{invalid_utf8=150}\x05", "\x07{invalid_utf8=233}O{invalid_utf8=158}\x07La{invalid_utf8=157}\x02", "{invalid_utf8=194}\x07{invalid_utf8=136}\t", "\x03", "0", "{invalid_utf8=133}{invalid_utf8=136}", "}", "{invalid_utf8=150}\x0b", "\b?\x07\x03", "", "", "\x04\x01\b>R\x17{invalid_utf8=150}\x0f", "\x07\x01", "", "", "\x02\x04\x01\x07\x03", "", "", "\b@=\x17{invalid_utf8=150}\x06", "\x04", "\b\x16\b\x04O{invalid_utf8=150}\t", "\x04", "\b*\x07\x1e", "", "", "{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "0\x01@{invalid_utf8=142}\r", "", "\x01", "\x03)", "\x02\x17\x0b\x17", "\x10", "{invalid_utf8=150}\x04", "\x04\x01\b\x18N{invalid_utf8=150}\x04", "\b3\x04\x02O{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "\x12\x05<{invalid_utf8=142}\r", "", "\x01", "\x03)", "\x02\x19\x12\x1d", "{invalid_utf8=189}", "{invalid_utf8=150}\x04", "\x04\x01\b\x18N{invalid_utf8=150}\x06", "\b4\x04\x01\b.N{invalid_utf8=150}\x02", "\b4N{invalid_utf8=150}\x02", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\x02N{invalid_utf8=150}\x02", "\b\x034{invalid_utf8=157}\x02", "M", "ON{invalid_utf8=150}\x04", "\b\x19\x05\x01O{invalid_utf8=150}\x04", "\x04\x01\b\x18N{invalid_utf8=150}\x02", "\b4N{invalid_utf8=150}\x04", "\x04\x01\b\x18N{invalid_utf8=150}\x02", "\b6NG{invalid_utf8=150}\n", "\x03\x07\x02", "", "", "\x04\x01\b+R\x17{invalid_utf8=150}\t", "\b7\b8\x07\x01", "", "", "{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "-", "\"N{invalid_utf8=150}\x02", "\b\x04N{invalid_utf8=150}\x02", "\b5NG{invalid_utf8=150}\x04", "\x04\x01\b.N{invalid_utf8=150}\x02", "\b6NGO{invalid_utf8=150}\x04", "\x04\x01\b\x184{invalid_utf8=157}\x02", "{invalid_utf8=137}{invalid_utf8=255}\'C{invalid_utf8=150}\t", "\x07\x01", "", "", "\x04\x01\b9R\x17{invalid_utf8=150}\x03", "", "\x05", "2{invalid_utf8=157}\x02", "3\x02\'{invalid_utf8=142}\b", "", "", "", "\x03)", "\x12", "{invalid_utf8=150}\t", "\x07", "", "", "", "\x04\x01\b\x1cR{invalid_utf8=135}\x01", "\x02\x17{invalid_utf8=150}\x03", "", "\x05", "2{invalid_utf8=157}\x02", "#", "iO{invalid_utf8=150}\t", "\x04", "\b5\x07\x14", "", "", "O", "O{invalid_utf8=150}\x04", "\x04\x01\b\x1a{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "{invalid_utf8=160}\x01<O{invalid_utf8=150}\x04", "\x04\x01\b\x0f4P{invalid_utf8=157}\x02", "{invalid_utf8=234}\x01,{invalid_utf8=150}\x0b", "\b=\x07\x03", "", "", "\x04\x01\b>R\x17{invalid_utf8=150}\x04", "\x04\x01\b\x0bN4P{invalid_utf8=157}\x02", "{invalid_utf8=238}\x04O{invalid_utf8=142}\r", "", "\x01", "\x03)", "\x02\x19\x12\x1d", "+", "{invalid_utf8=150}\n", "\b7\b:\b:\x04\x02\b;N{invalid_utf8=150}\x02", "\b<N{invalid_utf8=150}\x05", "\x07\x02", "", "", "C{invalid_utf8=150}\t", "\x07\x01", "", "", "\x04\x01\b9R\x17{invalid_utf8=150}\x03", "", "\x04", "2{invalid_utf8=157}\x02", "{invalid_utf8=190}", "#\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\x02N\x12\x12{invalid_utf8=157}\x02", "{invalid_utf8=209}\x03{invalid_utf8=150}\x02", "\b\x05\x1c{invalid_utf8=150}\x02", "\b", "{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "{invalid_utf8=166}\x03#\x1c\x12\x12{invalid_utf8=157}\x02", "\x14", "{invalid_utf8=150}\x02", "\b\x05\x1c{invalid_utf8=150}\t", "\b", "\x07", "", "", "", "\b\x06@O{invalid_utf8=150}\x02", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "{invalid_utf8=160}\x03\'{invalid_utf8=150}\x02", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\x02N{invalid_utf8=150}\x02", "\b\x03N{invalid_utf8=150}\x02", "\b\x04N\x12\x12{invalid_utf8=157}\x02", "{invalid_utf8=241}{invalid_utf8=254}{invalid_utf8=150}{invalid_utf8=2}", "\b", "4{invalid_utf8=157}\x02", "{invalid_utf8=157}{invalid_utf8=255}@{invalid_utf8=142}\b", "", "", "", "\x03\x19", "\r", "{invalid_utf8=150}\b", "\x07", "", "", "", "\x04\x02\x03R\x174{invalid_utf8=157}\x02", "{invalid_utf8=240}\x02<{invalid_utf8=155}\x05", "", "", "", "", "", "4{invalid_utf8=157}\x02", "{invalid_utf8=220}{invalid_utf8=254}iO{invalid_utf8=150}\x04", "\x04\x01\b\x12N{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "{invalid_utf8=221}{invalid_utf8=255},{invalid_utf8=142}\r", "", "\x01", "\x03)", "\x02\x1a\x01\x16", "=", "{invalid_utf8=150}\x06", "\x04\x01\b\f\x04\x02O{invalid_utf8=150}\n", "\b\r\x04\x01\b\x0e\x04\x01\b\x0fN{invalid_utf8=150}\x05", "\x07\x02", "", "", "C{invalid_utf8=150}\t", "\x07\x01", "", "", "\x04\x01\b\x10R\x17{invalid_utf8=150}\t", "\x07", "", "", "", "\x04\x01\b\x11R>4P{invalid_utf8=157}\x02", "b\x02O{invalid_utf8=142}\b", "", "", "", "\x02)", "0", "{invalid_utf8=150}\r", "\x04\x01\b0\x07\x02", "", "", "\x04\x01\b\x18N{invalid_utf8=150}\x02", "\b1R\x17{invalid_utf8=150}\r", "\x04\x01\b2\x07\x02", "", "", "\x04\x01\b.N{invalid_utf8=150}\x02", "\b1R\x17{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "`\x03OO{invalid_utf8=150}\x04", "\x04\x01\b0{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "8{invalid_utf8=254}i{invalid_utf8=142}\b", "", "", "", "\x05)", "{invalid_utf8=175}\x01{invalid_utf8=150}\x04", "\x04\x01\b\x13N\x12{invalid_utf8=157}\x02", "\x18", "{invalid_utf8=150}\x04", "\x04\x01\b\fN{invalid_utf8=150}\x02", "\b\x1dN{invalid_utf8=135}\x01", "\x02\x17{invalid_utf8=153}\x02", "{invalid_utf8=254}", "{invalid_utf8=150}\x04", "\x04\x01\b\f4{invalid_utf8=157}\x02", "\x1e\x01,\f{invalid_utf8=150}\n", "\x03\x07\x02", "", "", "\x04\x01\b\x18N{invalid_utf8=150}\x02", "\b+R\x17{invalid_utf8=150}\n", "\b\r\x04\x01\b\x0e\x04\x01\b,N{invalid_utf8=150}\t", "\b-\x04\x02\x07\x01", "", "", "B{invalid_utf8=150}\x05", "\x07\x03", "", "", "C4{invalid_utf8=157}\x02", "\x14\x01#\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\x02N{invalid_utf8=150}\x02", "\b\x03N{invalid_utf8=150}\x02", "\b\x04N{invalid_utf8=150}\x02", "\b*N{invalid_utf8=150}\x02", "\x04\x044P{invalid_utf8=157}\x02", "{invalid_utf8=148}{invalid_utf8=255}<R{invalid_utf8=150}\f", "\b\'\x07{invalid_utf8=255}{invalid_utf8=255}{invalid_utf8=255}{invalid_utf8=255}\x07\x02", "", "", "C{invalid_utf8=150}\t", "\x07\x01", "", "", "\x04\x03\b(R\x17{invalid_utf8=150}\x02", "\x04\x03{invalid_utf8=135}\x01", "\x02\x17{invalid_utf8=153}\x02", "U", "{invalid_utf8=150}\x04", "\x04\x01\b\fN{invalid_utf8=150}\x02", "\b\x1dN{invalid_utf8=135}\x01", "\x02\x174{invalid_utf8=157}\x02", "<", "#N{invalid_utf8=150}\x02", "\b S{invalid_utf8=135}\x01", "\x03\x17{invalid_utf8=150}\r", "\b!\b\"\x07\x01", "", "", "\x04\x01\b#N{invalid_utf8=150}\x02", "\b$N{invalid_utf8=150}\x02", "\b%N{invalid_utf8=150}\x02", "\b&{invalid_utf8=150}\x03", "", "\x03", "2{invalid_utf8=157}\x02", "~{invalid_utf8=255}={invalid_utf8=150}\x04", "\x04\x02\b\x1eN{invalid_utf8=135}\x01", "\x04\x17{invalid_utf8=150}\t", "\x07", "", "", "", "\x04\x01\b\x18N{invalid_utf8=150}\x02", "\b)R\x17{invalid_utf8=150}\x02", "\b", "4{invalid_utf8=157}\x02", "%{invalid_utf8=255}\"N{invalid_utf8=150}\x02", "\b\x1dN{invalid_utf8=150}\x02", "\b\x1eN{invalid_utf8=150}\x05", "\x07", "", "", "", "I\x12{invalid_utf8=157}\x02", "b{invalid_utf8=255}{invalid_utf8=150}\x07", "\x07", "", "", "", "\b\x07\x1c{invalid_utf8=150}\x02", "\b\x1f{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "b{invalid_utf8=255}O{invalid_utf8=150}\t", "\x07\x01", "", "", "\x04\x01\b\x10R\x17{invalid_utf8=150}\x04", "\x04\x01\b.N{invalid_utf8=150}\x06", "\b/\x04\x01\b\fN{invalid_utf8=150}\x02", "\b!NO{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "/{invalid_utf8=252}@O{invalid_utf8=150}\x04", "\x04\x01\b\x15{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "{invalid_utf8=213}", "iN{invalid_utf8=135}\x01", "\x01\x17{invalid_utf8=150}\x04", "\x04\x01\b\x0b{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "`{invalid_utf8=253}\'O{invalid_utf8=150}\x04", "\x04\x01\b2{invalid_utf8=150}\x03", "", "\b", "2{invalid_utf8=157}\x02", "{invalid_utf8=219}{invalid_utf8=250}@O{invalid_utf8=150}\x04", "\x04\x01\b\x12{invalid_utf8=150}\x03", "", "\t", "2{invalid_utf8=157}\x02", "{invalid_utf8=141}\x01\'{invalid_utf8=135}\x01", "", "O{invalid_utf8=150}\x04", "\x04", "\b\x07\x1c{invalid_utf8=150}\x02", "\b\x02N{invalid_utf8=150}\x02", "\b\bN{invalid_utf8=150}\x02", "\b\tNi{invalid_utf8=150}\x04", "\x04", "\b\n{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "{invalid_utf8=140}{invalid_utf8=255}\"N{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\t", "\b\x02\x07", "", "", "", "\b\x06@O{invalid_utf8=150}\x02", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01{invalid_utf8=150}\x03", "", "\b", "2{invalid_utf8=157}\x02", "y", "@N\x12\x12{invalid_utf8=157}\x02", "\x1a", "{invalid_utf8=150}\x02", "\b\x05\x1c{invalid_utf8=150}\x02", "\b", "N{invalid_utf8=150}\t", "\b\x01\x07", "", "", "", "\b\x06@O{invalid_utf8=150}\x02", "\b", "{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "{invalid_utf8=210}{invalid_utf8=251}#{invalid_utf8=142}\b", "", "", "", "\x03\x19", "4", "{invalid_utf8=150}\x02", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\x02N{invalid_utf8=150}\x02", "\b\x03N{invalid_utf8=150}\x02", "\b\x04N{invalid_utf8=150}\x02"
+Jump loc06b8
+loc06a9:Push 127815657
+loc06b1:PushDuplicate
+BitOr
+If loc0e7e
+loc06b8:ConstantPool "0", "{invalid_utf8=133}{invalid_utf8=136}", "}"
+loc06c4:Push constant63, 3, register1, constant62
+CallMethod
+Pop
+Push 1, null, register1, 3, constant64
+CallFunction
+Pop
+Push register0, constant22, constant4
+SetMember
+Push register0, constant42, 30
+Push false
+Not
+If loc0839
+NewObject
+loc070a:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x17\x0b\x17" {
+Push register1, constant24
+GetMember
+Push constant51, register2
+SetMember
+}
+Push true
+If loc0c4a
+DefineLocal
+loc0735:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x19\x12\x1d" {
+Push register1, constant24
+GetMember
+Push constant52, register1, constant46
+GetMember
+Push constant52
+GetMember
+Push "0"
+GetVariable
+Push "{invalid_utf8=133}{invalid_utf8=136}"
+GetMember
+Push "}"
+GetMember
+Push constant3
+GetTime
+If loc07c7
+SetMember
+loc077b:GetMember
+Push constant25, true
+SetMember
+Push register1, constant24
+GetMember
+Push constant52
+GetMember
+Push register1, constant24
+GetMember
+Push constant54
+GetMember
+Add2
+Push undefined, 2, register1, constant43
+CallMethod
+Pop
+Push constant55, constant56, 1
+Push true
+If loc07f3
+GetProperty
+loc07c7:GetMember
+Push constant4
+GetMember
+Push constant53
+GetMember
+Add2
+Push register1, constant46
+GetMember
+Push constant54
+GetMember
+Add2
+SetMember
+Push register1, constant24
+GetTime
+If loc077b
+StartDrag
+loc07f3:InitObject
+Push 1, register1, constant57
+CallMethod
+Pop
+}
+Push "\x05"
+CharToAscii
+If loc0a45
+StartDrag
+loc080f:DefineFunction2 "", 0, 3, false, false, true, false, true, false, false, true, false {
+Push 0, register1, constant28
+CallMethod
+StoreRegister 2
+Pop
+}
+Push "\x05"
+CharToAscii
+If loc085f
+Extends
+loc0839:SetMember
+Push register0, constant53, 20
+SetMember
+loc0847:Jump loc1051
+loc084c:SetMember
+Push register1, "\x15\x1e\b"
+Push true
+If loc09fe
+DefineLocal
+loc085f:SetMember
+Push register1, "\x18\x13\x1b"
+GetTime
+Increment
+If loc0a58
+ImplementsOp
+loc086f:Push "isFirstQuestion", 3, register1, "addProperty"
+CallMethod
+Pop
+Push register1, "\x1a\x1d"
+GetMember
+GetTime
+Increment
+If loc0d7c
+SetMember
+loc088f:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x19\x12\x1d" {
+Push "type", "response", "response", register2, "row"
+GetMember
+Push "item"
+GetMember
+Push 2
+InitObject
+Push 1, register1, "\x17\b\x03"
+CallMethod
+Pop
+}
+Push "\x04"
+CharToAscii
+If loc0994
+SetProperty
+loc08d7:GetVariable
+Push "\x18\x03\x17"
+GetMember
+Push "gapi"
+GetMember
+Not
+Not
+If loc0cbc
+Push "_global"
+GetVariable
+Push "dofus"
+Push false
+Not
+If loc0ca7
+SetProperty
+loc0902:GetVariable
+Not
+Not
+If loc091e
+Push "_global"
+GetVariable
+Push "dofus", 0, "Object"
+NewObject
+SetMember
+loc091e:Push "dofus"
+GetVariable
+Push "\x18\x03\x17"
+Push false
+Not
+If loc0cd4
+StartDrag
+loc0935:Push "dofus"
+GetVariable
+Push "\x18\x03\x17"
+GetMember
+Push "gapi"
+GetMember
+Push "\x17\x01\x0e"
+GetMember
+Push "QuestionViewer"
+GetMember
+Not
+Not
+If loc0847
+Push "dofus"
+GetTime
+If loc0902
+NewObject
+loc0966:DefineFunction2 "", 0, 3, false, false, false, true, true, false, false, true, false {
+Push 0, register2, undefined
+CallMethod
+Pop
+}
+GetTime
+If loc0c74
+DefineLocal
+loc0985:DefineFunction "", 0 {
+}
+GetTime
+If loc086f
+Extends
+loc0994:SetMember
+Push register1, "\x15\x11"
+GetMember
+Push false
+Not
+If loc0985
+ImplementsOp
+loc09a9:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x1a\x01\x16" {
+Push register1, "\x1e\x05\x02", register2
+SetMember
+Push "object", register1, "method", register1, "\x18\x13\x1b"
+GetMember
+Push 2
+InitObject
+Push 1, register1, "\x16\x01\x0e"
+CallMethod
+Pop
+Push 0, register1, "__get__question"
+CallMethod
+Return
+}
+GetTime
+Increment
+If loc0c5f
+SetMember
+loc09fe:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "itemSelected", 2, register1, "\x1d\x06\x1b"
+GetMember
+Push "\x15\x1d\x15"
+CallMethod
+Pop
+Push register1, "change", 2, register1, "\x1e\x0f\x16"
+GetMember
+Push "\x15\x1d\x15"
+CallMethod
+Pop
+}
+Push false
+Not
+If loc0da4
+SetMember
+loc0a45:SetMember
+Push register1, "itemSelected"
+Push true
+If loc088f
+Extends
+loc0a58:DefineFunction2 "", 0, 5, false, false, true, false, true, false, false, true, false {
+Push register1, "\x1c\x04\x06"
+GetMember
+Not
+If loc0a89
+Push register1, "\x1e\x05\x02"
+GetMember
+Push "\x1a\x0e\n"
+GetMember
+StoreRegister 2
+Pop
+Jump loc0b87
+loc0a89:Push register1, "\x1e\x05\x02"
+GetTime
+If loc0bb4
+ImplementsOp
+loc0a97:Multiply
+Push undefined, 2, register1, "\x1d\x06\x1b"
+GetMember
+Push "\x1a\x19\x1c"
+CallMethod
+Pop
+Push "object", register1, "method", register1, "\x15\x1e\x15"
+GetMember
+Push "params", register2, 1
+InitArray
+Push 3
+InitObject
+GetTime
+If loc0beb
+SetProperty
+loc0ad8:GetVariable
+Push "\x18\x03\x17"
+GetMember
+Push "gapi"
+GetMember
+Push "\x17\x01\x0e"
+GetMember
+Push "QuestionViewer"
+GetMember
+Push "\x1a\x0e\x0b"
+GetMember
+Push register4
+GetTime
+Increment
+If loc0a97
+DefineLocal
+loc0b04:CallMethod
+Push "id", -1, 2
+InitObject
+Push 1, register3, "push"
+CallMethod
+Pop
+Push register3
+StoreRegister 2
+Pop
+Jump loc0b87
+loc0b32:Push register1, "\x1e\x05\x02"
+GetMember
+Push "\x1a\x0e\n"
+GetMember
+StoreRegister 2
+Pop
+GetTime
+If loc0b87
+SetProperty
+loc0b4c:GetMember
+Push "\x17\x0e\x13"
+NewMethod
+StoreRegister 3
+Pop
+Push "label", "CONTINUE_TO_SPEAK", 1, register1, "_parent"
+GetMember
+Push "api"
+GetMember
+Push "lang"
+GetMember
+Push "getText"
+Push "\x03"
+CharToAscii
+If loc0b04
+CallFunction
+loc0b87:Push register2, "length"
+GetMember
+StoreRegister 4
+Pop
+Push 0, register1, "\x1d\x06\x1b"
+GetMember
+Push "\x1a\x0b\x1c"
+CallMethod
+Pop
+Push "dofus"
+GetTime
+If loc0ad8
+GetProperty
+loc0bb4:GetMember
+Push "\x1a\x0e\n"
+GetMember
+Push "length"
+GetMember
+Push 0
+Equals2
+Not
+If loc0b32
+Push 0, "\x16\x04\t"
+GetVariable
+Push "\x1b\x17\x07"
+Push true
+If loc0b4c
+SetMember
+loc0beb:Push 1, register1, "\x16\x01\x0e"
+CallMethod
+Pop
+Push register1, "\x1e\x0f\x16"
+GetMember
+Push "text", register1, "\x1e\x05\x02"
+GetMember
+Push "label"
+GetMember
+SetMember
+}
+Push false
+Not
+If loc084c
+NewObject
+loc0c1e:SetMember
+Push register1, "\x18\t\x0b"
+Push false
+Not
+If loc0d06
+Extends
+loc0c32:GetMember
+StoreRegister 1
+Pop
+Push register1, "\x1a\x1d"
+Push true
+If loc09a9
+StartDrag
+loc0c4a:SetMember
+Push register1, constant50
+Push "\b"
+CharToAscii
+If loc0735
+NewObject
+loc0c5f:SetMember
+Push register1, constant18
+Push "\t"
+CharToAscii
+If loc0e00
+StartDrag
+loc0c74:StoreRegister 0
+SetMember
+Push register0, constant7
+GetVariable
+Push "}"
+GetMember
+Push constant8
+GetMember
+Push constant9
+GetMember
+Extends
+Push register0, constant10
+Push false
+Not
+If loc0c32
+GetProperty
+loc0ca7:GetMember
+Push "{invalid_utf8=133}{invalid_utf8=136}"
+GetMember
+Push "}", 0, constant6
+NewObject
+SetMember
+loc0cbc:Push "0"
+GetVariable
+Push "{invalid_utf8=133}{invalid_utf8=136}"
+Push "\b"
+CharToAscii
+If loc0d4c
+NewObject
+loc0cd4:GetMember
+Not
+Not
+If loc0cf6
+Push constant5
+GetVariable
+Push "0"
+GetMember
+Push "{invalid_utf8=133}{invalid_utf8=136}", 0, constant6
+NewObject
+SetMember
+loc0cf6:Push "0"
+Push true
+If loc08d7
+SetProperty
+loc0d06:DefineFunction2 "", 0, 3, false, false, false, true, true, false, false, true, false {
+Push "0"
+GetVariable
+Push "{invalid_utf8=133}{invalid_utf8=136}"
+GetMember
+Push "}"
+GetMember
+Push constant3
+GetMember
+Push constant4
+GetMember
+Push constant22
+GetMember
+Push false, 2, register2, constant21
+CallMethod
+Pop
+}
+GetTime
+If loc103d
+GetProperty
+loc0d4c:GetMember
+Push "}"
+GetMember
+Push constant3
+GetMember
+Not
+Not
+If loc0e5c
+Push constant5
+GetVariable
+Push "0"
+GetMember
+Push "{invalid_utf8=133}{invalid_utf8=136}"
+Push true
+If loc0e47
+SetProperty
+loc0d7c:DefineFunction "", 0 {
+}
+Push "\x04"
+CharToAscii
+If loc06c4
+ImplementsOp
+loc0d91:GetMember
+Push constant3
+GetMember
+Push constant4
+GetTime
+If loc0966
+SetProperty
+loc0da4:SetMember
+Push register1, constant44
+GetTime
+Increment
+If loc070a
+CloneSprite
+loc0db4:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, constant24
+GetMember
+Push constant25, false
+SetMember
+Push constant13, register1, constant14, register1, constant26
+GetMember
+Push 2
+InitObject
+Push 1, register1, constant16
+CallMethod
+Pop
+}
+Push false
+Not
+If loc0e34
+GetProperty
+loc0e00:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x16\f\x01" {
+Push register1, constant19, register2
+SetMember
+Push 0, register1, constant20
+CallMethod
+Return
+}
+Push false
+Not
+If loc0c1e
+CallFunction
+loc0e34:SetMember
+Push register1, constant27
+Push true
+If loc080f
+ImplementsOp
+loc0e47:GetMember
+Push "}"
+GetMember
+Push constant3, 0, constant6
+NewObject
+SetMember
+loc0e5c:Push constant5
+GetVariable
+Push "0"
+GetMember
+Push "{invalid_utf8=133}{invalid_utf8=136}"
+GetMember
+Push "}"
+Push true
+If loc0d91
+CallFunction
+loc0e7e:ConstantPool "dofus", "\x18\x03\x17", "gapi", "\x17\x01\x0e", "QuestionViewer", "_global", "Object", "\x16\x04\t", "\x17\x01\x17", "\x1b\x13\x05", "prototype", "\x1a\x1d", "\x1e\x05\x02", "object", "method", "\x18\x13\x1b", "\x16\x01\x0e", "__get__question", "\x15\x11", "\x1c\x04\x06", "__get__isFirstQuestion", "\x18\t\x0b", "\x16\x1b\x18", "\x17\x02\x13", "\x1d\x06\x1b", "_visible", "\x15\x1e\b", "draw", "getStyle", "\x1a\x0e\n", "length", "\x1b\x17\x07", "\x17\x0e\x13", "label", "CONTINUE_TO_SPEAK", "_parent", "api", "lang", "getText", "id", "push", "\x1a\x0b\x1c", "\x1a\x0e\x0b", "\x1a\x19\x1c", "\x15\x1e\x15", "params", "\x1e\x0f\x16", "text", "itemSelected", "\x15\x1d\x15", "change", "dataProvider", "_y", "\x1a\t\x06", "height", "type", "resize", "\x17\b\x03", "response", "row", "item", "isFirstQuestion", "addProperty", "question", "ASSetPropFlags"
+GetTime
+Increment
+If loc0935
+StartDrag
+loc103d:SetMember
+Push register1, "\x17\x02\x13"
+Push false
+Not
+If loc0db4
+ImplementsOp
+loc1051:

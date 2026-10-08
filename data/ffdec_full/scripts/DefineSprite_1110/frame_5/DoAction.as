@@ -1,0 +1,10 @@
+if(false)
+{
+   if(false)
+   {
+   }
+}
+else
+{
+   stop();
+}

@@ -1,0 +1,63 @@
+on(construct){
+   while(true)
+   {
+      if(!ord("\x05"))
+      {
+         if(false)
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push(true);
+      }
+      var _temp_1 = §§pop();
+      if(_temp_1 and _temp_1)
+      {
+         if(!ord("\x0b"))
+         {
+            §§goto(addre9e6);
+         }
+      }
+      §§push("\x16i");
+      §§push("\x11");
+      break;
+   }
+   set(§§pop(),§§pop());
+   set(":","{invalid_utf8=136}\x07");
+   set("\x02",false);
+   set("\x16i",true);
+   while(true)
+   {
+      §§push("\x11");
+      §§push(false);
+      if(!getTimer())
+      {
+         §§pop()[§§pop()] = §§pop();
+      }
+      else
+      {
+         addre9e6:
+         set(§§pop(),getProperty(§§pop(), _X));
+         set(§§constant(7),§§constant(3));
+         set(§§constant(8),1);
+         set(§§constant(9),2);
+         set(§§constant(10),true);
+         §§push(§§constant(11));
+         §§push(§§constant(12));
+         if(false)
+         {
+            §§push(getProperty(§§pop(), _X));
+         }
+         else
+         {
+            addre940:
+            set(§§pop(),§§pop());
+         }
+         §§goto(addrea20);
+      }
+      §§goto(addre940);
+   }
+   addrea20:
+}

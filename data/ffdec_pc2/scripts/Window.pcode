@@ -1,0 +1,17 @@
+ConstantPool "{invalid_utf8=152}", "_{invalid_utf8=186}"
+Push false
+Not
+If loc0029
+Push 24842976
+PushDuplicate
+BitAnd
+If loc0046
+Jump loc0074
+loc0029:Push "ank.gapi.controls.Window"
+loc0046:GetVariable
+Push "Window", 2, "Object"
+GetVariable
+Push "registerClass"
+CallMethod
+Pop
+loc0074:

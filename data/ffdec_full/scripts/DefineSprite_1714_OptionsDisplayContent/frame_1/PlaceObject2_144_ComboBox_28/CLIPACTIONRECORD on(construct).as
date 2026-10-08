@@ -1,0 +1,77 @@
+on(construct){
+   loop2:
+   while(true)
+   {
+      loop3:
+      while(true)
+      {
+         if(false)
+         {
+            if(false)
+            {
+               while(true)
+               {
+                  set("",0);
+                  set("",4);
+                  set("\x1d{invalid_utf8=150}\x07",4);
+                  set("\b\x11\x07\x04","");
+                  set("",3);
+                  §§push("\x1d{invalid_utf8=150}\x04");
+                  §§push(20);
+                  if(false)
+                  {
+                     §§pop()[§§pop()] = §§pop();
+                     §§goto(addr1704);
+                  }
+                  §§goto(addr1736);
+                  break loop3;
+               }
+               §§goto(addr1735);
+               addr16bb:
+            }
+         }
+         else
+         {
+            §§push(false);
+         }
+         if(§§pop())
+         {
+            break;
+         }
+         break loop2;
+      }
+      set(§§pop(),§§pop());
+      §§goto(addr16bb);
+   }
+   do
+   {
+      set("{invalid_utf8=150}\x02","\x05");
+      set("\x12{invalid_utf8=157}\x02","{invalid_utf8=214}");
+      set("{invalid_utf8=136}\b","{invalid_utf8=214}");
+      set("\x02","{invalid_utf8=154}\x17");
+      §§push("\x1b|");
+      §§push(20);
+      if(!(getTimer() + 1))
+      {
+         addr1736:
+         set(§§pop(),§§pop()());
+         set("\b\x12\b\x13\x1d{invalid_utf8=150}\x07","\b\x14\x07\x03");
+         addr1885:
+         return;
+         addr1735:
+      }
+      set(§§pop(),§§pop());
+      set(§§constant(8),§§constant(9));
+      set(§§constant(10),true);
+      set(§§constant(11),false);
+      set(§§constant(12),0);
+      set(§§constant(13),4);
+      §§push(§§constant(14));
+      §§push(0);
+      break loop3;
+      §§push(new §\§\§pop()§());
+   }
+   while(true);
+   addr1704:
+   §§goto(addr1885);
+}

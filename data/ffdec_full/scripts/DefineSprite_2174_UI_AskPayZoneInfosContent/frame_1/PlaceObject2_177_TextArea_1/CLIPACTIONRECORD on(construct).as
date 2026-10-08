@@ -1,0 +1,67 @@
+on(construct){
+   loop1:
+   while(true)
+   {
+      while(true)
+      {
+         if(false)
+         {
+            if(!ord("\x05"))
+            {
+               break;
+            }
+         }
+         else
+         {
+            §§push("\x05");
+         }
+         if(ord(§§pop()))
+         {
+            break loop1;
+         }
+         §§goto(addr12f66);
+      }
+      while(true)
+      {
+         set("",false);
+         set("\x05",false);
+         set("2{invalid_utf8=157}\x02",true);
+         set("{invalid_utf8=153}",true);
+         §§push("{invalid_utf8=136}\x04");
+         §§push(-1);
+         if(false)
+         {
+            break;
+         }
+         set(§§pop(),§§pop());
+         set(§§constant(6),§§constant(7));
+         set(§§constant(8),0);
+         set(§§constant(9),true);
+         §§push(§§constant(10));
+         §§push(false);
+         if(!(getTimer() + 1))
+         {
+            startDrag(§§pop(),§§pop(),§§pop(),§§pop(),§§pop(),§§pop());
+            break loop1;
+         }
+         addr12fa3:
+         set(§§pop(),§§pop());
+         set("\x1d{invalid_utf8=150}\x04","\b\x01\x05");
+         set("\x1d{invalid_utf8=150}\x04","\b\x02\x05");
+         set("\x1d{invalid_utf8=150}\x04","\b\x03\x05\x01\x1d{invalid_utf8=150}\x04");
+         set("\b\x04\x05\x01\x1d{invalid_utf8=150}\x07","\b\x03\x05\x01\x1d{invalid_utf8=150}\x04");
+         set("\b\x05\x07{invalid_utf8=255}{invalid_utf8=255}{invalid_utf8=255}{invalid_utf8=255}{invalid_utf8=150}\x02",true);
+         §§goto(addr1309b);
+         set("\x03",false);
+      }
+      §§goto(addr12fa3);
+   }
+   if(ord("\b"))
+   {
+      addr12f66:
+      set("\x03",false);
+      break loop2;
+   }
+   duplicateMovieClip(§§pop(),§§pop(),§§pop());
+   addr1309b:
+}

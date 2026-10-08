@@ -1,0 +1,32 @@
+onClipEvent(load){
+   while(true)
+   {
+      if(!ord("\b"))
+      {
+         if(!(0x11C1A4AB & 0x11C1A4AB))
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push(false);
+      }
+      if(§§pop())
+      {
+         break;
+      }
+      function §\x1e\x11\t§(eventObj)
+      {
+         _parent.selectItem({target:this});
+      }
+      if(!ord("\x04"))
+      {
+         duplicateMovieClip(§§pop(),§§pop(),§§pop());
+         §§goto(addr13d81);
+      }
+      break;
+   }
+   this["\x15\x1d\x15"]("click",eval("\x1e\x11\t"));
+   addr13d81:
+}

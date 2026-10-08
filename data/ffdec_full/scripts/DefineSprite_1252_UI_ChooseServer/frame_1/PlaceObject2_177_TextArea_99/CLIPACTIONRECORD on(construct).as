@@ -1,0 +1,64 @@
+on(construct){
+   while(true)
+   {
+      if(!(true or true))
+      {
+         if(!ord("\x05"))
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push("\b");
+      }
+      if(!ord(§§pop()))
+      {
+         break;
+      }
+      while(true)
+      {
+         if(false)
+         {
+            §§pop()[§§pop()] = §§pop();
+         }
+         else
+         {
+            addr5d8a0:
+            set("\x1b",false);
+            set("]",false);
+            set(§§constant(2),false);
+            set(§§constant(3),true);
+            set(§§constant(4),false);
+            §§push(§§constant(5));
+            §§push(-1);
+            if(false)
+            {
+               duplicateMovieClip(§§pop(),§§pop(),§§pop());
+               break;
+            }
+         }
+         set(§§pop(),§§pop());
+         set(§§constant(6),§§constant(7));
+         set(§§constant(8),0);
+         set(§§constant(9),true);
+         set(§§constant(10),false);
+         set(§§constant(11),§§constant(12));
+         §§push(§§constant(13));
+         §§push(§§constant(14));
+         if(false)
+         {
+            var §§pop() = §§pop();
+            §§goto(addr5d9d1);
+         }
+         break;
+      }
+      set(§§pop(),§§pop());
+      set(§§constant(15),§§constant(14));
+      set(§§constant(16),§§constant(14));
+      set(§§constant(17),true);
+      addr5d9d1:
+      return;
+   }
+   §§goto(addr5d8a0);
+}

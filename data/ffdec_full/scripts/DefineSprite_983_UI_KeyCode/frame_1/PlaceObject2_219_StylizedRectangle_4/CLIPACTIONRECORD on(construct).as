@@ -1,0 +1,20 @@
+on(construct){
+   while(true)
+   {
+      if(!ord("\x06"))
+      {
+         if(!ord("\x06"))
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push("enabled");
+         §§push(true);
+      }
+      set(§§pop(),§§pop());
+      styleName = "MediumBrownAllRoundStylizedRectangle";
+      break;
+   }
+}

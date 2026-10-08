@@ -1,0 +1,16 @@
+while(true)
+{
+   if(!ord("\x0b"))
+   {
+      if(false)
+      {
+         break;
+      }
+   }
+   else
+   {
+      §§push("ank.gapi.controls.button.ButtonBackground");
+   }
+   Object.registerClass("ButtonToggleUp",eval(§§pop()));
+   break;
+}

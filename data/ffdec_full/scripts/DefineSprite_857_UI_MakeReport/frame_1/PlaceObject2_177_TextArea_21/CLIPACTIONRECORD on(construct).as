@@ -1,0 +1,64 @@
+on(construct){
+   while(true)
+   {
+      if(!ord("\x0b"))
+      {
+         if(!(0x2317DF84 | 0x2317DF84))
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push("\x0b");
+      }
+      if(!ord(§§pop()))
+      {
+         break;
+      }
+      if(!ord("\b"))
+      {
+         setProperty(§§pop(), _X, §§pop());
+      }
+      else
+      {
+         set(")B",false);
+         set(§§constant(1),true);
+         set(§§constant(2),true);
+         set(§§constant(3),true);
+         set(§§constant(4),true);
+         §§push(§§constant(5));
+         §§push(-1);
+         while(true)
+         {
+            set(§§pop(),§§pop());
+            set(§§constant(6),§§constant(7));
+            set(§§constant(8),0);
+            set(§§constant(9),true);
+            set(§§constant(10),true);
+            §§push(§§constant(11));
+            §§push(§§constant(12));
+            if(!getTimer())
+            {
+               §§pop()[§§pop()] = §§pop();
+               §§goto(addr3e1c8);
+            }
+            addr3e206:
+            set(§§pop(),§§pop());
+            set(§§constant(13),§§constant(14));
+            set(§§constant(15),§§constant(14));
+            set(§§constant(16),§§constant(14));
+            set(§§constant(17),true);
+            break;
+            addr3e1c8:
+         }
+         addr3e2b9:
+         return;
+         addr3e196:
+         §§pop()[§§pop()] = §§pop();
+         §§goto(addr3e206);
+      }
+      §§goto(addr3e2b9);
+   }
+   §§goto(addr3e196);
+}

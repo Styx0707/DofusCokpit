@@ -1,0 +1,40 @@
+while(true)
+{
+   if(!(0x04B858C5 & 0x04B858C5))
+   {
+      if(!ord("\x06"))
+      {
+         break;
+      }
+   }
+   else
+   {
+      §§push("\x05");
+   }
+   if(ord(§§pop()))
+   {
+      while(true)
+      {
+         if(!ord("\b"))
+         {
+            setProperty(§§pop(), _X, §§pop());
+            break;
+         }
+         GAC.applyColor(cIop_R_Ruban,1);
+         §§push(2);
+         §§push("cIop_R_Cheveux");
+         if(false)
+         {
+            continue;
+         }
+         §§pop() implements ;
+      }
+      §§goto(addr3e02f);
+   }
+   §§push(eval(§§pop()));
+   §§push(2);
+   §§push(§§constant(1));
+   break;
+}
+eval(§§pop())["\x05"]();
+addr3e02f:

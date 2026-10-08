@@ -1,0 +1,16 @@
+while(true)
+{
+   if(!ord("\x0b"))
+   {
+      if(false)
+      {
+         break;
+      }
+   }
+   else
+   {
+      §§push("ank.gapi.controls.VolumeSlider");
+   }
+   Object.registerClass("VolumeSlider",eval(§§pop()));
+   break;
+}

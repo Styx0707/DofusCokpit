@@ -1,0 +1,335 @@
+ConstantPool "{invalid_utf8=143}\r", "U", ".x"
+Push 960154031
+PushDuplicate
+BitAnd
+If loc002d
+Push true
+PushDuplicate
+And
+If loc0035
+Jump loc0619
+loc002d:Push 472314804
+loc0035:Increment
+If loc04b5
+ConstantPool "~", "W1", "{invalid_utf8=149}"
+loc0047:SetMember
+Push register1, constant34
+Push true
+If loc0118
+NewObject
+loc005a:SetMember
+Push register1, constant12
+Push "\x06"
+CharToAscii
+If loc02da
+ImplementsOp
+loc006f:GetMember
+StoreRegister 1
+Pop
+Push register1, constant10
+GetTime
+Increment
+If loc03a3
+GetProperty
+loc0084:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, constant18, 2, register1, constant19
+GetMember
+Push constant20
+CallMethod
+Pop
+}
+Push false
+Not
+If loc01cb
+ImplementsOp
+loc00b3:GetMember
+Push "{invalid_utf8=149}"
+GetMember
+Push constant3
+GetMember
+Not
+Not
+If loc00d9
+Push constant5
+Push false
+Not
+If loc048a
+CallFunction
+loc00d8:SetMember
+loc00d9:Push constant5
+GetVariable
+Push "~"
+GetMember
+Push "W1"
+GetMember
+Push "{invalid_utf8=149}"
+GetMember
+Push constant3
+GetMember
+Push constant4
+GetTime
+Increment
+If loc0419
+SetProperty
+loc0104:SetMember
+Push register1, constant15
+Push false
+Not
+If loc0084
+StartDrag
+loc0118:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x19\x12\x1d" {
+Push register2, constant23
+GetMember
+Push constant35
+GetMember
+StoreRegister 0
+Push constant31
+StrictEquals
+If loc014a
+Jump loc0176
+loc014a:Push 0, register1, constant26
+GetMember
+Push constant36
+GetMember
+Push constant37
+GetTime
+If loc0169
+ImplementsOp
+loc0169:GetMember
+Push constant38
+CallMethod
+Pop
+Jump loc0176
+}
+loc0176:Push "\t"
+CharToAscii
+If loc03f5
+GetProperty
+loc0183:SetMember
+Push register1, constant18
+Push true
+If loc01da
+StartDrag
+loc0196:Push "~"
+GetVariable
+Push "W1"
+GetMember
+Push "{invalid_utf8=149}"
+GetMember
+Push constant3
+GetMember
+Push constant4
+GetMember
+Not
+Not
+If loc0414
+Push "~"
+Push true
+If loc045d
+GetProperty
+loc01cb:SetMember
+Push register1, constant17
+GetTime
+If loc02b3
+Extends
+loc01da:DefineFunction2 "", 1, 4, false, false, true, false, true, false, false, true, false, 2, "\x19\x12\x1d" {
+Push register2, constant23
+GetMember
+StoreRegister 0
+Push register1, constant19
+GetMember
+StrictEquals
+If loc0209
+Jump loc0275
+loc0209:Push constant24, constant25, 1, register1, constant26
+GetMember
+Push constant27
+GetTime
+If loc0226
+Extends
+loc0226:GetMember
+Push constant28
+CallMethod
+Push constant29, constant30, 2
+InitObject
+Push constant31, constant32, 3, register1, "{invalid_utf8=149}"
+GetMember
+Push constant33
+CallMethod
+StoreRegister 3
+Pop
+Push register1, constant34, 2, register3, constant20
+GetTime
+Increment
+If loc026e
+DefineLocal
+loc026e:CallMethod
+Pop
+Jump loc0275
+}
+loc0275:GetTime
+If loc0047
+GetProperty
+loc027c:Push constant5
+GetVariable
+Push "~"
+GetMember
+Push "W1"
+GetMember
+Push "{invalid_utf8=149}", 0, constant6
+NewObject
+SetMember
+loc029c:Push "~"
+GetVariable
+Push "W1"
+Push false
+Not
+If loc00b3
+ImplementsOp
+loc02b3:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, constant19
+GetMember
+Push constant21, constant22
+SetMember
+}
+Push false
+Not
+If loc0183
+CastOp
+loc02da:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push constant13, register1, constant14, register1, constant15
+GetMember
+Push 2
+InitObject
+Push 1, register1, constant16
+CallMethod
+Pop
+Push constant13, register1, constant14, register1, constant17
+GetMember
+Push 2
+InitObject
+Push 1, register1, constant16
+CallMethod
+Pop
+}
+GetTime
+If loc0104
+NewObject
+loc0336:GetMember
+Push "W1", 0, constant6
+NewObject
+SetMember
+loc0345:Push "~"
+GetVariable
+Push "W1"
+GetMember
+Push "{invalid_utf8=149}"
+GetMember
+Not
+Not
+If loc029c
+Push true
+If loc027c
+Extends
+loc0369:StoreRegister 0
+SetMember
+Push register0, "~"
+GetVariable
+Push "W1"
+GetMember
+Push "{invalid_utf8=149}"
+GetMember
+Push constant7
+GetMember
+Push constant8
+GetMember
+Extends
+Push register0, constant9
+Push "\x0b"
+CharToAscii
+If loc006f
+GetProperty
+loc03a3:DefineFunction2 "", 0, 3, false, false, false, true, true, false, false, true, false {
+Push "~"
+GetVariable
+Push "W1"
+GetMember
+Push "{invalid_utf8=149}"
+GetMember
+Push constant3
+GetMember
+Push constant4
+GetMember
+Push constant11
+GetTime
+If loc03d8
+ImplementsOp
+loc03d8:GetMember
+Push false, 2, register2, constant10
+CallMethod
+Pop
+}
+Push false
+Not
+If loc005a
+NewObject
+loc03f5:SetMember
+Push 1, null, register1, 3, constant39
+CallFunction
+Pop
+Push register0, constant11, constant4
+SetMember
+loc0414:Jump loc0619
+loc0419:DefineFunction2 "", 0, 3, false, false, false, true, true, false, false, true, false {
+Push 0, register2, undefined
+CallMethod
+Pop
+}
+Push true
+If loc0369
+ImplementsOp
+loc043c:GetVariable
+Push "\x18\x03\x17"
+GetMember
+Not
+Not
+If loc0345
+Push "_global"
+GetVariable
+Push "dofus"
+GetTime
+Increment
+If loc0336
+SetMember
+loc045d:GetVariable
+Not
+Not
+If loc0479
+Push "_global"
+GetVariable
+Push "dofus", 0, "Object"
+NewObject
+SetMember
+loc0479:Push "dofus"
+Push false
+Not
+If loc043c
+GetProperty
+loc048a:GetVariable
+Push "dofus"
+GetMember
+Push "\x18\x03\x17"
+GetMember
+Push "gapi"
+GetMember
+Push "ui", 0, "Object"
+NewObject
+Push true
+If loc00d8
+SetProperty
+loc04b5:ConstantPool "dofus", "\x18\x03\x17", "gapi", "ui", "DemoMode", "_global", "Object", "\x17\x01\x17", "\x17\t\x11", "prototype", "\x18\t\x0b", "\x16\x1b\x18", "\x17\x02\x13", "object", "method", "\x15\x1e\b", "\x16\x01\x0e", "\x18\n\x1c", "click", "_btnDemoReset", "\x15\x1d\x15", "label", "Redémarrer la démo", "target", "title", "QUESTION", "api", "lang", "getText", "text", "Voulez-vous redémarrer la démonstration du jeu depuis le début ?", "AskYesNoReset", "AskYesNo", "\x18\x17\x04", "yes", "_name", "\x19\x06\x1c", "\x15\x1c\x04", "askResetDemoMode", "ASSetPropFlags"
+Push "\x0b"
+CharToAscii
+If loc0196
+NewObject
+loc0619:

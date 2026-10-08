@@ -1,0 +1,79 @@
+on(construct){
+   while(true)
+   {
+      if(!(true and true))
+      {
+         if(false)
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push(true);
+      }
+      var _temp_1 = §§pop();
+      §§push(_temp_1 or _temp_1);
+      break;
+   }
+   while(true)
+   {
+      loop4:
+      while(true)
+      {
+         if(!§§pop())
+         {
+            while(true)
+            {
+               set(§§pop(),§§pop());
+               set(§§constant(13),§§constant(14));
+               set(§§constant(15),§§constant(14));
+               set(§§constant(16),§§constant(14));
+               §§push(§§constant(17));
+               §§push(true);
+               if(ord("\x07"))
+               {
+                  break loop4;
+               }
+               setProperty(§§pop(), _X, §§pop());
+               while(true)
+               {
+                  set(§§pop(),§§pop());
+                  set(§§constant(5),-1);
+                  set(§§constant(6),§§constant(7));
+                  set(§§constant(8),0);
+                  set(§§constant(9),true);
+                  set(§§constant(10),false);
+                  §§push(§§constant(11));
+                  §§push(§§constant(12));
+                  if(ord("\x04"))
+                  {
+                     break;
+                  }
+                  setProperty(§§pop(), _X, §§pop());
+               }
+            }
+            return;
+         }
+         if(false)
+         {
+            duplicateMovieClip(§§pop(),§§pop(),§§pop());
+            return;
+         }
+         set("{invalid_utf8=147}{",false);
+         set("{invalid_utf8=178}[",false);
+         set(§§constant(2),false);
+         set(§§constant(3),true);
+         §§push(§§constant(4));
+         §§push(false);
+         if(ord("\x04"))
+         {
+            §§goto(addr1de27);
+         }
+         §§push(getProperty(§§pop(), _X));
+         break;
+      }
+      set(§§pop(),§§pop());
+      break;
+   }
+}

@@ -1,0 +1,86 @@
+on(construct){
+   loop2:
+   while(true)
+   {
+      loop3:
+      while(true)
+      {
+         if(false)
+         {
+            if(false)
+            {
+               while(true)
+               {
+                  set(§§pop(),§§pop());
+                  set("",0);
+                  set("",4);
+                  §§push("\x1d{invalid_utf8=150}\x07");
+                  §§push(0);
+                  if(false)
+                  {
+                     break;
+                  }
+                  set(§§pop(),§§pop());
+                  set(§§constant(15),0);
+                  set(§§constant(16),1);
+                  set(§§constant(17),4);
+                  set(§§constant(18),§§constant(19));
+                  set(§§constant(20),10);
+                  §§push(§§constant(21));
+                  §§push(20);
+                  if(!ord("\n"))
+                  {
+                     §§pop() extends §§pop();
+                     §§goto(addr010f);
+                  }
+                  else
+                  {
+                     addr00b5:
+                     set(§§pop(),§§pop());
+                     set("",§§constant(23));
+                  }
+                  §§goto(addr023b);
+                  break loop3;
+               }
+               duplicateMovieClip(§§pop(),§§pop(),§§pop());
+               §§goto(addr00b5);
+               addr0089:
+            }
+         }
+         else
+         {
+            §§push(101253708);
+         }
+         if(!§§pop())
+         {
+            break;
+         }
+         break loop2;
+      }
+      set(§§pop(),§§pop());
+      set(§§constant(10),true);
+      §§goto(addr0089);
+   }
+   if(ord("\x07"))
+   {
+      do
+      {
+         S = §§constant(1);
+         set(§§constant(2),§§constant(3));
+         set(§§constant(4),§§constant(3));
+         set(§§constant(5),§§constant(6));
+         set(§§constant(7),20);
+         §§push(§§constant(8));
+         §§push(§§constant(9));
+         if(ord("\x04"))
+         {
+            break loop3;
+         }
+         §§pop()[§§pop()] = §§pop();
+      }
+      while(ord("\x07"));
+      addr010f:
+   }
+   addr023b:
+   new §\§\§pop()§();
+}

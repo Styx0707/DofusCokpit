@@ -1,0 +1,62 @@
+on(construct){
+   loop1:
+   while(true)
+   {
+      while(true)
+      {
+         if(!(0x0149C624 & 0x0149C624))
+         {
+            if(!(0x0149C624 & 0x0149C624))
+            {
+               break;
+            }
+         }
+         else
+         {
+            §§push(false);
+         }
+         if(§§pop())
+         {
+            break;
+         }
+         break loop1;
+      }
+      §§goto(addr133b4);
+   }
+   while(true)
+   {
+      set("{invalid_utf8=197}N","{invalid_utf8=145}");
+      set(§§constant(2),§§constant(3));
+      set(§§constant(4),false);
+      set(§§constant(5),false);
+      set(§§constant(6),false);
+      §§push(§§constant(7));
+      §§push(§§constant(3));
+      if(!getTimer())
+      {
+         §§push(§§pop()(§§pop()));
+      }
+      else
+      {
+         set(§§pop(),§§pop());
+         set(§§constant(8),0);
+         set(§§constant(9),2);
+         set(§§constant(10),true);
+         §§push(§§constant(11));
+         §§push(§§constant(12));
+         if(false)
+         {
+            §§goto(addr13421);
+            §§push(§§pop()(§§pop()));
+         }
+      }
+      set(§§pop(),§§pop());
+      break;
+      addr13421:
+   }
+   addr134c0:
+   return;
+   addr133b4:
+   setProperty(§§pop(), _X, §§pop());
+   §§goto(addr134c0);
+}

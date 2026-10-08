@@ -1,0 +1,83 @@
+on(construct){
+   loop2:
+   while(true)
+   {
+      loop3:
+      while(true)
+      {
+         if(!(0x31FD5340 | 0x31FD5340))
+         {
+            if(!ord("\x06"))
+            {
+               while(true)
+               {
+                  set("\b\n\x05\x01\x1d{invalid_utf8=150}\x04",true);
+                  set("\b\x0b\x05",false);
+                  set("\x1d{invalid_utf8=150}\x07",0);
+                  §§push("\b\f\x01");
+                  §§push(4);
+                  if(!getTimer())
+                  {
+                     break;
+                  }
+                  set(§§pop(),§§pop());
+                  set(§§constant(14),0);
+                  set(§§constant(15),0);
+                  set(§§constant(16),4);
+                  set(§§constant(17),4);
+                  set(§§constant(18),§§constant(19));
+                  §§push(§§constant(20));
+                  §§push(12);
+                  if(false)
+                  {
+                     startDrag(§§pop(),§§pop(),§§pop(),§§pop(),§§pop(),§§pop());
+                     §§goto(addr14079);
+                  }
+                  else
+                  {
+                     addr14016:
+                     set(§§pop(),§§pop());
+                     set("4{invalid_utf8=157}\x02",20);
+                     set("\x16","O\x1d{invalid_utf8=150}\x07");
+                  }
+                  §§goto(addr141a8);
+                  break loop3;
+               }
+               §§pop()[§§pop()] = §§pop();
+               §§goto(addr14016);
+               addr13fea:
+            }
+         }
+         else
+         {
+            §§push(448131110);
+         }
+         if(!§§pop())
+         {
+            break;
+         }
+         break loop2;
+      }
+      set(§§pop(),§§pop());
+      set(§§constant(8),§§constant(9));
+      §§goto(addr13fea);
+   }
+   do
+   {
+      w = "\x13`";
+      set("\x1d",§§constant(3));
+      set(§§constant(4),§§constant(3));
+      set(§§constant(5),§§constant(6));
+      §§push(§§constant(7));
+      §§push(20);
+      if(ord("\b"))
+      {
+         break loop3;
+      }
+      §§push(§§pop()());
+   }
+   while(true);
+   addr14079:
+   startDrag(§§pop(),§§pop(),§§pop(),§§pop(),§§pop(),§§pop());
+   addr141a8:
+}

@@ -1,0 +1,84 @@
+on(construct){
+   loop2:
+   while(true)
+   {
+      loop3:
+      while(true)
+      {
+         if(false)
+         {
+            if(!ord("\x02"))
+            {
+               while(true)
+               {
+                  set("",4);
+                  set("\x1d{invalid_utf8=150}\x04","\b\x12\b\x13\x1d{invalid_utf8=150}\x07");
+                  set("\b\x14\x07\x05",5);
+                  set("",20);
+                  §§push("");
+                  §§push("\x1d{invalid_utf8=150}\x07");
+                  if(!ord("\n"))
+                  {
+                     §§goto(addr1b850);
+                     §§push(§§pop()());
+                  }
+                  §§goto(addr1b88e);
+                  break loop3;
+               }
+               §§goto(addr1b88d);
+               addr1b813:
+            }
+         }
+         else
+         {
+            §§push("\x06");
+         }
+         if(!ord(§§pop()))
+         {
+            break;
+         }
+         break loop2;
+      }
+      set(§§pop(),§§pop());
+      set(§§constant(16),4);
+      §§goto(addr1b813);
+   }
+   if(ord("\x02"))
+   {
+      do
+      {
+         set("{invalid_utf8=150}\x03","");
+         set("\x06","2{invalid_utf8=157}\x02");
+         set("{invalid_utf8=222}","2{invalid_utf8=157}\x02");
+         set("{invalid_utf8=136}\t","\x03");
+         set("@",20);
+         §§push("{invalid_utf8=194}");
+         §§push("Ý");
+         if(false)
+         {
+            addr1b88d:
+            §§pop() extends §§pop();
+            addr1b88e:
+            set(§§pop(),§§pop());
+            §§goto(addr1b9d8);
+         }
+         set(§§pop(),§§pop());
+         set(§§constant(10),true);
+         set(§§constant(11),false);
+         set(§§constant(12),0);
+         set(§§constant(13),4);
+         set(§§constant(14),0);
+         §§push(§§constant(15));
+         §§push(0);
+         if(ord("\x07"))
+         {
+            break loop3;
+         }
+         setProperty(§§pop(), _X, §§pop());
+      }
+      while(ord("\x02"));
+      addr1b850:
+   }
+   startDrag(§§pop(),§§pop(),§§pop(),§§pop(),§§pop(),§§pop());
+   addr1b9d8:
+}

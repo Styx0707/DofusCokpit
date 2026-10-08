@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dofus Retro — Donjons</title>
+    <link rel="icon" type="image/svg+xml" href="/ui/favicon.svg">
+    <style>
+        :root {
+            --plane: #f9f9f7;
+            --surface: #fcfcfb;
+            --ink: #0b0b0b;
+            --ink2: #52514e;
+            --muted: #898781;
+            --grid: #e1e0d9;
+            --line: #c3c2b7;
+            --accent: #2a78d6;
+            --accent-soft: #cde2fb;
+            --chip: #f0efec;
+            --border: rgba(11, 11, 11, 0.10);
+            --shadow: rgba(11, 11, 11, 0.18);
+            --good: #0ca30c;
+            --warn: #d98a00;
+            --bad: #d6392a;
+        }
+
+        :root[data-theme="dark"] {
+            --plane: #0d0d0d;
+            --surface: #1a1a19;
+            --ink: #ffffff;
+            --ink2: #c3c2b7;
+            --muted: #898781;
+            --grid: #2c2c2a;
+            --line: #383835;
+            --accent: #3987e5;
+            --accent-soft: #184f95;
+            --chip: #242422;
+            --border: rgba(255, 255, 255, 0.10);
+            --shadow: rgba(0, 0, 0, 0.5);
+            --good: #2fbf2f;
+            --warn: #f0a728;
+            --bad: #f0584a;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--plane);
+            color: var(--ink);
+            font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+            font-size: 14px;
+            line-height: 1.45;
+        }
+
+        .wrap {
+            max-width: 1060px;
+            margin: 0 auto;
+            padding: 22px 20px 60px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 14px;
+        }
+
+        h1 {
+            font-size: 20px;
+            margin: 0;
+            font-weight: 650;
+        }
+
+        .spacer {
+            flex: 1;
+        }
+
+        a.nav {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 13px;
+            margin-right: 6px;
+        }
+
+        .sub {
+            color: var(--muted);
+            font-size: 12.5px;
+        }
+
+        select, input, button {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            color: var(--ink);
+            border-radius: 8px;
+            padding: 7px 10px;
+            font-size: 13.5px;
+            font-family: inherit;
+        }
+
+        button {
+            cursor: pointer;
+            color: var(--ink2);
+        }
+
+        button.primary {
+            background: var(--accent);
+            color: #fff;
+            border-color: transparent;
+            font-weight: 600;
+        }
+
+        button.warn {
+            background: var(--warn);
+            color: #0b0b0b;
+            border-color: transparent;
+            font-weight: 600;
+        }
+
+        button:disabled {
+            opacity: 0.45;
+            cursor: not-allowed;
+        }
+
+        .panel {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px 16px;
+            margin-bottom: 14px;
+        }
+
+        .panel h2 {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--ink2);
+            margin: 0 0 10px;
+            font-weight: 600;
+        }
+
+        .row {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            display: inline-block;
+            background: var(--muted);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 4px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 6px 8px;
+            border-bottom: 1px solid var(--grid);
+            font-size: 13px;
+        }
+
+        th {
+            color: var(--muted);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            font-weight: 600;
+        }
+
+        td input {
+            padding: 4px 7px;
+        }
+
+        td input.cell {
+            width: 72px;
+            font-variant-numeric: tabular-nums;
+        }
+
+        td input.cells {
+            width: 160px;
+            font-variant-numeric: tabular-nums;
+        }
+
+        td input.lbl {
+            width: 100%;
+            min-width: 120px;
+        }
+
+        .mono {
+            font-variant-numeric: tabular-nums;
+        }
+
+        tr.cur {
+            background: color-mix(in srgb, var(--accent) 16%, transparent);
+        }
+
+        tr.cur td:first-child {
+            box-shadow: inset 3px 0 0 var(--accent);
+        }
+
+        .tiny {
+            padding: 3px 7px;
+            font-size: 12px;
+        }
+
+        .teamgrid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .teamchip {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--chip);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            padding: 4px 10px;
+            font-size: 13px;
+        }
+
+        .teamchip input {
+            width: auto;
+            padding: 0;
+        }
+
+        .teamchip.here {
+            border-color: var(--good);
+        }
+
+        .note {
+            margin-top: 10px;
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .big {
+            font-size: 15px;
+            font-weight: 650;
+        }
+
+        .status {
+            margin-top: 10px;
+            font-size: 13px;
+            min-height: 18px;
+        }
+
+        code {
+            background: var(--chip);
+            padding: 1px 5px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+
+        .pill {
+            display: inline-block;
+            padding: 1px 8px;
+            border-radius: 999px;
+            font-size: 11px;
+            font-weight: 600;
+            background: var(--accent-soft);
+            color: var(--ink);
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <header>
+        <h1>🏰 Donjons</h1>
+        <span class="spacer"></span>
+        <a class="nav" href="/ui/">Persos</a>
+        <a class="nav" href="/ui/board.html">Comptes</a>
+        <a class="nav" href="/ui/live.html">Repop live</a>
+        <a class="nav" href="/ui/build.html">Build</a>
+        <button id="theme">◐</button>
+    </header>
+
+    <div class="panel">
+        <h2>Donjon</h2>
+        <div class="row">
+            <select id="dsel" style="min-width:220px">
+                <option value="">— charger un donjon —</option>
+            </select>
+            <button id="dnew">+ Nouveau</button>
+            <input id="dname" placeholder="Nom du donjon" style="min-width:200px">
+            <button id="dsave" class="primary">💾 Enregistrer</button>
+            <button id="ddel">🗑 Supprimer</button>
+            <span class="spacer"></span>
+            <span class="sub"><span class="dot" id="livedot"></span> <span id="liveinfo">live…</span></span>
+        </div>
+        <div class="note">Un donjon = suite ordonnée de salles reliées par une <b>cellule de transition</b>
+            (la porte/trappe à cliquer pour passer à la suivante). Capture-la une fois en traversant le donjon
+            avec le sniffer actif, puis fais sortir toute l'équipe d'un clic.
+        </div>
+    </div>
+
+    <div class="panel">
+        <h2>1 · Capture de la séquence</h2>
+        <div class="row">
+            <label class="sub">Suivre le compte
+                <select id="capacc" style="min-width:160px">
+                    <option value="">—</option>
+                </select>
+            </label>
+            <button id="capstart" class="primary">● Démarrer la capture</button>
+            <button id="capstop" class="warn" style="display:none">■ Terminer</button>
+            <span id="capstatus" class="sub"></span>
+        </div>
+        <div class="note">Démarre, puis traverse le donjon en jeu avec ce compte : chaque nouvelle salle
+            s'ajoute, et la cellule de sortie se remplit toute seule (depuis les transitions observées).
+            Tu pourras corriger à la main ci-dessous.
+        </div>
+    </div>
+
+    <div class="panel">
+        <h2>2 · Salles</h2>
+        <table id="rooms">
+            <thead>
+            <tr>
+                <th style="width:36px">#</th>
+                <th style="width:90px">Map id</th>
+                <th>Nom de salle</th>
+                <th style="width:180px">Cases du parcours</th>
+                <th style="width:120px">Ordre</th>
+            </tr>
+            </thead>
+            <tbody id="roomsbody"></tbody>
+        </table>
+        <div class="row" style="margin-top:10px">
+            <button id="raddcur" class="tiny">+ Ajouter la salle courante</button>
+            <button id="raddempty" class="tiny">+ Ligne vide</button>
+            <span class="sub">La dernière salle (boss) n'a pas de cellule de sortie.</span>
+        </div>
+    </div>
+
+    <div class="panel">
+        <h2>3 · Run — faire tourner l'équipe</h2>
+        <div class="row" style="margin-bottom:8px">
+            <label class="sub"
+                   title="n'inclure que les comptes du groupe Farm (board.html) — protège les comptes d'arène">
+                <input type="checkbox" id="farmonly" checked> Limiter au groupe Farm</label>
+        </div>
+        <div class="row" style="margin-bottom:8px">
+            <span class="sub">Équipe :</span>
+            <span id="team" class="teamgrid"></span>
+        </div>
+        <div class="row">
+            <span id="curroom" class="big">—</span>
+            <span class="spacer"></span>
+            <button id="stepbtn" class="primary">Sortir l'équipe → salle suivante ▸</button>
+            <button id="stepcancel" class="warn" style="display:none">✖ Annuler</button>
+        </div>
+        <div id="runstatus" class="status sub"></div>
+        <div class="note">Le combat reste <b>manuel</b> : joue le combat à 8, gagne la salle, puis clique
+            « Sortir l'équipe ». Le walker (<code>dofus_walker.au3</code>) doit tourner. Chaque fenêtre
+            est activée puis la cellule de sortie cliquée — zéro paquet réseau.
+        </div>
+    </div>
+</div>
+
+<script>
+    const $ = id => document.getElementById(id);
+    const sleep = ms => new Promise(r => setTimeout(r, ms));
+    const esc = s => (s ?? "").toString().replace(/[&<>"]/g, c => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;'
+    }[c]));
+
+    let DUN = {id: "", name: "", rooms: []};   // donjon courant (modèle éditable)
+    let ACCOUNTS = [];                          // /live/state accounts
+    let GMAP = {};                              // nom -> groupe MANUEL (board.html)
+    let RULES = [];                             // règles d'auto-rangement par motif
+    let farmOnly = true;                        // limiter l'équipe au groupe "farm"
+    let teamExcluded = new Set();               // noms décochés du run (mode manuel)
+    let capturing = false, capAcc = "", capLastMap = null;
+    let stepping = false;
+
+    // --- chargement des donjons ---------------------------------------------
+    async function loadList(selectId) {
+        let list = [];
+        try {
+            list = await (await fetch("/dungeon")).json();
+        } catch (e) {
+        }
+        const sel = $("dsel");
+        sel.innerHTML = `<option value="">— charger un donjon —</option>` +
+            list.map(d => `<option value="${esc(d.id)}">${esc(d.name || d.id)} (${d.rooms} salle(s))</option>`).join("");
+        if (selectId) sel.value = selectId;
+    }
+
+    async function loadDungeon(id) {
+        if (!id) {
+            DUN = {id: "", name: "", rooms: []};
+            $("dname").value = "";
+            renderRooms();
+            renderRun();
+            return;
+        }
+        let d;
+        try {
+            d = await (await fetch("/dungeon/" + encodeURIComponent(id))).json();
+        } catch (e) {
+            return;
+        }
+        DUN = {
+            id: d.id || id, name: d.name || "", rooms: (d.rooms || []).map(r => ({
+                ...r,
+                path_cells: (r.path_cells && r.path_cells.length) ? r.path_cells.slice()
+                    : (r.exit_cell != null ? [r.exit_cell] : [])
+            }))
+        };
+        $("dname").value = DUN.name;
+        renderRooms();
+        renderRun();
+    }
+
+    function slug(s) {
+        // normalize NFD sépare les accents (marques combinantes), que le filtre
+        // [^a-z0-9] retire ensuite -> pas besoin d'une regex de diacritiques.
+        return (s || "").toLowerCase().normalize("NFD")
+            .replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") || "donjon";
+    }
+
+    // --- rendu table des salles ---------------------------------------------
+    function renderRooms() {
+        const cur = currentRoomIndex();
+        const b = $("roomsbody");
+        if (!DUN.rooms.length) {
+            b.innerHTML = `<tr><td colspan="5" class="sub">Aucune salle. Lance une capture ou ajoute des lignes.</td></tr>`;
+            return;
+        }
+        b.innerHTML = DUN.rooms.map((r, i) => {
+            const last = i === DUN.rooms.length - 1;
+            return `<tr class="${i === cur ? 'cur' : ''}">
+                <td class="mono">${i + 1}</td>
+                <td><input class="cell mono" data-i="${i}" data-k="map_id" value="${r.map_id ?? ""}"></td>
+                <td><input class="lbl" data-i="${i}" data-k="label" value="${esc(r.label || "")}" placeholder="Salle ${i + 1}"></td>
+                <td>${last ? `<span class="sub">— boss —</span>` : `<input class="cells mono" data-i="${i}" data-k="path_cells" value="${(r.path_cells || []).join(', ')}" placeholder="320, 445">`}</td>
+                <td>
+                    <button class="tiny rup" data-i="${i}" ${i === 0 ? "disabled" : ""}>↑</button>
+                    <button class="tiny rdn" data-i="${i}" ${last ? "disabled" : ""}>↓</button>
+                    <button class="tiny rdel" data-i="${i}">✕</button>
+                </td></tr>`;
+        }).join("");
+    }
+
+    $("roomsbody").addEventListener("input", e => {
+        const el = e.target;
+        if (!el.dataset.k) return;
+        const i = +el.dataset.i, k = el.dataset.k, r = DUN.rooms[i];
+        if (k === "label") r.label = el.value;
+        else if (k === "path_cells") {
+            // liste de cases séparées par virgule/espace ; la dernière = la porte
+            const arr = el.value.split(/[^0-9]+/).filter(Boolean).map(n => parseInt(n, 10)).filter(n => !isNaN(n));
+            r.path_cells = arr;
+            r.exit_cell = arr.length ? arr[arr.length - 1] : null;
+        } else {
+            const v = el.value.trim();
+            r[k] = v === "" ? null : parseInt(v, 10);
+        }
+    });
+    $("roomsbody").addEventListener("click", e => {
+        const i = +e.target.dataset.i;
+        if (e.target.classList.contains("rdel")) {
+            DUN.rooms.splice(i, 1);
+            renderRooms();
+            renderRun();
+        } else if (e.target.classList.contains("rup") && i > 0) {
+            [DUN.rooms[i - 1], DUN.rooms[i]] = [DUN.rooms[i], DUN.rooms[i - 1]];
+            renderRooms();
+            renderRun();
+        } else if (e.target.classList.contains("rdn") && i < DUN.rooms.length - 1) {
+            [DUN.rooms[i + 1], DUN.rooms[i]] = [DUN.rooms[i], DUN.rooms[i + 1]];
+            renderRooms();
+            renderRun();
+        }
+    });
+
+    $("raddempty").onclick = () => {
+        DUN.rooms.push({map_id: "", label: "", path_cells: [], exit_cell: null});
+        renderRooms();
+    };
+    $("raddcur").onclick = () => {
+        const a = ACCOUNTS.find(x => x.map_id != null);
+        if (!a) {
+            alert("Aucun compte positionné (bouge un perso en jeu).");
+            return;
+        }
+        DUN.rooms.push({map_id: a.map_id, label: "Salle " + (DUN.rooms.length + 1), path_cells: [], exit_cell: null});
+        renderRooms();
+    };
+
+    // --- sauvegarde ----------------------------------------------------------
+    $("dsave").onclick = async () => {
+        const name = $("dname").value.trim();
+        if (!name) {
+            alert("Donne un nom au donjon.");
+            return;
+        }
+        if (!DUN.id) DUN.id = slug(name);
+        DUN.name = name;
+        try {
+            await fetch("/dungeon/" + encodeURIComponent(DUN.id), {
+                method: "PUT", headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({name, rooms: DUN.rooms}),
+            });
+            await loadList(DUN.id);
+            flashRun(`💾 « ${name} » enregistré (${DUN.rooms.length} salle(s)).`);
+        } catch (e) {
+            flashRun("❌ échec enregistrement : " + e.message);
+        }
+    };
+    $("ddel").onclick = async () => {
+        if (!DUN.id) return;
+        if (!confirm(`Supprimer « ${DUN.name || DUN.id} » ?`)) return;
+        try {
+            await fetch("/dungeon/" + encodeURIComponent(DUN.id), {method: "DELETE"});
+        } catch (e) {
+        }
+        await loadList("");
+        await loadDungeon("");
+    };
+    $("dnew").onclick = () => {
+        const name = prompt("Nom du nouveau donjon :", "");
+        if (!name) return;
+        DUN = {id: slug(name), name, rooms: []};
+        $("dname").value = name;
+        $("dsel").value = "";
+        renderRooms();
+        renderRun();
+    };
+    $("dsel").onchange = () => loadDungeon($("dsel").value);
+
+    // --- capture -------------------------------------------------------------
+    $("capstart").onclick = () => {
+        capAcc = $("capacc").value;
+        if (!capAcc) {
+            alert("Choisis un compte à suivre.");
+            return;
+        }
+        if (DUN.rooms.length && !confirm("La capture repart de zéro (remplace les salles actuelles). Continuer ?")) return;
+        DUN.rooms = [];
+        capturing = true;
+        capLastMap = null;
+        $("capstart").style.display = "none";
+        $("capstop").style.display = "";
+        $("capstatus").textContent = "● capture… traverse le donjon en jeu.";
+        renderRooms();
+    };
+    $("capstop").onclick = () => {
+        capturing = false;
+        $("capstart").style.display = "";
+        $("capstop").style.display = "none";
+        $("capstatus").textContent = `■ capture terminée : ${DUN.rooms.length} salle(s). Vérifie puis Enregistre.`;
+    };
+
+    // Détecte un changement de map du compte suivi -> ajoute une salle, et
+    // résout la cellule de sortie de la salle précédente via /dungeon/transitions.
+    async function captureTick() {
+        if (!capturing) return;
+        const a = ACCOUNTS.find(x => (x.name === capAcc || x.label === capAcc));
+        if (!a || a.map_id == null) return;
+        const mid = a.map_id;
+        if (mid !== capLastMap) {
+            const prev = capLastMap;
+            if (DUN.rooms.length === 0 || DUN.rooms[DUN.rooms.length - 1].map_id !== mid) {
+                DUN.rooms.push({
+                    map_id: mid,
+                    label: "Salle " + (DUN.rooms.length + 1),
+                    path_cells: [],
+                    exit_cell: null,
+                    _from: prev
+                });
+            }
+            capLastMap = mid;
+            $("capstatus").textContent = `● ${DUN.rooms.length} salle(s) — salle courante map ${mid}.`;
+        }
+        await resolvePaths();
+        renderRooms();
+    }
+
+    // Remplit path_cells (le parcours complet) des salles dont on connaît la
+    // transition (from -> to), depuis les clics observés (cells).
+    async function resolvePaths() {
+        const need = DUN.rooms.some((r, i) => i < DUN.rooms.length - 1 && !(r.path_cells && r.path_cells.length) && Number.isInteger(r.map_id));
+        if (!need) return;
+        let trans = [];
+        try {
+            trans = (await (await fetch("/dungeon/transitions?limit=200")).json()).transitions || [];
+        } catch (e) {
+            return;
+        }
+        for (let i = 0; i < DUN.rooms.length - 1; i++) {
+            const r = DUN.rooms[i], next = DUN.rooms[i + 1];
+            if ((r.path_cells && r.path_cells.length) || !Number.isInteger(r.map_id) || !Number.isInteger(next.map_id)) continue;
+            const t = trans.find(x => x.from === r.map_id && x.to === next.map_id);
+            if (t) {
+                r.path_cells = (t.cells && t.cells.length) ? t.cells.slice() : (t.cell != null ? [t.cell] : []);
+                r.exit_cell = r.path_cells.length ? r.path_cells[r.path_cells.length - 1] : null;
+            }
+        }
+    }
+
+    // --- run : équipe + pas de donjon ---------------------------------------
+    function presentAccounts() {
+        return ACCOUNTS.filter(a => a.name);
+    }
+
+    // groupe effectif d'un compte : assignation manuelle (board) sinon règle de nom
+    function baseName(name) {
+        return (name || "").replace(/\s*-?\s*\[[^\]]*]\s*$/, "").trim().toLowerCase();
+    }
+
+    function groupOf(name) {
+        if (GMAP[name]) return GMAP[name];
+        const b = baseName(name);
+        for (const r of RULES) {
+            if (r.prefix && b.startsWith(r.prefix.toLowerCase())) return r.group;
+            if (r.suffix && b.endsWith(r.suffix.toLowerCase())) return r.group;
+            if (r.contains && b.includes(r.contains.toLowerCase())) return r.group;
+        }
+        return "";
+    }
+
+    function hasFarmGroup() {
+        return presentAccounts().some(a => groupOf(a.name) === "farm");
+    }
+
+    // Équipe du run : par défaut limitée au groupe "farm" (manuel ou règle) pour ne
+    // pas bouger les comptes d'arène ; sinon sélection manuelle (cases cochées).
+    function teamNames() {
+        const pres = presentAccounts();
+        if (farmOnly && hasFarmGroup()) return pres.filter(a => groupOf(a.name) === "farm").map(a => a.name);
+        return pres.map(a => a.name).filter(n => !teamExcluded.has(n));
+    }
+
+    function currentRoomIndex() {
+        // salle courante = map partagée par l'équipe (map la plus fréquente).
+        const names = new Set(teamNames());
+        const maps = ACCOUNTS.filter(a => a.name && names.has(a.name) && a.map_id != null).map(a => a.map_id);
+        if (!maps.length) return -1;
+        const freq = {};
+        maps.forEach(m => freq[m] = (freq[m] || 0) + 1);
+        const common = +Object.entries(freq).sort((a, b) => b[1] - a[1])[0][0];
+        return DUN.rooms.findIndex(r => r.map_id === common);
+    }
+
+    function renderTeam() {
+        const pres = presentAccounts();
+        const farm = farmOnly && hasFarmGroup();
+        if (!pres.length) {
+            $("team").innerHTML = `<span class="sub">aucun compte détecté (bouge un perso en jeu)</span>`;
+            return;
+        }
+        if (farm) {
+            // mode groupe Farm : chips informatifs (non modifiables ici → via board.html)
+            $("team").innerHTML = pres.filter(a => groupOf(a.name) === "farm").map(a =>
+                    `<span class="teamchip here">🏰 ${esc(a.name)} <span class="sub mono">m${a.map_id ?? "?"}</span></span>`).join("")
+                || `<span class="sub">groupe Farm vide — assigne des comptes dans « Comptes ».</span>`;
+            return;
+        }
+        $("team").innerHTML = pres.map(a => {
+            const on = !teamExcluded.has(a.name);
+            return `<label class="teamchip here"><input type="checkbox" data-n="${esc(a.name)}" ${on ? "checked" : ""}>${esc(a.name)} <span class="sub mono">m${a.map_id ?? "?"}</span></label>`;
+        }).join("");
+    }
+
+    $("team").addEventListener("change", e => {
+        const n = e.target.dataset.n;
+        if (!n) return;
+        if (e.target.checked) teamExcluded.delete(n); else teamExcluded.add(n);
+        renderRun();
+    });
+
+    $("farmonly").addEventListener("change", e => {
+        farmOnly = e.target.checked;
+        renderRun();
+    });
+
+    function renderRun() {
+        renderTeam();
+        const idx = currentRoomIndex();
+        const el = $("curroom");
+        if (!DUN.rooms.length) {
+            el.textContent = "— (aucune salle définie)";
+        } else if (idx < 0) {
+            el.innerHTML = `<span class="sub">équipe hors des salles connues</span>`;
+        } else {
+            const r = DUN.rooms[idx], last = idx === DUN.rooms.length - 1;
+            el.innerHTML = `<span class="pill">Salle ${idx + 1}/${DUN.rooms.length}</span> ${esc(r.label || "")}`
+                + (last ? ` — <b>boss</b> 🏁` : ``);
+        }
+        const idxOk = idx >= 0 && idx < DUN.rooms.length - 1;
+        const path = idxOk ? (DUN.rooms[idx].path_cells || []) : [];
+        $("stepbtn").disabled = stepping || !idxOk || path.length === 0 || teamNames().length === 0;
+        renderRooms();
+    }
+
+    $("stepbtn").onclick = async () => {
+        const idx = currentRoomIndex();
+        if (idx < 0 || idx >= DUN.rooms.length - 1) {
+            flashRun("⛔ équipe pas dans une salle avec sortie.");
+            return;
+        }
+        const r = DUN.rooms[idx];
+        const cells = (r.path_cells && r.path_cells.length) ? r.path_cells : (r.exit_cell != null ? [r.exit_cell] : []);
+        if (!cells.length) {
+            flashRun("⛔ parcours de sortie inconnu pour cette salle (renseigne les cases).");
+            return;
+        }
+        const team = teamNames();
+        if (!team.length) {
+            flashRun("⛔ équipe vide.");
+            return;
+        }
+        stepping = true;
+        $("stepcancel").style.display = "";
+        renderRun();
+        flashRun(`▸ sortie de la salle ${idx + 1} : ${team.length} fenêtre(s) → ${cells.length} case(s)…`);
+        let res;
+        try {
+            res = await (await fetch("/dungeon/step", {
+                method: "POST", headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({team, map_id: r.map_id, cells}),
+            })).json();
+        } catch (e) {
+            flashRun("❌ réseau : " + e.message);
+            stepping = false;
+            $("stepcancel").style.display = "none";
+            renderRun();
+            return;
+        }
+        if (!res.ok) {
+            flashRun("⛔ refusé : " + (res.reason || "?"));
+            stepping = false;
+            $("stepcancel").style.display = "none";
+            renderRun();
+            return;
+        }
+        // suit le job walker jusqu'à done/failed/canceled
+        for (; ;) {
+            await sleep(1500);
+            if (!stepping) break;
+            let ws;
+            try {
+                ws = await (await fetch("/walk/state")).json();
+            } catch (e) {
+                continue;
+            }
+            const j = ws.job;
+            if (!j || j.state === "done") {
+                flashRun(`✅ équipe sortie de la salle ${idx + 1}.`);
+                break;
+            }
+            if (j.state === "failed") {
+                flashRun("❌ walker : " + (j.message || "échec"));
+                break;
+            }
+            if (j.state === "canceled") {
+                flashRun("⏹ annulé.");
+                break;
+            }
+            flashRun(`⏳ ${esc(j.message || "en cours…")}`);
+        }
+        stepping = false;
+        $("stepcancel").style.display = "none";
+        renderRun();
+    };
+    $("stepcancel").onclick = async () => {
+        stepping = false;
+        try {
+            await fetch("/walk/cancel", {method: "POST"});
+        } catch (e) {
+        }
+        flashRun("annulation demandée…");
+    };
+
+    function flashRun(t) {
+        $("runstatus").textContent = t;
+    }
+
+    // --- polling live --------------------------------------------------------
+    function refreshAccSelect() {
+        const sel = $("capacc"), cur = sel.value;
+        const opts = ACCOUNTS.map(a => a.name || a.label).filter(Boolean);
+        sel.innerHTML = `<option value="">—</option>` + opts.map(n => `<option value="${esc(n)}">${esc(n)}</option>`).join("");
+        if (opts.includes(cur)) sel.value = cur;
+    }
+
+    async function poll() {
+        try {
+            const s = await (await fetch("/live/state")).json();
+            ACCOUNTS = s.accounts || [];
+            $("livedot").style.background = (s.last_event_ago_s != null && s.last_event_ago_s < 15) ? "var(--good)" : "var(--muted)";
+            $("liveinfo").textContent = `${s.streams ?? 0} flux · maj ${s.last_event_ago_s != null ? s.last_event_ago_s + "s" : "—"}`;
+        } catch (e) {
+            $("livedot").style.background = "var(--bad)";
+            $("liveinfo").textContent = "API injoignable";
+        }
+        try {
+            GMAP = await (await fetch("/board/groups")).json() || {};
+        } catch (e) {
+        }
+        try {
+            RULES = await (await fetch("/board/rules")).json() || [];
+        } catch (e) {
+        }
+        refreshAccSelect();
+        await captureTick();
+        renderRun();
+    }
+
+    $("theme").onclick = () => {
+        const r = document.documentElement;
+        r.dataset.theme = r.dataset.theme === "dark" ? "light" : "dark";
+    };
+
+    (async () => {
+        await loadList("");
+        // charge le 1er donjon s'il existe (ex: scarafeuille seedé)
+        try {
+            const list = await (await fetch("/dungeon")).json();
+            if (list.length) {
+                $("dsel").value = list[0].id;
+                await loadDungeon(list[0].id);
+            }
+        } catch (e) {
+        }
+        poll();
+        setInterval(poll, 1000);
+    })();
+</script>
+<script src="/ui/nav.js"></script>
+</body>
+</html>

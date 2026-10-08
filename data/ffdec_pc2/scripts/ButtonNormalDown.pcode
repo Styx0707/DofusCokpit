@@ -1,0 +1,16 @@
+Push "\x0b"
+CharToAscii
+If loc0020
+Push 427141913
+PushDuplicate
+BitAnd
+If loc004e
+Jump loc0086
+loc0020:Push "ank.gapi.controls.button.ButtonBackground"
+loc004e:GetVariable
+Push "ButtonNormalDown", 2, "Object"
+GetVariable
+Push "registerClass"
+CallMethod
+Pop
+loc0086:

@@ -1,0 +1,18 @@
+ConstantPool "<e", "L$", "u"
+Push 175534183
+PushDuplicate
+BitAnd
+If loc002d
+Push true
+PushDuplicate
+Or
+If loc0052
+Jump loc0088
+loc002d:Push "ank.gapi.controls.VerticalChrono"
+loc0052:GetVariable
+Push "VerticalChrono", 2, "Object"
+GetVariable
+Push "registerClass"
+CallMethod
+Pop
+loc0088:

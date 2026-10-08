@@ -1,0 +1,15 @@
+Push "\x07"
+CharToAscii
+If loc001c
+Push false
+Not
+If loc0045
+Jump loc007a
+loc001c:Push "ank.gapi.controls.list.SelectableRow"
+loc0045:GetVariable
+Push "SelectableRow", 2, "Object"
+GetVariable
+Push "registerClass"
+CallMethod
+Pop
+loc007a:

@@ -1,0 +1,20 @@
+on(construct){
+   while(true)
+   {
+      if(!ord("\x02"))
+      {
+         if(false)
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push("enabled");
+         §§push(true);
+      }
+      set(§§pop(),§§pop());
+      styleName = "BrownTopRoundStylizedRectangle";
+      break;
+   }
+}

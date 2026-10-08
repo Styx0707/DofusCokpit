@@ -1,0 +1,20 @@
+on(construct){
+   while(true)
+   {
+      if(false)
+      {
+         if(!ord("\x03"))
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push("enabled");
+         §§push(true);
+      }
+      set(§§pop(),§§pop());
+      styleName = "ExtraLightBrownSpellFullInfosStylizedRectangle";
+      break;
+   }
+}

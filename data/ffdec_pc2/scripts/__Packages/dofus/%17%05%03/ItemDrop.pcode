@@ -1,0 +1,849 @@
+ConstantPool "p?"
+Push "\x03"
+CharToAscii
+If loc11b6
+Push true
+PushDuplicate
+Or
+If loc11bc
+ConstantPool "{invalid_utf8=150}\x03", "", "\x0b", "2{invalid_utf8=157}\x02", "{invalid_utf8=213}\x0b{invalid_utf8=136}\x04", "\x01", "{invalid_utf8=142}", "O{invalid_utf8=150}\t", "\x04\x01\b\x11\x07\x01", "", "", "O", "O4{invalid_utf8=157}\x02", "{invalid_utf8=186}\t\"{invalid_utf8=150}\x04", "\x04\x01\b\x1fN{invalid_utf8=150}\x0b", "\bC\x07\x03", "", "", "\x04\x01\bAR\x174{invalid_utf8=157}\x02", "w\t\'{invalid_utf8=150}\x02", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\x02N\x12\x12{invalid_utf8=157}\x02", "{invalid_utf8=191}{invalid_utf8=255}{invalid_utf8=150}\x02", "\b", "{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "*\x03\"{invalid_utf8=142}\b", "", "", "", "\x02)", "\t", "{invalid_utf8=150}\x04", "\x04\x01\b\x14N>4{invalid_utf8=157}\x02", "~", "\"\x1c{invalid_utf8=150}\x02", "\b\x01N\x12\x12{invalid_utf8=157}\x02", "y\t{invalid_utf8=150}\x02", "\b\x03\x1c{invalid_utf8=150}\x02", "\b", "N{invalid_utf8=150}\t", "\b\x01\x07", "", "", "", "\b\x04{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "U\t\"{invalid_utf8=150}\x04", "\x04\x01\b\x1eN{invalid_utf8=150}\x0b", "\bE\x07\x03", "", "", "\x04\x01\bAR\x17{invalid_utf8=150}\x0f", "\x07\x01", "", "", "\x02\x04\x01\x07\x03", "", "", "\bF=\x17{invalid_utf8=150}\t", "\x04", "\bG\x07\x05", "", "", "O{invalid_utf8=150}\t", "\x04", "\bH\x07\x01", "", "", "4{invalid_utf8=157}\x02", "\t{invalid_utf8=255}#O{invalid_utf8=150}\x04", "\x04\x01\b${invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "{invalid_utf8=228}\x02\"{invalid_utf8=150}\x04", "\x04\x01\b\"N{invalid_utf8=150}\x0b", "\bD\x07\x03", "", "", "\x04\x01\bAR\x17{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "Z", "\"{invalid_utf8=150}\x04", "\x04\x01\b#N{invalid_utf8=150}\x0b", "\b@\x07\x03", "", "", "\x04\x01\bAR\x174{invalid_utf8=157}\x02", "{invalid_utf8=214}\x01#{invalid_utf8=150}\x04", "\x04\x01\b!N{invalid_utf8=150}\x0b", "\bB\x07\x03", "", "", "\x04\x01\bAR\x17{invalid_utf8=150}\x03", "", "\t", "2{invalid_utf8=157}\x02", "O\bOO{invalid_utf8=150}\x04", "\x04\x01\b#{invalid_utf8=150}\x03", "", "\x06", "2{invalid_utf8=157}\x02", "{invalid_utf8=218}{invalid_utf8=254},{invalid_utf8=155}\x05", "", "", "", "", "", "{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "\x12{invalid_utf8=255}@O{invalid_utf8=150}\x04", "\x04\x01\b\x1e{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "%\x02\"{invalid_utf8=142}\b", "", "", "", "\x02)", "\t", "{invalid_utf8=150}\x04", "\x04\x01\b\x0eN>{invalid_utf8=150}\x03", "", "\b", "2{invalid_utf8=157}\x02", "{invalid_utf8=164}{invalid_utf8=255},{invalid_utf8=142}\x1b", "", "\x01", "\x05)", "\x02bApplyProspection", "{invalid_utf8=238}", "{invalid_utf8=150}\x02", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\bN{invalid_utf8=150}\x02", "\b\tN{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\x1c{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "D", "\"\f{invalid_utf8=135}\x01", "\x04\x17{invalid_utf8=150}\x02", "\x04\x02\x12{invalid_utf8=157}\x02", "\x14", "{invalid_utf8=150}\x0b", "\x04\x04\x07\x01", "", "", "\x04\x01\b?R{invalid_utf8=135}\x01", "\x04\x17{invalid_utf8=150}\x0e", "\x07d", "", "", "\x04\x04\x07\x02", "", "", "\b=\x1c{invalid_utf8=150}\x02", "\b>4{invalid_utf8=157}\x02", "@", "\"N{invalid_utf8=150}\x02", "\b<N{invalid_utf8=150}\x05", "\x07d", "", "", "\r{invalid_utf8=135}\x01", "\x03\x17{invalid_utf8=150}\t", "\x07d", "", "", "\x04\x01\b\x12N{invalid_utf8=150}\x07", "\x07\x02", "", "", "\b=\x1c{invalid_utf8=150}\x02", "\b>R{invalid_utf8=150}\x02", "\x04\x034{invalid_utf8=157}\x02", "{invalid_utf8=255}iR{invalid_utf8=135}\x01", "\x04\x17{invalid_utf8=150}\x04", "\x04\x01\b\x11N{invalid_utf8=150}\x05", "\x07\x01", "", "", "g\x12{invalid_utf8=157}\x02", "\x1b", "{invalid_utf8=150}\x06", "\x04\x04\x04\x01\b\x11N\r{invalid_utf8=135}\x01", "\x04\x17{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "\x01", "\'{invalid_utf8=150}\x02", "\x04\x04>{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "\x14", "<O{invalid_utf8=150}\x04", "\x04\x01\b-{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "{invalid_utf8=214}{invalid_utf8=254}@O{invalid_utf8=150}\x04", "\x04\x01\b?{invalid_utf8=150}\x03", "", "\x07", "2{invalid_utf8=157}\x02", "\x17\x07iO{invalid_utf8=150}\x04", "\x04\x01\b!{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "{invalid_utf8=196}\x06${invalid_utf8=155}\x05", "", "", "", "", "", "4P{invalid_utf8=157}\x02", "\x1c{invalid_utf8=254}<{invalid_utf8=135}\x01", "", "O{invalid_utf8=150}\x04", "\x04", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\bNi{invalid_utf8=150}\x04", "\x04", "\b\x16{invalid_utf8=150}\x03", "", "\x0b", "2{invalid_utf8=157}\x02", "8\x06+O{invalid_utf8=150}\x04", "\x04\x01\b\"{invalid_utf8=150}\x03", "", "\x07", "2{invalid_utf8=157}\x02", ":{invalid_utf8=254}$O{invalid_utf8=150}\x04", "\x04\x01\b\x1f{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", ")", "\"\x1c\x12\x12{invalid_utf8=157}\x02", "\x14", "{invalid_utf8=150}\x02", "\b\x03\x1c{invalid_utf8=150}\t", "\b", "\x07", "", "", "", "\b\x04@O{invalid_utf8=150}\x02", "\b", "4{invalid_utf8=157}\x02", "{invalid_utf8=203}{invalid_utf8=252}O{invalid_utf8=142}\b", "", "", "", "\x03\x19", "\x0e", "{invalid_utf8=150}\t", "\x07", "", "", "", "\x04\x02\b R>4P{invalid_utf8=157}\x02", ">{invalid_utf8=255}#{invalid_utf8=142}\b", "", "", "", "\x02)", "\t", "{invalid_utf8=150}\x04", "\x04\x01\b\x06N>4P{invalid_utf8=157}\x02", "{invalid_utf8=136}{invalid_utf8=255}@{invalid_utf8=142}\b", "", "", "", "\n\x19", "f\x04{invalid_utf8=150}\x05", "\x07", "", "", "", "B{invalid_utf8=135}\x01", "\x03\x17{invalid_utf8=150}\x04", "\x04\x01\b\x0eN{invalid_utf8=135}\x01", "\x04\x17{invalid_utf8=150}\t", "\x07", "", "", "", "\x04\x02\b%R{invalid_utf8=135}\x01", "\x05\x17{invalid_utf8=150}\x02", "\x04\x04\x12{invalid_utf8=157}\x02", ".", "{invalid_utf8=150}\x0b", "\b&\b\'\x07\x01", "", "", "\b", "{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", ".\x02\'G{invalid_utf8=150}\x02", "\b)G{invalid_utf8=150}\t", "\x07\x01", "", "", "\x04\x03\b*R\x17{invalid_utf8=150}\x02", "\x04\x05\x12{invalid_utf8=157}\x02", "\x05\x01{invalid_utf8=150}\x0b", "\b&\b+\x07\x01", "", "", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x014P{invalid_utf8=157}\x02", "j", "iN{invalid_utf8=150}\x02", "\b(R{invalid_utf8=150}\t", "\x07\x01", "", "", "\x04\x03\b*R\x17{invalid_utf8=150}\x02", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\bN{invalid_utf8=150}\x02", "\b\t4P{invalid_utf8=157}\x02", "|\x01ON{invalid_utf8=150}\x05", "\x07\x01", "", "", "B{invalid_utf8=150}\t", "\b0\x07\x02", "", "", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\bN{invalid_utf8=150}\x02", "\b\tN{invalid_utf8=150}\x02", "\b\n4{invalid_utf8=157}\x02", "{invalid_utf8=152}{invalid_utf8=255},N{invalid_utf8=150}\x02", "\b\bN{invalid_utf8=150}\x02", "\b\tN{invalid_utf8=150}\x02", "\b\nN{invalid_utf8=150}\x02", "\b(RG{invalid_utf8=150}\x02", "\b)G{invalid_utf8=150}\t", "\x07\x01", "", "", "\x04\x03\b*4{invalid_utf8=157}\x02", "L", "#R\x17{invalid_utf8=150}\x0b", "\x05\x01\x07\x01", "", "", "\x04\x01\b-R{invalid_utf8=150}\x05", "\x07\x01", "", "", "B{invalid_utf8=150}\t", "\b/\x07\x02", "", "", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\bN{invalid_utf8=150}\x02", "\b\tN{invalid_utf8=150}\x02", "\b\n{invalid_utf8=150}\x03", "", "\t", "2{invalid_utf8=157}\x02", "J", "OR\x17{invalid_utf8=150}\x02", "\x04\x04L{invalid_utf8=157}\x02", "\x06", "\x17{invalid_utf8=150}\x02", "\x04\x05\x12{invalid_utf8=157}\x02", "\x10", "{invalid_utf8=150}\x0b", "\b,\x07\x01", "", "", "\x04\x03\b*R\x17{invalid_utf8=150}\x0b", "\x05", "\x07\x01", "", "", "\x04\x01\b-R{invalid_utf8=150}\x05", "\x07\x01", "", "", "B4P{invalid_utf8=157}\x02", "A", "ON{invalid_utf8=150}\x02", "\b(R{invalid_utf8=150}\t", "\x07\x01", "", "", "\x04\x03\b*R\x17{invalid_utf8=150}\x04", "\x04\x01\b\fN{invalid_utf8=150}\x05", "\x07", "", "", "", "g\x12{invalid_utf8=157}\x02", "{invalid_utf8=185}{invalid_utf8=254}{invalid_utf8=150}\x04", "\x04\x01\b\f{invalid_utf8=150}\x03", "", "\x04", "2{invalid_utf8=157}\x02", "{invalid_utf8=197}{invalid_utf8=254}O{invalid_utf8=150}\t", "\b.\x07\x02", "", "", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\bN{invalid_utf8=150}\x02", "\b\tN{invalid_utf8=150}\x02", "\b\nN{invalid_utf8=150}\x02", "\b(R{invalid_utf8=150}\t", "\x07\x01", "", "", "\x04\x03\b*4P{invalid_utf8=157}\x02", "{invalid_utf8=238}{invalid_utf8=254}{invalid_utf8=105}N{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b1N{invalid_utf8=150}\x02", "\b2N{invalid_utf8=135}\x01", "\x06\x17{invalid_utf8=150}\x07", "\x04\x06\x07\x01", "", "", "B{invalid_utf8=150}\t", "\b3\x07\x02", "", "", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01{invalid_utf8=150}\x03", "", "\t", "2{invalid_utf8=157}\x02", "{invalid_utf8=177}\x01O\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\bN{invalid_utf8=150}\x02", "\b\tN{invalid_utf8=150}\x02", "\b\nN{invalid_utf8=150}\x02", "\b(R{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "{invalid_utf8=169}{invalid_utf8=253}i{invalid_utf8=150}\x04", "\x04\x06\x04\b\x0b{invalid_utf8=135}\x01", "\t\x17{invalid_utf8=150}\x07", "\x04\t\x07", "", "", "", "g\x12{invalid_utf8=157}\x02", "{invalid_utf8=174}", "{invalid_utf8=150}\r", "\x04\x07\b6\x04\t\x04\b\x07\x02", "", "", "B{invalid_utf8=150}\t", "\b7\x07\x02", "", "", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\b4{invalid_utf8=157}\x02", "{invalid_utf8=203}", "\"\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\bN{invalid_utf8=150}\x02", "\b\tN{invalid_utf8=150}\x02", "\b\nN{invalid_utf8=150}\x02", "\b(R{invalid_utf8=150}\t", "\x07\x01", "", "", "\x04\x03\b*R\x17{invalid_utf8=150}\x0b", "\b:\x07\x01", "", "", "\x04\x03\b;{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "\'\x01+\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\bN{invalid_utf8=150}\x02", "\b\tN{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b1N{invalid_utf8=150}\x02", "\b5R{invalid_utf8=135}\x01", "\b\x17{invalid_utf8=150}\x03", "", "\b", "2{invalid_utf8=157}\x02", "5{invalid_utf8=255}+{invalid_utf8=150}\x0b", "\x04\x07\x07\x01", "", "", "\x04\x03\b*R\x17{invalid_utf8=150}\x04", "\x04\x01\b\x14N{invalid_utf8=150}\x01", "\x03I\x12\x12{invalid_utf8=157}\x02", "{invalid_utf8=139}{invalid_utf8=255}{invalid_utf8=150}\x04", "\x04\x01\b\x14N{invalid_utf8=150}\x05", "\x07\x01", "", "", "B{invalid_utf8=150}\t", "\b9\x07\x02", "", "", "\b", "{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "7{invalid_utf8=255}\"N{invalid_utf8=150}\x02", "\b\tN{invalid_utf8=150}\x02", "\b\nN{invalid_utf8=150}\x02", "\b(RG{invalid_utf8=150}\x02", "\b8GG{invalid_utf8=135}\x01", "\x07\x17{invalid_utf8=150}\x03", "", "\n", "2{invalid_utf8=157}\x02", "{invalid_utf8=136}{invalid_utf8=255},N{invalid_utf8=150}\x02", "\b\bN{invalid_utf8=150}\x02", "\b\tN{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b1N{invalid_utf8=150}\x02", "\b4N\x12{invalid_utf8=157}\x02", "b{invalid_utf8=255}{invalid_utf8=150}\f", "\x07\x10", "", "", "\x07\x01", "", "", "\b", "{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "\x11{invalid_utf8=255}iN{invalid_utf8=150}\x02", "\b\bN{invalid_utf8=150}\x02", "\b\tN{invalid_utf8=150}\x02", "\b\nN{invalid_utf8=150}\x02", "\b(R{invalid_utf8=135}\x01", "\x07\x17{invalid_utf8=150}\x02", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01{invalid_utf8=150}\x03", "", "\x02", "2{invalid_utf8=157}\x02", "{invalid_utf8=139}{invalid_utf8=255},R>{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "~{invalid_utf8=250}#{invalid_utf8=142}\x12", "", "\x02", "\b)", "\x02\x19\n\x1a", "\x03\x19\t\x01", "\x0b\x01{invalid_utf8=150}\x0b", "\x04\x03\x04\x02\x07\x02", "", "", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\bN{invalid_utf8=150}\x02", "\b\tN{invalid_utf8=150}\x02", "\b\nN{invalid_utf8=150}\x02", "\b\x0bR{invalid_utf8=135}\x01", "\x04\x17{invalid_utf8=150}\x04", "\x04\x04\b\x18{invalid_utf8=150}\x03", "", "\x06", "2{invalid_utf8=157}\x02", "+", "+N{invalid_utf8=150}\x07", "\x07\x02", "", "", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\bN{invalid_utf8=150}\x02", "\b\tN{invalid_utf8=150}\x02", "\b\x014{invalid_utf8=157}\x02", "w", ",N{invalid_utf8=135}\x01", "\x05\x17{invalid_utf8=150}\x03", "\x04\x05\x03I\x12{invalid_utf8=157}\x02", "\x06", "{invalid_utf8=150}\x02", "\x05\x01>{invalid_utf8=150}\x05", "\x07", "", "", "", "{invalid_utf8=135}\x01", "\x06\x17{invalid_utf8=153}\x02", "\x16", "{invalid_utf8=150}\x02", "\x04\x06{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "\x01", "\"P{invalid_utf8=135}\x01", "\x06\x17{invalid_utf8=150}\x06", "\x04\x06\x04\x05\b\x19NH\x12{invalid_utf8=157}\x02", "C", "{invalid_utf8=150}\x04", "\x04\x05\x04\x06N{invalid_utf8=135}\x01", "\x07\x17{invalid_utf8=150}\x04", "\x04\x07\b\x1aN{invalid_utf8=150}\x04", "\x04\x07\b\x1b4P{invalid_utf8=157}\x02", "a{invalid_utf8=255}ON{invalid_utf8=150}\x02", "\b\x1cN{invalid_utf8=150}\x02", "\b\x1dR\x12\x12{invalid_utf8=157}\x02", "\x06", "{invalid_utf8=150}\x02", "\x05", ">{invalid_utf8=153}\x02", "{invalid_utf8=150}{invalid_utf8=255}{invalid_utf8=150}\x02", "\x05\x01>{invalid_utf8=150}\x03", "", "\t", "2{invalid_utf8=157}\x02", "\x05{invalid_utf8=248}<N{invalid_utf8=135}\x01", "\x01\x17{invalid_utf8=150}\x04", "\x04", "\b\x174P{invalid_utf8=157}\x02", "{invalid_utf8=191}{invalid_utf8=254}i{invalid_utf8=155}\x05", "", "", "", "", "", "{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "L{invalid_utf8=247},{invalid_utf8=155}\x05", "", "", "", "", "", "4P{invalid_utf8=157}\x02", "H{invalid_utf8=246}<{invalid_utf8=155}\x05", "", "", "", "", "", "{invalid_utf8=150}\x03", "", "\x07", "2{invalid_utf8=157}\x02", "J{invalid_utf8=247}@{invalid_utf8=142}\b", "", "", "", "\x02)", "\t", "{invalid_utf8=150}\x04", "\x04\x01\b\fN>4{invalid_utf8=157}\x02", "a{invalid_utf8=249}@@O{invalid_utf8=150}\x02", "\b\x03\x1c{invalid_utf8=150}\x02", "\b", "N{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\x02{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "{", "O{invalid_utf8=142}\x17", "", "\x01", "\x04)", "\x02nCurrentProba", "X", "{invalid_utf8=150}\f", "\x07\x10", "", "", "\x07\x01", "", "", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\bN{invalid_utf8=150}\x02", "\b\tN{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b1{invalid_utf8=150}\x03", "", "\x04", "2{invalid_utf8=157}\x02", "\x01", "ON{invalid_utf8=150}\x02", "\b5R{invalid_utf8=135}\x01", "\x03\x17{invalid_utf8=150}\x04", "\x04\x02\x04\x03\f{invalid_utf8=150}\x05", "\x07d", "", "", "\r>4P{invalid_utf8=157}\x02", "q{invalid_utf8=245}i{invalid_utf8=142}+", "", "\x05", "\t\x19", "\x03\x19\n\x1a", "\x04nMonsterGrade", "\x05\x19\t\x01", "\x06\x19\f\x1c", "\x07\x1a\x12\x14", "{invalid_utf8=246}", "{invalid_utf8=150}\x11", "\x04\x07\x03\x04\x06\x04\x05\x03\x07\x05", "", "", "\x04\x02\b\x05R\x17{invalid_utf8=150}\x06", "\x04\x01\b\x06\x04\x03O{invalid_utf8=150}\x06", "\x04\x01\b\x07\x04\x05O{invalid_utf8=150}\x0b", "\x04\x05\x04\x03\x07\x02", "", "", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\bN{invalid_utf8=150}\x02", "\b\t{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "A", "#N{invalid_utf8=150}\x01", "\x03I\x12\x12{invalid_utf8=157}\x02", "\r", "{invalid_utf8=150}\b", "\x04\x01\b\x11\x04\b\b\x10NO{invalid_utf8=150}\x03", "\x04\x04\x03I\x12{invalid_utf8=157}\x02", "T", "{invalid_utf8=150}\x05", "\x07\x01", "", "", "{invalid_utf8=135}\x01", "\x04\x17{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "<", "ON{invalid_utf8=150}\x02", "\b\nN{invalid_utf8=150}\x02", "\b\x0bR{invalid_utf8=135}\x01", "\b\x17{invalid_utf8=150}\b", "\x04\x01\b\f\x04\b\b\rNO{invalid_utf8=150}\b", "\x04\x01\b\x0e\x04\b\b\x0fNO{invalid_utf8=150}\x04", "\x04\b\b\x104P{invalid_utf8=157}\x02", "{invalid_utf8=134}{invalid_utf8=255}O{invalid_utf8=150}\b", "\x04\x01\b\x12\x04\b\b\x13N{invalid_utf8=150}\x07", "\x04\x04\x07\x01", "", "", "\x0bNO{invalid_utf8=150}\b", "\x04\x01\b\x14\x04\b\b\x15NO{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "e{invalid_utf8=247}i{invalid_utf8=136}O\x03I", "dofus", "\x17\x05\x03", "ItemDrop", "_global", "Object", "initialize", "\x1d\x1a\x05", "\x1d\x1e\x1a", "\x18\x10\x1c", "api", "lang", "getMonsterDrop", "_nMinimumProspection", "pp", "_bHasDropConditions", "c", "sr", "_nFixedDropRate", "_nBaseDropRate", "t", "_nDropPerMonsterCount", "dc", "prototype", "\x18\r\x18", "sc", "length", "expected", "criterion", "GameServer", "verifyCriterion", "\x04\x06", "__get__itemID", "\x07\r", "__get__minimumProspection", "__get__hasDropConditions", "__get__dropPerMonsterCount", "getDropInfosString", "__get__isQuest", "<b>", "LOOT_HAS_CONDITIONS", "getText", "</b>", "push", "QUEST_ITEM", "", "getDropRate", "LOOT_DROP_BASE_RATE", "LOOT_DROP_PROSPECTING_RATE", "LOOT_DROP_PROSPECTING_THRESHOLD", "\x1a\x05\x15", "totalPartyProspection", "TOTAL_PROSPECTING", "inParty", "getCharacValueByID", " (", "VALUE_PLUS_VALUE_FROM_PARTY", ")", "LOOT_DROP_MAX_PER_MONSTER", "\n", "join", "dropBonusForServer", "Math", "min", "applyPlayerProspection", "dropPerMonsterCount", "addProperty", "minimumProspection", "itemID", "hasDropConditions", "\x18\x1e\x03", "ASSetPropFlags", "RARE_VALUE", "VERY_RARE_VALUE", "{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "\f{invalid_utf8=241}<{invalid_utf8=198}\t{invalid_utf8=175}P\x01", "", "", ")\x0e\x01", "{invalid_utf8=175}P__Packages.dofus.\x18\x03\x17.gapi.ui.KeyCode", "{invalid_utf8=255}\x0e{invalid_utf8=207}\x19", "", "{invalid_utf8=175}P{invalid_utf8=150}\x05", "\x07{invalid_utf8=228}\x0eM;L`{invalid_utf8=157}\x02", "\x14", "{invalid_utf8=150}\x05", "\x07{invalid_utf8=228}\x0eM;La{invalid_utf8=157}\x02", "\r", "{invalid_utf8=136}\x11", "{invalid_utf8=159}\x1c{invalid_utf8=150}\x05", "\x07{invalid_utf8=165}4{invalid_utf8=216}", "L`{invalid_utf8=157}\x02", "^\x15{invalid_utf8=136}\x04", "\x01", "\\", "{invalid_utf8=155}\x05", "", "", "", "", "", "{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "{invalid_utf8=144}\x11,O{invalid_utf8=150}\x04", "\x04\x01\b04{invalid_utf8=157}\x02", "{invalid_utf8=174}\t#O{invalid_utf8=150}\x04", "\x04\x01\bf4{invalid_utf8=157}\x02", "{invalid_utf8=253}\x0e#O{invalid_utf8=150}\x04", "\x04\x01\b-{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "$\x06,{invalid_utf8=142}\x10", "", "\x01", "\x02)", "", "sTitle", "]", "{invalid_utf8=150}\x06", "\b\x0b\x04\x01\b\f4P{invalid_utf8=157}\x02", "\x01", "\"{invalid_utf8=142}\b", "", "", "", "\x02)", "\x11", "{invalid_utf8=150}\x04", "\x04\x01\b\rN{invalid_utf8=150}\x04", "\b\x0e\b\x0f\x1cO{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "\x01", "<{invalid_utf8=150}\x05", "\x07\x02", "", "", "C{invalid_utf8=150}\t", "\x07\x01", "", "", "\x04\x01\b\x10R\x17{invalid_utf8=150}\t", "\x07", "", "", "", "\x04\x01\b\x11R>{invalid_utf8=150}\x03", "", "\x06", "2{invalid_utf8=157}\x02", "J\x0e,{invalid_utf8=142}\r", "", "\x01", "\x03)", "\x02\x19\x0e\x18", "c", "{invalid_utf8=150}\x07", "\x04\x02\x07\b", "", "", "g\x12{invalid_utf8=157}\x02", ",", "{invalid_utf8=150}\t", "\b\x16\x07\x01", "", "", "\b\x17\x1c{invalid_utf8=150}\x02", "\b\x18N{invalid_utf8=150}\x02", "\b\x19N{invalid_utf8=150}\x02", "\b\x1a4{invalid_utf8=157}\x02", "\x01", "\'R\x17{invalid_utf8=150}\x01", "\x03>{invalid_utf8=150}\x06", "\x04\x01\b\x1b\x04\x02O{invalid_utf8=150}\t", "\x07", "", "", "", "\x04\x01\b\x1cR\x17{invalid_utf8=150}\t", "\x07", "", "", "", "\x04\x01\b\x1dR>4{invalid_utf8=157}\x02", "{invalid_utf8=128}\bi{invalid_utf8=142}\r", "", "\x01", "\x03)", "\x02\x19\x12\x1d", "{invalid_utf8=253}", "{invalid_utf8=150}\x04", "\x04\x02\btN{invalid_utf8=135}\x01", "", "{invalid_utf8=150}\x04", "\x04\x01\bANf{invalid_utf8=157}\x02", "{invalid_utf8=136}", "{invalid_utf8=150}\x06", "\x04", "\x04\x01\bBNf{invalid_utf8=157}\x02", "{invalid_utf8=139}", "{invalid_utf8=150}\x06", "\x04", "\x04\x01\bCNf{invalid_utf8=157}\x02", "\x15", "{invalid_utf8=150}\x06", "\x04", "\x04\x01\b3{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "H", "\"{invalid_utf8=150}\t", "\x07", "", "", "", "\x04\x01\b\x1cR\x17{invalid_utf8=153}\x02", "{invalid_utf8=155}", "{invalid_utf8=150}\x06", "\br\x04\x01\b\x13N{invalid_utf8=150}\t", "\x07\x02", "", "", "\x04\x01\b(N{invalid_utf8=150}\x02", "\b)N{invalid_utf8=150}\x02", "\b*N{invalid_utf8=150}\x02", "\bs{invalid_utf8=150}\x02", "\x05"
+Jump loc11d7
+loc11b6:Push "\x0b"
+loc11bc:CharToAscii
+If loc1d9b
+ConstantPool "{invalid_utf8=142}"
+loc11c9:SetMember
+Push register1, constant17, 1
+SetMember
+loc11d7:Jump loc20f8
+loc11dc:SetMember
+GetTime
+If loc1b9d
+GetProperty
+loc11e4:Push register1, "__get__itemID"
+GetMember
+Push "itemID", 3, register1, "addProperty"
+CallMethod
+Pop
+GetTime
+If loc1b79
+StartDrag
+loc1203:Push "dofus"
+GetVariable
+Push "\x17\x05\x03"
+GetMember
+Push "ItemDrop"
+GetMember
+Not
+Not
+If loc11d7
+Push "dofus"
+Push false
+Not
+If loc1556
+GetProperty
+loc122d:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "_nDropPerMonsterCount"
+GetMember
+Return
+}
+GetTime
+If loc12c5
+GetProperty
+loc1248:GetVariable
+Push "\x17\x05\x03"
+GetMember
+Not
+Not
+If loc1bcf
+Push "_global"
+GetVariable
+Push "dofus"
+GetMember
+Push "\x17\x05\x03", 0, "Object"
+Push true
+If loc1bcd
+GetProperty
+loc1279:Push register1, "\x04\x06"
+GetMember
+Push "\x18\x1e\x03", 3, register1, "addProperty"
+CallMethod
+Pop
+Push 1, null, register1, 3, "ASSetPropFlags"
+CallFunction
+Pop
+Push register0, "RARE_VALUE", 5
+SetMember
+Push register0, "VERY_RARE_VALUE", 1
+GetTime
+If loc11c9
+SetProperty
+loc12c5:SetMember
+Push register1, "getDropInfosString"
+Push true
+If loc15bb
+GetProperty
+loc12d8:Push register1, "__get__hasDropConditions"
+GetMember
+Push "hasDropConditions", 3, register1, "addProperty"
+CallMethod
+Pop
+Push true
+If loc1354
+GetProperty
+loc12fb:Push register1, "__get__dropPerMonsterCount"
+GetMember
+Push "dropPerMonsterCount", 3, register1, "addProperty"
+CallMethod
+Pop
+GetTime
+If loc14ef
+SetProperty
+loc131a:Push register1, "__get__minimumProspection"
+GetMember
+Push "minimumProspection", 3, register1, "addProperty"
+CallMethod
+Pop
+Push "\t"
+CharToAscii
+If loc1b8d
+SetMember
+loc133f:SetMember
+Push register1, "__get__dropPerMonsterCount"
+Push "\x06"
+CharToAscii
+If loc122d
+ImplementsOp
+loc1354:DefineFunction "", 0 {
+}
+Push false
+Not
+If loc1279
+NewObject
+loc1368:SetMember
+Push register1, "\x04\x06"
+Push true
+If loc159f
+GetProperty
+loc137b:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "_bHasDropConditions"
+GetMember
+Return
+}
+Push "\b"
+CharToAscii
+If loc133f
+ImplementsOp
+loc139c:DefineFunction2 "", 1, 5, false, false, true, false, true, false, false, true, false, 2, "bApplyProspection" {
+Push "dofus"
+GetVariable
+Push "\x17\x05\x03"
+GetMember
+Push "\x18\x10\x1c"
+GetMember
+Push "api"
+GetMember
+Push "\x17\x05\x03"
+GetMember
+Push "GameServer"
+Push true
+If loc142b
+GetProperty
+loc13e8:Multiply
+StoreRegister 4
+Pop
+Push register2
+Not
+If loc140d
+Push register4, 1, register1, "applyPlayerProspection"
+CallMethod
+StoreRegister 4
+Pop
+loc140d:Push 100, register4, 2, "Math"
+GetVariable
+Push "min"
+GetTime
+If loc146a
+GetProperty
+loc142b:GetMember
+Push "dropBonusForServer"
+GetMember
+Push 100
+Divide
+StoreRegister 3
+Pop
+Push 100, register1, "_nBaseDropRate"
+GetMember
+Push 2, "Math"
+GetVariable
+Push "min"
+CallMethod
+Push register3
+GetTime
+If loc13e8
+Extends
+loc146a:CallMethod
+StoreRegister 4
+Pop
+Push register1, "_nFixedDropRate"
+GetMember
+Push 1
+Greater
+Not
+If loc14a2
+Push register4, register1, "_nFixedDropRate"
+GetMember
+Divide
+StoreRegister 4
+Pop
+Push true
+If loc14a2
+StartDrag
+loc14a2:Push register4
+Return
+}
+Push false
+Not
+If loc14c7
+DefineLocal
+loc14b4:SetMember
+Push register1, "getDropRate"
+Push true
+If loc139c
+NewObject
+loc14c7:SetMember
+Push register1, "applyPlayerProspection"
+Push "\x07"
+CharToAscii
+If loc1bf2
+Extends
+loc14dc:SetMember
+Push register1, "__get__minimumProspection"
+Push true
+If loc1bb2
+CloneSprite
+loc14ef:DefineFunction "", 0 {
+}
+GetTime
+Increment
+If loc131a
+DefineLocal
+loc14ff:StoreRegister 0
+SetMember
+Push register0, "dofus"
+GetVariable
+Push "\x17\x05\x03"
+GetMember
+Push "\x18\x10\x1c"
+GetMember
+Extends
+Push register0, "prototype"
+Push "\x0b"
+CharToAscii
+If loc1b64
+CastOp
+loc152d:SetMember
+Push register1, "__get__hasDropConditions"
+Push "\x07"
+CharToAscii
+If loc137b
+CloneSprite
+loc1542:SetMember
+Push register1, "__get__itemID"
+Push false
+Not
+If loc157e
+GetProperty
+loc1556:GetVariable
+Not
+Not
+If loc1572
+Push "_global"
+GetVariable
+Push "dofus", 0, "Object"
+NewObject
+SetMember
+loc1572:Push "dofus"
+GetTime
+If loc1248
+SetMember
+loc157e:DefineFunction2 "", 0, 3, false, false, false, true, true, false, false, true, false {
+Push 0, register2, "\x07\r"
+CallMethod
+Return
+}
+GetTime
+Increment
+If loc14dc
+SetProperty
+loc159f:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "\x1d\x1a\x05"
+GetMember
+Return
+}
+GetTime
+Increment
+If loc1542
+NewObject
+loc15bb:DefineFunction2 "", 0, 10, false, false, false, true, true, false, false, true, false {
+Push 0
+InitArray
+StoreRegister 3
+Pop
+Push register1, "_bHasDropConditions"
+GetMember
+StoreRegister 4
+Pop
+Push 0, register2, "__get__isQuest"
+CallMethod
+StoreRegister 5
+Pop
+Push register4
+Not
+If loc162c
+Push "<b>", "LOOT_HAS_CONDITIONS", 1, "dofus"
+Push true
+If loc1844
+StartDrag
+loc1617:Add2
+Push "</b>"
+Add2
+Push 1, register3, "push"
+CallMethod
+Pop
+loc162c:Push register5
+Not
+If loc173c
+Push "<b>", "QUEST_ITEM", 1, "dofus"
+GetVariable
+Push "\x17\x05\x03"
+GetTime
+Increment
+If loc16bc
+Extends
+loc1653:GetMember
+Push "getText"
+CallMethod
+Push 1, register3, "push"
+CallMethod
+Pop
+loc1668:Push "dofus"
+GetVariable
+Push "\x17\x05\x03"
+GetMember
+Push "\x18\x10\x1c"
+GetMember
+Push "api"
+GetTime
+Increment
+If loc1802
+SetMember
+loc1687:GetMember
+Push 1
+InitArray
+Push "LOOT_DROP_PROSPECTING_THRESHOLD", 2, "dofus"
+GetVariable
+Push "\x17\x05\x03"
+GetMember
+Push "\x18\x10\x1c"
+GetMember
+Push "api"
+GetMember
+Push "lang"
+GetTime
+If loc1653
+ImplementsOp
+loc16bc:GetMember
+Push "\x18\x10\x1c"
+GetMember
+Push "api"
+GetMember
+Push "lang"
+GetMember
+Push "getText"
+CallMethod
+Add2
+Push "</b>"
+Add2
+Push 1, register3, "push"
+GetTime
+If loc173a
+SetProperty
+loc16ef:CallMethod
+Pop
+Push true, 1, register1, "getDropRate"
+CallMethod
+Push 1
+InitArray
+Push "LOOT_DROP_PROSPECTING_RATE", 2, "dofus"
+GetVariable
+Push "\x17\x05\x03"
+GetMember
+Push "\x18\x10\x1c"
+GetMember
+Push "api"
+GetMember
+Push "lang"
+Push "\t"
+CharToAscii
+If loc1783
+SetMember
+loc173a:CallMethod
+Pop
+loc173c:Push register4
+PushDuplicate
+If loc174d
+Pop
+Push register5
+loc174d:Not
+If loc1763
+Push "", 1, register3, "push"
+CallMethod
+Pop
+loc1763:Push false, 1, register1, "getDropRate"
+CallMethod
+Push 1
+InitArray
+GetTime
+Increment
+If loc17c3
+SetMember
+loc1783:GetMember
+Push "getText"
+CallMethod
+Push 1, register3, "push"
+CallMethod
+Pop
+Push register1, "_nMinimumProspection"
+GetMember
+Push 0
+Greater
+Not
+If loc1668
+Push register1, "_nMinimumProspection"
+Push "\x04"
+CharToAscii
+If loc1687
+SetMember
+loc17c3:Push "LOOT_DROP_BASE_RATE", 2, "dofus"
+GetVariable
+Push "\x17\x05\x03"
+GetMember
+Push "\x18\x10\x1c"
+GetMember
+Push "api"
+GetMember
+Push "lang"
+GetMember
+Push "getText"
+CallMethod
+Push 1, register3, "push"
+GetTime
+Increment
+If loc16ef
+Extends
+loc1802:GetMember
+Push "\x17\x05\x03"
+GetMember
+Push "\x1a\x05\x15"
+GetMember
+Push "totalPartyProspection"
+GetMember
+StoreRegister 6
+Pop
+Push register6, 1
+InitArray
+Push "TOTAL_PROSPECTING", 2, "dofus"
+GetVariable
+Push "\x17\x05\x03"
+Push "\t"
+CharToAscii
+If loc19f4
+SetMember
+loc1844:GetVariable
+Push "\x17\x05\x03"
+GetMember
+Push "\x18\x10\x1c"
+GetMember
+Push "api"
+GetMember
+Push "lang"
+GetMember
+Push "getText"
+CallMethod
+Push false
+Not
+If loc1617
+Extends
+loc186f:Push register6, register8
+Subtract
+StoreRegister 9
+Pop
+Push register9, 0
+Greater
+Not
+If loc193b
+Push register7, " (", register9, register8, 2
+InitArray
+Push "VALUE_PLUS_VALUE_FROM_PARTY", 2, "dofus"
+GetVariable
+Push "\x17\x05\x03"
+GetMember
+Push "\x18\x10\x1c"
+GetTime
+If loc1987
+GetProperty
+loc18bd:GetVariable
+Push "\x17\x05\x03"
+GetMember
+Push "\x18\x10\x1c"
+GetMember
+Push "api"
+GetMember
+Push "lang"
+GetMember
+Push "getText"
+CallMethod
+Push 1, register3, "push"
+CallMethod
+Pop
+loc18ea:Push "\n", 1, register3, "join"
+Push false
+Not
+If loc1a2a
+CastOp
+loc1904:GetVariable
+Push "\x17\x05\x03"
+GetMember
+Push "\x18\x10\x1c"
+GetMember
+Push "api"
+GetMember
+Push "\x17\x05\x03"
+GetMember
+Push "\x1a\x05\x15"
+GetMember
+Push "getCharacValueByID"
+CallMethod
+StoreRegister 8
+Pop
+Push "\b"
+CharToAscii
+If loc186f
+CastOp
+loc193b:Push register7, 1, register3, "push"
+CallMethod
+Pop
+Push register1, "_nDropPerMonsterCount"
+GetMember
+Push undefined
+Equals2
+Not
+Not
+If loc18ea
+Push register1, "_nDropPerMonsterCount"
+GetMember
+Push 1
+InitArray
+Push "LOOT_DROP_MAX_PER_MONSTER", 2, "dofus"
+Push true
+If loc18bd
+GetProperty
+loc1987:GetMember
+Push "api"
+GetMember
+Push "lang"
+GetMember
+Push "getText"
+CallMethod
+Add2
+Push ")"
+Add2
+Add2
+StoreRegister 7
+Pop
+Push "\n"
+CharToAscii
+If loc193b
+ImplementsOp
+loc19b4:GetMember
+Push "\x18\x10\x1c"
+GetMember
+Push "api"
+GetMember
+Push "\x17\x05\x03"
+GetMember
+Push "\x1a\x05\x15"
+GetMember
+Push "inParty"
+GetMember
+Not
+If loc193b
+Push 16, 1, "dofus"
+Push false
+Not
+If loc1904
+Extends
+loc19f4:GetMember
+Push "\x18\x10\x1c"
+GetMember
+Push "api"
+GetMember
+Push "lang"
+GetMember
+Push "getText"
+CallMethod
+StoreRegister 7
+Pop
+Push "dofus"
+GetVariable
+Push "\x17\x05\x03"
+Push "\x02"
+CharToAscii
+If loc19b4
+ImplementsOp
+loc1a2a:CallMethod
+Return
+}
+Push true
+If loc14b4
+SetProperty
+loc1a37:DefineFunction2 "", 2, 8, false, false, true, false, true, false, false, true, false, 2, "\x19\n\x1a", 3, "\x19\t\x01" {
+Push register3, register2, 2, "dofus"
+GetVariable
+Push "\x17\x05\x03"
+GetMember
+Push "\x18\x10\x1c"
+GetMember
+Push "api"
+GetMember
+Push "lang"
+GetMember
+Push "getMonsterDrop"
+CallMethod
+StoreRegister 4
+Pop
+Push register4, "sc"
+Push "\x06"
+CharToAscii
+If loc1abc
+CastOp
+loc1a92:GetMember
+Push 2, "dofus"
+GetVariable
+Push "\x17\x05\x03"
+GetMember
+Push "\x18\x10\x1c"
+GetMember
+Push "api"
+GetMember
+Push "\x17\x05\x03"
+GetTime
+If loc1b32
+ImplementsOp
+loc1abc:GetMember
+StoreRegister 5
+Pop
+Push register5, undefined
+Equals2
+Not
+If loc1ad5
+Push true
+Return
+loc1ad5:Push 0
+StoreRegister 6
+Pop
+Jump loc1afd
+loc1ae7:Push register6
+Push true
+If loc1af7
+GetProperty
+loc1af7:Increment
+StoreRegister 6
+Pop
+loc1afd:Push register6, register5, "length"
+GetMember
+Less2
+Not
+If loc1b51
+Push register5, register6
+GetMember
+StoreRegister 7
+Pop
+Push register7, "expected"
+GetMember
+Push register7, "criterion"
+GetTime
+Increment
+If loc1a92
+SetMember
+loc1b32:GetMember
+Push "GameServer"
+GetMember
+Push "verifyCriterion"
+CallMethod
+Not
+Not
+If loc1b4c
+Push false
+Return
+loc1b4c:Jump loc1ae7
+loc1b51:Push true
+Return
+}
+Push "\t"
+CharToAscii
+If loc1368
+DefineLocal
+loc1b64:GetMember
+StoreRegister 1
+Pop
+Push register0, "\x18\r\x18"
+GetTime
+Increment
+If loc1a37
+Extends
+loc1b79:DefineFunction "", 0 {
+}
+Push false
+Not
+If loc12d8
+ImplementsOp
+loc1b8d:DefineFunction "", 0 {
+}
+GetTime
+Increment
+If loc11e4
+DefineLocal
+loc1b9d:DefineFunction "", 0 {
+}
+Push "\x07"
+CharToAscii
+If loc12fb
+NewObject
+loc1bb2:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "_nMinimumProspection"
+GetMember
+Return
+}
+GetTime
+If loc152d
+NewObject
+loc1bcd:NewObject
+SetMember
+loc1bcf:Push "_global"
+GetVariable
+Push "dofus"
+GetMember
+Push "\x17\x05\x03"
+GetMember
+Push "ItemDrop"
+Push false
+Not
+If loc1c6c
+SetMember
+loc1bf2:DefineFunction2 "", 1, 4, false, false, true, false, true, false, false, true, false, 2, "nCurrentProba" {
+Push 16, 1, "dofus"
+GetVariable
+Push "\x17\x05\x03"
+GetMember
+Push "\x18\x10\x1c"
+GetMember
+Push "api"
+GetMember
+Push "\x17\x05\x03"
+GetMember
+Push "\x1a\x05\x15"
+Push "\x04"
+CharToAscii
+If loc1c46
+SetMember
+loc1c46:GetMember
+Push "getCharacValueByID"
+CallMethod
+StoreRegister 3
+Pop
+Push register2, register3
+Multiply
+Push 100
+Divide
+Return
+}
+GetTime
+Increment
+If loc11dc
+Extends
+loc1c6c:DefineFunction2 "", 5, 9, false, false, false, true, true, false, false, true, false, 3, "\x19\n\x1a", 4, "nMonsterGrade", 5, "\x19\t\x01", 6, "\x19\f\x1c", 7, "\x1a\x12\x14" {
+Push register7, undefined, register6, register5, undefined, 5, register2, "initialize"
+CallMethod
+Pop
+Push register1, "\x1d\x1a\x05", register3
+SetMember
+Push register1, "\x1d\x1e\x1a", register5
+SetMember
+Push register5, register3, 2, "dofus"
+GetVariable
+Push "\x17\x05\x03"
+GetMember
+Push "\x18\x10\x1c"
+GetMember
+Push "api"
+Push true
+If loc1d2f
+SetProperty
+loc1cef:GetMember
+Push undefined
+Equals2
+Not
+Not
+If loc1d09
+Push register1, "_nFixedDropRate", register8, "sr"
+GetMember
+SetMember
+loc1d09:Push register4, undefined
+Equals2
+Not
+If loc1d6a
+Push 1
+StoreRegister 4
+Pop
+Push false
+Not
+If loc1d6a
+SetMember
+loc1d2f:GetMember
+Push "lang"
+GetMember
+Push "getMonsterDrop"
+CallMethod
+StoreRegister 8
+Pop
+Push register1, "_nMinimumProspection", register8, "pp"
+GetMember
+SetMember
+Push register1, "_bHasDropConditions", register8, "c"
+GetMember
+SetMember
+Push register8, "sr"
+GetTime
+Increment
+If loc1cef
+SetMember
+loc1d6a:Push register1, "_nBaseDropRate", register8, "t"
+GetMember
+Push register4, 1
+Subtract
+GetMember
+SetMember
+Push register1, "_nDropPerMonsterCount", register8, "dc"
+GetMember
+SetMember
+}
+Push true
+If loc14ff
+Extends
+loc1d9b:ConstantPool "dofus", "\x17\x05\x03", "ItemDrop", "_global", "Object", "initialize", "\x1d\x1a\x05", "\x1d\x1e\x1a", "\x18\x10\x1c", "api", "lang", "getMonsterDrop", "_nMinimumProspection", "pp", "_bHasDropConditions", "c", "sr", "_nFixedDropRate", "_nBaseDropRate", "t", "_nDropPerMonsterCount", "dc", "prototype", "\x18\r\x18", "sc", "length", "expected", "criterion", "GameServer", "verifyCriterion", "\x04\x06", "__get__itemID", "\x07\r", "__get__minimumProspection", "__get__hasDropConditions", "__get__dropPerMonsterCount", "getDropInfosString", "__get__isQuest", "<b>", "LOOT_HAS_CONDITIONS", "getText", "</b>", "push", "QUEST_ITEM", "", "getDropRate", "LOOT_DROP_BASE_RATE", "LOOT_DROP_PROSPECTING_RATE", "LOOT_DROP_PROSPECTING_THRESHOLD", "\x1a\x05\x15", "totalPartyProspection", "TOTAL_PROSPECTING", "inParty", "getCharacValueByID", " (", "VALUE_PLUS_VALUE_FROM_PARTY", ")", "LOOT_DROP_MAX_PER_MONSTER", "\n", "join", "dropBonusForServer", "Math", "min", "applyPlayerProspection", "dropPerMonsterCount", "addProperty", "minimumProspection", "itemID", "hasDropConditions", "\x18\x1e\x03", "ASSetPropFlags", "RARE_VALUE", "VERY_RARE_VALUE"
+Push true
+If loc1203
+DefineLocal
+loc20f8:

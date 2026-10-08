@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dofus Retro — Suivi ressources / build</title>
+    <link rel="icon" type="image/svg+xml" href="/ui/favicon.svg">
+    <style>
+        :root {
+            --plane: #f9f9f7;
+            --surface: #fcfcfb;
+            --ink: #0b0b0b;
+            --ink2: #52514e;
+            --muted: #898781;
+            --grid: #e1e0d9;
+            --accent: #2a78d6;
+            --accent-soft: #cde2fb;
+            --good: #0ca30c;
+            --chip: #f0efec;
+            --border: rgba(11, 11, 11, 0.10);
+        }
+
+        :root[data-theme="dark"] {
+            --plane: #0d0d0d;
+            --surface: #1a1a19;
+            --ink: #ffffff;
+            --ink2: #c3c2b7;
+            --muted: #898781;
+            --grid: #2c2c2a;
+            --accent: #3987e5;
+            --accent-soft: #184f95;
+            --good: #0ca30c;
+            --chip: #242422;
+            --border: rgba(255, 255, 255, 0.10);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--plane);
+            color: var(--ink);
+            font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+            font-size: 14px;
+            line-height: 1.45;
+        }
+
+        .wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 24px 20px 60px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 20px;
+            margin: 0;
+            font-weight: 650;
+        }
+
+        a.nav {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .spacer {
+            flex: 1;
+        }
+
+        button {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            color: var(--ink2);
+            border-radius: 8px;
+            padding: 8px 11px;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        .kpis {
+            display: grid;
+            grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .tile {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px 16px;
+        }
+
+        .tile .v {
+            font-size: 26px;
+            font-weight: 680;
+        }
+
+        .tile .l {
+            color: var(--muted);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-top: 2px;
+        }
+
+        .panel {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 6px 4px;
+            margin-bottom: 18px;
+        }
+
+        .panel h2 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--ink2);
+            margin: 12px 14px 8px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .panel h2 label {
+            font-weight: 500;
+            text-transform: none;
+            letter-spacing: 0;
+            color: var(--ink2);
+            font-size: 12.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px 14px;
+            font-size: 13.5px;
+            border-top: 1px solid var(--grid);
+        }
+
+        th {
+            color: var(--muted);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            font-weight: 600;
+            border-top: none;
+        }
+
+        td.num, th.num {
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .iname {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .iname img {
+            width: 26px;
+            height: 26px;
+            object-fit: contain;
+        }
+
+        tr.done td {
+            color: var(--muted);
+        }
+
+        input.edit {
+            width: 64px;
+            text-align: right;
+            background: var(--plane);
+            border: 1px solid var(--border);
+            color: var(--ink);
+            border-radius: 6px;
+            padding: 4px 6px;
+            font-size: 13px;
+            font-variant-numeric: tabular-nums;
+        }
+
+        input.edit:focus {
+            outline: 2px solid var(--accent-soft);
+            border-color: var(--accent);
+        }
+
+        .bar {
+            position: relative;
+            height: 16px;
+            background: var(--grid);
+            border-radius: 5px;
+            overflow: hidden;
+            min-width: 110px;
+        }
+
+        .bar > span {
+            position: absolute;
+            inset: 0 auto 0 0;
+            background: var(--accent);
+            border-radius: 5px;
+        }
+
+        .bar.ok > span {
+            background: var(--good);
+        }
+
+        .bar em {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-style: normal;
+            font-size: 11px;
+            color: var(--ink);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .tag {
+            font-size: 10.5px;
+            color: var(--accent);
+            border: 1px solid var(--accent-soft);
+            border-radius: 6px;
+            padding: 0 5px;
+            margin-left: 6px;
+        }
+
+        .foot {
+            color: var(--muted);
+            font-size: 12px;
+            margin-top: 20px;
+        }
+
+        .trees {
+            padding: 6px 12px 14px;
+        }
+
+        details.tw {
+            margin: 2px 0;
+        }
+
+        details.tw > summary {
+            list-style: none;
+            cursor: pointer;
+            padding: 3px 4px;
+            border-radius: 6px;
+        }
+
+        details.tw > summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details.tw > summary:hover {
+            background: color-mix(in srgb, var(--accent) 8%, transparent);
+        }
+
+        .tnode {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .tnode img {
+            width: 22px;
+            height: 22px;
+            object-fit: contain;
+        }
+
+        .tw > summary::before {
+            content: "▸";
+            color: var(--muted);
+            font-size: 11px;
+            margin-right: 4px;
+            display: inline-block;
+            width: 10px;
+        }
+
+        details.tw[open] > summary::before {
+            content: "▾";
+        }
+
+        .leaf {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            padding: 3px 4px 3px 18px;
+        }
+
+        .leaf img {
+            width: 22px;
+            height: 22px;
+            object-fit: contain;
+        }
+
+        .tq {
+            color: var(--ink2);
+            font-weight: 650;
+            font-variant-numeric: tabular-nums;
+        }
+
+        ul.tree {
+            list-style: none;
+            margin: 0 0 0 14px;
+            padding: 0 0 0 12px;
+            border-left: 1px solid var(--grid);
+        }
+
+        ul.tree > li {
+            margin: 1px 0;
+        }
+
+        .root > summary {
+            font-weight: 650;
+            font-size: 14.5px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <header>
+        <div><h1>Suivi ressources / build</h1><a class="nav" href="./">← Persos &amp; stuff</a>
+            &nbsp; <a class="nav" href="bank.html">Banque</a></div>
+        <div class="spacer"></div>
+        <button id="theme">◐ Thème</button>
+    </header>
+
+    <section class="kpis" id="kpis"></section>
+
+    <section class="panel"><h2>Items à crafter — quantité éditable</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Item</th>
+                <th>Type</th>
+                <th class="num">Niv.</th>
+                <th class="num">Qté</th>
+            </tr>
+            </thead>
+            <tbody id="targets"></tbody>
+        </table>
+    </section>
+
+    <section class="panel"><h2>Détail des crafts — recettes &amp; sous-crafts</h2>
+        <div class="trees" id="trees"></div>
+    </section>
+
+    <section class="panel"><h2>Ressources à réunir
+        <label><input type="checkbox" id="expand"> décomposer les sous-crafts (ressources brutes)</label>
+        <label><input type="checkbox" id="hidedone"> masquer les complètes</label>
+    </h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Ressource</th>
+                <th class="num">Besoin</th>
+                <th class="num">Banque</th>
+                <th class="num">Acquis</th>
+                <th class="num">Manque</th>
+                <th>Progression</th>
+            </tr>
+            </thead>
+            <tbody id="res"></tbody>
+        </table>
+    </section>
+
+    <section class="panel"><h2>Recettes à portée — il ne manque que quelques ressources
+        <span style="flex:1"></span>
+        <span class="tag" id="nearcount"></span>
+    </h2>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:0 14px 10px">
+            <label>manquantes ≤ <input class="edit" id="nearmax" type="number" min="1" max="10" value="2"
+                                        style="width:46px"></label>
+            <input class="edit" id="nearq" type="search" placeholder="Rechercher une recette…"
+                   style="width:200px;text-align:left">
+            <label>type <select class="edit" id="neartype" style="width:auto"></select></label>
+            <label>niv <input class="edit" id="nearlmin" type="number" min="0" placeholder="0" style="width:56px">
+                – <input class="edit" id="nearlmax" type="number" min="0" placeholder="∞" style="width:56px"></label>
+            <label>tri
+                <select class="edit" id="nearsort" style="width:auto">
+                    <option value="missing">proximité (moins de manque)</option>
+                    <option value="value">valeur (prix u.)</option>
+                    <option value="level">niveau</option>
+                    <option value="name">nom</option>
+                </select>
+            </label>
+            <label><input type="checkbox" id="nearready"> inclure fabricables (manque 0)</label>
+        </div>
+        <table>
+            <thead>
+            <tr>
+                <th>Recette</th>
+                <th>Type</th>
+                <th class="num">Niv.</th>
+                <th class="num">Manque</th>
+                <th>Ressources manquantes (nom ×qté)</th>
+                <th class="num">Prix u.</th>
+            </tr>
+            </thead>
+            <tbody id="near"></tbody>
+        </table>
+    </section>
+
+    <div class="foot">Modifie une <b>Qté</b> d'item ou un <b>Acquis</b> de ressource : tout se recalcule et est
+        sauvegardé.
+        « Décomposer » remplace les sous-crafts (Rubis, Rutile…) par leurs <b>ressources brutes</b> (Eau, métaux,
+        pierres…).
+    </div>
+</div>
+
+<script>
+    const $ = (s) => document.querySelector(s);
+
+    function esc(s) {
+        return (s ?? "").toString().replace(/[&<>"]/g, c => ({
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;'
+        }[c]));
+    }
+
+    function ico(x) {
+        return x.icon ? `<img src="${esc(x.icon)}" alt="" loading="lazy">` : "";
+    }
+
+    async function putJSON(url, obj) {
+        await fetch(url, {method: "PUT", headers: {"Content-Type": "application/json"}, body: JSON.stringify(obj)});
+    }
+
+    async function load() {
+        const expand = $("#expand")?.checked;
+        const [targets, res, trees] = await Promise.all([
+            fetch("../build").then(r => r.json()),
+            fetch("../build/resources" + (expand ? "?expand=true" : "")).then(r => r.json()),
+            fetch("../build/tree").then(r => r.json()),
+        ]);
+        renderTargets(targets);
+        renderRes(res);
+        renderKpis(targets, res);
+        renderTrees(trees);
+        loadNear();
+    }
+
+    let NEAR = [];  // cache du dernier fetch (filtré/trié côté client)
+
+    async function loadNear() {
+        const n = Math.max(1, Math.min(10, +$("#nearmax").value || 2));
+        const ready = $("#nearready").checked ? "&include_ready=true" : "";
+        NEAR = await fetch("../craftable/near?max_missing=" + n + ready + "&limit=3000").then(r => r.json());
+        buildNearTypes();
+        renderNear();
+    }
+
+    function buildNearTypes() {
+        const cur = $("#neartype").value;
+        const types = [...new Set(NEAR.map(r => r.result_type || "(inconnu)"))].sort((a, b) => a.localeCompare(b, "fr"));
+        $("#neartype").innerHTML = `<option value="">Tous types</option>`
+            + types.map(t => `<option value="${esc(t)}">${esc(t)}</option>`).join("");
+        if (cur) $("#neartype").value = cur;
+    }
+
+    function renderNear() {
+        const q = $("#nearq").value.trim().toLowerCase();
+        const type = $("#neartype").value;
+        const lmin = +$("#nearlmin").value || 0;
+        const lmax = +$("#nearlmax").value || 9999;
+        const sort = $("#nearsort").value;
+        const val = r => (r.unit_price || 0) * (r.result_quantity || 1);
+        let rows = NEAR.filter(r => {
+            if (q && !(r.result_name || "").toLowerCase().includes(q)) return false;
+            if (type && (r.result_type || "(inconnu)") !== type) return false;
+            const lv = r.result_level || 0;
+            return lv >= lmin && lv <= lmax;
+        });
+        const cmp = {
+            missing: (a, b) => a.missing_kinds - b.missing_kinds || a.missing_total - b.missing_total || (a.result_name || "").localeCompare(b.result_name || "", "fr"),
+            value: (a, b) => val(b) - val(a),
+            level: (a, b) => (b.result_level || 0) - (a.result_level || 0),
+            name: (a, b) => (a.result_name || "").localeCompare(b.result_name || "", "fr"),
+        }[sort] || null;
+        if (cmp) rows.sort(cmp);
+        const shown = rows.slice(0, 300);
+        $("#nearcount").textContent = rows.length + (rows.length > 300 ? " recettes (300 affichées)" : " recette" + (rows.length > 1 ? "s" : ""));
+        $("#near").innerHTML = shown.map(r => {
+            const ready = r.missing_kinds === 0;
+            const miss = ready ? "—" : r.missing.map(m => `${esc(m.name)}&nbsp;<span class="tq">×${m.missing}</span>`).join(", ");
+            const price = r.unit_price != null ? r.unit_price.toLocaleString("fr-FR") : "—";
+            const qty = r.result_quantity > 1 ? `<span class="tag">×${r.result_quantity}</span>` : '';
+            const badge = ready ? `<span class="tag" style="color:var(--good);border-color:var(--good)" title="déjà fabricable maintenant">✓ ${r.max_crafts}×</span>` : '';
+            const manque = ready ? `<span style="color:var(--good)">✓</span>` : `${r.missing_kinds} <span style="color:var(--muted)">(${r.missing_total})</span>`;
+            return `<tr>
+      <td><span class="iname">${ico(r)}<span>${esc(r.result_name)}</span></span>${qty}${badge}</td>
+      <td style="color:var(--muted)">${esc(r.result_type || "")}</td>
+      <td class="num">${r.result_level ?? ""}</td>
+      <td class="num">${manque}</td>
+      <td>${miss}</td>
+      <td class="num">${price}</td></tr>`;
+        }).join("") || `<tr><td colspan="6" style="color:var(--muted)">Aucune recette à portée avec ces filtres.</td></tr>`;
+    }
+
+    function renderKpis(targets, res) {
+        const done = res.filter(r => r.remaining === 0).length;
+        const miss = res.reduce((s, r) => s + r.remaining, 0);
+        const pct = res.length ? Math.round(100 * done / res.length) : 100;
+        const tiles = [
+            ["Items à crafter", targets.reduce((s, t) => s + t.quantity, 0)],
+            ["Ressources complètes", `${done}/${res.length}`],
+            ["Manque total", miss],
+            ["Avancement (ressources)", pct + " %"],
+        ];
+        $("#kpis").innerHTML = tiles.map(([l, v]) => `<div class="tile"><div class="v">${v}</div><div class="l">${l}</div></div>`).join("");
+    }
+
+    function renderTargets(t) {
+        $("#targets").innerHTML = t.map(x => `<tr>
+    <td><span class="iname">${ico(x)}${esc(x.name)}</span>${x.label ? `<span class="tag">${esc(x.label)}</span>` : ""}</td>
+    <td>${esc(x.type || "")}</td><td class="num">${x.level ?? ""}</td>
+    <td class="num"><input class="edit qty" type="number" min="0" data-id="${x.id}" value="${x.quantity}"></td></tr>`).join("")
+            || `<tr><td colspan="4" style="color:var(--muted)">Aucune cible.</td></tr>`;
+    }
+
+    function renderRes(res) {
+        const hide = $("#hidedone")?.checked;
+        const list = hide ? res.filter(r => r.remaining > 0) : res;
+        $("#res").innerHTML = list.map(r => {
+            const ok = r.remaining === 0;
+            return `<tr class="${ok ? 'done' : ''}">
+      <td><span class="iname">${ico(r)}${esc(r.name)}</span>${r.craftable ? '<span class="tag">craftable</span>' : ''}</td>
+      <td class="num">${r.needed}</td><td class="num">${r.in_bank}</td>
+      <td class="num"><input class="edit acq" type="number" min="0" data-item="${r.item_id}" value="${r.acquired}"></td>
+      <td class="num">${r.remaining || "✓"}</td>
+      <td><div class="bar ${ok ? 'ok' : ''}"><span style="width:${r.pct}%"></span><em>${r.pct}%</em></div></td></tr>`;
+        }).join("") || `<tr><td colspan="6" style="color:var(--muted)">Rien à afficher.</td></tr>`;
+    }
+
+    function nodeHead(n) {
+        return `<span class="tnode">${ico(n)}<span>${esc(n.name)}</span>${n.quantity ? `<span class="tq">×${n.quantity}</span>` : ''}${(n.ingredients && n.ingredients.length) ? '<span class="tag">craft</span>' : ''}</span>`;
+    }
+
+    function renderNode(n, root) {
+        if (n.ingredients && n.ingredients.length) {
+            const open = root ? " open" : "";
+            return `<details class="tw ${root ? 'root' : ''}"${open}><summary>${nodeHead(n)}</summary>`
+                + `<ul class="tree">${n.ingredients.map(c => `<li>${renderNode(c, false)}</li>`).join("")}</ul></details>`;
+        }
+        return `<div class="leaf">${ico(n)}<span>${esc(n.name)}</span>${n.quantity ? `<span class="tq">×${n.quantity}</span>` : ''}</div>`;
+    }
+
+    function renderTrees(trees) {
+        $("#trees").innerHTML = trees.map(t => renderNode(t, true)).join("")
+            || `<div style="color:var(--muted);padding:6px 4px">Aucun craft.</div>`;
+    }
+
+    document.addEventListener("change", async (e) => {
+        const t = e.target;
+        if (t.classList.contains("qty")) {
+            await putJSON("../build/target", {id: +t.dataset.id, quantity: +t.value || 0});
+            load();
+        } else if (t.classList.contains("acq")) {
+            await putJSON("../build/manual", {item_id: +t.dataset.item, quantity: +t.value || 0});
+            load();
+        } else if (t.id === "expand") {
+            load();
+        } else if (t.id === "hidedone") {
+            load();
+        }
+    });
+
+    // "Recettes à portée" : le seuil refait un fetch (anti-rebond) ; les autres
+    // filtres (recherche, niveau, type, tri) filtrent le cache côté client =>
+    // instantané. Tout est LIVE, aucun bouton.
+    let _nearTimer;
+    const nearDebounced = (fn) => {
+        clearTimeout(_nearTimer);
+        _nearTimer = setTimeout(fn, 250);
+    };
+    $("#nearmax").addEventListener("input", () => nearDebounced(loadNear));
+    $("#nearq").addEventListener("input", () => nearDebounced(renderNear));
+    $("#nearlmin").addEventListener("input", () => nearDebounced(renderNear));
+    $("#nearlmax").addEventListener("input", () => nearDebounced(renderNear));
+    $("#neartype").addEventListener("change", renderNear);
+    $("#nearsort").addEventListener("change", renderNear);
+    $("#nearready").addEventListener("change", loadNear);
+
+    $("#theme").addEventListener("click", () => {
+        const r = document.documentElement;
+        r.dataset.theme = r.dataset.theme === "dark" ? "light" : "dark";
+    });
+    if (window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches) document.documentElement.dataset.theme = "dark";
+    load();
+</script>
+<script src="/ui/nav.js"></script>
+</body>
+</html>

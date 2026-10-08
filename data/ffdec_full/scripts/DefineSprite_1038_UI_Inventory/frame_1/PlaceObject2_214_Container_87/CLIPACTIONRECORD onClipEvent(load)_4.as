@@ -1,0 +1,32 @@
+onClipEvent(load){
+   while(true)
+   {
+      if(!ord("\n"))
+      {
+         if(false)
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push(104947052);
+      }
+      if(!(§§pop() - 1))
+      {
+         break;
+      }
+      function §\x1e\x11\n§(eventObj)
+      {
+         _parent.dblClickItem({target:this});
+      }
+      if(false)
+      {
+         startDrag(§§pop(),§§pop(),§§pop(),§§pop(),§§pop(),§§pop());
+         §§goto(addr85c4);
+      }
+      break;
+   }
+   this["\x15\x1d\x15"]("dblClick",eval("\x1e\x11\n"));
+   addr85c4:
+}

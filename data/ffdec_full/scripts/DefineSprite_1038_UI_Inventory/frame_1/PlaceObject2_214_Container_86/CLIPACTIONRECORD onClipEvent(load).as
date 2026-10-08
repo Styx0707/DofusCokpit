@@ -1,0 +1,32 @@
+onClipEvent(load){
+   while(true)
+   {
+      if(!ord("\x07"))
+      {
+         if(false)
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push(757983410);
+      }
+      if(!§§pop())
+      {
+         break;
+      }
+      function §\x1e\x11\t§(eventObj)
+      {
+         _parent.selectItem({target:this});
+      }
+      if(false)
+      {
+         var §§pop() = §§pop();
+         §§goto(addr1981e);
+      }
+      break;
+   }
+   this["\x15\x1d\x15"]("click",eval("\x1e\x11\t"));
+   addr1981e:
+}

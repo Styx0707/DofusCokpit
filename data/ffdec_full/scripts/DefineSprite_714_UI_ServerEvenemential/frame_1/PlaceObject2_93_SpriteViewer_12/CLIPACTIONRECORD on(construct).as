@@ -1,0 +1,64 @@
+on(construct){
+   while(true)
+   {
+      if(false)
+      {
+         if(!(true and true))
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push(false);
+      }
+      if(§§pop())
+      {
+         break;
+      }
+      if(!getTimer())
+      {
+         §§pop()[§§pop()] = §§pop();
+      }
+      else
+      {
+         set("{invalid_utf8=135}",true);
+         set(§§constant(1),false);
+         set(§§constant(2),§§constant(3));
+         set(§§constant(4),false);
+         §§push(§§constant(5));
+         §§push(§§constant(3));
+         if(ord("\x02"))
+         {
+            while(true)
+            {
+               set(§§pop(),§§pop());
+               set(§§constant(6),false);
+               set(§§constant(7),false);
+               set(§§constant(8),§§constant(9));
+               set(§§constant(10),true);
+               §§push(§§constant(11));
+               §§push(true);
+               if(!getTimer())
+               {
+                  startDrag(§§pop(),§§pop(),§§pop(),§§pop(),§§pop(),§§pop());
+                  §§goto(addrd14f);
+               }
+               addrd183:
+               set(§§pop(),§§pop());
+               set(§§constant(12),200);
+               set(§§constant(13),true);
+               break;
+               addrd14f:
+            }
+            addrd22e:
+            return;
+            addrd120:
+         }
+         §§pop()[§§pop()] = §§pop();
+         §§goto(addrd183);
+      }
+      §§goto(addrd22e);
+   }
+   §§goto(addrd120);
+}

@@ -1,0 +1,16 @@
+ConstantPool "{invalid_utf8=186}\x1f", "m"
+Push "\x02"
+CharToAscii
+If loc0027
+Push "\x02"
+CharToAscii
+If loc0046
+Jump loc0076
+loc0027:Push "ank.gapi.controls.TextArea"
+loc0046:GetVariable
+Push "TextArea", 2, "Object"
+GetVariable
+Push "registerClass"
+CallMethod
+Pop
+loc0076:

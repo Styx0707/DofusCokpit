@@ -1,0 +1,35 @@
+onClipEvent(load){
+   while(true)
+   {
+      if(!ord("\x0b"))
+      {
+         if(!ord("\x0b"))
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push(863763162);
+      }
+      if(§§pop())
+      {
+         function §\x1e\x11\t§(eventObj)
+         {
+            _parent.selectItem({target:this});
+         }
+         if(false)
+         {
+            §§goto(addra6c7);
+         }
+      }
+      §§push(eval("\x1e\x11\t"));
+      §§push("click");
+      §§push(2);
+      §§push("this");
+      break;
+   }
+   eval(§§pop())["\x15\x1d\x15"]();
+   addra6c7:
+   getProperty(§§pop(), _X);
+}

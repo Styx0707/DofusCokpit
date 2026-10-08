@@ -1,0 +1,61 @@
+on(construct){
+   while(true)
+   {
+      if(!ord("\n"))
+      {
+         if(!(true and true))
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push(469579874);
+      }
+      if(!§§pop())
+      {
+         break;
+      }
+      if(!getTimer())
+      {
+         §§goto(addr1d81c);
+      }
+      break;
+   }
+   set("{invalid_utf8=150}\x05","\x07b8{invalid_utf8=253}\x1b{invalid_utf8=157}\x02");
+   set("9","{invalid_utf8=136}\x05");
+   set("\x01",false);
+   set("m\x1b",false);
+   while(true)
+   {
+      §§push("{invalid_utf8=150}\x04");
+      §§push(false);
+      if(!(getTimer() + 1))
+      {
+         §§push(getProperty(§§pop(), _X));
+      }
+      else
+      {
+         addr1d81c:
+         set(§§pop(),getProperty(§§pop(), _X));
+         set(§§constant(7),§§constant(3));
+         set(§§constant(8),0);
+         set(§§constant(9),2);
+         set(§§constant(10),false);
+         §§push(§§constant(11));
+         §§push(§§constant(3));
+         if(!ord("\x0b"))
+         {
+            §§push(getProperty(§§pop(), _X));
+         }
+         else
+         {
+            addr1d793:
+            set(§§pop(),§§pop());
+         }
+         §§goto(addr1d857);
+      }
+      §§goto(addr1d793);
+   }
+   addr1d857:
+}

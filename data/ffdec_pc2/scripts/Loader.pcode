@@ -1,0 +1,16 @@
+ConstantPool "\f", "{invalid_utf8=170}"
+Push "\x0b"
+CharToAscii
+If loc0025
+Push false
+Not
+If loc0042
+Jump loc0070
+loc0025:Push "ank.gapi.controls.Loader"
+loc0042:GetVariable
+Push "Loader", 2, "Object"
+GetVariable
+Push "registerClass"
+CallMethod
+Pop
+loc0070:

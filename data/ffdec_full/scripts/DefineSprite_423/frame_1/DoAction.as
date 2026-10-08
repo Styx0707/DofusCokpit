@@ -1,0 +1,20 @@
+while(true)
+{
+   if(false)
+   {
+      if(!(0x341FD845 & 0x341FD845))
+      {
+         break;
+      }
+   }
+   else
+   {
+      §§push(1);
+      §§push("cVlad_R_pied01");
+   }
+   §§push(eval(§§pop()));
+   §§push(2);
+   §§push("GAC");
+   break;
+}
+eval(§§pop()).applyColor();

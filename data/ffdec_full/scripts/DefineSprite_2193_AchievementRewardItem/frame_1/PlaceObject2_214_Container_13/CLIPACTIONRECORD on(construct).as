@@ -1,0 +1,44 @@
+on(construct){
+   while(true)
+   {
+      if(false)
+      {
+         if(!ord("\x03"))
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push(548345891);
+      }
+      if(§§pop())
+      {
+         if(!getTimer())
+         {
+            §§push(§§pop()(§§pop()));
+         }
+         backgroundRenderer = "UI_AchievementRewardContainer";
+         set("\x16\x10\x12","");
+         dragAndDrop = false;
+         enabled = false;
+         set("\x18\x07\x0e",false);
+         §§push("highlightRenderer");
+         §§push("");
+         if(!ord("\b"))
+         {
+            duplicateMovieClip(§§pop(),§§pop(),§§pop());
+            §§goto(addr0f07);
+         }
+      }
+      set(§§pop(),§§pop());
+      set(§§constant(8),0);
+      §§push(§§constant(9));
+      §§push(2);
+      break;
+   }
+   set(§§pop(),§§pop());
+   set("",true);
+   set("","");
+   addr0f07:
+}

@@ -1,0 +1,21 @@
+while(true)
+{
+   if(false)
+   {
+      if(!(0x39464BAF & 0x39464BAF))
+      {
+         break;
+      }
+   }
+   else
+   {
+      §§push(1);
+      §§push("cIopRPied00");
+   }
+   §§push(eval(§§pop()));
+   §§push(2);
+   §§push(GAC);
+   §§push("applyColor");
+   break;
+}
+§§pop()[§§pop()]();

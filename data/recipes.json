@@ -1,0 +1,64 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Minerai de Fer"
+    },
+    {
+      "id": 2,
+      "name": "Frene"
+    },
+    {
+      "id": 3,
+      "name": "Cuir de Bouftou"
+    },
+    {
+      "id": 50,
+      "name": "Lingot de Fer"
+    },
+    {
+      "id": 51,
+      "name": "Planche de Frene"
+    },
+    {
+      "id": 900,
+      "name": "Epee de Boisaille"
+    },
+    {
+      "id": 901,
+      "name": "Bouclier de Bouftou"
+    }
+  ],
+  "recipes": [
+    {
+      "result_item_id": 50,
+      "result_quantity": 1,
+      "ingredients": {
+        "1": 2
+      }
+    },
+    {
+      "result_item_id": 51,
+      "result_quantity": 1,
+      "ingredients": {
+        "2": 3
+      }
+    },
+    {
+      "result_item_id": 900,
+      "result_quantity": 1,
+      "ingredients": {
+        "50": 3,
+        "51": 1
+      }
+    },
+    {
+      "result_item_id": 901,
+      "result_quantity": 1,
+      "ingredients": {
+        "3": 4,
+        "50": 1
+      }
+    }
+  ]
+}

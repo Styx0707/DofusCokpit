@@ -1,0 +1,16 @@
+while(true)
+{
+   if(!ord("\x04"))
+   {
+      if(false)
+      {
+         break;
+      }
+   }
+   else
+   {
+      §§push("ank.gapi.controls.CircleChrono");
+   }
+   Object.registerClass("CircleChrono",eval(§§pop()));
+   break;
+}

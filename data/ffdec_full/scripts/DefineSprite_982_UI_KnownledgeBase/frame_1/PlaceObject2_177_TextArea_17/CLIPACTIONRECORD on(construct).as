@@ -1,0 +1,72 @@
+on(construct){
+   loop1:
+   while(true)
+   {
+      while(true)
+      {
+         while(true)
+         {
+            if(false)
+            {
+               if(!ord("\x07"))
+               {
+                  break;
+               }
+            }
+            else
+            {
+               §§push(false);
+            }
+            if(§§pop())
+            {
+               break;
+            }
+            if(false)
+            {
+               §§push(getProperty(§§pop(), _X));
+               return;
+            }
+            break loop1;
+         }
+         §§goto(addrc758);
+      }
+      return;
+   }
+   set("{invalid_utf8=150}\x02",false);
+   set("\x05",false);
+   set("\x12{invalid_utf8=157}\x02",false);
+   set("{invalid_utf8=157}",true);
+   set("{invalid_utf8=136}\x06",true);
+   §§push("\x02");
+   §§push(-1);
+   if(getTimer() + 1)
+   {
+      while(true)
+      {
+         set(§§pop(),§§pop());
+         set("{invalid_utf8=171}","\x0b");
+         set("\x1d{invalid_utf8=150}\x04",2);
+         set("\b\x06\b\x07\x1d{invalid_utf8=150}\x07",true);
+         §§push("\b\b\x07\x02");
+         §§push(false);
+         if(!ord("\x05"))
+         {
+            §§goto(addrc788);
+            §§push(getProperty(§§pop(), _X));
+         }
+         addrc7c2:
+         set(§§pop(),§§pop());
+         set("","");
+         set("\x1d{invalid_utf8=150}\x04","\b\t\x05\x01\x1d{invalid_utf8=150}\x04");
+         set("\b\n\x05","{invalid_utf8=150}\x03");
+         set("","{invalid_utf8=150}\x03");
+         set("\x05",true);
+         return;
+         addrc788:
+      }
+      return;
+      addrc758:
+   }
+   setProperty(§§pop(), _X, §§pop());
+   §§goto(addrc7c2);
+}

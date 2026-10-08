@@ -1,0 +1,10 @@
+if(!ord("\x0b"))
+{
+   if(false)
+   {
+   }
+}
+else
+{
+   stop();
+}

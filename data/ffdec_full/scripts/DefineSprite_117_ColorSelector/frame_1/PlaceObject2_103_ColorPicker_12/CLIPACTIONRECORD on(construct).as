@@ -1,0 +1,24 @@
+on(construct){
+   while(true)
+   {
+      if(!(true and true))
+      {
+         if(!ord("\x03"))
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push("enabled");
+         §§push(true);
+      }
+      set(§§pop(),§§pop());
+      set("\x1b\x03\x03",10);
+      set("\x1b\x03\x04",30);
+      §§push("styleName");
+      §§push("default");
+      break;
+   }
+   set(§§pop(),§§pop());
+}

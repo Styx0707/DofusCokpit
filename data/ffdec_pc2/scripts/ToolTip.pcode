@@ -1,0 +1,16 @@
+Push false
+Not
+If loc001f
+Push 281144152
+PushDuplicate
+BitAnd
+If loc003d
+Jump loc006c
+loc001f:Push "ank.gapi.controls.ToolTip"
+loc003d:GetVariable
+Push "ToolTip", 2, "Object"
+GetVariable
+Push "registerClass"
+CallMethod
+Pop
+loc006c:

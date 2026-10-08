@@ -1,0 +1,958 @@
+Push 727529049
+PushDuplicate
+BitAnd
+If loc0020
+Push "\x0b"
+CharToAscii
+If loc0025
+Jump loc0f96
+loc0020:Push true
+loc0025:PushDuplicate
+And
+If loc0d9d
+ConstantPool "{invalid_utf8=175}"
+loc0033:SetMember
+Push 1, null, register1, 3, constant61
+CallFunction
+Pop
+Push register0, constant24, 6
+SetMember
+loc0055:Jump loc0f96
+loc005a:GetMember
+Not
+Not
+If loc0908
+Push "_global"
+GetVariable
+Push "dofus"
+GetMember
+Push "\x16\x02\x11", 0, "Object"
+Push true
+If loc0906
+DefineLocal
+loc0085:SetMember
+Push register1, "sendResetShop"
+GetTime
+Increment
+If loc0433
+GetProperty
+loc0095:GetVariable
+Not
+Not
+If loc00b1
+Push "_global"
+GetVariable
+Push "dofus", 0, "Object"
+NewObject
+SetMember
+loc00b1:Push "dofus"
+GetVariable
+Push "\x16\x02\x11"
+GetTime
+Increment
+If loc005a
+Extends
+loc00c4:DefineFunction2 "", 1, 14, false, false, true, false, true, false, false, true, false, 2, "\x1a\x1b\x11" {
+Push register2, "c"
+Equals2
+Not
+If loc0103
+Push "GladiatroolShop", 1, register1, "api"
+GetMember
+Push "ui"
+GetMember
+Push "\x1b\x13\x15"
+CallMethod
+Pop
+Push undefined
+Return
+loc0103:Push 0
+InitArray
+StoreRegister 3
+GetTime
+Increment
+If loc032d
+DefineLocal
+loc0118:GetMember
+Push "\x18\x10\x1c"
+NewMethod
+StoreRegister 10
+Pop
+Push ",", 1, register9, 1
+GetMember
+Push "split"
+CallMethod
+StoreRegister 11
+Pop
+Push 0
+GetTime
+If loc023e
+NewObject
+loc0150:SetMember
+Push register13, "price", register9, 2
+GetMember
+ToNumber
+SetMember
+Push register13, 1, register3, "push"
+CallMethod
+Pop
+Jump loc01b0
+loc0177:Push register1, "api"
+GetMember
+Push "\x17\x05\x03"
+Push true
+If loc0375
+GetProperty
+loc018f:GetMember
+Push "Gladiatrool"
+GetMember
+Push "resetNumber", register6
+SetMember
+Push 0
+StoreRegister 7
+Pop
+Jump loc01bb
+loc01b0:Push register7
+Increment
+StoreRegister 7
+Pop
+loc01bb:Push register7, 6
+Push false
+Not
+If loc0274
+CloneSprite
+loc01d1:NewMethod
+Push 1, register8, "push"
+CallMethod
+Pop
+Jump loc0248
+loc01e5:Push 0
+InitObject
+StoreRegister 13
+Pop
+Push register13, "fakeItems", register8
+SetMember
+Push register13, "realItem", register10
+GetTime
+Increment
+If loc0150
+ImplementsOp
+loc020e:Push register1, "api"
+GetMember
+Push "\x17\x05\x03"
+GetMember
+Push "Gladiatrool"
+GetMember
+Push "resetPrice", register5
+SetMember
+Push register1, "api"
+GetMember
+Push "\x17\x05\x03"
+GetTime
+If loc018f
+NewObject
+loc023e:StoreRegister 12
+Pop
+Jump loc0253
+loc0248:Push register12
+Increment
+StoreRegister 12
+Pop
+loc0253:Push register12, "dofus"
+GetVariable
+Push "\x16\x02\x11"
+GetMember
+Push "ChooseReward"
+GetMember
+Push "ICONS_NEEDED"
+GetTime
+Increment
+If loc02af
+SetProperty
+loc0274:Less2
+Not
+If loc0177
+Push 0
+InitArray
+StoreRegister 8
+Pop
+Push ";", 1, register4, register7
+GetMember
+Push "split"
+CallMethod
+StoreRegister 9
+Pop
+Push false
+Not
+If loc02dd
+ImplementsOp
+loc02af:GetMember
+Less2
+Not
+If loc01e5
+Push register11, register12
+GetMember
+Push undefined, 2, "dofus"
+GetVariable
+Push "\x17\x05\x03"
+GetMember
+Push "\x18\x10\x1c"
+GetTime
+If loc01d1
+DefineLocal
+loc02dd:Push register9, 0
+GetMember
+Push 1, register1, "api"
+GetMember
+Push "lang"
+GetMember
+Push "\x17\x1a\x02"
+CallMethod
+ToString
+Push undefined, undefined, register9, 0
+GetMember
+Push undefined, 5, "dofus"
+GetVariable
+Push "\x17\x05\x03"
+Push "\x0b"
+CharToAscii
+If loc0118
+CastOp
+loc032d:Pop
+Push "|", 1, register2, "split"
+CallMethod
+StoreRegister 4
+Pop
+Push 0, register4, "shift"
+CallMethod
+ToNumber
+StoreRegister 5
+Pop
+Push 0, register4, "shift"
+CallMethod
+ToNumber
+StoreRegister 6
+Pop
+Push "\b"
+CharToAscii
+If loc020e
+Extends
+loc0375:GetMember
+Push "Gladiatrool"
+GetMember
+Push "shopItems", register3
+SetMember
+Push "GladiatroolShop", 1, register1, "api"
+GetMember
+Push "ui"
+GetMember
+Push "\x18\x02\f"
+Push false
+Not
+If loc03aa
+GetProperty
+loc03aa:CallMethod
+Push undefined
+Equals2
+Not
+If loc03dc
+Push "GladiatroolShop", "GladiatroolShop", 2, register1, "api"
+GetMember
+Push "ui"
+GetMember
+Push "\x18\x17\x04"
+GetTime
+Increment
+If loc03da
+SetMember
+loc03da:CallMethod
+Pop
+}
+loc03dc:Push false
+Not
+If loc045c
+SetProperty
+loc03e8:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x19\b\x1a" {
+Push "wb", register2
+Add2
+Push 1, register1, "\x16\x02\x11"
+GetMember
+Push "send"
+CallMethod
+Pop
+}
+Push true
+If loc0085
+DefineLocal
+loc041f:SetMember
+Push register1, "onShopData"
+Push false
+Not
+If loc00c4
+SetProperty
+loc0433:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push "wu", 1, register1, "\x16\x02\x11"
+GetMember
+Push "send"
+CallMethod
+Pop
+}
+GetTime
+Increment
+If loc04b5
+SetProperty
+loc045c:SetMember
+Push register1, "onPlayerData"
+Push false
+Not
+If loc0927
+GetProperty
+loc0470:GetMember
+StoreRegister 1
+Pop
+Push register1, "sendBuyReward"
+Push "\b"
+CharToAscii
+If loc03e8
+ImplementsOp
+loc048a:Push "dofus"
+GetVariable
+Push "\x16\x02\x11"
+GetMember
+Push "ChooseReward"
+GetMember
+Not
+Not
+If loc0055
+Push "dofus"
+Push "\n"
+CharToAscii
+If loc0095
+SetProperty
+loc04b5:SetMember
+Push register1, "sendSellTonic"
+Push "\x06"
+CharToAscii
+If loc0d19
+StartDrag
+loc04ca:DefineFunction2 "", 1, 16, false, false, true, false, true, false, false, true, false, 2, "\x1a\x1b\x11" {
+Push register2, "length"
+GetMember
+Push 0
+Equals2
+Not
+Not
+If loc08cf
+Push 0
+InitArray
+StoreRegister 3
+Pop
+Push "|", 1, register2, "split"
+CallMethod
+StoreRegister 4
+Pop
+GetTime
+If loc0721
+CloneSprite
+loc051b:GetMember
+Push "TOKENS_ARRAY", ";", 1, register4, 4
+GetMember
+Push "split"
+CallMethod
+SetMember
+Push 1
+StoreRegister 15
+Pop
+Jump loc0554
+loc0549:Push register15
+Increment
+StoreRegister 15
+Pop
+loc0554:Push register15, "dofus"
+GetTime
+Increment
+If loc089b
+StartDrag
+loc0563:GetVariable
+Push "\x16\x02\x11"
+GetMember
+Push "ChooseReward"
+GetMember
+Push "ICONS_NEEDED"
+GetMember
+Less2
+Not
+If loc0683
+Push register12, register13
+GetMember
+Push undefined, 2, "dofus"
+GetTime
+Increment
+If loc0663
+DefineLocal
+loc0598:CallMethod
+StoreRegister 10
+Pop
+Push register10
+ToString
+Push 0, 1, undefined, undefined, 5, "dofus"
+GetVariable
+Push "\x17\x05\x03"
+GetMember
+Push "\x18\x10\x1c"
+NewMethod
+StoreRegister 11
+Pop
+Push ",", 1, register8, 1
+GetTime
+Increment
+If loc0627
+CallFunction
+loc05e5:SetMember
+Push register14, "realItem", register9
+SetMember
+Push register14, "bonusEffects", register11
+SetMember
+Push register14, 1, register3, "push"
+CallMethod
+Pop
+Jump loc0743
+loc060f:Push "dofus"
+GetVariable
+Push "\x16\x02\x11"
+GetMember
+Push "ChooseReward"
+GetTime
+If loc06f2
+SetProperty
+loc0627:GetMember
+Push "split"
+CallMethod
+StoreRegister 12
+Pop
+Push 0
+StoreRegister 13
+Pop
+Jump loc0650
+loc0645:Push register13
+Increment
+StoreRegister 13
+Pop
+loc0650:Push register13, "dofus"
+Push false
+Not
+If loc0563
+CallFunction
+loc0663:GetVariable
+Push "\x17\x05\x03"
+GetMember
+Push "\x18\x10\x1c"
+NewMethod
+Push 1, register7, "push"
+CallMethod
+Pop
+Jump loc0645
+loc0683:Push 0
+InitObject
+StoreRegister 14
+Pop
+Push register14, "fakeItems", register7
+Push true
+If loc05e5
+CastOp
+loc06a5:Push register8, 0
+GetMember
+Push undefined, 2, "dofus"
+GetVariable
+Push "\x17\x05\x03"
+GetMember
+Push "\x18\x10\x1c"
+NewMethod
+StoreRegister 9
+Pop
+Push 14, 1, register8, 2
+GetMember
+Push "slice"
+Push true
+If loc0598
+SetMember
+loc06f2:GetMember
+Push "TOKENS_ARRAY"
+GetMember
+Push undefined
+Equals2
+Not
+If loc07e6
+Push "dofus"
+GetVariable
+Push "\x16\x02\x11"
+GetMember
+Push "ChooseReward"
+Push false
+Not
+If loc051b
+Extends
+loc0721:Push register4, 3
+GetMember
+StoreRegister 5
+Pop
+Push 0
+StoreRegister 6
+Pop
+Jump loc0755
+loc0743:Push register6
+Increment
+StoreRegister 6
+Pop
+GetTime
+If loc0755
+CallFunction
+loc0755:Push register6, 3
+Less2
+Not
+If loc060f
+Push 0
+InitArray
+StoreRegister 7
+Pop
+Push ";", 1, register4, register6
+GetMember
+Push "split"
+CallMethod
+StoreRegister 8
+Pop
+Push false
+Not
+If loc06a5
+Extends
+loc079a:GetVariable
+Push "\x16\x02\x11"
+GetMember
+Push "ChooseReward"
+GetMember
+Push "TOKENS_ARRAY"
+GetMember
+Push register15, "dofus"
+GetVariable
+Push "\x16\x02\x11"
+GetMember
+Push "ChooseReward"
+Push true
+If loc0800
+SetProperty
+loc07cb:GetMember
+Push "ChooseReward"
+GetMember
+Push "TOKENS_ARRAY"
+GetMember
+Push register15
+GetMember
+ToNumber
+Add2
+SetMember
+Jump loc0549
+loc07e6:Push "ChooseReward", 1, register1, "api"
+Push false
+Not
+If loc0864
+StartDrag
+loc0800:GetMember
+Push "TOKENS_ARRAY"
+GetMember
+Push register15, 1
+Subtract
+GetMember
+ToNumber
+Push "dofus"
+GetVariable
+Push "\x16\x02\x11"
+GetTime
+If loc07cb
+CallFunction
+loc0826:GetVariable
+Push "\x16\x02\x11"
+GetMember
+Push "ChooseReward"
+GetMember
+Push "TOKENS_ARRAY"
+GetMember
+Push "currentRoom", register5, 3
+InitObject
+Push "ChooseReward", "ChooseReward", 4, register1, "api"
+GetMember
+Push "ui"
+GetTime
+Increment
+If loc08c7
+CastOp
+loc0864:GetMember
+Push "ui"
+GetMember
+Push "\x18\x02\f"
+CallMethod
+Push undefined
+Equals2
+Not
+If loc08cf
+Push "bAlwaysOnTop", true, 1
+InitObject
+Push "items", register3, "tokens", "dofus"
+GetTime
+If loc0826
+SetProperty
+loc089b:GetVariable
+Push "\x16\x02\x11"
+GetMember
+Push "ChooseReward"
+GetMember
+Push "TOKENS_ARRAY"
+GetMember
+Push "length"
+GetMember
+Less2
+Not
+If loc07e6
+Push "dofus"
+GetTime
+If loc079a
+GetProperty
+loc08c7:GetMember
+Push "\x18\x17\x04"
+CallMethod
+Pop
+}
+loc08cf:GetTime
+If loc041f
+StartDrag
+loc08d6:DefineFunction2 "", 2, 5, false, false, false, true, true, false, false, true, false, 3, "\x19\x11\x14", 4, "oAPI" {
+Push register4, register3, 2, register2, "initialize"
+CallMethod
+Pop
+}
+GetTime
+Increment
+If loc0cc8
+NewObject
+loc0906:NewObject
+SetMember
+loc0908:Push "_global"
+GetVariable
+Push "dofus"
+GetMember
+Push "\x16\x02\x11"
+GetMember
+Push "ChooseReward"
+GetTime
+Increment
+If loc08d6
+DefineLocal
+loc0927:DefineFunction2 "", 1, 15, false, false, true, false, true, false, false, true, false, 2, "\x1a\x1b\x11" {
+Push "|", 1, register2, "split"
+CallMethod
+StoreRegister 3
+Pop
+Push register1, "api"
+GetMember
+Push "\x17\x05\x03"
+GetMember
+Push "Gladiatrool"
+GetMember
+Push "currentRoom", register3, 0
+Push true
+If loc0b55
+SetMember
+loc0976:Not
+If loc0c3b
+Push "dofus"
+GetVariable
+Push "\x17\x05\x03"
+GetMember
+Push "\x18\x10\x1c"
+GetMember
+Push register12, "item"
+GetMember
+CastOp
+StoreRegister 13
+GetTime
+Increment
+If loc0c1a
+ImplementsOp
+loc09a3:GetMember
+ToNumber
+Add2
+SetMember
+Jump loc0b87
+loc09ac:Push register1, "api"
+GetMember
+Push "\x17\x05\x03"
+GetMember
+Push "Gladiatrool"
+GetMember
+Push "tokens", register4
+Push false
+Not
+If loc0adb
+ImplementsOp
+loc09d3:GetMember
+Push "\x17\x05\x03"
+GetMember
+Push "Gladiatrool"
+GetMember
+Push "effects", register6
+SetMember
+Push 0
+InitArray
+StoreRegister 7
+Pop
+Push ";", 1, register3, 4
+GetMember
+Push "split"
+Push "\b"
+CharToAscii
+If loc0b18
+SetMember
+loc0a1a:StoreRegister 10
+Pop
+Jump loc0a2f
+loc0a24:Push register10
+Increment
+StoreRegister 10
+Pop
+loc0a2f:Push register10, register8, "length"
+GetMember
+Less2
+Not
+If loc0c98
+Push ",", 1, register8, register10
+GetMember
+Push "split"
+GetTime
+Increment
+If loc0a98
+CallFunction
+loc0a5c:Increment
+StoreRegister 5
+Pop
+loc0a62:Push register5, register4, "length"
+GetMember
+Less2
+Not
+If loc09ac
+Push register4, register5, register4, register5, 1
+Subtract
+GetMember
+ToNumber
+Push register4, register5
+Push true
+If loc09a3
+NewObject
+loc0a98:CallMethod
+StoreRegister 11
+Pop
+Push register11, 0
+GetMember
+Push "unicID", 2, register9, "\x17\x11\x10"
+CallMethod
+StoreRegister 12
+Pop
+Push register12, "index"
+GetMember
+Push -1
+Equals2
+Not
+Push false
+Not
+If loc0976
+CloneSprite
+loc0adb:SetMember
+Push register1, "api"
+GetMember
+Push "\x17\x05\x03"
+GetMember
+Push "Gladiatrool"
+GetMember
+Push "shopTokens", register3, 2
+GetMember
+ToNumber
+SetMember
+Push ",", 1, register3, 3
+GetTime
+Increment
+If loc0b93
+ImplementsOp
+loc0b18:CallMethod
+StoreRegister 8
+Pop
+Push 0, register1, "api"
+GetMember
+Push "\x17\x05\x03"
+GetMember
+Push "Gladiatrool"
+GetMember
+Push "getTonicItems"
+CallMethod
+StoreRegister 9
+Pop
+Push 0
+Push true
+If loc0a1a
+Extends
+loc0b55:GetMember
+ToNumber
+SetMember
+Push ";", 1, register3, 1
+GetMember
+Push "split"
+CallMethod
+StoreRegister 4
+Pop
+Push 1
+StoreRegister 5
+Pop
+Jump loc0a62
+loc0b87:Push register5
+GetTime
+If loc0a5c
+DefineLocal
+loc0b93:GetMember
+Push "split"
+CallMethod
+ToString
+Push 0, 1, undefined, undefined, 5, "dofus"
+GetVariable
+Push "\x17\x05\x03"
+GetMember
+Push "\x18\x10\x1c"
+NewMethod
+StoreRegister 6
+Pop
+Push register1, "api"
+Push true
+If loc09d3
+Extends
+loc0bd5:CallMethod
+ToString
+Push undefined, undefined, register11, 0
+GetMember
+Push undefined, 5, "dofus"
+GetVariable
+Push "\x17\x05\x03"
+GetMember
+Push "\x18\x10\x1c"
+NewMethod
+StoreRegister 13
+Pop
+loc0c01:Push 0
+InitObject
+StoreRegister 14
+Pop
+Push true
+If loc0c69
+NewObject
+loc0c1a:Pop
+Push 1, register12, "index"
+GetMember
+Push 2, register9, "\x1a\f\x11"
+CallMethod
+Pop
+Jump loc0c01
+loc0c3b:Push register11, 0
+GetMember
+Push 1, register1, "api"
+GetMember
+Push "lang"
+GetMember
+Push "\x17\x1a\x02"
+Push true
+If loc0bd5
+SetProperty
+loc0c69:Push register14, "realItem", register13
+SetMember
+Push register14, "price", register11, 1
+GetMember
+SetMember
+Push register14, 1, register7, "push"
+CallMethod
+Pop
+Jump loc0a24
+loc0c98:Push register1, "api"
+GetMember
+Push "\x17\x05\x03"
+GetMember
+Push "Gladiatrool"
+Push "\n"
+CharToAscii
+If loc0cb8
+GetProperty
+loc0cb8:GetMember
+Push "items", register7
+SetMember
+}
+GetTime
+If loc0cf6
+Extends
+loc0cc8:StoreRegister 0
+SetMember
+Push register0, "dofus"
+GetVariable
+Push "\x16\x02\x11"
+GetMember
+Push "Handler"
+GetMember
+Extends
+Push register0, "prototype"
+Push "\x02"
+CharToAscii
+If loc0470
+GetProperty
+loc0cf6:SetMember
+Push register1, "onBought"
+Push true
+If loc0d4d
+SetMember
+loc0d09:SetMember
+Push register1, "onData"
+GetTime
+Increment
+If loc04ca
+CloneSprite
+loc0d19:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x19\b\x1a" {
+Push "wd", register2
+Add2
+Push 1, register1, "\x16\x02\x11"
+GetMember
+Push "send"
+CallMethod
+Pop
+}
+GetTime
+Increment
+If loc0d09
+SetMember
+loc0d4d:DefineFunction2 "", 1, 4, false, false, true, false, true, false, false, true, false, 2, "\x1a\x1b\x11" {
+Push register2
+ToNumber
+StoreRegister 3
+Pop
+Push register3, 1, register1, "api"
+GetMember
+Push "\x17\x05\x03"
+GetMember
+Push "Gladiatrool"
+GetMember
+Push "removeShopItem"
+Push false
+Not
+If loc0d94
+DefineLocal
+loc0d94:CallMethod
+Pop
+}
+GetTime
+If loc0033
+GetProperty
+loc0d9d:ConstantPool "dofus", "\x16\x02\x11", "ChooseReward", "_global", "Object", "initialize", "Handler", "prototype", "sendBuyReward", "wb", "send", "sendResetShop", "wu", "sendSellTonic", "wd", "onData", "length", "|", "split", ";", "\x17\x05\x03", "\x18\x10\x1c", "slice", ",", "ICONS_NEEDED", "push", "fakeItems", "realItem", "bonusEffects", "TOKENS_ARRAY", "api", "ui", "\x18\x02\f", "bAlwaysOnTop", "items", "tokens", "currentRoom", "\x18\x17\x04", "onShopData", "c", "GladiatroolShop", "\x1b\x13\x15", "shift", "Gladiatrool", "resetPrice", "resetNumber", "lang", "\x17\x1a\x02", "price", "shopItems", "onPlayerData", "shopTokens", "effects", "getTonicItems", "unicID", "\x17\x11\x10", "index", "item", "\x1a\f\x11", "onBought", "removeShopItem", "ASSetPropFlags"
+Push true
+If loc048a
+SetProperty
+loc0f96:

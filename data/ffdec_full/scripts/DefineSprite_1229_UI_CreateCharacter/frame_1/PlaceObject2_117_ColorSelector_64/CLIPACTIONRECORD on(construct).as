@@ -1,0 +1,24 @@
+on(construct){
+   while(true)
+   {
+      if(!ord("\x06"))
+      {
+         if(!(0x18B384CC & 0x18B384CC))
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push("enabled");
+         §§push(true);
+      }
+      set(§§pop(),§§pop());
+      set("\x1b\x03\x03",10);
+      set("\x1b\x03\x04",30);
+      §§push("styleName");
+      §§push("default");
+      break;
+   }
+   set(§§pop(),§§pop());
+}

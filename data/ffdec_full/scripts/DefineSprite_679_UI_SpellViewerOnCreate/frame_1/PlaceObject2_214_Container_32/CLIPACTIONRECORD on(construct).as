@@ -1,0 +1,61 @@
+on(construct){
+   while(true)
+   {
+      if(!(true or true))
+      {
+         if(!(0x39DA8384 | 0x39DA8384))
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push("\n");
+      }
+      if(ord(§§pop()))
+      {
+         if(!(getTimer() + 1))
+         {
+            §§pop() implements ;
+            §§goto(addr189e1);
+         }
+      }
+      set("{invalid_utf8=157}{invalid_utf8=175}",§§constant(1));
+      break;
+   }
+   set("\n","");
+   set("2{invalid_utf8=157}\x02",true);
+   set("8",true);
+   while(true)
+   {
+      §§push("{invalid_utf8=136}\x05");
+      §§push(true);
+      if(!getTimer())
+      {
+         startDrag(§§pop(),§§pop(),§§pop(),§§pop(),§§pop(),§§pop());
+      }
+      else
+      {
+         addr189e1:
+         set(§§pop(),§§pop());
+         set(§§constant(6),§§constant(7));
+         set(§§constant(8),1);
+         set(§§constant(9),0);
+         set(§§constant(10),false);
+         §§push(§§constant(11));
+         §§push(§§constant(12));
+         if(!getTimer())
+         {
+            §§push(getProperty(§§pop(), _X));
+         }
+         else
+         {
+            addr18947:
+            set(§§pop(),§§pop());
+         }
+         §§goto(addr18a16);
+      }
+      §§goto(addr18947);
+   }
+   addr18a16:
+}

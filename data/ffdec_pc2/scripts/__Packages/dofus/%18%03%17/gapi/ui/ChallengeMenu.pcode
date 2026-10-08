@@ -1,0 +1,541 @@
+ConstantPool "L8"
+Push "\n"
+CharToAscii
+If loc0025
+Push "\n"
+CharToAscii
+If loc002a
+Jump loc08bd
+loc0025:Push false
+loc002a:Not
+If loc073d
+ConstantPool "\"{invalid_utf8=145}", "{invalid_utf8=201}", "_{invalid_utf8=165}"
+loc003d:Push constant48, 3, register1, constant46
+CallMethod
+Pop
+Push register1, constant10
+GetMember
+Push "\x0b"
+CharToAscii
+If loc08aa
+ImplementsOp
+loc0062:SetMember
+Push register1, constant33
+Push "\x02"
+CharToAscii
+If loc00bb
+GetProperty
+loc0077:SetMember
+Push register1, constant36
+GetTime
+Increment
+If loc017d
+SetProperty
+loc0087:GetMember
+Push "{invalid_utf8=201}"
+GetMember
+Push "_{invalid_utf8=165}"
+GetMember
+Push constant3, 0, constant6
+NewObject
+SetMember
+loc00a2:Push constant5
+GetVariable
+Push "\"{invalid_utf8=145}"
+GetMember
+Push "{invalid_utf8=201}"
+GetTime
+Increment
+If loc05ae
+CallFunction
+loc00bb:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push constant34, register1, constant35, register1, constant36
+GetMember
+Push 2
+InitObject
+Push 1, register1, constant37
+CallMethod
+Pop
+}
+GetTime
+Increment
+If loc0077
+SetProperty
+loc00f3:GetVariable
+Push "\"{invalid_utf8=145}"
+GetMember
+Push "{invalid_utf8=201}"
+GetMember
+Push "_{invalid_utf8=165}", 0, constant6
+NewObject
+SetMember
+loc010e:Push "\"{invalid_utf8=145}"
+GetVariable
+Push "{invalid_utf8=201}"
+GetTime
+Increment
+If loc050f
+NewObject
+loc0121:DefineFunction "", 0 {
+}
+Push true
+If loc014a
+NewObject
+loc0134:SetMember
+Push register1, constant28
+GetMember
+Push "\b"
+CharToAscii
+If loc0121
+SetProperty
+loc014a:Push constant43, 3, register1, constant46
+CallMethod
+Pop
+Push register1, constant16
+GetMember
+GetTime
+Increment
+If loc0232
+DefineLocal
+loc016a:SetMember
+Push register1, constant31
+Push true
+If loc01de
+NewObject
+loc017d:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, constant25
+GetMember
+Push constant38, register1, constant11
+GetMember
+SetMember
+Push register1, constant17
+GetMember
+Not
+If loc01c7
+Push register1, constant20
+GetMember
+Push constant38, register1, constant14
+Push true
+If loc01c5
+NewObject
+loc01c5:GetMember
+SetMember
+}
+loc01c7:GetTime
+Increment
+If loc0535
+SetMember
+loc01cf:SetMember
+Push register1, constant28
+GetTime
+If loc0298
+GetProperty
+loc01de:DefineFunction2 "", 0, 3, false, false, false, true, true, false, false, true, false {
+Push "\"{invalid_utf8=145}"
+GetVariable
+Push "{invalid_utf8=201}"
+GetMember
+Push "_{invalid_utf8=165}"
+GetMember
+Push constant3
+GetMember
+Push constant4
+GetMember
+Push constant32
+Push "\x02"
+CharToAscii
+If loc0219
+ImplementsOp
+loc0219:GetMember
+Push false, 2, register2, constant31
+CallMethod
+Pop
+}
+GetTime
+Increment
+If loc0062
+CallFunction
+loc0232:DefineFunction "", 0 {
+}
+Push true
+If loc02db
+NewObject
+loc0245:Push constant49, 3, register1, constant46
+CallMethod
+Pop
+Push 1, null, register1, 3, constant50
+CallFunction
+Pop
+Push register0, constant32, constant4
+SetMember
+Push register0, constant23, 90
+SetMember
+loc0280:Jump loc08bd
+loc0285:DefineFunction "", 0 {
+}
+Push true
+If loc003d
+GetProperty
+loc0298:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x16\x11\x04" {
+Push register1, "\x1c\x07\x11", register2
+SetMember
+Push register1, "\x1d\x10\x19"
+GetMember
+Push "_visible", register2
+SetMember
+Push 0, register1, "__get__ready"
+CallMethod
+Return
+}
+Push true
+If loc016a
+Extends
+loc02db:Push "cancelButton", 3, register1, "addProperty"
+CallMethod
+Pop
+Push register1, "\x16\x17"
+GetMember
+GetTime
+If loc0285
+StartDrag
+loc02fa:GetVariable
+Push "\x18\x03\x17"
+GetMember
+Not
+Not
+If loc068c
+Push "_global"
+GetVariable
+Push "dofus"
+GetTime
+Increment
+If loc067d
+Extends
+loc031b:DefineFunction2 "", 0, 3, false, false, false, true, true, false, false, true, false {
+Push 0, register2, undefined
+CallMethod
+Pop
+}
+Push true
+If loc0712
+CloneSprite
+loc033e:Push "dofus"
+GetVariable
+Push "\x18\x03\x17"
+GetMember
+Push "gapi"
+GetMember
+Push "ui"
+GetMember
+Push "ChallengeMenu"
+GetMember
+Not
+Not
+If loc0280
+Push "dofus"
+Push "\t"
+CharToAscii
+If loc0612
+CastOp
+loc0375:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x16\n\x06" {
+Push register1, "\x1c\x02\x11", register2
+SetMember
+Push register1, "_btnCancel"
+GetMember
+Push "_visible", register2
+SetMember
+Push register1, "\x1c\x14\x10"
+GetMember
+Push "_visible", register2
+SetMember
+Push register2
+Not
+Not
+If loc04fa
+Push register1, "\x1d\b\n"
+Push "\x03"
+CharToAscii
+If loc049d
+ImplementsOp
+loc03cf:GetVariable
+Push "\x18\x03\x17"
+GetMember
+Push "gapi"
+GetMember
+Push "ui"
+GetMember
+Push "ChallengeMenu"
+GetMember
+Push "\x1b\x1a\x13"
+GetMember
+Add2
+SetMember
+Push register1, "_lblReady"
+GetTime
+Increment
+If loc0463
+GetProperty
+loc03ff:GetMember
+Push "ChallengeMenu"
+GetMember
+Push "\x1b\x1a\x13"
+GetMember
+Add2
+SetMember
+Push register1, "\x1c\n\x14"
+GetMember
+Push "_x", register1, "\x1c\n\x14"
+GetMember
+Push "_x"
+GetMember
+Push "dofus"
+Push false
+Not
+If loc03cf
+SetMember
+loc0437:GetMember
+Push "\x1b\x1a\x13"
+GetMember
+Add2
+SetMember
+Push register1, "\x1d\x10\x19"
+GetMember
+Push "_x", register1, "\x1d\x10\x19"
+GetMember
+Push "_x"
+Push false
+Not
+If loc04cc
+CastOp
+loc0463:GetMember
+Push "_x", register1, "_lblReady"
+GetMember
+Push "_x"
+GetMember
+Push "dofus"
+GetVariable
+Push "\x18\x03\x17"
+GetMember
+Push "gapi"
+GetMember
+Push "ui"
+GetMember
+Push "ChallengeMenu"
+Push false
+Not
+If loc0437
+DefineLocal
+loc049d:GetMember
+Push "_x", register1, "\x1d\b\n"
+GetMember
+Push "_x"
+GetMember
+Push "dofus"
+GetVariable
+Push "\x18\x03\x17"
+GetMember
+Push "gapi"
+GetMember
+Push "ui"
+GetTime
+If loc03ff
+Extends
+loc04cc:GetMember
+Push "dofus"
+GetVariable
+Push "\x18\x03\x17"
+GetMember
+Push "gapi"
+GetMember
+Push "ui"
+GetMember
+Push "ChallengeMenu"
+GetTime
+If loc04f1
+CallFunction
+loc04f1:GetMember
+Push "\x1b\x1a\x13"
+GetMember
+Add2
+SetMember
+loc04fa:Push 0, register1, "__get__cancelButton"
+CallMethod
+Return
+}
+GetTime
+If loc01cf
+SetProperty
+loc050f:GetMember
+Push "gapi"
+GetMember
+Push "ui"
+GetMember
+Not
+Not
+If loc00a2
+Push "_global"
+GetVariable
+Push "dofus"
+GetTime
+If loc0087
+StartDrag
+loc0535:SetMember
+Push register1, "\x1a\x14\x04"
+Push false
+Not
+If loc06b7
+SetProperty
+loc0549:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x1b\x02\x15" {
+Push register1, "\x1e\n\x0e", register2
+SetMember
+Push 0, register1, "__get__labelReady"
+CallMethod
+Return
+}
+Push false
+Not
+If loc05cc
+CloneSprite
+loc057d:SetMember
+Push register1, "\x10\x03"
+Push true
+If loc0375
+SetMember
+loc0590:GetMember
+Extends
+Push register0, "prototype"
+GetMember
+StoreRegister 1
+Pop
+Push register1, "\x16\x19"
+GetTime
+Increment
+If loc0549
+SetMember
+loc05ae:GetMember
+Push "gapi"
+GetMember
+Push "ui"
+GetMember
+Push "ChallengeMenu"
+Push false
+Not
+If loc031b
+SetProperty
+loc05cc:SetMember
+Push register1, "\x16\x17"
+Push true
+If loc063e
+SetProperty
+loc05df:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push 0, register1, "api"
+GetMember
+Push "\x19\x06\x1c"
+GetMember
+Push "Game"
+GetMember
+Push "\x18\x14\x07"
+CallMethod
+Pop
+}
+GetTime
+Increment
+If loc0134
+ImplementsOp
+loc0612:GetVariable
+Not
+Not
+If loc062e
+Push "_global"
+GetVariable
+Push "dofus", 0, "Object"
+NewObject
+SetMember
+loc062e:Push "dofus"
+Push true
+If loc02fa
+CastOp
+loc063e:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x1b\x02\x14" {
+Push register1, "\x1e\n\r", register2
+SetMember
+Push 0, register1, "__get__labelCancel"
+CallMethod
+Return
+}
+GetTime
+Increment
+If loc057d
+StartDrag
+loc066e:SetMember
+Push register1, "\x1a\x13\x1a"
+GetTime
+If loc05df
+CallFunction
+loc067d:GetMember
+Push "\x18\x03\x17", 0, "Object"
+NewObject
+SetMember
+loc068c:Push "dofus"
+GetVariable
+Push "\x18\x03\x17"
+GetMember
+Push "gapi"
+GetMember
+Not
+Not
+If loc010e
+Push "_global"
+Push "\x03"
+CharToAscii
+If loc00f3
+DefineLocal
+loc06b7:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "\x1c\x07\x11"
+GetMember
+Not
+Push 1, register1, "api"
+GetMember
+Push "\x19\x06\x1c"
+GetMember
+Push "Game"
+GetMember
+Push "ready"
+CallMethod
+Pop
+Push register1, "ready", register1, "\x1c\x07\x11"
+GetMember
+Not
+Push false
+Not
+If loc0704
+GetProperty
+loc0704:SetMember
+}
+Push "\t"
+CharToAscii
+If loc066e
+SetProperty
+loc0712:StoreRegister 0
+SetMember
+Push register0, "dofus"
+GetVariable
+Push "\x18\x03\x17"
+GetMember
+Push "gapi"
+GetMember
+Push "\x17\x01\x17"
+GetMember
+Push "\x17\t\x11"
+GetTime
+If loc0590
+SetMember
+loc073d:ConstantPool "dofus", "\x18\x03\x17", "gapi", "ui", "ChallengeMenu", "_global", "Object", "\x17\x01\x17", "\x17\t\x11", "prototype", "\x16\x19", "\x1e\n\x0e", "__get__labelReady", "\x16\x17", "\x1e\n\r", "__get__labelCancel", "\x10\x03", "\x1c\x02\x11", "_btnCancel", "_visible", "\x1c\x14\x10", "\x1d\b\n", "_x", "\x1b\x1a\x13", "\x1c\n\x14", "_lblReady", "\x1d\x10\x19", "__get__cancelButton", "\x1b\x07", "\x1c\x07\x11", "__get__ready", "\x18\t\x0b", "\x16\x1b\x18", "\x17\x02\x13", "object", "method", "\x1a\x17\x16", "\x16\x01\x0e", "text", "\x1a\x14\x04", "api", "\x19\x06\x1c", "Game", "ready", "\x1a\x13\x1a", "\x18\x14\x07", "addProperty", "cancelButton", "labelCancel", "labelReady", "ASSetPropFlags"
+Push true
+If loc033e
+SetProperty
+loc08aa:DefineFunction "", 0 {
+}
+Push true
+If loc0245
+ImplementsOp
+loc08bd:

@@ -1,0 +1,16 @@
+Push 167126319
+PushDuplicate
+BitOr
+If loc001f
+Push false
+Not
+If loc0039
+Jump loc0064
+loc001f:Push "ank.gapi.controls.Fps"
+loc0039:GetVariable
+Push "Fps", 2, "Object"
+GetVariable
+Push "registerClass"
+CallMethod
+Pop
+loc0064:

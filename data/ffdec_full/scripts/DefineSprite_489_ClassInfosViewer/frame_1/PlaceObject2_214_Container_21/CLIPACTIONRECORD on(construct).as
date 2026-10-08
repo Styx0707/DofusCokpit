@@ -1,0 +1,49 @@
+on(construct){
+   while(true)
+   {
+      if(!ord("\x0b"))
+      {
+         if(!ord("\x0b"))
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push("\x0b");
+      }
+      if(ord(§§pop()))
+      {
+         while(true)
+         {
+            if(!ord("\x06"))
+            {
+               startDrag(§§pop(),§§pop(),§§pop(),§§pop(),§§pop(),§§pop());
+               break;
+            }
+            backgroundRenderer = "";
+            set("\x16\x10\x12","");
+            dragAndDrop = true;
+            enabled = true;
+            set("\x18\x07\x0e",true);
+            §§push("highlightRenderer");
+            §§push("ClassInfosViewerSpellContainerHighlight");
+            if(!getTimer())
+            {
+               continue;
+            }
+            startDrag(§§pop(),§§pop(),§§pop(),§§pop(),§§pop(),§§pop());
+         }
+         §§goto(addr2ed38);
+      }
+      set(§§pop(),§§pop());
+      §§push(§§constant(8));
+      §§push(1);
+      break;
+   }
+   set(§§pop(),§§pop());
+   set("\x1d{invalid_utf8=150}\x07",0);
+   set("\b\b\x07\x01",false);
+   set("","");
+   addr2ed38:
+}

@@ -1,0 +1,35 @@
+onClipEvent(load){
+   while(true)
+   {
+      if(!(0x0CB360F4 & 0x0CB360F4))
+      {
+         if(!ord("\x04"))
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push("\x05");
+      }
+      if(!ord(§§pop()))
+      {
+         break;
+      }
+      function §\x1e\x11\t§(eventObj)
+      {
+         _parent.selectItem({target:this});
+      }
+      if(false)
+      {
+         §§push(§§pop()());
+      }
+      else
+      {
+         addr1a585:
+         this["\x15\x1d\x15"]("click",eval("\x1e\x11\t"));
+      }
+      return;
+   }
+   §§goto(addr1a585);
+}

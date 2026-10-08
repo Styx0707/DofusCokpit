@@ -1,0 +1,103 @@
+on(construct){
+   loop3:
+   while(true)
+   {
+      while(true)
+      {
+         while(true)
+         {
+            if(!(0x3277B577 | 0x3277B577))
+            {
+               if(false)
+               {
+                  break;
+               }
+            }
+            else
+            {
+               §§push(false);
+            }
+            if(§§pop())
+            {
+               break;
+            }
+            if(false)
+            {
+               §§push(§§pop()(§§pop()));
+               return;
+            }
+            break loop3;
+         }
+         §§goto(addra486);
+      }
+      return;
+   }
+   set("{invalid_utf8=150}\x02",true);
+   set("\x05",false);
+   set("\x12{invalid_utf8=157}\x02","&\x01{invalid_utf8=136}\x07");
+   set("\x02",true);
+   §§push("#{invalid_utf8=133}");
+   §§push("&\x01{invalid_utf8=136}\x07");
+   while(true)
+   {
+      set(§§pop(),§§pop());
+      set("{invalid_utf8=128}",false);
+      set("\x1d{invalid_utf8=150}\x04",true);
+      set("\b\x11\b\x03\x1d{invalid_utf8=150}\x04","\b\x12\b\x13\x1d{invalid_utf8=150}\x04");
+      set("\b\x14\b\x03\x1d{invalid_utf8=150}\x04",false);
+      §§push("\b\x15\x05");
+      §§push(false);
+      break;
+      §§push(new §\§\§pop()§());
+   }
+   loop1:
+   while(true)
+   {
+      set(§§pop(),§§pop());
+      set("\x1d{invalid_utf8=150}\x04",false);
+      set("\b\x16\x05",false);
+      set("{invalid_utf8=150}\x03",0);
+      set("",true);
+      §§push("\b");
+      §§push(false);
+      if(ord("\x0b"))
+      {
+         while(true)
+         {
+            set(§§pop(),§§pop());
+            set("2{invalid_utf8=157}\x02","&\x01{invalid_utf8=136}\x07");
+            set("9","i\x1d{invalid_utf8=150}\x04");
+            set("\b\f\x05","&\x01{invalid_utf8=136}\x07");
+            set("\x1d{invalid_utf8=150}\x04",false);
+            §§push("\b\r\x05");
+            §§push(false);
+            if(!ord("\b"))
+            {
+               §§pop() extends §§pop();
+            }
+            continue loop1;
+         }
+         return;
+         addra486:
+      }
+      setProperty(§§pop(), _X, §§pop());
+      set(§§pop(),§§pop());
+      set("\x1d{invalid_utf8=150}\x07",true);
+      set("\b\x0e\x01",false);
+      set("",false);
+      set("",316);
+      §§push("");
+      §§push(true);
+      if(!ord("\x06"))
+      {
+         var §§pop() = §§pop();
+         §§goto(addra52b);
+      }
+      set(§§pop(),§§pop());
+      set("\x1d{invalid_utf8=150}\x04",true);
+      set("\b\x0f\x05\x01\x1d{invalid_utf8=150}\x04",false);
+      return;
+      addra52b:
+   }
+   return;
+}

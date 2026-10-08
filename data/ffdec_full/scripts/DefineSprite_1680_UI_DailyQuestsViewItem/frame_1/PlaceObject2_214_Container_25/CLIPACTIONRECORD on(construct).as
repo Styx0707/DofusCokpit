@@ -1,0 +1,63 @@
+on(construct){
+   loop1:
+   while(true)
+   {
+      while(true)
+      {
+         while(true)
+         {
+            if(!ord("\x02"))
+            {
+               if(!ord("\x02"))
+               {
+                  break;
+               }
+            }
+            else
+            {
+               §§push(93107875);
+            }
+            if(!(§§pop() - 1))
+            {
+               break;
+            }
+            if(false)
+            {
+               §§pop() extends §§pop();
+               return;
+            }
+            break loop1;
+         }
+         §§goto(addr1e0e7);
+      }
+      return;
+   }
+   set("{invalid_utf8=150}\x05","\x07{invalid_utf8=163}{invalid_utf8=182}{invalid_utf8=140}\x05Q{invalid_utf8=157}\x02");
+   y = "{invalid_utf8=136}\x06";
+   set("\x02",false);
+   set("%",false);
+   §§push("{invalid_utf8=179}");
+   §§push(false);
+   while(true)
+   {
+      set(§§pop(),§§pop());
+      set("\x1d{invalid_utf8=150}\x04","{invalid_utf8=136}\x06");
+      set("\b\x07\b\x03\x1d{invalid_utf8=150}\x07",0);
+      set("\b\b\x01",2);
+      set("",false);
+      §§push("");
+      §§push("{invalid_utf8=136}\x06");
+      if(!ord("\x06"))
+      {
+         var §§pop() = §§pop();
+         §§goto(addr1e122);
+      }
+      addr1e155:
+      set(§§pop(),§§pop());
+      return;
+      addr1e122:
+   }
+   return;
+   addr1e0e7:
+   §§goto(addr1e155);
+}

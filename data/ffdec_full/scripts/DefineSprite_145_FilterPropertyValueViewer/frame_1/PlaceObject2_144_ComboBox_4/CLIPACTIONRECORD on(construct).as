@@ -1,0 +1,73 @@
+on(construct){
+   while(true)
+   {
+      if(!ord("\x07"))
+      {
+         if(!(0x11D88D06 | 0x11D88D06))
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push(114011814);
+      }
+      if(!(§§pop() + 1))
+      {
+         break;
+      }
+      while(true)
+      {
+         while(true)
+         {
+            if(false)
+            {
+               startDrag(§§pop(),§§pop(),§§pop(),§§pop(),§§pop(),§§pop());
+            }
+            else
+            {
+               background = "ComboBoxNormal";
+               set("\x16\x14\x1a","ButtonTransparentUp");
+               buttonBackgroundUp = "ButtonTransparentUp";
+               set("\x16\x14\x1b","ComboBoxButtonNormalIcon");
+               set("\x16\x14\x1d",20);
+               §§push("cellRenderer");
+               §§push("DefaultCellRenderer");
+               if(!getTimer())
+               {
+                  setProperty(§§pop(), _X, §§pop());
+                  break;
+               }
+            }
+            set(§§pop(),§§pop());
+            enabled = true;
+            set("\x18\r\x07",false);
+            set("\x18\x12\x12",0);
+            set("\x18\x12\x13",4);
+            set("\x18\x12\x14",0);
+            §§push("\x18\x12\x15");
+            §§push(0);
+            if(!getTimer())
+            {
+               §§push(§§pop()());
+               return;
+            }
+            break;
+         }
+         §§push(§§pop()(§§pop()));
+         set(§§pop(),§§pop());
+         set("\x18\x15\x18",1);
+         set("\x18\x15\x19",4);
+         set("\x18\x1c\x01","");
+         set("\x1a\x0f\x01",10);
+         §§push("rowHeight");
+         §§push(20);
+         addr8eab:
+         set(§§pop(),§§pop());
+         set(§§constant(22),§§constant(23));
+         break;
+      }
+      return;
+   }
+   §§goto(addr8eab);
+}

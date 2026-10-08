@@ -1,0 +1,17 @@
+ConstantPool "{invalid_utf8=140}"
+Push 87551636
+PushDuplicate
+BitAnd
+If loc0027
+Push "\n"
+CharToAscii
+If loc0047
+Jump loc0078
+loc0027:Push "ank.gapi.controls.ScrollBar"
+loc0047:GetVariable
+Push "ScrollBar", 2, "Object"
+GetVariable
+Push "registerClass"
+CallMethod
+Pop
+loc0078:

@@ -1,0 +1,63 @@
+on(construct){
+   while(true)
+   {
+      if(!ord("\x06"))
+      {
+         if(!ord("\x06"))
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push("\x05");
+      }
+      if(ord(§§pop()))
+      {
+         if(!(getTimer() + 1))
+         {
+            startDrag(§§pop(),§§pop(),§§pop(),§§pop(),§§pop(),§§pop());
+            §§goto(addr12dca);
+         }
+      }
+      set("{invalid_utf8=168}","{invalid_utf8=171}");
+      §§push("1");
+      §§push("{invalid_utf8=171}");
+      break;
+   }
+   set(§§pop(),§§pop());
+   set("2{invalid_utf8=157}\x02",false);
+   set("<",true);
+   while(true)
+   {
+      §§push("{invalid_utf8=136}\b");
+      §§push(false);
+      if(!(getTimer() + 1))
+      {
+         startDrag(§§pop(),§§pop(),§§pop(),§§pop(),§§pop(),§§pop());
+      }
+      else
+      {
+         addr12dca:
+         set(§§pop(),§§pop());
+         set(§§constant(6),"{invalid_utf8=171}");
+         set(§§constant(7),1);
+         set(§§constant(8),3);
+         set(§§constant(9),true);
+         §§push(§§constant(10));
+         §§push(§§constant(11));
+         if(false)
+         {
+            §§push(new §\§\§pop()§());
+         }
+         else
+         {
+            addr12d46:
+            set(§§pop(),§§pop());
+         }
+         §§goto(addr12e04);
+      }
+      §§goto(addr12d46);
+   }
+   addr12e04:
+}

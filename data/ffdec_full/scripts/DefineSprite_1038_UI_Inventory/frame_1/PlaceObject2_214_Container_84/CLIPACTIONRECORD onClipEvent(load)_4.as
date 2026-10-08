@@ -1,0 +1,32 @@
+onClipEvent(load){
+   while(true)
+   {
+      if(false)
+      {
+         if(!(true or true))
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push(false);
+      }
+      if(§§pop())
+      {
+         break;
+      }
+      function §\x1e\x11\n§(eventObj)
+      {
+         _parent.dblClickItem({target:this});
+      }
+      if(false)
+      {
+         startDrag(§§pop(),§§pop(),§§pop(),§§pop(),§§pop(),§§pop());
+         §§goto(addrd62f);
+      }
+      break;
+   }
+   this["\x15\x1d\x15"]("dblClick",eval("\x1e\x11\n"));
+   addrd62f:
+}

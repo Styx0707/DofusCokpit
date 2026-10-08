@@ -1,0 +1,35 @@
+onClipEvent(load){
+   while(true)
+   {
+      if(false)
+      {
+         if(false)
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push(false);
+      }
+      if(§§pop())
+      {
+         break;
+      }
+      function §\x1e\x11\n§(eventObj)
+      {
+         _parent.dblClickItem({target:this});
+      }
+      if(!ord("\b"))
+      {
+         §§pop() extends §§pop();
+      }
+      else
+      {
+         addr196c7:
+         this["\x15\x1d\x15"]("dblClick",eval("\x1e\x11\n"));
+      }
+      return;
+   }
+   §§goto(addr196c7);
+}

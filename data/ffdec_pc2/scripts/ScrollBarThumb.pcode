@@ -1,0 +1,17 @@
+ConstantPool "Ks", "{invalid_utf8=134}o"
+Push 255000849
+PushDuplicate
+BitAnd
+If loc002b
+Push "\x06"
+CharToAscii
+If loc0057
+Jump loc008d
+loc002b:Push "ank.gapi.controls.scrollbar.ScrollThumb"
+loc0057:GetVariable
+Push "ScrollBarThumb", 2, "Object"
+GetVariable
+Push "registerClass"
+CallMethod
+Pop
+loc008d:

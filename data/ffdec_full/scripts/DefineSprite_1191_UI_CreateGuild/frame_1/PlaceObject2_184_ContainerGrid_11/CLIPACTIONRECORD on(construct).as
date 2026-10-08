@@ -1,0 +1,41 @@
+on(construct){
+   while(true)
+   {
+      if(!ord("\x0b"))
+      {
+         if(!(true and true))
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push("\x05");
+      }
+      if(!ord(§§pop()))
+      {
+         §§goto(addr6b00);
+      }
+      §§push("enabled");
+      §§push(true);
+      break;
+   }
+   set(§§pop(),§§pop());
+   set("\x1a\x11\x11",true);
+   selectable = true;
+   styleName = "InventoryGrid";
+   set("\x1b\x18\x02",4);
+   §§push("\x1b\x18\x04");
+   §§push(5);
+   if(false)
+   {
+      startDrag(§§pop(),§§pop(),§§pop(),§§pop(),§§pop(),§§pop());
+   }
+   else
+   {
+      addr6b00:
+      set(§§pop(),§§pop());
+      §§goto(addr6b77);
+   }
+   addr6b77:
+}

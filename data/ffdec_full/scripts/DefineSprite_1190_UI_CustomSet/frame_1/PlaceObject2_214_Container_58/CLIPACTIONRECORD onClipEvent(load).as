@@ -1,0 +1,32 @@
+onClipEvent(load){
+   while(true)
+   {
+      if(!(0x264D0340 | 0x264D0340))
+      {
+         if(!ord("\x06"))
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push("\x02");
+      }
+      if(ord(§§pop()))
+      {
+         function §\x1e\x11\t§(eventObj)
+         {
+            _parent.selectItem({target:this});
+         }
+         if(false)
+         {
+            startDrag(§§pop(),§§pop(),§§pop(),§§pop(),§§pop(),§§pop());
+            §§goto(addr6b662);
+         }
+      }
+      §§push("\x1e\x11\t");
+      break;
+   }
+   this["\x15\x1d\x15"]("click",eval(§§pop()));
+   addr6b662:
+}

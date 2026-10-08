@@ -1,0 +1,80 @@
+on(construct){
+   loop2:
+   while(true)
+   {
+      loop3:
+      while(true)
+      {
+         if(!(true or true))
+         {
+            if(false)
+            {
+               while(true)
+               {
+                  set(§§pop(),§§pop());
+                  set("\b\x06\b\x07\x1d{invalid_utf8=150}\x07",0);
+                  set("\b\b\x01",true);
+                  set("",false);
+                  §§push("");
+                  §§push("");
+                  if(!getTimer())
+                  {
+                     §§goto(addre279);
+                     §§push(getProperty(§§pop(), _X));
+                  }
+                  §§goto(addre2b2);
+                  break loop3;
+               }
+               §§goto(addre375);
+               addre24f:
+            }
+         }
+         else
+         {
+            §§push(981517710);
+         }
+         if(!(§§pop() - 1))
+         {
+            break;
+         }
+         break loop2;
+      }
+      set(§§pop(),§§pop());
+      §§goto(addre24f);
+   }
+   do
+   {
+      set("{invalid_utf8=150}\x05",false);
+      set("\x07{invalid_utf8=142}ŀ:Q{invalid_utf8=157}\x02",false);
+      set("{invalid_utf8=161}",false);
+      set("{invalid_utf8=136}\x07",false);
+      set("\x02",true);
+      §§push("=E");
+      §§push(-1);
+      if(getTimer())
+      {
+         break loop3;
+      }
+      startDrag(§§pop(),§§pop(),§§pop(),§§pop(),§§pop(),§§pop());
+      set(§§pop(),§§pop());
+      set("\x1d{invalid_utf8=150}\x04","\b\t\x05\x01\x1d{invalid_utf8=150}\x04");
+      set("\b\n\x05","\b\t\x05\x01\x1d{invalid_utf8=150}\x04");
+      set("\x1d{invalid_utf8=150}\x04","\b\t\x05\x01\x1d{invalid_utf8=150}\x04");
+      §§push("\b\x0b\b\f4{invalid_utf8=157}\x02");
+      §§push(true);
+      if(false)
+      {
+         §§pop() extends §§pop();
+      }
+      else
+      {
+         §§goto(addre376);
+      }
+   }
+   while(true);
+   addre279:
+   addre375:
+   startDrag(§§pop(),§§pop(),§§pop(),§§pop(),§§pop(),§§pop());
+   addre376:
+   set(§§pop(),§§pop());
+}

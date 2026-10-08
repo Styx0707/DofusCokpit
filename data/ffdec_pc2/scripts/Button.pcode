@@ -1,0 +1,16 @@
+Push 366463465
+PushDuplicate
+BitOr
+If loc001f
+Push false
+Not
+If loc003c
+Jump loc006a
+loc001f:Push "ank.gapi.controls.Button"
+loc003c:GetVariable
+Push "Button", 2, "Object"
+GetVariable
+Push "registerClass"
+CallMethod
+Pop
+loc006a:

@@ -1,0 +1,16 @@
+while(true)
+{
+   if(false)
+   {
+      if(false)
+      {
+         break;
+      }
+   }
+   else
+   {
+      §§push("ank.gapi.controls.TextInput");
+   }
+   Object.registerClass("TextInput",eval(§§pop()));
+   break;
+}

@@ -1,0 +1,70 @@
+on(construct){
+   loop1:
+   while(true)
+   {
+      while(true)
+      {
+         while(true)
+         {
+            if(!(true or true))
+            {
+               if(false)
+               {
+                  break;
+               }
+            }
+            else
+            {
+               §§push(false);
+            }
+            if(!§§pop())
+            {
+               if(!ord("\t"))
+               {
+                  startDrag(§§pop(),§§pop(),§§pop(),§§pop(),§§pop(),§§pop());
+                  return;
+               }
+               break loop1;
+            }
+            §§goto(addr9b677);
+         }
+         §§goto(addr9b683);
+      }
+      return;
+   }
+   addr9b6ae:
+   set("{invalid_utf8=150}\x02",false);
+   set("\x05",true);
+   set("\x12{invalid_utf8=157}\x02",true);
+   set("{invalid_utf8=158}",true);
+   set("{invalid_utf8=136}\x04",true);
+   set("\x01",-1);
+   §§push("F");
+   §§push("\x1d{invalid_utf8=150}\x07");
+   set(§§pop(),§§pop());
+   set(§§constant(8),0);
+   while(true)
+   {
+      set("",true);
+      set("",true);
+      set("","\x1d{invalid_utf8=150}\x04");
+      §§push("\b\t\x05\x01\x1d{invalid_utf8=150}\x04");
+      §§push("\b\n\x05\x01\x1d{invalid_utf8=150}\x04");
+      if(false)
+      {
+         §§goto(addr9b6ae);
+         §§push(getProperty(§§pop(), _X));
+      }
+      addr9b6f4:
+      set(§§pop(),§§pop());
+      set("\b\x0b\b\f\x1d{invalid_utf8=150}\x04","\b\n\x05\x01\x1d{invalid_utf8=150}\x04");
+      set("\b\r\b\x0e{invalid_utf8=150}\x02","\b\n\x05\x01\x1d{invalid_utf8=150}\x04");
+      set("\x05",true);
+      return;
+      set(§§pop(),§§pop());
+      set(§§constant(8),0);
+   }
+   addr9b683:
+   §§pop() implements ;
+   §§goto(addr9b6f4);
+}

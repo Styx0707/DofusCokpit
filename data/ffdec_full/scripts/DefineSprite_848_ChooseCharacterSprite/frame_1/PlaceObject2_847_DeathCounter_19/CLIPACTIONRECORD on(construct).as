@@ -1,0 +1,19 @@
+on(construct){
+   while(true)
+   {
+      if(!ord("\x0b"))
+      {
+         if(false)
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push("\x17\x12\b");
+         §§push("defaultValue");
+      }
+      set(§§pop(),§§pop());
+      break;
+   }
+}

@@ -1,0 +1,18 @@
+while(true)
+{
+   if(false)
+   {
+      if(!ord("\n"))
+      {
+         break;
+      }
+   }
+   else
+   {
+      §§push(1);
+      §§push("cIop_R_Epaulette01");
+   }
+   §§push(GAC.applyColor(eval(§§pop()),§§pop()));
+   break;
+}
+§§pop();

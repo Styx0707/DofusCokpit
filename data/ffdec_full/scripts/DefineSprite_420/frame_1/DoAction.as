@@ -1,0 +1,21 @@
+while(true)
+{
+   if(!(true or true))
+   {
+      if(!ord("\n"))
+      {
+         break;
+      }
+   }
+   else
+   {
+      §§push(1);
+      §§push("cVlad_R_pied00");
+   }
+   §§push(eval(§§pop()));
+   §§push(2);
+   §§push(GAC);
+   §§push("applyColor");
+   break;
+}
+§§pop()[§§pop()]();

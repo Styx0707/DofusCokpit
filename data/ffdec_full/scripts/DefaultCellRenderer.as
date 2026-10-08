@@ -1,0 +1,16 @@
+while(true)
+{
+   if(false)
+   {
+      if(!ord("\x03"))
+      {
+         break;
+      }
+   }
+   else
+   {
+      §§push("ank.gapi.controls.list.DefaultCellRenderer");
+   }
+   Object.registerClass("DefaultCellRenderer",eval(§§pop()));
+   break;
+}

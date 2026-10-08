@@ -1,0 +1,20 @@
+while(true)
+{
+   if(false)
+   {
+      if(!(true or true))
+      {
+         break;
+      }
+   }
+   else
+   {
+      §§push(3);
+      §§push("cIop_R_Bras01");
+   }
+   §§push(eval(§§pop()));
+   §§push(2);
+   §§push(GAC);
+   break;
+}
+§§pop().applyColor();

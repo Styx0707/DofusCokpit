@@ -1,0 +1,384 @@
+ConstantPool "."
+Push "\b"
+CharToAscii
+If loc117c
+Push 602725181
+PushDuplicate
+BitOr
+If loc1184
+ConstantPool "{invalid_utf8=150}\x05", "\x07\x01{invalid_utf8=249}{invalid_utf8=180}!Q{invalid_utf8=157}\x02", "{invalid_utf8=233}\x04{invalid_utf8=136}\n", "\x03", "\x1dZ", "\x07\x12", "R", "O{invalid_utf8=150}\x0f", "\x07\x01", "", "", "\x02\x04\x01\x07\x03", "", "", "\b\x1c=\x17", "{invalid_utf8=142}\b", "", "", "", "\x03\x19", "\x10", "{invalid_utf8=150}\x0b", "\x05", "\x07\x01", "", "", "\x04\x02\b\x15R\x174P{invalid_utf8=157}\x02", "{invalid_utf8=199}\x03ON{invalid_utf8=150}\x02", "\b\x02N{invalid_utf8=150}\x02", "\b\x03N{invalid_utf8=150}\x02", "\b\x04N{invalid_utf8=150}\x02", "\b\x054{invalid_utf8=157}\x02", "6\x02@N{invalid_utf8=135}\x01", "\x01\x17{invalid_utf8=150}\x04", "\x04\x01\b\f{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "\x10", "+O{invalid_utf8=150}\x04", "\x04\x01\b\x154{invalid_utf8=157}\x02", "{invalid_utf8=151}{invalid_utf8=255}={invalid_utf8=142}\x17", "", "\x03", "\x06)", "\x02\x16\x14\x13", "\x03\x1b\b\x1d", "\x04\x19\x13\r", "\x15\x01{invalid_utf8=150}\x02", "\x04\x02\x12{invalid_utf8=157}\x02", "{invalid_utf8=197}", "{invalid_utf8=150}\x04", "\x04\x01\b\rN{invalid_utf8=150}\x04", "\b\x0e\x04\x02{invalid_utf8=157}\x02", "\n", "{invalid_utf8=150}\x02", "\b\x0f{invalid_utf8=153}\x02", "\x0b", "{invalid_utf8=150}\x07", "\x04\x04\x07\x04", "", "", "NO{invalid_utf8=150}\x04", "\x04\x01\b\rN{invalid_utf8=150}\x02", "\b\x10{invalid_utf8=150}\x03", "", "\x06", "2{invalid_utf8=157}\x02", ";", ",NO{invalid_utf8=150}\x04", "\x04\x01\b\x12N{invalid_utf8=150}\x04", "\x04\x01\b\x13N{invalid_utf8=150}\x02", "\x04\x05\x0b{invalid_utf8=150}\x05", "\x07\x1e", "", "", "\x0b{invalid_utf8=150}\t", "\x07\x02", "", "", "\x04\x01\b\x11{invalid_utf8=150}\x03", "", "\x0b", "2{invalid_utf8=157}\x02", ";", "\"N{invalid_utf8=135}\x01", "\x05\x17{invalid_utf8=150}\x04", "\x04\x01\b\x11N{invalid_utf8=150}\x04", "\b\x0e\x04\x02{invalid_utf8=157}\x02", "\n", "{invalid_utf8=150}\x02", "\b\x0f{invalid_utf8=153}\x02", "{invalid_utf8=163}{invalid_utf8=255}{invalid_utf8=150}\x07", "\x04\x04\x07", "", "", "", "{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "{invalid_utf8=141}{invalid_utf8=255}=N{invalid_utf8=150}\x02", "\b\x14R\x17{invalid_utf8=153}\x02", "E", "{invalid_utf8=150}\x04", "\x04\x01\b\rN{invalid_utf8=150}\x02", "\b\x0eN{invalid_utf8=150}\x01", "\x03I\x12\x12{invalid_utf8=157}\x02", "+", "{invalid_utf8=150}\x04", "\x04\x01\b\r{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "\x01", "\'N{invalid_utf8=150}\x04", "\b\x0e\b\x0fO{invalid_utf8=150}\x04", "\x04\x01\b\x11N{invalid_utf8=150}\x04", "\b\x0e\b\x0fO4P{invalid_utf8=157}\x02", "{invalid_utf8=187}{invalid_utf8=254}\"{invalid_utf8=157}\x02", "\x1a", "{invalid_utf8=150}\x02", "\b\x06\x1c{invalid_utf8=150}\x02", "\b", "N{invalid_utf8=150}\t", "\b\x01\x07", "", "", "", "\b\x07@O{invalid_utf8=150}\x02", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "U\x02#N{invalid_utf8=150}\t", "\b\x04\x07", "", "", "", "\b\x07@O{invalid_utf8=150}\x02", "\b\x06\x1c{invalid_utf8=150}\x02", "\b", "N{invalid_utf8=150}\x02", "\b\x014P{invalid_utf8=157}\x02", "&{invalid_utf8=254}#{invalid_utf8=142}\b", "", "", "", "\x02)", "f", "{invalid_utf8=150}\x04", "\x04\x01\b\x12N{invalid_utf8=150}\x04", "\x04\x01\b\x13N{invalid_utf8=150}\x05", "\x072", "", "", "\x0b{invalid_utf8=150}\t", "\x07\x02", "", "", "\x04\x01\b\x11N{invalid_utf8=150}\x02", "\b\x14R\x17{invalid_utf8=150}\x04", "\x04\x01\b\x12{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "\x01", "@N{invalid_utf8=150}\x04", "\x04\x01\b\x13N{invalid_utf8=150}\x05", "\x07\x14", "", "", "\x0b{invalid_utf8=150}\t", "\x07\x02", "", "", "\x04\x01\b\rN{invalid_utf8=150}\x02", "\b\x14R\x174P{invalid_utf8=157}\x02", "t{invalid_utf8=253}<{invalid_utf8=142}\b", "", "", "", "\x03\x19", "\r", "{invalid_utf8=150}\b", "\x07", "", "", "", "\x04\x02\x03R\x17{invalid_utf8=150}\x03", "", "\n", "2{invalid_utf8=157}\x02", "{invalid_utf8=252}\x01,\x1c{invalid_utf8=150}\t", "\b", "\x07", "", "", "", "\b\x07@O{invalid_utf8=150}\x02", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01N\x12\x124{invalid_utf8=157}\x02", "{invalid_utf8=226}{invalid_utf8=254}{invalid_utf8=36}\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\x02N{invalid_utf8=150}\x02", "\b\x03N{invalid_utf8=150}\x02", "\b\x04{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", ".", "@N{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\t", "\b\x02\x07", "", "", "", "\b\x07@O{invalid_utf8=150}\x02", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01{invalid_utf8=150}\x03", "", "\x05", "2{invalid_utf8=157}\x02", "x", "ON\x12\x12{invalid_utf8=157}\x02", "{invalid_utf8=205}{invalid_utf8=254}{invalid_utf8=150}\x02", "\b\x06\x1c{invalid_utf8=150}\x02", "\b", "N{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\x02N{invalid_utf8=150}\x02", "\b\x034P{invalid_utf8=157}\x02", "{invalid_utf8=154}{invalid_utf8=254}${invalid_utf8=142}\b", "", "", "", "\x03\x19", "3", "{invalid_utf8=150}\t", "\x07", "", "", "", "\x04\x02\b\x18R\x17{invalid_utf8=150}\n", "\b\x19\x04\x01\b\x1a\x04\x01\b\x17N{invalid_utf8=150}\x05", "\x07\x02", "", "", "C{invalid_utf8=150}\t", "\x07\x01", "", "", "\x04\x01\b\x1bR\x17{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "{invalid_utf8=248}\x01\'N{invalid_utf8=150}\x02", "\b\x02N{invalid_utf8=150}\x02", "\b\x03N\x12\x12{invalid_utf8=157}\x02", "{invalid_utf8=236}", "{invalid_utf8=150}\x02", "\b\x06\x1c{invalid_utf8=150}\x02", "\b", "4{invalid_utf8=157}\x02", "{invalid_utf8=192}", "\'{invalid_utf8=150}\x02", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\x02N{invalid_utf8=150}\x02", "\b\x03N{invalid_utf8=150}\x02", "\b\x04{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", ")", ",O{invalid_utf8=150}\x04", "\x04\x01\b\x18{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "U{invalid_utf8=255}<O{invalid_utf8=150}\x04", "\x04\x01\b\x16{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "O", "#N{invalid_utf8=150}\x02", "\b\x05N\x12\x12{invalid_utf8=157}\x02", "{invalid_utf8=244}{invalid_utf8=251}{invalid_utf8=150}{invalid_utf8=2}", "\b", "\x1c\x12\x12{invalid_utf8=157}\x02", "{invalid_utf8=147}{invalid_utf8=254}{invalid_utf8=150}\x02", "\b\x06{invalid_utf8=150}\x03", "", "\b", "2{invalid_utf8=157}\x02", "s{invalid_utf8=254}<N{invalid_utf8=150}\x02", "\b\x02N\x12\x12{invalid_utf8=157}\x02", "{invalid_utf8=192}{invalid_utf8=254}{invalid_utf8=150}\x02", "\b\x06\x1c{invalid_utf8=150}\x02", "\b", "4P{invalid_utf8=157}\x02", "{invalid_utf8=153}{invalid_utf8=254}i{invalid_utf8=142}\b", "", "", "", "\x02)", "\x0e", "{invalid_utf8=150}\t", "\x07", "", "", "", "\x04\x01\b\x17R\x174P{invalid_utf8=157}\x02", "j{invalid_utf8=255},N{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\x02N{invalid_utf8=150}\t", "\b\x03\x07", "", "", "", "\b\x07@O{invalid_utf8=150}\x02", "\b", "{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "*{invalid_utf8=254},{invalid_utf8=135}\x01", "", "O{invalid_utf8=150}\x04", "\x04", "\b\b\x1c{invalid_utf8=150}\x02", "\b\x02N{invalid_utf8=150}\x02", "\b\tN{invalid_utf8=150}\x02", "\b\nNi{invalid_utf8=150}\x04", "\x04", "\b\x0b4P{invalid_utf8=157}\x02", "}{invalid_utf8=251}\"{invalid_utf8=136}{invalid_utf8=174}", "\x1d", "dofus", "\x18\x03\x17", "gapi", "\x17\x01\x0e", "\x16\x10\t", "BookPageIndexChapterItem", "_global", "Object", "\x16\x04\t", "\x17\x01\x17", "\x1b\x13\x05", "prototype", "\x1a\x1b\x05", "\x1c\x1c\x0f", "text", "", "textWidth", "\x1c\x14\x1a", "\x0e\x06", "\x1d", "\x1a\x19\x1c", "\x18\t\x0b", "\x17\x02\x13", "\x16\x05\x15", "size", "object", "method", "\x16\x01\x0e", "ASSetPropFlags", "4{invalid_utf8=157}\x02", "0{invalid_utf8=254}iO{invalid_utf8=150}\x04", "\x04\x01\b\x17{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "m{invalid_utf8=252}\"{invalid_utf8=198}\t{invalid_utf8=132}P\x01", "", "", "*\x0e\x01", "{invalid_utf8=132}P__Packages.dofus.\x18\x03\x17.gapi.ui.Register", "{invalid_utf8=255}\x0e\'>", "", "{invalid_utf8=132}P{invalid_utf8=136}\x06", "\x02", "{invalid_utf8=128}", "Y", "{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "\x11", "{invalid_utf8=150}\x03", "", "\n", "2{invalid_utf8=157}\x02", "\r", "{invalid_utf8=136}\x1b", "DZ{invalid_utf8=150}\x05", "\x07\x1f\x1bY", "L`{invalid_utf8=157}\x02", "{invalid_utf8=171}5{invalid_utf8=136}\x06", "\x02", ";", "\"", "O{invalid_utf8=150}\x10", "\x07\x01", "", "", "\x02\x04\x01\x07\x03", "", "", "\t\x04\x01=\x17{invalid_utf8=150}\x06", "\x04", "\b\x0b\b\x04O{invalid_utf8=150}\t", "\x04", "\b{invalid_utf8=243}\x07d", "", "", "O{invalid_utf8=150}\t", "\x04\x01\b{invalid_utf8=242}\x07", "", "", "", "O{invalid_utf8=150}\x06", "\x04\x01\b{invalid_utf8=240}\x05", "4P{invalid_utf8=157}\x02", "V\f<{invalid_utf8=142}\b", "", "", "", "\x03\x19", "{invalid_utf8=217}", "{invalid_utf8=150}\x02", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\x02N{invalid_utf8=150}\x02", "\b\x03N{invalid_utf8=150}\x02", "\b\x04N{invalid_utf8=150}\x02", "\b\x0bN{invalid_utf8=150}\x0b", "\x05", "\x07\x02", "", "", "\x04\x02\b\n{invalid_utf8=150}\x03", "", "\t", "2{invalid_utf8=157}\x02", ",", "={invalid_utf8=142}\r", "", "\x01", "\x03)", "\x02\x16\x13\r", "\x14", "{invalid_utf8=150}\t", "\x04\x02\x07\x01", "", "", "\b\x0e\x1c{invalid_utf8=150}\x02", "\b\x11R\x174{invalid_utf8=157}\x02", "@", "#R\x17{invalid_utf8=150}\x0b", "\x04\x01\b\f\x07", "", "", "", "\b\r@O{invalid_utf8=150}\x04", "\b\x0e\x04\x01<{invalid_utf8=150}\x0b", "\x04\x01\b\x0f\x07", "", "", "", "\b\r@O{invalid_utf8=150}\x04", "\x04\x01\b\x0fN{invalid_utf8=150}\x02", "\b\x104P{invalid_utf8=157}\x02", "{invalid_utf8=151}{invalid_utf8=255}<O{invalid_utf8=150}\x0b", "\b\x12\x07\x01", "", "", "\x04\x01\b\x13N{invalid_utf8=150}\x02", "\b\x14N{invalid_utf8=150}\x02", "\b\x15R{invalid_utf8=150}\t", "\x07\x01", "", "", "\x04\x01\b\x0fN{invalid_utf8=150}\x02", "\b\x16R\x174{invalid_utf8=157}\x02", "{invalid_utf8=227}\x1a@{invalid_utf8=150}\x02", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\x02N{invalid_utf8=150}\x02", "\b\x03N{invalid_utf8=150}\x02", "\b\x04N\x12\x12{invalid_utf8=157}\x02", "g\x0b4{invalid_utf8=157}\x02", "{invalid_utf8=207}3=O{invalid_utf8=150}\x04", "\x04\x01\b{invalid_utf8=150}4{invalid_utf8=157}\x02", "{invalid_utf8=215}-+O{invalid_utf8=150}\x04", "\x04\x01\b${invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "{invalid_utf8=246}\x11i{invalid_utf8=142}\r", "", "\x01", "\x03)", "\x02\x16\f\x06", "{invalid_utf8=169}", "{invalid_utf8=150}\x04", "\x04\x01\b{invalid_utf8=167}N\x12{invalid_utf8=157}\x02", "\x05", "{invalid_utf8=150}\x01", "\x03>{invalid_utf8=150}\x04", "\x04\x01\b{invalid_utf8=168}N{invalid_utf8=150}\x05", "\x07\x02", "", "", "I\x12L\x12{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "6", "@O{invalid_utf8=150}\x04", "\x04\x01\b{invalid_utf8=170}N{invalid_utf8=150}\r", "\b{invalid_utf8=172}\b{invalid_utf8=173}\x07\x01", "", "", "\x04\x01\b\x13N{invalid_utf8=150}\x02", "\b\x14N{invalid_utf8=150}\x02", "\b\x15RO{invalid_utf8=150}\x04", "\x04\x01\b{invalid_utf8=174}4{invalid_utf8=157}\x02", "9", ",{invalid_utf8=157}\x02", "\x07", "\x17{invalid_utf8=150}\x02", "\x04\x02\x12\x12{invalid_utf8=157}\x02", "\x05", "{invalid_utf8=150}\x01", "\x03>{invalid_utf8=150}\x06", "\x04\x01\b{invalid_utf8=169}\x05\x01O{invalid_utf8=150}\x04", "\x04\x01\b{invalid_utf8=170}N{invalid_utf8=150}\x04", "\b{invalid_utf8=171}\x05\x014P{invalid_utf8=157}\x02", "{invalid_utf8=148}{invalid_utf8=255}\"N{invalid_utf8=150}\x04", "\b0\b{invalid_utf8=154}O4P{invalid_utf8=157}\x02", "{invalid_utf8=188}\x0f@O{invalid_utf8=150}\x04", "\x04\x01\b%4P{invalid_utf8=157}\x02", "s&,{invalid_utf8=135}\x01", "", "O{invalid_utf8=150}\x04", "\x04", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\x02N{invalid_utf8=150}\x02", "\b\x07N{invalid_utf8=150}\x02", "\b\b{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "{invalid_utf8=215}.i{invalid_utf8=142}\r", "", "\x01", "\x03)", "\x02\x19\x12\x1d", "\x0b\x02{invalid_utf8=150}\x04", "\x04\x01\b{invalid_utf8=167}N\x12{invalid_utf8=157}\x02", "\x05", "{invalid_utf8=150}\x01", "\x03>{invalid_utf8=150}\x04", "\x04\x02\b\x1aN{invalid_utf8=135}\x01", "", "{invalid_utf8=150}\x04", "\x04\x01\bhNf{invalid_utf8=157}\x02", "1", "{invalid_utf8=150}\x06", "\x04", "\x04\x01\bk{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "\"\x01\"Nf{invalid_utf8=157}\x02", "{invalid_utf8=206}", "{invalid_utf8=150}\x06", "\x04", "\x04\x01\bvNf{invalid_utf8=157}\x02", "{invalid_utf8=154}\x01{invalid_utf8=153}\x02", "{invalid_utf8=173}\x01{invalid_utf8=150}\x04", "\x04\x01\b{invalid_utf8=185}N{invalid_utf8=150}\x06", "\b{invalid_utf8=216}\x04\x01\b{invalid_utf8=185}{invalid_utf8=150}\x03", "", "\x05", "2{invalid_utf8=157}\x02", "]", "=R\x12{invalid_utf8=157}\x02", "\x13", "{invalid_utf8=150}\x0e", "\x07\x02", "", "", "\x07\x01", "", "", "\x04\x01\b R\x17{invalid_utf8=153}\x02", "+", "{invalid_utf8=150}\x0e", "\x07\x02", "", "", "\x07\x01", "", "", "\x04\x01\b{invalid_utf8=194}R\x12{invalid_utf8=157}\x02", "\x0e", "{invalid_utf8=150}\t", "\x07", "", "", "", "\x04\x01\b{invalid_utf8=202}R\x17{invalid_utf8=153}\x02", "", "", "{invalid_utf8=153}\x02", "@\x01{invalid_utf8=150}\x03", "", "\x04", "2{invalid_utf8=157}\x02", "\x1c\x01$N{invalid_utf8=150}\x02", "\b{invalid_utf8=216}N\x12O{invalid_utf8=153}\x02", "%\x01{invalid_utf8=150}\x04", "\x04\x01\bnN{invalid_utf8=150}\x04", "\b{invalid_utf8=216}\x05\x01O{invalid_utf8=153}\x02", "\x10\x01{invalid_utf8=150}\x04", "\x04\x01\boN{invalid_utf8=150}\x04", "\b{invalid_utf8=216}\x05\x01{invalid_utf8=150}\x03", "", "\x0b", "2{invalid_utf8=157}\x02", "{invalid_utf8=154}", "@{invalid_utf8=150}\x04", "\x04\x01\b{invalid_utf8=168}N{invalid_utf8=135}\x01", "", "{invalid_utf8=150}\x05", "\x07\x01", "", "", "f{invalid_utf8=157}\x02", "\x15", "{invalid_utf8=150}\x07", "\x04", "\x07\x02", "", "", "f{invalid_utf8=157}\x02", "Z{invalid_utf8=255}{invalid_utf8=153}\x02", "{invalid_utf8=128}{invalid_utf8=255}{invalid_utf8=150}\x0e", "\x07\x01", "", "", "\x07\x01", "", "", "\x04\x01\b\x02", "\x05", "\x12{invalid_utf8=157}\x02", "\x1a{invalid_utf8=255}iNf{invalid_utf8=157}\x02", "|{invalid_utf8=255}{invalid_utf8=150}\x06", "\x04", "\x04\x01\bjNf{invalid_utf8=157}\x02", "{invalid_utf8=129}{invalid_utf8=255}{invalid_utf8=150}\x06", "\x04", "\x04\x01\blNf{invalid_utf8=157}\x02", ",", "{invalid_utf8=150}\x06", "\x04", "\x04\x01\bfNf{invalid_utf8=157}\x02", ";", "{invalid_utf8=150}\x06", "\x04", "\x04\x01\bu{invalid_utf8=150}\x03", "", "\x0b", "2{invalid_utf8=157}\x02", "{invalid_utf8=147}{invalid_utf8=254}#O{invalid_utf8=153}\x02", "U", "{invalid_utf8=150}\x04", "\x04\x01\b{invalid_utf8=179}N{invalid_utf8=150}\x06", "\b{invalid_utf8=216}\x04\x01\b{invalid_utf8=179}N{invalid_utf8=150}\x02", "\b{invalid_utf8=216}N\x12O{invalid_utf8=153}\x02", "6", "{invalid_utf8=150}\t", "\x07", "", "", "", "\x04\x01\b\x17R\x17{invalid_utf8=153}\x02", "#", "{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "%{invalid_utf8=255}@{invalid_utf8=150}\x0e", "\x07\x01", "", "", "\x07\x01", "", "", "\x04\x01\b R\x17{invalid_utf8=153}\x02", "", "", "{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "{invalid_utf8=211},iO{invalid_utf8=150}\x04", "\x04\x01\b��\x03", "", "\x06", "2{invalid_utf8=157}\x02", "T\r+{invalid_utf8=142}\r", "", "\x01", "\x03)", "\x02\x19\x0f\b", "m\x04{invalid_utf8=150}\x02", "\x04\x02{invalid_utf8=135}\x01", "", "{invalid_utf8=150}\x05", "\x07\x01", "", "", "f{invalid_utf8=157}\x02", "\x15", "{invalid_utf8=150}\x07", "\x04", "\x07\x02", "", "", "f{invalid_utf8=157}\x02", "{invalid_utf8=245}\x02{invalid_utf8=153}\x02", ";\x04{invalid_utf8=150}\x04", "\x04\x01\b{invalid_utf8=165}N{invalid_utf8=150}\x02", "\b04P{invalid_utf8=157}\x02", "{invalid_utf8=189}\x01\"{invalid_utf8=150}\x04", "\x04\x01\b{invalid_utf8=182}N{invalid_utf8=150}\x02", "\b0N{invalid_utf8=150}\x02", "\b{invalid_utf8=158}N{invalid_utf8=150}\x05", "\x07", "", "", "", "g\x12L{invalid_utf8=157}\x02", "", "\x17{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "\x1e\x01#N{invalid_utf8=150}\x05", "\x07{invalid_utf8=255}{invalid_utf8=255}{invalid_utf8=255}{invalid_utf8=255}IL{invalid_utf8=157}\x02", "b", "\x17{invalid_utf8=150}\x04", "\x04\x01\b{invalid_utf8=184}N{invalid_utf8=150}\x02", "\b{invalid_utf8=195}N{invalid_utf8=150}\x02", "\b{invalid_utf8=196}4{invalid_utf8=157}\x02", ">", "iN{invalid_utf8=150}\x02", "\b{invalid_utf8=195}N{invalid_utf8=150}\x02", "\b{invalid_utf8=134}N{invalid_utf8=150}\x05", "\x07{invalid_utf8=255}{invalid_utf8=255}{invalid_utf8=255}{invalid_utf8=255}IL{invalid_utf8=157}\x02", "+", "\x17{invalid_utf8=150}\x04", "\x04\x01\b{invalid_utf8=149}N{invalid_utf8=150}\x02", "\b{invalid_utf8=195}N{invalid_utf8=150}\x02", "\b{invalid_utf8=134}{invalid_utf8=150}\x03", "", "\x05", "2{invalid_utf8=157}\x02", "{invalid_utf8=153}{invalid_utf8=255}+N{invalid_utf8=150}\x05", "\x07", "", "", "", "I\x12{invalid_utf8=157}\x02", "q\x01{invalid_utf8=150}\r", "\b{invalid_utf8=197}\b{invalid_utf8=198}\x07\x01", "", "", "\x04\x01\b\x13N{invalid_utf8=150}\x02", "\b\x14N{invalid_utf8=150}\x02", "\b.R{invalid_utf8=150}\x0b", "\b{invalid_utf8=199}\x07\x01", "", "", "\x04\x01\b\x13N{invalid_utf8=150}\x02", "\b\x14{invalid_utf8=150}\x03", "", "\x04", "2{invalid_utf8=157}\x02", "\b\x01<N{invalid_utf8=150}\x05", "\x07", "", "", "", "g\x12L{invalid_utf8=157}\x02", "{invalid_utf8=171}{invalid_utf8=255}\x17{invalid_utf8=150}\x04", "\x04\x01\bN{invalid_utf8=150}\x02", "\b0N{invalid_utf8=150}\x02", "\b{invalid_utf8=158}N{invalid_utf8=150}\x05", "\x07", "", "", "", "g\x12{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "d", "\'{invalid_utf8=150}\x04", "\x04\x01\b{invalid_utf8=183}N{invalid_utf8=150}\x02", "\b0N{invalid_utf8=150}\x02", "\b{invalid_utf8=158}N{invalid_utf8=150}\x05", "\x07", "", "", "", "g\x12L{invalid_utf8=157}\x02", "]{invalid_utf8=255}\x174{invalid_utf8=157}\x02", "{invalid_utf8=179}{invalid_utf8=254}#{invalid_utf8=150}\x04", "\x04\x01\b{invalid_utf8=137}N{invalid_utf8=150}\x02", "\b{invalid_utf8=195}N{invalid_utf8=150}\x02", "\b{invalid_utf8=134}N{invalid_utf8=150}\x05", "\x07{invalid_utf8=255}{invalid_utf8=255}{invalid_utf8=255}{invalid_utf8=255}IL{invalid_utf8=157}\x02", "2{invalid_utf8=255}\x17{invalid_utf8=150}\x04", "\x04\x01\b{invalid_utf8=147}{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "{invalid_utf8=216}{invalid_utf8=254}#L{invalid_utf8=157}\x02", "\x18{invalid_utf8=255}\x17{invalid_utf8=150}\x04", "\x04\x01\b{invalid_utf8=181}N{invalid_utf8=150}\x02", "\b0N{invalid_utf8=150}\x02", "\b{invalid_utf8=158}N{invalid_utf8=150}\x05", "\x07", "", "", "", "g\x12L{invalid_utf8=157}\x02", "{invalid_utf8=243}{invalid_utf8=254}{invalid_utf8=23}{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "g{invalid_utf8=255}\"N{invalid_utf8=150}\x02", "\b{invalid_utf8=158}N{invalid_utf8=150}\x05", "\x07", "", "", "", "g\x12L{invalid_utf8=157}\x02", "{invalid_utf8=208}{invalid_utf8=254}\x17{invalid_utf8=150}\x04", "\x04\x01\b}N{invalid_utf8=150}\x02", "\b0N{invalid_utf8=150}\x02", "\b{invalid_utf8=158}4{invalid_utf8=157}\x02", "{invalid_utf8=250}{invalid_utf8=254}\"N{invalid_utf8=150}\x02", "\b.R{invalid_utf8=150}\t", "\x07\x03", "", "", "\x04\x01\b\x13N{invalid_utf8=150}\x02", "\bzN{invalid_utf8=150}\x02", "\b{invalid_utf8=200}R\x17{invalid_utf8=150}\x02", "\x05", ">{invalid_utf8=153}\x02", "{invalid_utf8=188}", "{invalid_utf8=150}\x04", "\x04\x01\b}4{invalid_utf8=157}\x02", "{invalid_utf8=181}\x01@N{invalid_utf8=150}\x02", "\b0N{invalid_utf8=150}\x02", "\b{invalid_utf8=158}N{invalid_utf8=150}\x05", "\x07", "", "", "", "g\x12L{invalid_utf8=157}\x02", "=\x01\x17{invalid_utf8=150}\x04", "\x04\x01\b{invalid_utf8=174}4{invalid_utf8=157}\x02", "X\x01,N{invalid_utf8=150}\x02", "\b{invalid_utf8=195}N{invalid_utf8=150}\x02", "\b{invalid_utf8=134}N{invalid_utf8=150}\x02", "\b{invalid_utf8=155}IL{invalid_utf8=157}\x02", "\x15\x01\x17{invalid_utf8=150}\x04", "\x04\x01\b{invalid_utf8=164}{invalid_utf8=150}\x03", "", "\n", "2{invalid_utf8=157}\x02", "{invalid_utf8=238}", "$N{invalid_utf8=150}\x02", "\b0N{invalid_utf8=150}\x02", "\b{invalid_utf8=158}N{invalid_utf8=150}\x05", "\x07", "", "", "", "g\x12L{invalid_utf8=157}\x02", "{invalid_utf8=227}", "\x17{invalid_utf8=150}\x04", "\x04\x01\b{invalid_utf8=178}4P{invalid_utf8=157}\x02", "z{invalid_utf8=255}\"N{invalid_utf8=150}\x02", "\b.R{invalid_utf8=150}\t", "\x07\x03", "", "", "\x04\x01\b\x13N{invalid_utf8=150}\x02", "\bzN{invalid_utf8=150}\x02", "\b{invalid_utf8=200}R\x17{invalid_utf8=150}\x02", "\x05", ">{invalid_utf8=153}\x02", "K\x01{invalid_utf8=150}\x04", "\x04\x01\b{invalid_utf8=177}{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "{invalid_utf8=150}{invalid_utf8=255}@N{invalid_utf8=150}\x05", "\x07\b", "", "", "H\x12{invalid_utf8=157}\x02", "{invalid_utf8=217}{invalid_utf8=255}{invalid_utf8=150}\r", "\b{invalid_utf8=197}\b{invalid_utf8=201}\x07\x01", "", "", "\x04\x01\b\x13N{invalid_utf8=150}\x02", "\b\x14N{invalid_utf8=150}\x02", "\b.R{invalid_utf8=150}\x0b", "\b{invalid_utf8=199}\x07\x01", "", "", "\x04\x01\b\x13N{invalid_utf8=150}\x02", "\b\x144P{invalid_utf8=157}\x02", "z{invalid_utf8=255}<R{invalid_utf8=150}\x0b", "\b{invalid_utf8=199}\x07\x01", "", "", "\x04\x01\b\x13N{invalid_utf8=150}\x02", "\b\x14N{invalid_utf8=150}\x02", "\b.R{invalid_utf8=150}\t", "\x07\x03", "", "", "\x04\x01\b\x13N{invalid_utf8=150}\x02", "\bz{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "{invalid_utf8=165}", "ON{invalid_utf8=150}\x02", "\b{invalid_utf8=195}N{invalid_utf8=150}\x02", "\b{invalid_utf8=134}N{invalid_utf8=150}\x02", "\b{invalid_utf8=155}I\x12{invalid_utf8=157}\x02", "{invalid_utf8=153}", "{invalid_utf8=150}\r", "\b{invalid_utf8=197}\b{invalid_utf8=198}\x07\x01", "", "", "\x04\x01\b\x13N{invalid_utf8=150}\x02", "\b\x14N{invalid_utf8=150}\x02", "\b.4{invalid_utf8=157}\x02", "{invalid_utf8=140}{invalid_utf8=255}#N{invalid_utf8=150}\x02", "\b0N{invalid_utf8=150}\x02", "\b{invalid_utf8=158}N{invalid_utf8=150}\x05", "\x07", "", "", "", "g\x12L{invalid_utf8=157}\x02", "{invalid_utf8=186}{invalid_utf8=255}\x17{invalid_utf8=150}\x04", "\x04\x01\bx{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "y{invalid_utf8=254}\"N{invalid_utf8=150}\x02", "\b0N{invalid_utf8=150}\x02", "\b{invalid_utf8=158}N{invalid_utf8=150}\x05", "\x07\b", "", "", "HL{invalid_utf8=157}\x02", "{invalid_utf8=255}{invalid_utf8=254}\x17{invalid_utf8=150}\x04", "\x04\x01\bN{invalid_utf8=150}\x02", "\b0N{invalid_utf8=150}\x02", "\b{invalid_utf8=158}4{invalid_utf8=157}\x02", "{invalid_utf8=219}{invalid_utf8=254}\'N{invalid_utf8=150}\x02", "\b{invalid_utf8=200}R\x17{invalid_utf8=150}\x02", "\x05", ">{invalid_utf8=153}\x02", "", "", "{invalid_utf8=150}\x02", "\x05\x01>4{invalid_utf8=157}\x02", "I,\"O{invalid_utf8=150}\x04", "\x04\x01\b#{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "{invalid_utf8=142}\x03#\x1c{invalid_utf8=150}\x02", "\b", "N{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\t", "\b\x02\x07", "", "", "", "\b\x06@O{invalid_utf8=150}\x02", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "74@O{invalid_utf8=150}\x04", "\x04\x01\bt{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "{invalid_utf8=161}\x01\'O{invalid_utf8=150}\x04", "\x04\x01\b\x02", "\x05\x01{invalid_utf8=157}\x02", "\x11{invalid_utf8=251}={invalid_utf8=142}\b", "", "", "", "\x02)", "8\x01{invalid_utf8=150}\n", "\b\x1e\x04\x01\b\x1f\x04\x01\b N{invalid_utf8=150}\f", "\b!\x07\x01", "", "", "\x07\x01", "", "", "B{invalid_utf8=150}\x05", "\x07\x03", "", "", "C{invalid_utf8=150}\t", "\x07\x01", "", "", "\x04\x01\b\"R\x17{invalid_utf8=150}\n", "\b\x1e\x04\x01\b\x1f\x04\x01\b#4P{invalid_utf8=157}\x02", "D", "<N{invalid_utf8=150}\x05", "\x07\x02", "", "", "C{invalid_utf8=150}\t", "\x07\x01", "", "", "\x04\x01\b\"R\x17{invalid_utf8=150}\n", "\b\x1e\x04\x01\b\x1f\x04\x01\b&N{invalid_utf8=150}\x05", "\x07\x02", "", "", "C{invalid_utf8=150}\t", "\x07\x01", "", "", "\x04\x01\b\"4P{invalid_utf8=157}\x02", "S", ",N{invalid_utf8=150}\x05", "\x07\x02", "", "", "C{invalid_utf8=150}\t", "\x07\x01", "", "", "\x04\x01\b\"R\x17{invalid_utf8=150}\n", "\b\x1e\x04\x01\b\x1f\x04\x01\b$N{invalid_utf8=150}\x05", "\x07\x02", "", "", "C{invalid_utf8=150}\t", "\x07\x01", "", "", "\x04\x01\b\"R\x17{invalid_utf8=150}\n", "\b\x1e\x04\x01\b\x1f\x04\x01\b%4P{invalid_utf8=157}\x02", "l{invalid_utf8=255}#R\x17{invalid_utf8=150}\n", "\b\x1e\x04\x01\b\x1f\x04\x01\b\'N{invalid_utf8=150}\x06", "\b!\x04\x01\b\x13N{invalid_utf8=150}\x02", "\b(N{invalid_utf8=150}\x02", "\b)N{invalid_utf8=150}\x02", "\b*N{invalid_utf8=150}\x05", "\x07\x01", "", "", "B{invalid_utf8=150}\x03", "", "\b", "2{invalid_utf8=157}\x02", "\x01", "\"{invalid_utf8=150}\x05", "\x07\x03", "", "", "C{invalid_utf8=150}\t", "\x07\x01", "", "", "\x04\x01\b\"R\x174P{invalid_utf8=157}\x02", "J{invalid_utf8=254}@{invalid_utf8=142}\b", "", "", "", "\x02)", "/", "{invalid_utf8=150}\x0b", "\b{invalid_utf8=247}\x07\x01", ""
+Jump loc1198
+loc117c:Push 565508353
+loc1184:Decrement
+If loc1677
+ConstantPool "\x1dZ", "\x07\x12", "R"
+loc1197:SetMember
+loc1198:Push 1, null, register1, 3, "\b\x02N{invalid_utf8=150}\x02"
+CallFunction
+Pop
+loc11ac:Jump loc1743
+loc11b1:DefineFunction2 "", 0, 3, false, false, false, true, true, false, false, true, false {
+Push false, 1, register2, "\x18\t\x0b"
+CallMethod
+Pop
+}
+GetTime
+Increment
+If loc159a
+SetMember
+loc11d4:GetMember
+Push "gapi"
+GetMember
+Push "\x17\x01\x0e"
+GetMember
+Push "\x16\x10\t"
+GetMember
+Push "BookPageIndexChapterItem"
+GetTime
+If loc1428
+NewObject
+loc11f3:GetMember
+StoreRegister 1
+Pop
+Push register1, "\x1a\x1b\x05"
+Push false
+Not
+If loc121b
+CastOp
+loc120c:SetMember
+Push register1, "\x18\t\x0b"
+GetTime
+If loc11b1
+CallFunction
+loc121b:DefineFunction2 "", 3, 6, false, false, true, false, true, false, false, true, false, 2, "\x16\x14\x13", 3, "\x1b\b\x1d", 4, "\x19\x13\r" {
+Push register2
+Not
+If loc1305
+Push register1, "\x1c\x1c\x0f"
+GetMember
+Push "text", register2
+If loc125e
+Push ""
+Jump loc1269
+loc125e:Push register4, 4
+GetMember
+loc1269:SetMember
+Push register1, "\x1c\x1c\x0f"
+GetMember
+Push "textWidth"
+Push "\x06"
+CharToAscii
+If loc12be
+ImplementsOp
+loc1284:GetMember
+loc1285:SetMember
+Push register1, "\x0e\x06"
+GetMember
+Push register1, "\x1d"
+GetMember
+Push register5
+Subtract
+Push 30
+Subtract
+Push 2, register1, "\x1c\x14\x1a"
+Push "\x0b"
+CharToAscii
+If loc12f8
+GetProperty
+loc12be:GetMember
+StoreRegister 5
+Pop
+Push register1, "\x1c\x14\x1a"
+GetMember
+Push "text", register2
+If loc12e2
+Push ""
+Jump loc1285
+loc12e2:Push register4, 0
+Push false
+Not
+If loc1284
+CallFunction
+loc12f8:GetMember
+Push "\x1a\x19\x1c"
+CallMethod
+Pop
+Jump loc134a
+loc1305:Push register1, "\x1c\x1c\x0f"
+GetMember
+Push "text"
+GetMember
+Push undefined
+Equals2
+Not
+Not
+If loc134a
+Push register1, "\x1c\x1c\x0f"
+Push true
+If loc1331
+StartDrag
+loc1331:GetMember
+Push "text", ""
+SetMember
+Push register1, "\x1c\x14\x1a"
+GetMember
+Push "text", ""
+SetMember
+}
+loc134a:GetTime
+Increment
+If loc120c
+GetProperty
+loc1352:If loc1371
+Push "_global"
+GetVariable
+Push "dofus"
+GetMember
+Push "\x18\x03\x17", 0, "Object"
+NewObject
+SetMember
+loc1371:Push "dofus"
+GetVariable
+Push "\x18\x03\x17"
+Push true
+If loc15db
+SetProperty
+loc1387:GetMember
+Push "\x16\x10\t", 0, "Object"
+NewObject
+SetMember
+loc1396:Push "_global"
+GetVariable
+Push "dofus"
+GetMember
+Push "\x18\x03\x17"
+GetTime
+Increment
+If loc11d4
+SetProperty
+loc13af:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "\x0e\x06"
+GetMember
+Push register1, "\x1d"
+GetMember
+Push 50
+Subtract
+Push 2, register1, "\x1c\x14\x1a"
+GetMember
+Push "\x1a\x19\x1c"
+CallMethod
+Pop
+Push register1, "\x0e\x06"
+Push false
+Not
+If loc13fa
+NewObject
+loc13fa:GetMember
+Push register1, "\x1d"
+GetMember
+Push 20
+Subtract
+Push 2, register1, "\x1c\x1c\x0f"
+GetMember
+Push "\x1a\x19\x1c"
+CallMethod
+Pop
+}
+GetTime
+Increment
+If loc1197
+DefineLocal
+loc1428:DefineFunction2 "", 0, 3, false, false, false, true, true, false, false, true, false {
+Push 0, register2, undefined
+CallMethod
+Pop
+}
+Push "\n"
+CharToAscii
+If loc1648
+ImplementsOp
+loc144d:GetVariable
+Push "dofus", 0, "Object"
+NewObject
+SetMember
+loc145c:Push "dofus"
+GetVariable
+Push "\x18\x03\x17"
+GetMember
+Not
+Not
+GetTime
+If loc1352
+CloneSprite
+loc1471:GetVariable
+Push "\x18\x03\x17"
+GetMember
+Push "gapi"
+GetMember
+Push "\x17\x01\x0e"
+GetMember
+Push "\x16\x10\t"
+Push true
+If loc14c1
+NewObject
+loc1494:GetMember
+Push "\x18\x03\x17"
+GetMember
+Push "gapi", 0, "Object"
+NewObject
+SetMember
+loc14a9:Push "dofus"
+GetVariable
+Push "\x18\x03\x17"
+Push "\x05"
+CharToAscii
+If loc1538
+SetMember
+loc14c1:GetMember
+Not
+Not
+If loc1396
+Push "_global"
+GetVariable
+Push "dofus"
+GetMember
+Push "\x18\x03\x17"
+GetMember
+Push "gapi"
+GetMember
+Push "\x17\x01\x0e"
+GetTime
+Increment
+If loc1387
+CloneSprite
+loc14ee:DefineFunction2 "", 0, 3, false, false, false, true, true, false, false, true, false {
+Push 0, register2, "size"
+CallMethod
+Pop
+Push "object", register1, "method", register1, "\x16\x05\x15"
+GetMember
+Push 2
+InitObject
+Push 1, register1, "\x16\x01\x0e"
+CallMethod
+Pop
+}
+Push false
+Not
+If loc172f
+StartDrag
+loc1538:GetMember
+Push "gapi"
+GetMember
+Push "\x17\x01\x0e"
+GetMember
+Not
+Not
+If loc1638
+Push "_global"
+GetVariable
+Push "dofus"
+GetTime
+If loc161d
+StartDrag
+loc155e:Push "dofus"
+GetVariable
+Push "\x18\x03\x17"
+GetMember
+Push "gapi"
+GetMember
+Push "\x17\x01\x0e"
+GetMember
+Push "\x16\x10\t"
+Push true
+If loc15ae
+ImplementsOp
+loc1586:SetMember
+Push register1, "size"
+Push false
+Not
+If loc14ee
+DefineLocal
+loc159a:SetMember
+Push register1, "\x17\x02\x13"
+Push false
+Not
+If loc15fc
+SetProperty
+loc15ae:GetMember
+Push "BookPageIndexChapterItem"
+GetMember
+Not
+Not
+If loc11ac
+Push "dofus"
+GetVariable
+Not
+Not
+If loc145c
+Push "_global"
+Push "\b"
+CharToAscii
+If loc144d
+DefineLocal
+loc15db:GetMember
+Push "gapi"
+GetMember
+Not
+Not
+If loc14a9
+Push "_global"
+GetVariable
+Push "dofus"
+GetTime
+Increment
+If loc1494
+Extends
+loc15fc:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push 0, register1, "\x16\x05\x15"
+CallMethod
+Pop
+}
+GetTime
+Increment
+If loc1586
+ImplementsOp
+loc161d:GetMember
+Push "\x18\x03\x17"
+GetMember
+Push "gapi"
+GetMember
+Push "\x17\x01\x0e", 0, "Object"
+NewObject
+SetMember
+loc1638:Push "dofus"
+Push true
+If loc1471
+ImplementsOp
+loc1648:StoreRegister 0
+SetMember
+Push register0, "\x16\x04\t"
+GetVariable
+Push "gapi"
+GetMember
+Push "\x17\x01\x17"
+GetMember
+Push "\x1b\x13\x05"
+GetMember
+Extends
+Push register0, "prototype"
+GetTime
+Increment
+If loc11f3
+GetProperty
+loc1677:ConstantPool "dofus", "\x18\x03\x17", "gapi", "\x17\x01\x0e", "\x16\x10\t", "BookPageIndexChapterItem", "_global", "Object", "\x16\x04\t", "\x17\x01\x17", "\x1b\x13\x05", "prototype", "\x1a\x1b\x05", "\x1c\x1c\x0f", "text", "", "textWidth", "\x1c\x14\x1a", "\x0e\x06", "\x1d", "\x1a\x19\x1c", "\x18\t\x0b", "\x17\x02\x13", "\x16\x05\x15", "size", "object", "method", "\x16\x01\x0e", "ASSetPropFlags"
+GetTime
+If loc155e
+Extends
+loc172f:SetMember
+Push register1, "\x16\x05\x15"
+Push false
+Not
+If loc13af
+GetProperty
+loc1743:

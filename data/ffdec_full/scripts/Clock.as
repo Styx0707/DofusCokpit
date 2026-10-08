@@ -1,0 +1,16 @@
+while(true)
+{
+   if(!ord("\x04"))
+   {
+      if(!ord("\x04"))
+      {
+         break;
+      }
+   }
+   else
+   {
+      §§push("ank.gapi.controls.Clock");
+   }
+   Object.registerClass("Clock",eval(§§pop()));
+   break;
+}

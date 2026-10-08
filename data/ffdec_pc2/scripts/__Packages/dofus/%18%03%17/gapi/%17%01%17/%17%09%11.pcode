@@ -1,0 +1,226 @@
+Push false
+Not
+If loc028b
+Push false
+Not
+If loc0290
+ConstantPool "{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "{invalid_utf8=160}\x02{invalid_utf8=136}\x04", "\x01", "S", "O{invalid_utf8=150}\x04", "\x04\x01\b\r{invalid_utf8=150}\x03", "", "\x06", "2{invalid_utf8=157}\x02", "{invalid_utf8=223}\x01<N{invalid_utf8=150}\x02", "\b\x044{invalid_utf8=157}\x02", "{invalid_utf8=175}\x01\'@O{invalid_utf8=150}\x02", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01N\x12\x12{invalid_utf8=157}\x02", "{invalid_utf8=204}", "{invalid_utf8=150}\x02", "\b\x05{invalid_utf8=150}\x03", "", "\b", "2{invalid_utf8=157}\x02", "{invalid_utf8=166}", "@N\x12\x12{invalid_utf8=157}\x02", "{invalid_utf8=230}\x01{invalid_utf8=150}\x02", "\b\x05\x1c{invalid_utf8=150}\x02", "\b", "N{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\t", "\b\x02\x07", "", "", "", "\b\x06{invalid_utf8=150}\x03", "", "\x07", "2{invalid_utf8=157}\x02", "{invalid_utf8=186}\x01\"N\x12\x12{invalid_utf8=157}\x02", "\x14\x02{invalid_utf8=150}\x02", "\b", "\x1c\x12\x12{invalid_utf8=157}\x02", "{invalid_utf8=147}{invalid_utf8=255}{invalid_utf8=150}\x02", "\b\x05\x1c{invalid_utf8=150}\t", "\b", "\x07", "", "", "", "\b\x064{invalid_utf8=157}\x02", "y{invalid_utf8=255}\"N{invalid_utf8=135}\x01", "\x01\x17{invalid_utf8=150}\x04", "\x04\x01\b\n4P{invalid_utf8=157}\x02", "{invalid_utf8=130}", "\'{invalid_utf8=135}\x01", "", "O{invalid_utf8=150}\x04", "\x04", "\b\x07\x1c{invalid_utf8=150}\x02", "\b\x02N{invalid_utf8=150}\x02", "\b\x03N{invalid_utf8=150}\x02", "\b\bNi{invalid_utf8=150}\x04", "\x04", "\b\t4P{invalid_utf8=157}\x02", "{invalid_utf8=189}{invalid_utf8=255}#\x1c{invalid_utf8=150}\x02", "\b", "N{invalid_utf8=150}\t", "\b\x01\x07", "", "", "", "\b\x06@O{invalid_utf8=150}\x02", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\x024P{invalid_utf8=157}\x02", ".{invalid_utf8=255}\"{invalid_utf8=150}\x02", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\x02N{invalid_utf8=150}\x02", "\b\x03N{invalid_utf8=150}\x02", "\b\x044{invalid_utf8=157}\x02", "={invalid_utf8=255}<{invalid_utf8=142}\b", "", "", "", "\x02)", "\r", "{invalid_utf8=150}\x02", "\b\x05\x1c{invalid_utf8=150}\x02", "\b\x0bN>{invalid_utf8=150}\x03", "", "\x0b", "2{invalid_utf8=157}\x02", "{invalid_utf8=189}", "@{invalid_utf8=142}\r", "", "\x01", "\x04\x19", "\x03\x15\x1b\x0e", "\x1e", "{invalid_utf8=150}\x0b", "\x04\x03\x07\x01", "", "", "\x04\x02\b\fR\x17{invalid_utf8=150}\t", "\x07", "", "", "", "\x04\x01\b\nR>{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "b{invalid_utf8=254}\'{invalid_utf8=150}\x02", "\b\x05\x1c{invalid_utf8=150}\x02", "\b", "N{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\x02N{invalid_utf8=150}\t", "\b\x03\x07", "", "", "", "\b\x06{invalid_utf8=150}\x03", "", "\x02", "2{invalid_utf8=157}\x02", "B\x01,{invalid_utf8=142}\b", "", "", "", "\x03\x19", "\r", "{invalid_utf8=150}\b", "\x07", "", "", "", "\x04\x02\x03R\x17{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "{invalid_utf8=205}{invalid_utf8=254}={invalid_utf8=142}\x12", "", "\x02", "\x05\x19", "\x03\x16\x0b\x06", "\x04\x1a\x10\x1d", "\x12", "{invalid_utf8=150}\r", "\x04\x04\x04\x03\x07\x02", "", "", "\x04\x02\b\rR\x174{invalid_utf8=157}\x02", "C", "OO{invalid_utf8=150}\x04", "\x04\x01\b\f{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "1{invalid_utf8=255}<@O{invalid_utf8=150}\x02", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\x02N{invalid_utf8=150}\x02", "\b\x03N\x12\x12{invalid_utf8=157}\x02", "{invalid_utf8=189}", "{invalid_utf8=150}\x03"
+Jump loc0296
+loc028b:Push false
+loc0290:Not
+If loc053a
+loc0296:ConstantPool "S"
+loc029d:SetMember
+Push register1, constant13
+Push "\x06"
+CharToAscii
+If loc0490
+DefineLocal
+loc02b2:GetMember
+Push constant4
+GetTime
+If loc046d
+StartDrag
+loc02bf:NewObject
+SetMember
+loc02c1:Push "S"
+GetVariable
+Push constant1
+GetMember
+Not
+Not
+If loc03a0
+Push constant5
+Push "\b"
+CharToAscii
+If loc038b
+NewObject
+loc02e6:GetMember
+Not
+Not
+If loc04d4
+Push constant5
+GetVariable
+Push "S"
+GetMember
+Push constant1
+GetMember
+Push constant2, 0, constant6
+Push "\x07"
+CharToAscii
+If loc04d2
+GetProperty
+loc0319:GetMember
+Not
+Not
+If loc0535
+Push "S"
+GetVariable
+Not
+Not
+If loc02c1
+Push constant5
+GetVariable
+Push "S", 0, constant6
+GetTime
+If loc02bf
+GetProperty
+loc0347:GetMember
+StoreRegister 1
+Pop
+Push register1, constant10
+GetTime
+Increment
+If loc03dd
+StartDrag
+loc035c:StoreRegister 0
+SetMember
+Push register0, constant7
+GetVariable
+Push constant2
+GetMember
+Push constant3
+GetMember
+Push constant8
+GetMember
+Extends
+Push register0, constant9
+GetTime
+Increment
+If loc0347
+SetProperty
+loc038b:GetVariable
+Push "S"
+GetMember
+Push constant1, 0, constant6
+NewObject
+SetMember
+loc03a0:Push "S"
+GetVariable
+Push constant1
+GetMember
+Push constant2
+GetTime
+Increment
+If loc02e6
+GetProperty
+loc03b9:Push "S"
+GetVariable
+Push constant1
+GetMember
+Push constant2
+GetMember
+Push constant3
+GetMember
+Push constant4
+GetTime
+If loc0319
+DefineLocal
+loc03dd:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push constant5
+GetVariable
+Push constant11
+GetMember
+Return
+}
+Push "\x0b"
+CharToAscii
+If loc04be
+NewObject
+loc0402:DefineFunction2 "", 1, 4, false, false, false, true, true, false, false, true, false, 3, "\x15\x1b\x0e" {
+Push register3, 1, register2, constant12
+CallMethod
+Pop
+Push 0, register1, constant10
+CallMethod
+Return
+}
+Push false
+Not
+If loc029d
+StartDrag
+loc043c:Push constant5
+GetVariable
+Push "S"
+GetMember
+Push constant1
+GetMember
+Push constant2
+GetMember
+Push constant3, 0, constant6
+Push "\x02"
+CharToAscii
+If loc05b2
+ImplementsOp
+loc046d:DefineFunction2 "", 0, 3, false, false, false, true, true, false, false, true, false {
+Push 0, register2, undefined
+CallMethod
+Pop
+}
+Push true
+If loc035c
+CallFunction
+loc0490:DefineFunction2 "", 2, 5, false, false, false, true, true, false, false, true, false, 3, "\x16\x0b\x06", 4, "\x1a\x10\x1d" {
+Push register4, register3, 2, register2, constant13
+CallMethod
+Pop
+}
+GetTime
+If loc0500
+SetMember
+loc04be:SetMember
+Push register1, constant12
+Push false
+Not
+If loc0402
+DefineLocal
+loc04d2:NewObject
+SetMember
+loc04d4:Push "S"
+GetVariable
+Push constant1
+GetMember
+Push constant2
+GetMember
+Push constant3
+GetMember
+Not
+Not
+If loc05b4
+Push "\x0b"
+CharToAscii
+If loc043c
+DefineLocal
+loc0500:SetMember
+Push register1, constant12
+GetMember
+Push register1, constant10
+GetMember
+Push constant14, 3, register1, constant15
+CallMethod
+Pop
+Push 1, null, register1, 3, constant16
+CallFunction
+Pop
+loc0535:Jump loc05de
+loc053a:ConstantPool "dofus", "\x18\x03\x17", "gapi", "\x17\x01\x17", "\x17\t\x11", "_global", "Object", "\x16\x04\t", "\x1b\x13\x04", "prototype", "\x1e\x12\x05", "API", "\x0e\x17", "\x18\t\x0b", "api", "addProperty", "ASSetPropFlags"
+Push "\n"
+CharToAscii
+If loc03b9
+CloneSprite
+loc05b2:NewObject
+SetMember
+loc05b4:Push constant5
+GetVariable
+Push "S"
+GetMember
+Push constant1
+GetMember
+Push constant2
+GetMember
+Push constant3
+Push "\x02"
+CharToAscii
+If loc02b2
+NewObject
+loc05de:

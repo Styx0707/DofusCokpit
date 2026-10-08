@@ -1,0 +1,16 @@
+while(true)
+{
+   if(!ord("\t"))
+   {
+      if(!ord("\t"))
+      {
+         break;
+      }
+   }
+   else
+   {
+      gotoAndStop(2);
+   }
+   play();
+   break;
+}

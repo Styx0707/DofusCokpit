@@ -1,0 +1,82 @@
+on(construct){
+   loop2:
+   while(true)
+   {
+      while(true)
+      {
+         if(!(true and true))
+         {
+            if(!(true and true))
+            {
+               break;
+            }
+         }
+         else
+         {
+            §§push("\x0b");
+         }
+         if(!ord(§§pop()))
+         {
+            break;
+         }
+         break loop2;
+      }
+      §§goto(addr1c87f);
+   }
+   loop1:
+   while(true)
+   {
+      H = §§constant(1);
+      set(§§constant(2),§§constant(3));
+      set(§§constant(4),§§constant(3));
+      set(§§constant(5),§§constant(6));
+      set(§§constant(7),20);
+      §§push(§§constant(8));
+      §§push(§§constant(9));
+      if(!ord("\n"))
+      {
+         §§goto(addr1c954);
+         §§push(§§pop()());
+      }
+      else
+      {
+         while(true)
+         {
+            set(§§pop(),§§pop());
+            set(§§constant(10),true);
+            set(§§constant(11),false);
+            set(§§constant(12),0);
+            set(§§constant(13),4);
+            §§push(§§constant(14));
+            §§push(0);
+            if(false)
+            {
+               startDrag(§§pop(),§§pop(),§§pop(),§§pop(),§§pop(),§§pop());
+            }
+            else
+            {
+               set(§§pop(),§§pop());
+               set(§§constant(15),0);
+               set(§§constant(16),4);
+               set(§§constant(17),4);
+               set(§§constant(18),§§constant(19));
+               §§push(§§constant(20));
+               §§push(10);
+               if(!ord("\x05"))
+               {
+                  var §§pop() = §§pop();
+                  continue loop1;
+               }
+            }
+            set(§§pop(),§§pop());
+            set(§§constant(21),20);
+            set(§§constant(22),§§constant(23));
+            break;
+         }
+         addr1c87f:
+      }
+      return;
+      addr1c954:
+   }
+   break loop3;
+}

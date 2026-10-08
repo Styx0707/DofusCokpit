@@ -1,0 +1,10 @@
+if(false)
+{
+   if(ord("\x05"))
+   {
+   }
+}
+else
+{
+   stop();
+}

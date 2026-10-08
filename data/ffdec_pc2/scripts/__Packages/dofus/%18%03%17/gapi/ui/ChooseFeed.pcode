@@ -1,0 +1,901 @@
+ConstantPool "\x0b"
+Push true
+PushDuplicate
+Or
+If loc0328
+Push false
+Not
+If loc0330
+ConstantPool "{invalid_utf8=150}\x05", "\x07{invalid_utf8=191}{invalid_utf8=186}0\x19L`{invalid_utf8=157}\x02", "{invalid_utf8=175}\f{invalid_utf8=136}\x04", "\x01", "{invalid_utf8=193}", "{invalid_utf8=155}\x05", "", "", "", "", "", "{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "f\b\"{invalid_utf8=142}\b", "", "", "", "\x03\x19", "?", "{invalid_utf8=150}\x02", "\b", "\x1c{invalid_utf8=150}\x02", "\b\x01N{invalid_utf8=150}\x02", "\b\x02N{invalid_utf8=150}\x02", "\b\x03N{invalid_utf8=150}\x02", "\b\x04N{invalid_utf8=150}\x02", "\b\x13{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "\x01", "#N{invalid_utf8=150}\x0b", "\x05", "\x07\x02", "", "", "\x04\x02\b\x12R\x17{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", ")\x07O{invalid_utf8=142}\b", "", "", "", "\x05)", "=\x02{invalid_utf8=150}\b", "\x04\x01\b\f\x04\x01\b\'N{invalid_utf8=150}\x02", "\b0N{invalid_utf8=150}\x02", "\b1N{invalid_utf8=150}\x02", "\b2NO{invalid_utf8=150}\x04", "\x04\x01\b3{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "{invalid_utf8=192}\x01\'N{invalid_utf8=150}\x02", "\b8S{invalid_utf8=135}\x01", "\x02\x17{invalid_utf8=150}\x04", "\x04\x01\b\fNU{invalid_utf8=135}\x01", "", "{invalid_utf8=150}\x01", "\x02I{invalid_utf8=157}\x02", "C\x01{invalid_utf8=150}\x04", "\b9\x04", "<{invalid_utf8=150}\x03", "", "\x02", "2{invalid_utf8=157}\x02", "b", "=NIL\x12{invalid_utf8=157}\x02", "", "\x01\x17{invalid_utf8=150}\x04", "\x04\x03\b<N\x12L\x12{invalid_utf8=157}\x02", "{invalid_utf8=239}", "\x17{invalid_utf8=150}\x04", "\x04\x03\b=4{invalid_utf8=157}\x02", "q", "<\x17{invalid_utf8=150}\x06", "\x04\x04\x04\x01\b\x0bN{invalid_utf8=150}\x02", "\b:NH\x12{invalid_utf8=157}\x02", "{invalid_utf8=232}", "{invalid_utf8=150}\x04", "\x04\x03\b;N{invalid_utf8=150}\x04", "\x04\x01\b\x0bN{invalid_utf8=150}\x02", "\x04\x04{invalid_utf8=150}\x02", "\x05\x01{invalid_utf8=157}\x02", "{invalid_utf8=160}{invalid_utf8=255},{invalid_utf8=150}\x04", "\x04\x01\b\fN{invalid_utf8=150}\x02", "\b9\x1cN{invalid_utf8=135}\x01", "\x03\x17{invalid_utf8=150}\x05", "\x07", "", "", "", "{invalid_utf8=135}\x01", "\x04\x17{invalid_utf8=153}\x02", "{invalid_utf8=163}{invalid_utf8=255}{invalid_utf8=150}\x02", "\x04\x04P{invalid_utf8=135}\x01", "\x044P{invalid_utf8=157}\x02", "{invalid_utf8=145}{invalid_utf8=255}\"N\x12L\x12{invalid_utf8=157}\x02", "g", "\x17{invalid_utf8=150}\x04", "\x04\x03\b>N{invalid_utf8=150}\x05", "\x07{invalid_utf8=255}{invalid_utf8=255}{invalid_utf8=255}{invalid_utf8=255}IL\x12{invalid_utf8=157}\x02", "N", "\x174{invalid_utf8=157}\x02", "?", "ON\x12{invalid_utf8=157}\x02", "\x15", "{invalid_utf8=150}\x04", "\x04\x01\b N{invalid_utf8=150}\x04", "\bA\x04\x02O{invalid_utf8=153}\x02", "{invalid_utf8=244}", "{invalid_utf8=150}\r", "\bB\bC\bD\x04\x01\x07\x02", "", "", "C{invalid_utf8=150}\x06", "\bE\x04\x01\b\x104P{invalid_utf8=157}\x02", "=", ",{invalid_utf8=150}\x04", "\x04\x03\b?N\x12{invalid_utf8=157}\x02", "\x15", "{invalid_utf8=150}\x0b", "\x04\x03\x07\x01", "", "", "\x04\x02\b@R\x17{invalid_utf8=153}\x02", "\x05", "{invalid_utf8=153}\x02", "^{invalid_utf8=255}{invalid_utf8=153}\x02", "{invalid_utf8=175}{invalid_utf8=254}{invalid_utf8=150}\x04", "\x04\x02\b:4P{invalid_utf8=157}\x02", "{invalid_utf8=135}{invalid_utf8=255}iN{invalid_utf8=150}\x02", "\bBN{invalid_utf8=150}\x05", "\x07\x01", "", "", "B{invalid_utf8=150}\x0b", "\bF\x07\x02", "", "", "\x04\x01\b\'N{invalid_utf8=150}\x02", "\b(N{invalid_utf8=150}\x02", "\b)R{invalid_utf8=150}\n", "\x03\x07\x04", "", "", "\x04\x01\b\'N{invalid_utf8=150}\x02", "\bG{invalid_utf8=150}\x02", "\x05", "\x12{invalid_utf8=157}\x02", "7", "<N{invalid_utf8=150}\x04", "\b4\x05", "O{invalid_utf8=150}\x04", "\x04\x01\b5N{invalid_utf8=150}\x04", "\b4\x05", "O{invalid_utf8=150}\x07", "\x07", "", "", "", "\b6\x1c{invalid_utf8=150}\x02", "\b7{invalid_utf8=150}\x03", "", "\x04", "2{invalid_utf8=157}\x02", "\f{invalid_utf8=254}iN{invalid_utf8=150}\x02", "\bHR\x17{invalid_utf8=150}\t", "\x07", "", "", "", "\x04\x01\bIR\x174P{invalid_utf8=157}\x02", "{invalid_utf8=233}\x04\'O{invalid_utf8=150}\x04", "\x04\x01\b!{invalid_utf8=150}\x03", "", "\x02", "2{invalid_utf8=157}\x02", "{invalid_utf8=238}\x05,Ni{invalid_utf8=150}\x04", "\x04", "\b\tN{invalid_utf8=135}\x01", "\x01\x17{invalid_utf8=150}\x04", "\x04\x01\b\n{invalid_utf8=150}\x02", "\x05"
+Jump loc033e
+loc0328:Push 422623935
+loc0330:PushDuplicate
+BitAnd
+If loc0fea
+ConstantPool "{invalid_utf8=193}"
+loc033e:DefineFunction "", 0 {
+}
+Push false
+Not
+If loc0bb7
+GetProperty
+loc0352:DefineFunction2 "", 0, 3, false, false, false, true, true, false, false, true, false {
+Push "{invalid_utf8=150}\x05"
+GetVariable
+Push "\x07{invalid_utf8=191}{invalid_utf8=186}0\x19L`{invalid_utf8=157}\x02"
+GetMember
+Push "{invalid_utf8=175}\f{invalid_utf8=136}\x04"
+GetMember
+Push "\x01"
+GetMember
+Push "{invalid_utf8=193}"
+GetMember
+Push "?"
+Push true
+If loc038b
+SetProperty
+loc038b:GetMember
+Push false, 2, register2, "\x03\x19"
+CallMethod
+Pop
+}
+Push false
+Not
+If loc0ad0
+SetMember
+loc03a8:DefineFunction2 "", 0, 5, false, false, true, false, true, false, false, true, false {
+Push register1, "\x05", register1, ""
+GetMember
+Push "\x04\x01\b3{invalid_utf8=150}\x02"
+GetMember
+Push "\x05"
+GetMember
+Push "\x12{invalid_utf8=157}\x02"
+GetMember
+SetMember
+Push register1, "{invalid_utf8=192}\x01\'N{invalid_utf8=150}\x02"
+Push false
+Not
+If loc05a4
+StartDrag
+loc03e5:GetMember
+Push "{invalid_utf8=150}\x01"
+NewMethod
+StoreRegister 2
+Pop
+Push register1, "\x05"
+GetMember
+Enumerate2
+loc03fa:StoreRegister 0
+Push null
+Equals2
+If loc054b
+Push "\x02I{invalid_utf8=157}\x02", register0
+DefineLocal
+Push "\x02"
+CharToAscii
+If loc047e
+CallFunction
+loc041d:GetMember
+Equals2
+PushDuplicate
+Not
+If loc0526
+Pop
+Push register3, "<{invalid_utf8=150}\x03"
+GetMember
+Not
+PushDuplicate
+Not
+If loc0526
+Pop
+Push register3, ""
+GetTime
+If loc04b6
+DefineLocal
+loc0446:Pop
+loc0447:Push register4, register1, "{invalid_utf8=150}\x02"
+GetMember
+Push "C\x01{invalid_utf8=150}\x04"
+GetMember
+Less2
+Not
+If loc0546
+Push register3, "\b9\x04"
+GetMember
+Push register1, "{invalid_utf8=150}\x02"
+GetMember
+Push register4
+Push true
+If loc041d
+ImplementsOp
+loc047e:Push register1, "\x05"
+GetMember
+Push "\x02I{invalid_utf8=157}\x02"
+GetVariable
+GetMember
+StoreRegister 3
+Pop
+Push 0
+StoreRegister 4
+Pop
+Jump loc0447
+loc04a4:Push register4
+Increment
+StoreRegister 4
+GetTime
+Increment
+If loc0446
+GetProperty
+loc04b6:GetMember
+Not
+PushDuplicate
+Not
+If loc0526
+Pop
+Push register3, "\x02"
+GetMember
+Push -1
+Equals2
+PushDuplicate
+Not
+If loc0526
+Pop
+GetTime
+If loc051e
+SetMember
+loc04e0:GetMember
+Not
+If loc04fc
+Push register1, "\x07\x02"
+GetMember
+Push "=NIL\x12{invalid_utf8=157}\x02", register2
+SetMember
+Jump loc05f0
+loc04fc:Push "", "\x01\x17{invalid_utf8=150}\x04", "\x04\x03\b<N\x12L\x12{invalid_utf8=157}\x02", register1, 2
+InitObject
+Push "{invalid_utf8=239}", register1, ""
+GetTime
+Increment
+If loc055a
+ImplementsOp
+loc051e:Push register3, "2{invalid_utf8=157}\x02"
+GetMember
+loc0526:Not
+If loc0541
+Push register3, 1, register2, "b"
+CallMethod
+Pop
+Jump loc0546
+loc0541:Jump loc04a4
+loc0546:Jump loc03fa
+loc054b:Push register2, "C\x01{invalid_utf8=150}\x04"
+GetTime
+Increment
+If loc04e0
+Extends
+loc055a:GetMember
+Push ""
+GetMember
+Push 1
+InitArray
+Push "\x17{invalid_utf8=150}\x04", 2, register1, ""
+GetMember
+Push ""
+GetMember
+Push ""
+CallMethod
+Push undefined, 4, register1, ""
+GetMember
+Push "\x04\x03\b=4{invalid_utf8=157}\x02"
+Push false
+Not
+If loc05da
+DefineLocal
+loc05a4:GetMember
+Push "\b8S{invalid_utf8=135}\x01", false
+SetMember
+Push register1, "\x02\x17{invalid_utf8=150}\x04"
+GetMember
+Push "\b8S{invalid_utf8=135}\x01", false
+SetMember
+Push 0, "\x04\x01\b\fNU{invalid_utf8=135}\x01"
+GetVariable
+Push ""
+Push "\x04"
+CharToAscii
+If loc03e5
+Extends
+loc05da:GetMember
+Push "q"
+CallMethod
+Pop
+Push 0, register1, "<\x17{invalid_utf8=150}\x06"
+CallMethod
+Pop
+}
+loc05f0:GetTime
+Increment
+If loc0ae0
+StartDrag
+loc05f8:SetMember
+Push register1, ""
+Push "\x02"
+CharToAscii
+If loc0bfe
+ImplementsOp
+loc060d:GetMember
+Extends
+Push register0, ""
+GetMember
+StoreRegister 1
+Pop
+Push register1, ""
+Push false
+Not
+If loc076b
+SetProperty
+loc062f:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x19\x12\x1d" {
+Push register1, "{invalid_utf8=192}\x01\'N{invalid_utf8=150}\x02"
+GetMember
+Push "\x04\x04P{invalid_utf8=135}\x01", register2, "{invalid_utf8=135}\x01"
+GetMember
+Push "{invalid_utf8=163}{invalid_utf8=255}{invalid_utf8=150}\x02"
+GetMember
+SetMember
+Push register1, "{invalid_utf8=192}\x01\'N{invalid_utf8=150}\x02"
+GetMember
+Push "\b8S{invalid_utf8=135}\x01", true
+SetMember
+Push register1, "\x02\x17{invalid_utf8=150}\x04"
+GetMember
+Push "\b8S{invalid_utf8=135}\x01", true
+Push "\x07"
+CharToAscii
+If loc0684
+Extends
+loc0684:SetMember
+Push register1, "\b0N{invalid_utf8=150}\x02"
+GetMember
+Push "\b8S{invalid_utf8=135}\x01", false
+SetMember
+}
+GetTime
+If loc05f8
+Extends
+loc069c:NewObject
+SetMember
+loc069e:Push "{invalid_utf8=150}\x05"
+GetVariable
+Push "\x07{invalid_utf8=191}{invalid_utf8=186}0\x19L`{invalid_utf8=157}\x02"
+GetMember
+Push "{invalid_utf8=175}\f{invalid_utf8=136}\x04"
+GetMember
+Push "\x01"
+GetMember
+Not
+Not
+If loc07e8
+Push "{invalid_utf8=155}\x05"
+Push "\x0b"
+CharToAscii
+If loc0af4
+StartDrag
+loc06cf:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x19\x12\x1d" {
+Push register2, "{invalid_utf8=135}\x01"
+GetMember
+StoreRegister 0
+Push register1, "#N{invalid_utf8=150}\x0b"
+GetMember
+StrictEquals
+If loc0725
+Push register0, register1, "\b\x13{invalid_utf8=150}\x02"
+GetMember
+StrictEquals
+If loc0725
+Push register0, register1, "\x01"
+GetTime
+If loc0719
+StartDrag
+loc0719:GetMember
+StrictEquals
+If loc0738
+Jump loc0754
+loc0725:Push 0, register1, "<\x17{invalid_utf8=150}\x06"
+CallMethod
+Pop
+Jump loc0754
+loc0738:Push register1, "\x07\x02"
+GetMember
+Push "\x04\x17{invalid_utf8=153}\x02"
+GetMember
+Push 1, register1, "\b:NH\x12{invalid_utf8=157}\x02"
+CallMethod
+Pop
+}
+loc0754:GetTime
+If loc0813
+Extends
+loc075b:SetMember
+Push register1, "\b\x03N{invalid_utf8=150}\x02"
+GetTime
+Increment
+If loc0f08
+SetProperty
+loc076b:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x16\x07\r" {
+Push register1, "{invalid_utf8=150}\x02", register2
+SetMember
+Push register1, "\x05"
+GetMember
+Not
+If loc07a1
+Push 0, register1, "\x12{invalid_utf8=157}\x02"
+CallMethod
+Pop
+loc07a1:Push 0, register1, "f\b\"{invalid_utf8=142}\b"
+CallMethod
+Return
+}
+GetTime
+Increment
+If loc097e
+Extends
+loc07b7:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x19\x12\x1d" {
+Push 0, register1, "{invalid_utf8=175}\f{invalid_utf8=136}\x04"
+GetMember
+Push "\x17{invalid_utf8=150}\x04"
+CallMethod
+Pop
+}
+Push false
+Not
+If loc0ea1
+StartDrag
+loc07e7:SetMember
+loc07e8:Push "{invalid_utf8=155}\x05"
+GetVariable
+Push "{invalid_utf8=150}\x05"
+GetMember
+Push "\x07{invalid_utf8=191}{invalid_utf8=186}0\x19L`{invalid_utf8=157}\x02"
+GetMember
+Push "{invalid_utf8=175}\f{invalid_utf8=136}\x04"
+GetMember
+Push "\x01"
+GetMember
+Push "{invalid_utf8=193}"
+GetTime
+Increment
+If loc0b7f
+SetMember
+loc0813:SetMember
+Push register1, "\x04\x02\b\x12R\x17{invalid_utf8=150}\x02"
+Push true
+If loc0ed4
+GetProperty
+loc0826:SetMember
+Push register1, "\b\x01N{invalid_utf8=150}\x02"
+GetTime
+Increment
+If loc0a32
+ImplementsOp
+loc0836:GetMember
+Not
+Not
+If loc0be5
+Push "{invalid_utf8=150}\x05"
+GetVariable
+Not
+Not
+If loc08f6
+Push "{invalid_utf8=155}\x05"
+GetTime
+Increment
+If loc08e7
+SetProperty
+loc0858:StoreRegister 0
+SetMember
+Push register0, "{invalid_utf8=150}\x05"
+GetVariable
+Push "\x07{invalid_utf8=191}{invalid_utf8=186}0\x19L`{invalid_utf8=157}\x02"
+GetMember
+Push "{invalid_utf8=175}\f{invalid_utf8=136}\x04"
+GetMember
+Push ""
+GetMember
+Push ""
+Push true
+If loc060d
+NewObject
+loc0887:SetMember
+Push register1, "\x05"
+Push true
+If loc062f
+CloneSprite
+loc089a:SetMember
+Push register1, "\b\x04N{invalid_utf8=150}\x02"
+Push "\x0b"
+CharToAscii
+If loc06cf
+StartDrag
+loc08af:GetMember
+Push "{invalid_utf8=175}\f{invalid_utf8=136}\x04"
+GetMember
+Not
+Not
+If loc069e
+Push "{invalid_utf8=155}\x05"
+GetVariable
+Push "{invalid_utf8=150}\x05"
+GetMember
+Push "\x07{invalid_utf8=191}{invalid_utf8=186}0\x19L`{invalid_utf8=157}\x02"
+GetMember
+Push "{invalid_utf8=175}\f{invalid_utf8=136}\x04", 0, ""
+Push false
+Not
+If loc069c
+SetMember
+loc08e7:GetVariable
+Push "{invalid_utf8=150}\x05", 0, ""
+NewObject
+SetMember
+loc08f6:Push "{invalid_utf8=150}\x05"
+GetVariable
+Push "\x07{invalid_utf8=191}{invalid_utf8=186}0\x19L`{invalid_utf8=157}\x02"
+GetMember
+Not
+Not
+If loc0e43
+Push false
+Not
+If loc0e29
+SetProperty
+loc0915:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x19\x12\x1d" {
+Push register2, "{invalid_utf8=135}\x01"
+GetMember
+Push "\x07{invalid_utf8=255}{invalid_utf8=255}{invalid_utf8=255}{invalid_utf8=255}IL\x12{invalid_utf8=157}\x02"
+GetMember
+StoreRegister 0
+Push "N"
+StrictEquals
+If loc0947
+Jump loc0971
+loc0947:Push true, register2, "\x04\x01\b\x0bN{invalid_utf8=150}\x02"
+GetMember
+Push "\x04\x04{invalid_utf8=150}\x02"
+GetMember
+Push 2, register1, "\b:NH\x12{invalid_utf8=157}\x02"
+GetTime
+If loc096a
+CastOp
+loc096a:CallMethod
+Pop
+Jump loc0971
+}
+loc0971:Push "\x04"
+CharToAscii
+If loc0b69
+CloneSprite
+loc097e:SetMember
+Push register1, ""
+GetTime
+Increment
+If loc0e6e
+StartDrag
+loc098e:DefineFunction "", 0 {
+}
+Push false
+Not
+If loc0eb1
+GetProperty
+loc09a2:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push "\b", register1, "\x1c{invalid_utf8=150}\x02", register1, "\b\x01N{invalid_utf8=150}\x02"
+GetMember
+Push 2
+InitObject
+Push 1, register1, "\b\x02N{invalid_utf8=150}\x02"
+CallMethod
+Pop
+Push "\b", register1, "\x1c{invalid_utf8=150}\x02", register1, "\b\x03N{invalid_utf8=150}\x02"
+GetMember
+Push 2
+InitObject
+Push 1, register1, "\b\x02N{invalid_utf8=150}\x02"
+Push true
+If loc0a00
+ImplementsOp
+loc0a00:CallMethod
+Pop
+Push "\b", register1, "\x1c{invalid_utf8=150}\x02", register1, "\x12{invalid_utf8=157}\x02"
+GetMember
+Push 2
+InitObject
+Push 1, register1, "\b\x02N{invalid_utf8=150}\x02"
+CallMethod
+Pop
+}
+Push true
+If loc075b
+GetProperty
+loc0a32:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "\x01"
+GetMember
+Push "\x12{invalid_utf8=157}\x02", ")\x07O{invalid_utf8=142}\b", 1, register1, ""
+GetMember
+Push ""
+GetMember
+Push ""
+CallMethod
+SetMember
+Push register1, "\x05)"
+GetMember
+Push "=\x02{invalid_utf8=150}\b", "\x04\x01\b\f\x04\x01\b\'N{invalid_utf8=150}\x02", 1, register1, ""
+GetTime
+Increment
+If loc0a83
+Extends
+loc0a83:GetMember
+Push ""
+GetMember
+Push ""
+CallMethod
+SetMember
+Push register1, "\b0N{invalid_utf8=150}\x02"
+GetMember
+Push "\b1N{invalid_utf8=150}\x02", "\b2NO{invalid_utf8=150}\x04", 1, register1, ""
+GetMember
+Push ""
+GetMember
+Push ""
+Push false
+Not
+If loc0ac1
+ImplementsOp
+loc0ac1:CallMethod
+SetMember
+}
+Push "\t"
+CharToAscii
+If loc0bea
+SetMember
+loc0ad0:SetMember
+Push register1, "{invalid_utf8=150}\x02"
+GetTime
+Increment
+If loc09a2
+DefineLocal
+loc0ae0:SetMember
+Push register1, "<\x17{invalid_utf8=150}\x06"
+Push false
+Not
+If loc0b3f
+Extends
+loc0af4:GetVariable
+Push "{invalid_utf8=150}\x05"
+GetMember
+Push "\x07{invalid_utf8=191}{invalid_utf8=186}0\x19L`{invalid_utf8=157}\x02"
+GetMember
+Push "{invalid_utf8=175}\f{invalid_utf8=136}\x04"
+GetMember
+Push "\x01", 0, ""
+NewObject
+GetTime
+If loc07e7
+SetProperty
+loc0b1b:Push "{invalid_utf8=150}\x05"
+GetVariable
+Push "\x07{invalid_utf8=191}{invalid_utf8=186}0\x19L`{invalid_utf8=157}\x02"
+GetMember
+Push "{invalid_utf8=175}\f{invalid_utf8=136}\x04"
+GetMember
+Push "\x01"
+GetMember
+Push "{invalid_utf8=193}"
+GetTime
+If loc0836
+Extends
+loc0b3f:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push 0, register1, "\x04\x04\x04\x01\b\x0bN{invalid_utf8=150}\x02"
+CallMethod
+Pop
+Push true
+Return
+}
+Push true
+If loc0e59
+CloneSprite
+loc0b69:SetMember
+Push register1, ""
+GetMember
+Push "\x06"
+CharToAscii
+If loc098e
+ImplementsOp
+loc0b7f:DefineFunction2 "", 0, 3, false, false, false, true, true, false, false, true, false {
+Push 0, register2, undefined
+CallMethod
+Pop
+}
+Push "\n"
+CharToAscii
+If loc0858
+Extends
+loc0ba4:SetMember
+Push register1, "\x03\x19"
+Push true
+If loc0352
+ImplementsOp
+loc0bb7:Push "ON\x12{invalid_utf8=157}\x02", 3, register1, "?"
+CallMethod
+Pop
+Push 1, null, register1, 3, "\x15"
+CallFunction
+Pop
+Push register0, "?", "{invalid_utf8=150}\x04"
+SetMember
+loc0be5:Jump loc12f6
+loc0bea:SetMember
+Push register1, "\x1b\x14\x15"
+Push false
+Not
+If loc03a8
+SetProperty
+loc0bfe:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x19\x12\x1d" {
+Push register2, constant90
+GetMember
+Push constant92
+GetMember
+Push constant94
+GetMember
+Push constant95
+Add2
+Push register2, constant90
+GetMember
+Push constant92
+GetMember
+Push constant66
+GetTime
+If loc0c42
+GetProperty
+loc0c42:GetMember
+Push 2, register1, constant2
+GetMember
+Push constant96
+CallMethod
+Pop
+}
+Push "\t"
+CharToAscii
+If loc0e15
+NewObject
+loc0c64:DefineFunction2 "", 2, 4, false, false, true, false, true, false, false, true, false, 2, "\x19\x13\r", 3, "\x19\x0b\x05" {
+Push register2, constant76
+GetMember
+Not
+Not
+If loc0dac
+Push constant66, constant77, constant68, register1, 2
+InitObject
+Push constant69, constant47, 1, register1, constant39
+GetMember
+Push constant40
+Push false
+Not
+If loc0d85
+SetProperty
+loc0cbb:GetMember
+Push constant72
+CallMethod
+Pop
+Push undefined
+Return
+loc0cc8:Push "{invalid_utf8=193}"
+GetVariable
+Push constant83
+GetMember
+Push constant84
+GetMember
+Push constant85
+GetTime
+If loc0d43
+SetMember
+loc0ce6:Push constant66, constant78, constant79, constant80, register2, 1
+InitObject
+Push constant68, register1, 3
+InitObject
+Push constant81, constant82, 1, register1, constant39
+GetMember
+Push constant40
+GetMember
+Push constant41
+CallMethod
+Push undefined, 4, register1, constant39
+GetMember
+Push constant71
+Push "\x03"
+CharToAscii
+If loc0cbb
+CallFunction
+loc0d43:GetMember
+Push 1, register1, constant39
+GetMember
+Push constant71
+GetMember
+Push constant84
+GetMember
+Push constant86
+CallMethod
+Pop
+Push register2, constant76
+GetMember
+Push register1, constant16
+GetMember
+Push constant62
+Push false
+Not
+If loc0dc4
+Extends
+loc0d85:GetMember
+Push constant41
+CallMethod
+Push undefined, 4, register1, constant39
+GetMember
+Push constant71
+GetMember
+Push constant72
+CallMethod
+Pop
+Push undefined
+Return
+loc0dac:Push register3
+Not
+Not
+If loc0cc8
+Push false
+Not
+If loc0ce6
+Extends
+loc0dc4:GetMember
+Push register1, constant16
+GetMember
+Push constant76
+GetMember
+Push 3, register1, constant39
+GetMember
+Push constant87
+GetMember
+Push constant88
+GetMember
+Push constant89
+CallMethod
+Pop
+Push 0, register1, constant73
+GetTime
+Increment
+If loc0e07
+Extends
+loc0e07:CallMethod
+Pop
+}
+Push false
+Not
+If loc089a
+GetProperty
+loc0e15:SetMember
+Push register1, constant34
+Push false
+Not
+If loc07b7
+StartDrag
+loc0e29:Push constant5
+GetVariable
+Push "{invalid_utf8=193}"
+GetMember
+Push constant1, 0, constant6
+NewObject
+SetMember
+loc0e43:Push "{invalid_utf8=193}"
+GetVariable
+Push constant1
+Push true
+If loc08af
+CallFunction
+loc0e59:SetMember
+Push register1, constant75
+Push "\x05"
+CharToAscii
+If loc0c64
+SetProperty
+loc0e6e:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x19\x12\x16" {
+Push register1, constant16, register2
+SetMember
+Push 0, register1, constant17
+CallMethod
+Return
+}
+Push true
+If loc0ba4
+CastOp
+loc0ea1:SetMember
+Push register1, constant98
+GetTime
+Increment
+If loc0915
+CastOp
+loc0eb1:Push constant101, 3, register1, constant102
+CallMethod
+Pop
+Push register1, constant10
+GetMember
+Push true
+If loc033e
+ImplementsOp
+loc0ed4:DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "\x19\x12\x1d" {
+Push register2, constant90
+GetMember
+Push constant92
+GetMember
+Push 1, register1, constant75
+CallMethod
+Pop
+}
+GetTime
+Increment
+If loc0887
+StartDrag
+loc0f08:DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, constant26, 2, register1, constant27
+GetMember
+Push constant28
+CallMethod
+Pop
+Push register1, constant26, 2, register1, constant29
+GetMember
+Push constant28
+CallMethod
+Pop
+Push register1, constant26, 2, register1, constant30
+Push false
+Not
+If loc0f5f
+GetProperty
+loc0f5f:GetMember
+Push constant28
+CallMethod
+Pop
+Push register1, constant31, 2, register1, constant32
+GetMember
+Push constant28
+CallMethod
+Pop
+Push register1, constant33, 2, register1, constant32
+GetMember
+Push constant28
+CallMethod
+Pop
+Push register1, constant34, 2, register1, constant32
+Push true
+If loc0fb2
+NewObject
+loc0fb2:GetMember
+Push constant28
+CallMethod
+Pop
+Push register1, constant35, 2, register1, constant32
+GetMember
+Push constant28
+CallMethod
+Pop
+Push register1, constant32
+GetMember
+Push constant36, false
+SetMember
+}
+GetTime
+Increment
+If loc0826
+ImplementsOp
+loc0fea:ConstantPool "dofus", "\x18\x03\x17", "gapi", "ui", "ChooseFeed", "_global", "Object", "\x17\x01\x17", "\x17\t\x11", "prototype", "\x16\x0f", "\x1b\x1c\x18", "\x1c\x0f\x06", "\x1b\x14\x15", "__get__itemsType", "\x16\n", "\x1e\x03\x18", "\x01\x07", "\x18\t\x0b", "\x16\x1b\x18", "\x17\x02\x13", "object", "method", "\x18\n\x1c", "\x16\x01\x0e", "\x15\x1e\b", "click", "_btnClose", "\x15\x1d\x15", "\x1c\x0b\x10", "_bgh", "selectItem", "_cgGrid", "overItem", "outItem", "dblClickItem", "\x19\x02\x10", "label", "VALIDATE", "api", "lang", "getText", "\x1e\x10\t", "title", "FEED_ITEM", "\x1c\x1b\x19", "text", "SELECT_ITEM", "\x17\x05\x03", "\x1a\x05\x15", "Inventory", "\x1c\x11\x13", "_visible", "\x1d\f\x14", "\x16\x04\t", "\x1b\x17\x07", "\x17\x0e\x13", "k", "length", "type", "\x1b\x02\x10", "isCeremonial", "position", "\x16\x16\x03", "push", "dataProvider", "name", "noItem", "listener", "ERROR_BOX", "ERROR_NO_FOOD_LIVING_ITEM", "\x18\x12\x03", "\x1a\x1e\x0e", "\x16\x15\x13", "\x1b\x13\x14", "validate", "ID", "noSelection", "Confirm", "params", "oItem", "CAUTION_YESNO", "CONFIRM_FOOD_LIVING_ITEM", "\x18\x18\x12", "SpeakingItemsManager", "SPEAK_TRIGGER_FEED", "\x1b\x11\x11", "\x19\x06\x1c", "Items", "\x17\x0f\x16", "target", "selectedContentData", "\x17\x01\f", "\x18\x11\x01", "style", "ToolTip", "\x1b\x01\x11", "\x18\x07\n", "yes", "_name", "AskYesNoConfirm", "item", "addProperty", "itemsType", "ASSetPropFlags", "LivingItemsViewer"
+GetTime
+If loc0b1b
+CloneSprite
+loc12f6:

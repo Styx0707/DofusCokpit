@@ -1,0 +1,35 @@
+onClipEvent(load){
+   while(true)
+   {
+      if(false)
+      {
+         if(!ord("\x05"))
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push(false);
+      }
+      if(§§pop())
+      {
+         break;
+      }
+      function §\x1e\x11\n§(eventObj)
+      {
+         _parent.dblClickItem({target:this});
+      }
+      if(!ord("\x07"))
+      {
+         §§push(new §\§\§pop()§());
+      }
+      else
+      {
+         addrdf4e:
+         this["\x15\x1d\x15"]("dblClick",eval("\x1e\x11\n"));
+      }
+      return;
+   }
+   §§goto(addrdf4e);
+}

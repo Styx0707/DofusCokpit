@@ -1,0 +1,17 @@
+while(true)
+{
+   if(!ord("\x02"))
+   {
+      if(false)
+      {
+         break;
+      }
+   }
+   else
+   {
+      §§push(0);
+      §§push("_parent");
+   }
+   eval(§§pop())["\x19\x14\t"]();
+   break;
+}

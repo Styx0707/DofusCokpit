@@ -1,0 +1,526 @@
+Push false
+Not
+If loc001b
+Push false
+Not
+If loc0021
+Jump loc091d
+loc001b:Push "\x03"
+loc0021:CharToAscii
+If loc0847
+ConstantPool "8", "\"{invalid_utf8=131}", "{invalid_utf8=158}"
+loc0033:DefineFunction2 "", 2, 13, false, false, true, false, true, false, false, true, false, 2, "\x1b\x18\x11", 3, "\x18\x05\x04" {
+Push "8"
+GetVariable
+Push "\"{invalid_utf8=131}"
+GetMember
+Push constant18
+GetMember
+Push constant19
+GetMember
+Push 2
+Multiply
+StoreRegister 4
+Pop
+Push 10, constant20, 2, register1, constant21
+Push false
+Not
+If loc030c
+Extends
+loc008d:GetMember
+Push 5, register1, constant8
+CallMethod
+Pop
+Jump loc021e
+loc00a1:Push register5
+StoreRegister 11
+Pop
+Jump loc0109
+loc00b0:Push register11, 14
+GetTime
+If loc0103
+StartDrag
+loc00c1:GetMember
+Push constant15
+CallMethod
+Pop
+Push 0, register1, constant20
+GetMember
+Push constant16
+CallMethod
+Pop
+Push register7
+StoreRegister 9
+Pop
+Jump loc0196
+loc00ec:Push register9, 14
+Push "\n"
+CharToAscii
+If loc0190
+SetProperty
+loc0103:Add2
+StoreRegister 11
+Pop
+loc0109:Push register11, register6
+Greater
+Not
+Not
+If loc0141
+Push 16777215, 7, register11, register8, register1, constant20
+GetMember
+Push 5, register1, constant8
+CallMethod
+Pop
+Jump loc00b0
+loc0141:Push register5
+StoreRegister 12
+Push "\x03"
+CharToAscii
+If loc03fb
+ImplementsOp
+loc0157:Pop
+Push 0
+StoreRegister 7
+Pop
+Push register2, register4
+Add2
+StoreRegister 8
+Pop
+Push register5, register7, 2, register1, constant20
+GetMember
+Push constant13
+GetTime
+Increment
+If loc02ab
+DefineLocal
+loc0190:Add2
+StoreRegister 9
+Pop
+loc0196:Push register9, register8
+Greater
+Not
+Not
+If loc01ce
+Push 16777215, 7, register5, register9, register1, constant20
+GetMember
+Push 5, register1, constant8
+CallMethod
+Pop
+Jump loc00ec
+loc01ce:Push register7
+Push true
+If loc0214
+NewObject
+loc01de:GetMember
+Subtract
+StoreRegister 5
+Pop
+Push 0, "8"
+GetVariable
+Push "\"{invalid_utf8=131}"
+GetMember
+Push constant18
+GetMember
+Push constant22
+GetMember
+Subtract
+StoreRegister 6
+Push "\x03"
+CharToAscii
+If loc0157
+SetMember
+loc0214:StoreRegister 10
+Pop
+Jump loc022e
+loc021e:Push register10, 14
+Add2
+StoreRegister 10
+Pop
+loc022e:Push register10, register8
+Greater
+Not
+Not
+If loc00a1
+Push 16777215, 7, register6, register10, register1, constant20
+Push false
+Not
+If loc008d
+NewObject
+loc025e:CallMethod
+Pop
+Push register6, register8, 2, register1, constant20
+GetMember
+Push constant15
+CallMethod
+Pop
+Push register6, register7, 2, register1, constant20
+GetMember
+Push constant15
+CallMethod
+Pop
+Push register5, register7, 2, register1, constant20
+Push true
+If loc00c1
+SetMember
+loc02ab:CallMethod
+Pop
+Push 16777215, 0, 2, register1, constant20
+GetMember
+Push constant23
+CallMethod
+Pop
+Push 100, 16777215, 2, register1, constant20
+GetMember
+Push constant14
+CallMethod
+Pop
+Push register5, register8, 2, register1, constant20
+GetMember
+Push constant15
+Push "\x07"
+CharToAscii
+If loc025e
+CastOp
+loc030c:CallMethod
+Pop
+Push 0, register3
+Subtract
+Push register4
+Subtract
+Push "8"
+GetVariable
+Push "\"{invalid_utf8=131}"
+GetMember
+Push constant18
+GetMember
+Push constant22
+GetTime
+Increment
+If loc01de
+GetProperty
+loc033e:CallMethod
+Pop
+Push 16777215, 4, 5, -5, register1, constant20
+GetMember
+Push 5, register1, constant8
+CallMethod
+Pop
+Push register1, constant20
+GetMember
+Push constant24, false, false, 3, 3, 2, 2, 30, 0, 8, constant25
+GetVariable
+Push constant24
+Push true
+If loc0442
+GetProperty
+loc03b1:GetMember
+Push 5, register1, constant8
+CallMethod
+Pop
+Jump loc0401
+loc03c5:Push 16777215, 8, register6, 5
+Add2
+Push register7, register1, constant20
+GetMember
+Push 5, register1, constant8
+Push true
+If loc033e
+Extends
+loc03fb:Pop
+Jump loc0411
+loc0401:Push register12, 14
+Add2
+StoreRegister 12
+Pop
+loc0411:Push register12, register6
+Greater
+Not
+Not
+If loc03c5
+Push 16777215, 7, register12, register7, register1, constant20
+Push "\x04"
+CharToAscii
+If loc03b1
+SetProperty
+loc0442:GetMember
+Push constant26
+NewMethod
+Push 1
+InitArray
+SetMember
+Push register1, constant20
+GetMember
+Push constant27, 90
+SetMember
+}
+GetTime
+Increment
+If loc04e1
+CastOp
+loc046e:DefineFunction2 "", 4, 7, false, false, false, true, true, false, false, true, false, 3, "\x1b\x0f\x13", 4, "\x1b\x19\x14", 5, "\x1b\x1a\x14", 6, "\x18\x1a\n" {
+Push register6, register5, register4, register3, 4, register2, undefined
+CallMethod
+Pop
+}
+Push "\x04"
+CharToAscii
+If loc04fb
+StartDrag
+loc04af:GetMember
+Not
+Not
+If loc053f
+Push constant4
+GetVariable
+Push "8"
+GetMember
+Push "\"{invalid_utf8=131}"
+GetMember
+Push "{invalid_utf8=158}", 0, constant5
+Push false
+Not
+If loc053d
+ImplementsOp
+loc04e1:SetMember
+Push 1, null, register1, 3, constant28
+CallFunction
+Pop
+loc04f6:Jump loc091d
+loc04fb:StoreRegister 0
+SetMember
+Push register0, "\x16\x04\t"
+GetVariable
+Push "battlefield"
+GetMember
+Push "mc"
+GetMember
+Push "\x16\x13\x19"
+GetMember
+Extends
+Push register0, "prototype"
+Push true
+If loc0787
+NewObject
+loc052d:SetMember
+Push register1, "\x17\n\x02"
+GetTime
+Increment
+If loc0033
+Extends
+loc053d:NewObject
+SetMember
+loc053f:Push "_global"
+GetVariable
+Push "\x16\x04\t"
+GetMember
+Push "battlefield"
+GetMember
+Push "mc"
+GetMember
+Push "\x16\x13\x1b"
+Push false
+Not
+If loc046e
+ImplementsOp
+loc0568:DefineFunction2 "", 5, 12, false, false, true, false, true, false, false, true, false, 2, "\x18\x1b\x12", 3, "\x1b\x19\x14", 4, "\x1b\x1a\x14", 5, "\x1a\n\x06", 6, "\x16\x1d\x0e" {
+Push register3, 360, 15
+Divide
+Push 0
+Multiply
+Push "Math"
+GetVariable
+Push "PI"
+GetMember
+Multiply
+Push 180
+Divide
+Push 1, "Math"
+GetVariable
+Push "sin"
+GetTime
+If loc06ea
+DefineLocal
+loc05d2:Greater
+Not
+Not
+If loc0772
+Push register3, 360, 15
+Divide
+Push register9
+Multiply
+Push "Math"
+GetVariable
+Push "PI"
+Push true
+If loc0676
+CallFunction
+loc0606:GetMember
+Multiply
+Push 180
+Divide
+Push 1, "Math"
+GetVariable
+Push "cos"
+CallMethod
+Push register5
+Multiply
+Push true
+If loc0755
+Extends
+loc0633:GetMember
+Multiply
+Push 180
+Divide
+Push 1, "Math"
+GetVariable
+Push "cos"
+CallMethod
+Push register5
+Multiply
+Add2
+StoreRegister 8
+Pop
+Push register8, register7, 2, register2, "moveTo"
+Push true
+If loc06a5
+ImplementsOp
+loc0676:GetMember
+Multiply
+Push 180
+Divide
+Push 1, "Math"
+GetVariable
+Push "sin"
+CallMethod
+Push register5
+Multiply
+Push "\x06"
+CharToAscii
+If loc0727
+ImplementsOp
+loc06a5:CallMethod
+Pop
+Push 100, register6, 2, register2, "beginFill"
+CallMethod
+Pop
+Push 0
+StoreRegister 9
+Pop
+Jump loc06d9
+loc06ce:Push register9
+Increment
+StoreRegister 9
+Pop
+loc06d9:Push register9, 15
+GetTime
+If loc05d2
+Extends
+loc06ea:CallMethod
+Push register5
+Multiply
+Add2
+StoreRegister 7
+Pop
+Push register4, 360, 15
+Divide
+Push 0
+Multiply
+Push "Math"
+GetVariable
+Push "PI"
+Push false
+Not
+If loc0633
+NewObject
+loc0727:Add2
+StoreRegister 10
+Pop
+Push register4, 360, 15
+Divide
+Push register9
+Multiply
+Push "Math"
+GetVariable
+Push "PI"
+GetTime
+If loc0606
+GetProperty
+loc0755:Add2
+StoreRegister 11
+Pop
+Push register11, register10, 2, register2, "lineTo"
+CallMethod
+Pop
+Jump loc06ce
+loc0772:Push 0, register2, "endFill"
+CallMethod
+Pop
+}
+GetTime
+If loc052d
+StartDrag
+loc0787:GetMember
+StoreRegister 1
+Pop
+Push register1, "\x17\n\x05"
+Push "\x04"
+CharToAscii
+If loc0568
+NewObject
+loc07a1:Push "\x16\x04\t"
+GetVariable
+Push "battlefield"
+GetMember
+Push "mc"
+GetMember
+Push "\x16\x13\x1b"
+GetMember
+Not
+Not
+GetTime
+If loc07e6
+GetProperty
+loc07c2:GetVariable
+Push "battlefield"
+GetMember
+Not
+Not
+If loc082b
+Push "_global"
+GetVariable
+Push "\x16\x04\t"
+Push true
+If loc081c
+SetProperty
+loc07e6:If loc04f6
+Push "\x16\x04\t"
+GetVariable
+Not
+Not
+If loc080c
+Push "_global"
+GetVariable
+Push "\x16\x04\t", 0, "Object"
+NewObject
+SetMember
+loc080c:Push "\x16\x04\t"
+Push true
+If loc07c2
+Extends
+loc081c:GetMember
+Push "battlefield", 0, "Object"
+NewObject
+SetMember
+loc082b:Push "\x16\x04\t"
+GetVariable
+Push "battlefield"
+GetMember
+Push "mc"
+Push true
+If loc04af
+SetProperty
+loc0847:ConstantPool "\x16\x04\t", "battlefield", "mc", "\x16\x13\x1b", "_global", "Object", "\x16\x13\x19", "prototype", "\x17\n\x05", "Math", "PI", "sin", "cos", "moveTo", "beginFill", "lineTo", "endFill", "\x17\n\x02", "\x17\x01\x06", "\x16\x14\x01", "\x1c\x04\x0f", "createEmptyMovieClip", "\x16\x14\x02", "lineStyle", "filters", "flash", "GlowFilter", "_alpha", "ASSetPropFlags"
+GetTime
+If loc07a1
+ImplementsOp
+loc091d:

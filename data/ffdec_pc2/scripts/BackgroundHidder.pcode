@@ -1,0 +1,16 @@
+ConstantPool "{invalid_utf8=182}", "\x15"
+Push false
+Not
+If loc0025
+Push "\b"
+CharToAscii
+If loc004c
+Jump loc0084
+loc0025:Push "ank.gapi.controls.BackgroundHidder"
+loc004c:GetVariable
+Push "BackgroundHidder", 2, "Object"
+GetVariable
+Push "registerClass"
+CallMethod
+Pop
+loc0084:

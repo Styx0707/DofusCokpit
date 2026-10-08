@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dofus Retro — Persos &amp; Stuff</title>
+    <link rel="icon" type="image/svg+xml" href="/ui/favicon.svg">
+    <link rel="apple-touch-icon" href="/ui/favicon.svg">
+    <style>
+        :root {
+            --plane: #f9f9f7;
+            --surface: #fcfcfb;
+            --ink: #0b0b0b;
+            --ink2: #52514e;
+            --muted: #898781;
+            --grid: #e1e0d9;
+            --line: #c3c2b7;
+            --accent: #2a78d6;
+            --accent-soft: #cde2fb;
+            --chip: #f0efec;
+            --border: rgba(11, 11, 11, 0.10);
+            --shadow: rgba(11, 11, 11, 0.18);
+            --good: #0ca30c;
+        }
+
+        :root[data-theme="dark"] {
+            --plane: #0d0d0d;
+            --surface: #1a1a19;
+            --ink: #ffffff;
+            --ink2: #c3c2b7;
+            --muted: #898781;
+            --grid: #2c2c2a;
+            --line: #383835;
+            --accent: #3987e5;
+            --accent-soft: #184f95;
+            --chip: #242422;
+            --border: rgba(255, 255, 255, 0.10);
+            --shadow: rgba(0, 0, 0, 0.5);
+            --good: #0ca30c;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--plane);
+            color: var(--ink);
+            font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+            font-size: 14px;
+            line-height: 1.45;
+        }
+
+        .wrap {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 24px 20px 60px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 20px;
+            margin: 0;
+            font-weight: 650;
+        }
+
+        .sub {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .spacer {
+            flex: 1;
+        }
+
+        a.nav {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 13px;
+            margin-right: 6px;
+        }
+
+        input[type=search], select, input[type=number], button {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            color: var(--ink);
+            border-radius: 8px;
+            padding: 8px 11px;
+            font-size: 13.5px;
+            font-family: inherit;
+        }
+
+        input[type=search] {
+            min-width: 200px;
+        }
+
+        button {
+            cursor: pointer;
+            color: var(--ink2);
+        }
+
+        label.f {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            font-size: 11px;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .filters {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            margin-bottom: 18px;
+        }
+
+        .kpis {
+            display: grid;
+            grid-template-columns:repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .tile {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px 16px;
+        }
+
+        .tile .v {
+            font-size: 26px;
+            font-weight: 680;
+            letter-spacing: -0.01em;
+        }
+
+        .tile .l {
+            color: var(--muted);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-top: 2px;
+        }
+
+        .panel {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px 18px;
+            margin-bottom: 18px;
+        }
+
+        .panel h2 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--ink2);
+            margin: 0 0 12px;
+            font-weight: 600;
+        }
+
+        .bar-row {
+            display: grid;
+            grid-template-columns:120px 1fr 40px;
+            align-items: center;
+            gap: 10px;
+            margin: 5px 0;
+        }
+
+        .bar-row .name {
+            color: var(--ink2);
+        }
+
+        .bar-track {
+            background: var(--grid);
+            border-radius: 4px;
+            height: 14px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            background: var(--accent);
+            height: 100%;
+            border-radius: 4px;
+        }
+
+        .bar-row .cnt {
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+            color: var(--ink2);
+        }
+
+        .account {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 16px;
+            overflow: hidden;
+        }
+
+        .account > .head {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            padding: 12px 18px;
+            border-bottom: 1px solid var(--grid);
+        }
+
+        .acc-name {
+            font-weight: 650;
+            font-size: 15px;
+        }
+
+        .acc-meta {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .char {
+            display: grid;
+            grid-template-columns:250px 1fr;
+            gap: 14px;
+            padding: 11px 18px;
+            border-top: 1px solid var(--grid);
+            cursor: pointer;
+        }
+
+        .char:first-of-type {
+            border-top: none;
+        }
+
+        .char:hover {
+            background: color-mix(in srgb, var(--accent) 7%, transparent);
+        }
+
+        .who {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .cname {
+            font-weight: 600;
+        }
+
+        .cmeta {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: 600;
+            background: var(--accent-soft);
+            color: var(--ink);
+        }
+
+        .full {
+            display: inline-block;
+            padding: 1px 7px;
+            border-radius: 999px;
+            font-size: 11px;
+            font-weight: 600;
+            color: #fff;
+            background: var(--good);
+        }
+
+        .lvl {
+            color: var(--ink2);
+            font-size: 13px;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            align-content: flex-start;
+        }
+
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: var(--chip);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 3px 8px;
+            font-size: 12.5px;
+        }
+
+        .chip.empty {
+            color: var(--muted);
+            font-style: italic;
+            border-style: dashed;
+        }
+
+        .chip img {
+            width: 18px;
+            height: 18px;
+            object-fit: contain;
+        }
+
+        .foot {
+            color: var(--muted);
+            font-size: 12px;
+            margin-top: 24px;
+            text-align: center;
+        }
+
+        .overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            z-index: 50;
+        }
+
+        .modal {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            box-shadow: 0 12px 40px var(--shadow);
+            max-width: 820px;
+            width: 100%;
+            max-height: 88vh;
+            overflow: auto;
+            padding: 22px 24px;
+        }
+
+        .modal .x {
+            float: right;
+            border: none;
+            background: transparent;
+            font-size: 20px;
+            color: var(--muted);
+            cursor: pointer;
+        }
+
+        .modal h3 {
+            margin: 0 0 2px;
+            font-size: 19px;
+        }
+
+        .modal .msub {
+            color: var(--muted);
+            margin-bottom: 16px;
+        }
+
+        .cols {
+            display: grid;
+            grid-template-columns:1fr 300px;
+            gap: 18px;
+        }
+
+        @media (max-width: 720px) {
+            .cols {
+                grid-template-columns:1fr;
+            }
+        }
+
+        .slots {
+            display: grid;
+            grid-template-columns:1fr 1fr;
+            gap: 10px;
+        }
+
+        .slot {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            padding: 9px 11px;
+            border: 1px solid var(--grid);
+            border-radius: 10px;
+            background: var(--plane);
+        }
+
+        .slot-head {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+        }
+
+        .slot-head img {
+            width: 34px;
+            height: 34px;
+            object-fit: contain;
+            flex: none;
+        }
+
+        .slot .sl {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--muted);
+            display: block;
+        }
+
+        .slot .it {
+            font-size: 13.5px;
+            font-weight: 600;
+        }
+
+        .slot.void {
+            opacity: 0.6;
+        }
+
+        .slot.void .it {
+            color: var(--muted);
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .jets {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+        }
+
+        .jet {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11.5px;
+            color: var(--ink2);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .jet.unk {
+            color: var(--muted);
+        }
+
+        .jet .v {
+            min-width: 34px;
+            text-align: right;
+            font-weight: 600;
+        }
+
+        .edot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            flex: none;
+            box-shadow: 0 0 0 1px var(--border) inset;
+        }
+
+        .edot.none {
+            box-shadow: none;
+        }
+
+        .totals {
+            border: 1px solid var(--grid);
+            border-radius: 12px;
+            padding: 12px 14px;
+            background: var(--plane);
+            align-self: start;
+            position: sticky;
+            top: 0;
+        }
+
+        .totals h4 {
+            margin: 0 0 8px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--muted);
+        }
+
+        .totals .grp {
+            margin-top: 10px;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            padding: 2px 0;
+            font-size: 13px;
+        }
+
+        .stat .sv {
+            min-width: 46px;
+            text-align: right;
+            font-weight: 650;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .stat .sl {
+            color: var(--ink2);
+        }
+
+        .legend {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 14px;
+            padding-top: 10px;
+            border-top: 1px dashed var(--grid);
+            font-size: 11.5px;
+            color: var(--muted);
+        }
+
+        .legend span {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .note {
+            margin-top: 12px;
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <header>
+        <div><h1>Dofus Retro — Persos &amp; Stuff</h1>
+            <div class="sub" id="subtitle">Chargement…</div>
+        </div>
+        <div class="spacer"></div>
+        <a class="nav" href="bank.html">Banque</a>
+        <a class="nav" href="board.html">Comptes</a>
+        <a class="nav" href="live.html">Repop live</a>
+        <a class="nav" href="dungeon.html">Donjons</a>
+        <a class="nav" href="build.html">Suivi ressources -></a>
+        <button id="theme">◐ Thème</button>
+    </header>
+
+    <div class="filters">
+        <label class="f">Recherche<input type="search" id="search" placeholder="perso, item…"
+                                         autocomplete="off"></label>
+        <label class="f">Compte<select id="f-account">
+            <option value="">Tous</option>
+        </select></label>
+        <label class="f">Classe<select id="f-class">
+            <option value="">Toutes</option>
+        </select></label>
+        <label class="f">Niveau min<input type="number" id="f-level" min="0" value="0" style="width:90px"></label>
+        <label class="f">Tri<select id="f-sort">
+            <option value="level">Niveau ↓</option>
+            <option value="name">Nom A→Z</option>
+            <option value="account">Compte</option>
+        </select></label>
+        <label class="f">&nbsp;<button id="f-equip" data-on="0">Avec stuff</button>
+        </label>
+    </div>
+
+    <section class="kpis" id="kpis"></section>
+    <section class="panel"><h2>Personnages par classe (filtré)</h2>
+        <div id="class-bars"></div>
+    </section>
+    <section id="accounts"></section>
+    <div class="foot">Clique un perso pour sa fiche (paperdoll + jets + total des stats). Badge <b>complet</b> =
+        équipement capturé en jeu.
+    </div>
+</div>
+
+<div id="modal-root"></div>
+
+<script>
+    const $ = (s, r = document) => r.querySelector(s);
+    const SLOTS = ["Amulette", "Arme", "Anneau", "Ceinture", "Anneau", "Bottes", "Coiffe", "Cape", "Familier",
+        "Dofus", "Dofus", "Dofus", "Dofus", "Dofus", "Dofus", "Bouclier"];
+    const ELEM = {neutre: "#9a9a9a", terre: "#a86b2e", feu: "#d03b3b", eau: "#2a78d6", air: "#2fa84f"};
+    // Ordre d'affichage des stats du panneau total.
+    const STAT_ORDER = ["Vitalité", "Sagesse", "Force", "Intelligence", "Chance", "Agilité", "PA", "PM", "Portée",
+        "Initiative", "Prospection", "Invocations", "Coups Critiques", "Dommages", "% Dommages", "Soin",
+        "Vol de vie", "PDV rendus"];
+    let ROSTER = [], CHARS = [];
+
+    function esc(s) {
+        return (s ?? "").toString().replace(/[&<>"]/g, c => ({
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;'
+        }[c]));
+    }
+
+    function ico(it, cls) {
+        return it.icon ? `<img class="${cls || ''}" src="${esc(it.icon)}" alt="" loading="lazy">` : "";
+    }
+
+    function numOf(v) {
+        const n = parseInt((v + "").split("-").pop(), 10);
+        return isNaN(n) ? 0 : n;
+    }
+
+    async function load() {
+        try {
+            ROSTER = await (await fetch("../roster")).json();
+        } catch (e) {
+            $("#subtitle").textContent = "Erreur de chargement de /roster";
+            return;
+        }
+        CHARS = [];
+        for (const a of ROSTER) for (const c of a.characters)
+            CHARS.push({
+                ...c, account: a.account,
+                terms: (c.name + " " + (c.class_name || "") + " " + a.account + " " + (c.equipment || []).map(e => e.name).join(" ")).toLowerCase()
+            });
+        initFilters();
+        render();
+    }
+
+    function initFilters() {
+        const accs = [...new Set(CHARS.map(c => c.account))].sort();
+        const cls = [...new Set(CHARS.map(c => c.class_name).filter(Boolean))].sort();
+        $("#f-account").insertAdjacentHTML("beforeend", accs.map(a => `<option>${esc(a)}</option>`).join(""));
+        $("#f-class").insertAdjacentHTML("beforeend", cls.map(a => `<option>${esc(a)}</option>`).join(""));
+    }
+
+    function filtered() {
+        const q = $("#search").value.trim().toLowerCase(), acc = $("#f-account").value, cl = $("#f-class").value;
+        const minl = +$("#f-level").value || 0, equipOnly = $("#f-equip").dataset.on === "1";
+        let list = CHARS.filter(c =>
+            (!q || c.terms.includes(q)) && (!acc || c.account === acc) && (!cl || c.class_name === cl) &&
+            ((c.level || 0) >= minl) && (!equipOnly || (c.equipment && c.equipment.length)));
+        const sort = $("#f-sort").value;
+        const cmp = {
+            level: (a, b) => (b.level || 0) - (a.level || 0),
+            name: (a, b) => a.name.localeCompare(b.name),
+            account: (a, b) => a.account.localeCompare(b.account) || (b.level || 0) - (a.level || 0)
+        }[sort];
+        return list.sort(cmp);
+    }
+
+    function renderKpis(list) {
+        const accs = new Set(list.map(c => c.account)), cls = new Set(list.map(c => c.class_name));
+        const full = list.filter(c => c.full).length;
+        const tiles = [["Comptes", accs.size], ["Personnages", list.length], ["Stuff complet", full], ["Classes", cls.size]];
+        $("#kpis").innerHTML = tiles.map(([l, v]) => `<div class="tile"><div class="v">${v}</div><div class="l">${l}</div></div>`).join("");
+    }
+
+    function renderClassBars(list) {
+        const by = {};
+        for (const c of list) {
+            const k = c.class_name || "?";
+            by[k] = (by[k] || 0) + 1;
+        }
+        const e = Object.entries(by).sort((a, b) => b[1] - a[1]);
+        const max = Math.max(1, ...e.map(x => x[1]));
+        $("#class-bars").innerHTML = e.length ? e.map(([n, v]) =>
+                `<div class="bar-row"><span class="name">${esc(n)}</span><span class="bar-track"><span class="bar-fill" style="width:${(v / max * 100).toFixed(1)}%"></span></span><span class="cnt">${v}</span></div>`).join("")
+            : `<div class="sub">Aucun perso.</div>`;
+    }
+
+    function renderList(list) {
+        const byAcc = {};
+        for (const c of list) {
+            (byAcc[c.account] = byAcc[c.account] || []).push(c);
+        }
+        const order = $("#f-sort").value === "account" ? Object.keys(byAcc).sort() : [...new Set(list.map(c => c.account))];
+        $("#accounts").innerHTML = order.map(acc => {
+            const rows = byAcc[acc].map(c => {
+                const chips = (c.equipment && c.equipment.length) ? c.equipment.map(e => `<span class="chip">${ico(e)}${esc(e.name)}</span>`).join("")
+                    : `<span class="chip empty">aucun équipement connu</span>`;
+                const sex = c.sex === 1 ? "♀" : "♂";
+                const full = c.full ? `<span class="full">complet</span>` : "";
+                return `<div class="char" data-idx="${CHARS.indexOf(c)}">
+        <div class="who"><span class="cname">${esc(c.name)} <span class="lvl">${sex}</span></span>
+          <span class="cmeta"><span class="badge">${esc(c.class_name || "?")}</span><span class="lvl">Niv. ${c.level ?? "?"}</span>${full}</span></div>
+        <div class="chips">${chips}</div></div>`;
+            }).join("");
+            return `<div class="account"><div class="head"><span class="acc-name">${esc(acc)}</span><span class="acc-meta">${byAcc[acc].length} perso(s)</span></div>${rows}</div>`;
+        }).join("") || `<div class="panel">Aucun personnage ne correspond aux filtres.</div>`;
+    }
+
+    function render() {
+        const list = filtered();
+        $("#subtitle").textContent = `${list.length} / ${CHARS.length} personnages`;
+        renderKpis(list);
+        renderClassBars(list);
+        renderList(list);
+    }
+
+    function jetHtml(e) {
+        const dot = e.element ? `<span class="edot" style="background:${ELEM[e.element] || '#9a9a9a'}"></span>`
+            : `<span class="edot none"></span>`;
+        return `<span class="jet ${e.known ? '' : 'unk'}">${dot}<span class="v">${esc(e.value)}</span>${esc(e.label)}</span>`;
+    }
+
+    function slotCell(sl, it) {
+        if (!it) return `<div class="slot void"><div class="slot-head"><span><span class="sl">${esc(sl)}</span><span class="it">—</span></span></div></div>`;
+        const jets = (it.effects || []).map(jetHtml).join("");
+        return `<div class="slot"><div class="slot-head">${ico(it)}<span><span class="sl">${esc(it.slot_name || sl)}</span><span class="it">${esc(it.name)}</span></span></div><div class="jets">${jets}</div></div>`;
+    }
+
+    // Somme des jets de tout l'équipement, par stat (résistances gardées par élément).
+    function computeTotals(eq) {
+        const stat = {}, res = {};
+        for (const it of eq) for (const e of (it.effects || [])) {
+            if (e.label.startsWith("Rés")) {
+                res[e.label] = res[e.label] || {sum: 0, element: e.element};
+                res[e.label].sum += numOf(e.value);
+            } else {
+                stat[e.label] = (stat[e.label] || 0) + numOf(e.value);
+            }
+        }
+        return {stat, res};
+    }
+
+    function renderTotals(eq) {
+        const {stat, res} = computeTotals(eq);
+        const keys = Object.keys(stat).sort((a, b) => {
+            const ia = STAT_ORDER.indexOf(a), ib = STAT_ORDER.indexOf(b);
+            return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib) || a.localeCompare(b);
+        });
+        const line = (v, label, el) => `<div class="stat">${el ? `<span class="edot" style="background:${ELEM[el] || '#9a9a9a'}"></span>` : ''}<span class="sv">${v > 0 ? '+' : ''}${v}</span><span class="sl">${esc(label)}</span></div>`;
+        const main = keys.map(k => line(stat[k], k)).join("");
+        const rk = Object.keys(res).sort();
+        const rblock = rk.length ? `<div class="grp"><h4>Résistances</h4>${rk.map(k => line(res[k].sum, k, res[k].element)).join("")}</div>` : "";
+        return `<div class="totals"><h4>Total du stuff</h4>${main || '<div class="sub">—</div>'}${rblock}</div>`;
+    }
+
+    function legendHtml() {
+        return `<div class="legend">` + Object.entries(ELEM).map(([k, c]) =>
+            `<span><span class="edot" style="background:${c}"></span>${k}</span>`).join("") + `</div>`;
+    }
+
+    function openModal(c) {
+        const eq = c.equipment || [];
+        let body;
+        if (c.full) {
+            const grid = `<div class="slots">` + SLOTS.map((sl, i) => slotCell(sl, eq.find(e => e.slot === i))).join("") + `</div>` + legendHtml();
+            body = `<div class="cols"><div>${grid}</div>${renderTotals(eq)}</div>`;
+        } else {
+            body = eq.length ? `<div class="chips">` + eq.map(e => `<span class="chip">${ico(e)}${esc(e.name)}</span>`).join("") + `</div>`
+                : `<div class="sub">Aucun équipement connu.</div>`;
+        }
+        const sex = c.sex === 1 ? "♀" : "♂";
+        const note = c.full ? "" : `<div class="note">Équipement visible uniquement — capture en jeu requise pour le stuff complet (anneaux, amulette, dofus…).</div>`;
+        $("#modal-root").innerHTML = `<div class="overlay" id="ov">
+    <div class="modal"><button class="x" id="mx">✕</button>
+      <h3>${esc(c.name)} <span class="lvl">${sex}</span> ${c.full ? '<span class="full">complet</span>' : ''}</h3>
+      <div class="msub"><span class="badge">${esc(c.class_name || "?")}</span> &nbsp;Niveau ${c.level ?? "?"} &nbsp;•&nbsp; ${esc(c.account)}</div>
+      ${body}${note}
+    </div></div>`;
+        $("#ov").addEventListener("click", e => {
+            if (e.target.id === "ov") close();
+        });
+        $("#mx").addEventListener("click", close);
+    }
+
+    function close() {
+        $("#modal-root").innerHTML = "";
+    }
+
+    $("#accounts").addEventListener("click", e => {
+        const row = e.target.closest(".char");
+        if (!row) return;
+        openModal(CHARS[+row.dataset.idx]);
+    });
+    for (const id of ["search", "f-account", "f-class", "f-level", "f-sort"])
+        $("#" + id).addEventListener("input", render);
+    $("#f-equip").addEventListener("click", e => {
+        const b = e.currentTarget;
+        b.dataset.on = b.dataset.on === "1" ? "0" : "1";
+        b.style.background = b.dataset.on === "1" ? "var(--accent)" : "";
+        b.style.color = b.dataset.on === "1" ? "#fff" : "";
+        render();
+    });
+    document.addEventListener("keydown", e => {
+        if (e.key === "Escape") close();
+    });
+    $("#theme").addEventListener("click", () => {
+        const r = document.documentElement;
+        r.dataset.theme = r.dataset.theme === "dark" ? "light" : "dark";
+    });
+    if (window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches) document.documentElement.dataset.theme = "dark";
+
+    load();
+</script>
+<script src="/ui/nav.js"></script>
+</body>
+</html>

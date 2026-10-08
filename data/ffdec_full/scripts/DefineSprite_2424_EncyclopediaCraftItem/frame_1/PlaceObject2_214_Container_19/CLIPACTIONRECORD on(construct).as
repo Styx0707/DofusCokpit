@@ -1,0 +1,71 @@
+on(construct){
+   loop2:
+   while(true)
+   {
+      while(true)
+      {
+         if(false)
+         {
+            if(!(true and true))
+            {
+               break;
+            }
+         }
+         else
+         {
+            §§push(666312334);
+         }
+         var _temp_1 = §§pop();
+         if(!(_temp_1 | _temp_1))
+         {
+            break;
+         }
+         break loop2;
+      }
+      §§goto(addr26ef6);
+   }
+   if(ord("\x05"))
+   {
+      loop1:
+      while(true)
+      {
+         set("{invalid_utf8=140}{invalid_utf8=169}","L{invalid_utf8=183}");
+         set(§§constant(2),§§constant(3));
+         set(§§constant(4),false);
+         set(§§constant(5),true);
+         set(§§constant(6),false);
+         §§push(§§constant(7));
+         §§push(§§constant(3));
+         if(!ord("\x05"))
+         {
+            duplicateMovieClip(§§pop(),§§pop(),§§pop());
+            §§goto(addr26f65);
+         }
+         else
+         {
+            while(true)
+            {
+               set(§§pop(),§§pop());
+               set(§§constant(8),1);
+               set(§§constant(9),2);
+               set(§§constant(10),true);
+               §§push(§§constant(11));
+               §§push(§§constant(12));
+               if(ord("\n"))
+               {
+                  break;
+               }
+               startDrag(§§pop(),§§pop(),§§pop(),§§pop(),§§pop(),§§pop());
+               continue loop1;
+            }
+            addr26ef6:
+         }
+         addr2700a:
+         set(§§pop(),§§pop());
+         return;
+         addr26f65:
+      }
+      break loop3;
+   }
+   §§goto(addr2700a);
+}

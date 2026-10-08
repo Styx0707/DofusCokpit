@@ -1,0 +1,80 @@
+on(construct){
+   loop1:
+   while(true)
+   {
+      loop2:
+      while(true)
+      {
+         if(!(0x3806B5EE | 0x3806B5EE))
+         {
+            if(false)
+            {
+               while(true)
+               {
+                  set("{invalid_utf8=149}",50);
+                  set("]{invalid_utf8=147}","{invalid_utf8=128}");
+                  set("\x1d{invalid_utf8=150}\x07",0);
+                  set("\b\x05\x072",true);
+                  §§push("");
+                  §§push(true);
+                  if(!ord("\x03"))
+                  {
+                     var §§pop() = §§pop();
+                     §§goto(addr2676e);
+                  }
+                  else
+                  {
+                     set(§§pop(),§§pop());
+                     set(§§constant(11),§§constant(12));
+                     set(§§constant(13),§§constant(14));
+                     set(§§constant(15),§§constant(14));
+                     set(§§constant(16),§§constant(14));
+                     §§push(§§constant(17));
+                     §§push(true);
+                     if(false)
+                     {
+                        duplicateMovieClip(§§pop(),§§pop(),§§pop());
+                        break loop1;
+                     }
+                  }
+                  §§goto(addr2679c);
+                  break loop2;
+               }
+               §§goto(addr26862);
+               addr26734:
+            }
+         }
+         else
+         {
+            §§push(86767460);
+         }
+         if(!§§pop())
+         {
+            break;
+         }
+         break loop1;
+      }
+      set(§§pop(),§§pop());
+      §§goto(addr26734);
+   }
+   if(ord("\b"))
+   {
+      addr2676e:
+      set("{invalid_utf8=150}\x05",false);
+      set("\x07d{invalid_utf8=247}+\x05{invalid_utf8=157}\x02",false);
+      set("{invalid_utf8=170}",true);
+      set("{invalid_utf8=136}\t",true);
+      §§push("\x03");
+      §§push(false);
+      if(getTimer())
+      {
+         break loop2;
+      }
+      duplicateMovieClip(§§pop(),§§pop(),§§pop());
+      addr2679c:
+      set(§§pop(),§§pop());
+      §§goto(addr26863);
+   }
+   addr26862:
+   addr26863:
+}

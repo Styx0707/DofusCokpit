@@ -1,0 +1,15 @@
+Push "\x05"
+CharToAscii
+If loc001d
+Push "\x05"
+CharToAscii
+If loc004b
+Jump loc0086
+loc001d:Push "ank.gapi.controls.button.ButtonBackground"
+loc004b:GetVariable
+Push "ButtonTransparentUp", 2, "Object"
+GetVariable
+Push "registerClass"
+CallMethod
+Pop
+loc0086:

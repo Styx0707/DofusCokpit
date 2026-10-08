@@ -1,0 +1,20 @@
+while(true)
+{
+   if(!ord("\x03"))
+   {
+      if(!ord("\x03"))
+      {
+         break;
+      }
+   }
+   else
+   {
+      §§push(2);
+      §§push("cIop_R_CheveuxCourt");
+   }
+   §§push(eval(§§pop()));
+   §§push(2);
+   §§push(GAC);
+   break;
+}
+§§pop().applyColor();

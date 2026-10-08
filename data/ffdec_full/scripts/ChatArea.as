@@ -1,0 +1,16 @@
+while(true)
+{
+   if(false)
+   {
+      if(false)
+      {
+         break;
+      }
+   }
+   else
+   {
+      §§push("ank.gapi.controls.ChatArea");
+   }
+   Object.registerClass("ChatArea",eval(§§pop()));
+   break;
+}

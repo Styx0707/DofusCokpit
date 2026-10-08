@@ -1,0 +1,10 @@
+if(!ord("\n"))
+{
+   if(false)
+   {
+   }
+}
+else
+{
+   stop();
+}

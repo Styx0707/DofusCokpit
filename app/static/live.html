@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dofus Retro — Repop live</title>
+    <link rel="icon" type="image/svg+xml" href="/ui/favicon.svg">
+    <style>
+        :root {
+            --plane: #f9f9f7;
+            --surface: #fcfcfb;
+            --ink: #0b0b0b;
+            --ink2: #52514e;
+            --muted: #898781;
+            --grid: #e1e0d9;
+            --line: #c3c2b7;
+            --accent: #2a78d6;
+            --accent-soft: #cde2fb;
+            --chip: #f0efec;
+            --border: rgba(11, 11, 11, 0.10);
+            --shadow: rgba(11, 11, 11, 0.18);
+            --good: #0ca30c;
+            --warn: #d98a00;
+            --bad: #d6392a;
+        }
+
+        :root[data-theme="dark"] {
+            --plane: #0d0d0d;
+            --surface: #1a1a19;
+            --ink: #ffffff;
+            --ink2: #c3c2b7;
+            --muted: #898781;
+            --grid: #2c2c2a;
+            --line: #383835;
+            --accent: #3987e5;
+            --accent-soft: #184f95;
+            --chip: #242422;
+            --border: rgba(255, 255, 255, 0.10);
+            --shadow: rgba(0, 0, 0, 0.5);
+            --good: #2fbf2f;
+            --warn: #f0a728;
+            --bad: #f0584a;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--plane);
+            color: var(--ink);
+            font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+            font-size: 14px;
+            line-height: 1.45;
+        }
+
+        .wrap {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 24px 20px 60px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 6px;
+        }
+
+        h1 {
+            font-size: 20px;
+            margin: 0;
+            font-weight: 650;
+        }
+
+        .sub {
+            color: var(--muted);
+            font-size: 13px;
+            margin-bottom: 18px;
+        }
+
+        .spacer {
+            flex: 1;
+        }
+
+        a.nav {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 13px;
+            margin-right: 6px;
+        }
+
+        button {
+            background: var(--surface);
+            color: var(--ink);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            padding: 6px 12px;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            border-color: var(--accent);
+        }
+
+        .status {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            color: var(--ink2);
+            font-size: 13px;
+            margin-bottom: 16px;
+        }
+
+        .status b {
+            color: var(--ink);
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 6px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+            gap: 14px;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px 16px;
+            box-shadow: 0 1px 3px var(--shadow);
+        }
+
+        .card.stale {
+            opacity: 0.55;
+        }
+
+        .card.hit {
+            border-color: var(--good);
+            box-shadow: 0 0 0 1px var(--good);
+        }
+
+        .card h2 {
+            font-size: 15px;
+            margin: 0 0 2px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .badge {
+            font-size: 11px;
+            padding: 1px 8px;
+            border-radius: 20px;
+            border: 1px solid var(--line);
+            color: var(--ink2);
+            white-space: nowrap;
+        }
+
+        .badge.on {
+            background: var(--accent-soft);
+            border-color: var(--accent);
+            color: var(--ink);
+        }
+
+        .badge.good {
+            background: transparent;
+            border-color: var(--good);
+            color: var(--good);
+        }
+
+        .repop {
+            margin: 8px 0 10px;
+            font-size: 13px;
+        }
+
+        .repop .cd {
+            font-size: 22px;
+            font-weight: 700;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .repop .cd.ready {
+            color: var(--good);
+        }
+
+        .repop .cd.wait {
+            color: var(--warn);
+        }
+
+        .repop .none {
+            color: var(--muted);
+            font-style: italic;
+        }
+
+        .grp {
+            border-top: 1px dashed var(--grid);
+            padding: 7px 0 3px;
+        }
+
+        .grp .cell {
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .mon {
+            display: inline-block;
+            font-size: 12px;
+            padding: 1px 7px;
+            margin: 2px 3px 2px 0;
+            border-radius: 6px;
+            background: var(--chip);
+            border: 1px solid var(--border);
+        }
+
+        .mon.target {
+            background: var(--good);
+            color: #05230a;
+            border-color: var(--good);
+            font-weight: 650;
+        }
+
+        .empty {
+            color: var(--muted);
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .banner {
+            display: none;
+            background: var(--good);
+            color: #05230a;
+            font-weight: 650;
+            border-radius: 10px;
+            padding: 10px 14px;
+            margin-bottom: 14px;
+        }
+
+        .banner.archi {
+            background: var(--bad);
+            color: #fff;
+            font-size: 16px;
+            box-shadow: 0 0 0 3px var(--bad);
+            animation: archiblink 0.7s ease-in-out infinite;
+        }
+
+        @keyframes archiblink {
+            0%, 100% {
+                opacity: 1;
+                box-shadow: 0 0 0 3px var(--bad);
+            }
+            50% {
+                opacity: 0.55;
+                box-shadow: 0 0 0 7px rgba(214, 57, 42, 0.25);
+            }
+        }
+
+        .coord {
+            color: var(--accent);
+            font-weight: 650;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .coordset {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            font-size: 12px;
+            color: var(--muted);
+            margin: 4px 0 8px;
+        }
+
+        .coordset input {
+            width: 54px;
+            background: var(--surface);
+            color: var(--ink);
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            padding: 3px 6px;
+        }
+
+        .coordset button {
+            padding: 3px 10px;
+        }
+
+        .mon.archi {
+            background: var(--warn);
+            color: #2a1a00;
+            border-color: var(--warn);
+            font-weight: 650;
+        }
+
+        .card.archi {
+            border-color: var(--warn);
+            box-shadow: 0 0 0 1px var(--warn);
+        }
+
+        .badge.archi {
+            background: transparent;
+            border-color: var(--warn);
+            color: var(--warn);
+        }
+
+        .hin {
+            width: 96px;
+            background: var(--surface);
+            color: var(--ink);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            padding: 6px 8px;
+            font-size: 13px;
+        }
+
+        .minimap {
+            position: relative;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 12px 14px;
+            margin-bottom: 16px;
+        }
+
+        .mmhead {
+            font-size: 14px;
+            font-weight: 650;
+            margin-bottom: 8px;
+        }
+
+        #mm {
+            width: 100%;
+            height: 360px;
+            display: block;
+        }
+
+        #mm .grid-line {
+            stroke: var(--grid);
+            stroke-width: 1;
+        }
+
+        #mm .axis {
+            fill: var(--muted);
+            font-size: 15px;
+        }
+
+        #mm .acc {
+            cursor: pointer;
+        }
+
+        #mm .acc circle {
+            stroke: var(--surface);
+            stroke-width: 2;
+        }
+
+        #mm .acc text {
+            fill: var(--ink);
+            font-size: 14px;
+            font-weight: 600;
+            text-anchor: start;
+            dominant-baseline: central;
+            pointer-events: none;
+            paint-order: stroke;
+            stroke: var(--surface);
+            stroke-width: 3px;
+        }
+
+        .mmtip {
+            position: absolute;
+            pointer-events: none;
+            background: var(--plane);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            padding: 6px 10px;
+            font-size: 12px;
+            box-shadow: 0 2px 8px var(--shadow);
+            display: none;
+            z-index: 5;
+            white-space: nowrap;
+        }
+
+        .zone {
+            display: inline-block;
+            margin: 2px 0 4px;
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .tmt {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        .tmt th, .tmt td {
+            text-align: left;
+            padding: 4px 8px;
+            border-bottom: 1px solid var(--grid);
+        }
+
+        .tmt th {
+            color: var(--muted);
+            font-weight: 600;
+        }
+
+        .tmt td.num, .tmt th.num {
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .tmt td.archi {
+            color: var(--warn);
+            font-weight: 700;
+        }
+
+        .tmt td.good {
+            color: var(--good);
+            font-weight: 700;
+        }
+
+        .tmt .sub {
+            color: var(--muted);
+        }
+
+        .nm-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 7px 0;
+            border-top: 1px dashed var(--grid);
+        }
+
+        .nm-row:first-child {
+            border-top: none;
+        }
+
+        .nm-arrow {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--accent);
+            width: 36px;
+            text-align: center;
+            line-height: 1;
+        }
+
+        .nm-dir {
+            font-size: 11px;
+            color: var(--muted);
+            min-width: 18px;
+        }
+
+        .nm-setcell {
+            padding: 1px 8px;
+            font-size: 11px;
+        }
+
+        .moveinput {
+            width: 80px;
+            background: var(--surface);
+            color: var(--ink);
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            padding: 6px 8px;
+            font-size: 13px;
+        }
+
+        .moverow {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin: 8px 0;
+        }
+
+        .moverow select {
+            background: var(--surface);
+            color: var(--ink);
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            padding: 6px 8px;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        .moverow button {
+            padding: 6px 14px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <header>
+        <h1>🎯 Repop live</h1>
+        <span class="spacer"></span>
+        <a class="nav" href="/ui/">Persos</a>
+        <a class="nav" href="/ui/board.html">Comptes</a>
+        <a class="nav" href="/ui/dungeon.html">Donjons</a>
+        <a class="nav" href="/ui/build.html">Build</a>
+        <button id="alerts">🔔 Alertes</button>
+        <button id="names">↻ Noms</button>
+        <input id="archiid" class="hin" type="text" style="width:150px" placeholder="✦ ids archi (546 549 …)"
+               title="un ou plusieurs ids séparés par espace/virgule/retour — noms récupérés auto">
+        <button id="addarchi">+ archi</button>
+        <button id="theme">◐</button>
+        <button id="reset">Reset</button>
+    </header>
+    <div class="sub" id="targetline">Cible : …</div>
+    <div class="banner" id="banner"></div>
+    <div class="status">
+        <span><span class="dot" id="livedot"></span><b id="streams">0</b> flux (comptes)</span>
+        <span>Dernier message : <b id="lastevt">—</b></span>
+        <span>Rafraîchi : <b id="refreshed">—</b></span>
+    </div>
+    <div class="minimap" id="nextmovebox">
+        <div class="mmhead">🧭 Prochain coup <span class="sub">(direction vers la prochaine étape de la tournée)</span>
+        </div>
+        <div id="nextmovelist" class="sub">Calcule une tournée pour voir le prochain coup par compte.</div>
+    </div>
+    <div class="minimap" id="mmwrap">
+        <div class="mmhead">🗺️ Comptes sur la carte <span class="sub"
+                                                          id="mmhint">(grille [x,y] ; survole une case pour l'aperçu)</span>
+        </div>
+        <div class="coordset" id="bgctrl" style="flex-wrap:wrap">
+            <span>fond :</span>
+            <input id="bgfile" placeholder="pandala.jpg" style="width:120px" title="fichier déposé dans app/static/">
+            <span>coin HG</span>
+            <input id="bgx0" type="number" placeholder="x0" style="width:46px">
+            <input id="bgy0" type="number" placeholder="y0" style="width:46px">
+            <span>coin BD</span>
+            <input id="bgx1" type="number" placeholder="x1" style="width:46px">
+            <input id="bgy1" type="number" placeholder="y1" style="width:46px">
+            <span>opacité</span>
+            <input id="bgop" type="number" min="0.1" max="1" step="0.05" value="0.85" style="width:52px">
+            <button id="bgapply">Appliquer</button>
+            <button id="bgcalib" title="clique 2 repères connus sur l'image">🎯 Caler (2 pts)</button>
+            <button id="bgclear">Retirer</button>
+        </div>
+        <svg id="mm" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid meet"></svg>
+        <div class="mmtip" id="mmtip"></div>
+    </div>
+    <div class="minimap" id="topmaps" style="display:none"></div>
+    <div class="minimap" id="walkbox">
+        <div class="mmhead">🚶 Déplacer un compte
+            <span id="walkonline" class="badge" style="margin-left:8px">● walker …</span>
+            <button id="walklaunch" style="display:none;margin-left:6px">▶ Lancer le walker</button>
+            <span class="sub">— clique un <b>compte</b> sur la carte, puis la <b>case destination</b> (ou via le menu)</span>
+        </div>
+        <div class="moverow" style="flex-wrap:wrap">
+            <select id="walkacc">
+                <option value="">— compte —</option>
+            </select>
+            <span id="walkfrom" class="sub">départ : —</span>
+            <span class="sub">→</span>
+            <span id="walkto" class="sub">parcours : clique des cases sur la carte</span>
+            <button id="walkzig" disabled title="réordonne en Z (serpentin)">⚡ En Z</button>
+            <button id="walkgo" disabled>🚶 Aller</button>
+            <button id="walkclear" style="display:none">🗑 Effacer</button>
+            <button id="walkcancel" style="display:none">✖ Annuler</button>
+        </div>
+        <div id="walkstatus" class="sub" style="margin-top:8px">Prêt. Sélectionne un compte puis
+            une case sur la carte. Le walker (dofus_walker.au3) doit tourner, fenêtre du client au 1er plan.
+        </div>
+    </div>
+    <div class="minimap" id="routebox">
+        <div class="mmhead">🧭 Tournée optimisée
+            <select id="rzone" class="hin" style="width:auto"></select>
+            <input id="racc" class="hin" type="number" min="1" max="8" value="1" style="width:60px" title="comptes">
+            <button id="rgo">Calculer</button>
+            <button id="rclear">Effacer</button>
+        </div>
+        <div id="routelist" class="sub">Choisis une zone (ou « Auto ») et clique Calculer.</div>
+    </div>
+    <div class="grid" id="grid"></div>
+    <div class="empty" id="empty">En attente de données… Ingère une capture (<code>POST /live/ingest</code>)
+        ou active le suivi live (<code>LIVE_CAPTURE_DIR</code> + dumpcap).
+    </div>
+</div>
+<script>
+    const $ = (id) => document.getElementById(id);
+    let lastFetch = 0;
+    let maps = [];
+    let accounts = [];
+    let route = null;
+    let exitCells = {};
+    let mmT = null;   // transfo carte (clic écran -> case [x,y])
+    let bgCfg = null; // fond de carte réelle {img, x0, y0, x1, y1, op}
+    try {
+        bgCfg = JSON.parse(localStorage.getItem("walkbg") || "null");
+    } catch (e) {
+    }
+    let bgCalib = null; // mode calage en cours {img, pts:[{fx,fy,x,y}]}
+    const SEG_COLORS = ["#3987e5", "#f0a728", "#2fbf2f", "#e05a8a", "#9b6cf0", "#31c7c7", "#d6584a", "#c9a227"];
+    const ARROWS = {N: "↑", S: "↓", E: "→", O: "←", NE: "↗", NO: "↖", SE: "↘", SO: "↙", "-": "·"};
+
+    function compass(a, b) {
+        const dx = b[0] - a[0], dy = b[1] - a[1];
+        const ns = dy > 0 ? "S" : dy < 0 ? "N" : "";
+        const ew = dx > 0 ? "E" : dx < 0 ? "O" : "";
+        return (ns + ew) || "-";
+    }
+
+    let prevUp = new Set();
+    let prevArchi = new Set();
+    let firstPoll = true;
+
+    function alertUp(mapIds, kind) {
+        const isArchi = kind === "archi";
+        try {
+            const ctx = new (window.AudioContext || window.webkitAudioContext)();
+            const beeps = isArchi ? [0, 0.14, 0.28, 0.42, 0.56] : [0, 0.18, 0.36];
+            beeps.forEach(t => {
+                const o = ctx.createOscillator(), g = ctx.createGain();
+                o.type = isArchi ? "square" : "triangle";
+                o.frequency.value = isArchi ? 1245 : 880;
+                o.connect(g);
+                g.connect(ctx.destination);
+                g.gain.setValueAtTime(0.001, ctx.currentTime + t);
+                g.gain.exponentialRampToValueAtTime(0.35, ctx.currentTime + t + 0.02);
+                g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + t + 0.15);
+                o.start(ctx.currentTime + t);
+                o.stop(ctx.currentTime + t + 0.16);
+            });
+        } catch (e) {
+        }
+        const icon = kind === "archi" ? "✦" : "🎯";
+        const what = kind === "archi" ? "ARCHIMONSTRE" : "Bambouto";
+        const txt = what + " up sur map " + [...mapIds].join(", ");
+        if (window.Notification && Notification.permission === "granted") {
+            new Notification(icon + " Repop " + what, {body: txt});
+        }
+        const b = $("banner");
+        b.className = "banner" + (isArchi ? " archi" : "");
+        b.textContent = icon + " " + txt + " — " + new Date().toLocaleTimeString();
+        b.style.display = "block";
+    }
+
+    const root = document.documentElement;
+    root.dataset.theme = localStorage.getItem("theme") || "dark";
+    $("theme").onclick = () => {
+        root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
+        localStorage.setItem("theme", root.dataset.theme);
+    };
+    $("reset").onclick = async () => {
+        await fetch("/live/reset", {method: "POST"});
+        poll();
+    };
+    $("alerts").onclick = async () => {
+        if (window.Notification) {
+            try {
+                await Notification.requestPermission();
+            } catch (e) {
+            }
+        }
+        alertUp(["test"]);
+    };
+    $("names").onclick = async () => {
+        const r = await fetch("/live/names/reload", {method: "POST"});
+        const j = await r.json();
+        $("banner").textContent = "↻ " + j.monster_names + " noms de monstres rechargés";
+        $("banner").style.display = "block";
+        poll();
+    };
+    $("addarchi").onclick = async () => {
+        // un ou plusieurs ids (espace / virgule / point-virgule / retour ligne)
+        const ids = ($("archiid").value.match(/-?\d+/g) || []).map(Number);
+        if (!ids.length) return;
+        $("banner").textContent = `✦ ajout de ${ids.length} archi(s)…`;
+        $("banner").style.display = "block";
+        const added = [];
+        let last = null;
+        for (const id of ids) {
+            try {
+                const r = await fetch("/live/archi", {
+                    method: "POST", headers: {"Content-Type": "application/json"},
+                    body: JSON.stringify({id}),
+                });
+                last = await r.json();
+                added.push(last.name || ("#" + id));
+            } catch (e) {
+                added.push("#" + id + " (échec)");
+            }
+        }
+        $("archiid").value = "";
+        $("banner").textContent = `✦ ${added.length} archi(s) ajouté(s) : ${added.join(", ")}`
+            + (last ? ` — total ${last.archi_ids.length}` : "");
+        $("banner").style.display = "block";
+        poll();
+    };
+
+    window.setCoord = async (mapId) => {
+        const x = parseInt(document.getElementById("cx-" + mapId).value, 10);
+        const y = parseInt(document.getElementById("cy-" + mapId).value, 10);
+        if (Number.isNaN(x) || Number.isNaN(y)) return;
+        await fetch("/live/maps/coord", {
+            method: "POST", headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({map_id: mapId, x, y}),
+        });
+        poll();
+    };
+
+    const fmtDur = (s) => {
+        if (s == null) return "—";
+        s = Math.max(0, Math.round(s));
+        const m = Math.floor(s / 60), r = s % 60;
+        return m > 0 ? `${m}m${String(r).padStart(2, "0")}s` : `${r}s`;
+    };
+    const fmtAgo = (s) => s == null ? "—" : (s < 90 ? `il y a ${fmtDur(s)}` : `il y a ${Math.round(s / 60)} min`);
+
+    function monChip(m) {
+        const cls = m.archi ? "archi" : (m._target ? "target" : "");
+        const mark = m.archi ? "✦ " : "";
+        return `<span class="mon ${cls}">${mark}${m.name}<span class="cell"> (niv ${m.level ?? "?"})</span></span>`;
+    }
+
+    function render() {
+        const ae = document.activeElement;
+        if (ae && ae.tagName === "INPUT" && ae.closest && ae.closest(".coordset")) return;
+        const now = Date.now();
+        const elapsed = (now - lastFetch) / 1000;
+        $("empty").style.display = maps.length ? "none" : "block";
+        let html = "";
+        for (const mp of maps) {
+            const cls = "card" + (mp.target_present ? " hit" : "")
+                + (mp.archi_present ? " archi" : "") + (mp.active ? "" : " stale");
+            let badges = mp.active ? `<span class="badge on">perso présent</span>` : `<span class="badge">inactif</span>`;
+            if (mp.target_present) badges += ` <span class="badge good">cible ici</span>`;
+            if (mp.archi_present) badges += ` <span class="badge archi">✦ archi ici</span>`;
+
+            let repop = "";
+            if (mp.target_present) {
+                repop = `<div class="repop"><span class="cd ready">présent maintenant</span></div>`;
+            } else if (mp.repop_countdown_s != null) {
+                const left = mp.repop_countdown_s - elapsed;
+                const c = left <= 0 ? "ready" : "wait";
+                const txt = left <= 0 ? "repop imminent" : fmtDur(left);
+                repop = `<div class="repop"><span class="cd ${c}">${txt}</span>
+                    <div class="sub">estimé sur ${mp.repop_samples} cycle(s) · moy ${fmtDur(mp.repop_estimate_s)}</div></div>`;
+            } else {
+                repop = `<div class="repop"><span class="none">repop non calibré</span>
+                    <div class="sub">(besoin d'observer un cycle mort → repop de la cible)</div></div>`;
+            }
+
+            let groups = "";
+            for (const g of mp.groups) {
+                const mons = g.monsters.map(m => monChip(m)).join("");
+                groups += `<div class="grp"><span class="cell">cell ${g.cell ?? "?"} · vu ${fmtAgo(g.age_s)}</span><br>${mons}</div>`;
+            }
+            if (!mp.groups.length) groups = `<div class="grp"><span class="cell">aucun groupe listé</span></div>`;
+
+            const coordTxt = mp.coord ? `<span class="coord">[${mp.coord[0]},${mp.coord[1]}]</span>` : "";
+            const zoneTxt = mp.zone ? `<span class="zone">${mp.zone}</span>` : "";
+            const coordSet = mp.coord ? "" : `<div class="coordset">coords ?
+                <input id="cx-${mp.map_id}" type="number" placeholder="x">
+                <input id="cy-${mp.map_id}" type="number" placeholder="y">
+                <button onclick="setCoord(${mp.map_id})">ok</button></div>`;
+            html += `<div class="${cls}"><h2>Map ${mp.map_id} ${coordTxt} ${badges}</h2>${zoneTxt}${coordSet}${repop}${groups}</div>`;
+        }
+        $("grid").innerHTML = html;
+        renderMap();
+        renderTop();
+        renderNextMove();
+        refreshZoneOptions();
+        refreshWalkAccounts();
+        renderWalk();
+    }
+
+    function findNextStop(acc) {
+        if (!route || !acc.coord) return null;
+        for (const seg of route.segments) {
+            const idx = seg.findIndex(s => s.coord && s.coord[0] === acc.coord[0] && s.coord[1] === acc.coord[1]);
+            if (idx !== -1) return seg.length > 1 ? seg[(idx + 1) % seg.length] : null;
+        }
+        return null;
+    }
+
+    function renderNextMove() {
+        const box = $("nextmovelist");
+        if (!route || !route.count) {
+            box.textContent = "Calcule une tournée pour voir le prochain coup par compte.";
+            return;
+        }
+        const accs = (accounts || []).filter(a => a.coord);
+        if (!accs.length) {
+            box.textContent = "Aucun compte positionné pour l'instant (attends un changement de map en jeu).";
+            return;
+        }
+        let html = "";
+        for (const a of accs) {
+            const who = (a.name || a.label).replace(/[<>&"]/g, "");
+            const next = findNextStop(a);
+            if (!next) {
+                html += `<div class="nm-row"><span class="nm-arrow">·</span>`
+                    + `<b>${who}</b><span class="sub">hors tournée ou déjà sur sa seule étape</span></div>`;
+                continue;
+            }
+            const dir = compass(a.coord, next.coord);
+            const cell = exitCells[dir];
+            const cellTxt = cell != null
+                ? `case ${cell}`
+                : `case ? <button class="nm-setcell" data-dir="${dir}">définir</button>`;
+            html += `<div class="nm-row"><span class="nm-arrow">${ARROWS[dir] || "•"}</span>`
+                + `<b>${who}</b><span class="nm-dir">${dir}</span>`
+                + `<span class="sub">→ Map ${next.map_id}`
+                + `${next.coord ? " [" + next.coord[0] + "," + next.coord[1] + "]" : ""} · ${cellTxt}</span></div>`;
+        }
+        box.innerHTML = html;
+        box.querySelectorAll(".nm-setcell").forEach(btn => btn.onclick = async () => {
+            const dir = btn.dataset.dir;
+            const v = prompt("Cellule de sortie (0-559) observée en jeu pour la direction " + dir + " :");
+            const cell = parseInt(v, 10);
+            if (Number.isNaN(cell)) return;
+            await fetch("/live/exitcell", {
+                method: "POST", headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({direction: dir, cell}),
+            });
+            exitCells[dir] = cell;
+            renderNextMove();
+        });
+    }
+
+    function renderMap() {
+        const svg = $("mm");
+        // mode calage : image plein cadre + repères déjà cliqués
+        if (bgCalib) {
+            let p = `<image href="/ui/${bgCalib.img}" x="0" y="0" width="1000" height="600" `
+                + `preserveAspectRatio="none"></image>`;
+            bgCalib.pts.forEach((pt, i) => {
+                const cx = (pt.fx * 1000).toFixed(1), cy = (pt.fy * 600).toFixed(1);
+                p += `<circle cx="${cx}" cy="${cy}" r="8" fill="#f0584a" stroke="#fff" stroke-width="2"></circle>`
+                    + `<text x="${(pt.fx * 1000 + 11).toFixed(1)}" y="${cy}" fill="#fff" `
+                    + `style="font-weight:700;font-size:15px;paint-order:stroke;stroke:#000;stroke-width:3px" `
+                    + `dominant-baseline="central">${i + 1}·[${pt.x},${pt.y}]</text>`;
+            });
+            svg.innerHTML = p;
+            return;
+        }
+        const accs = (accounts || []).filter(a => a.coord);
+        const hot = (maps || []).filter(m => m.coord && (m.target_hits || m.archi_hits));
+        const rstops = route ? route.segments.flat().filter(s => s.coord) : [];
+        const pts = accs.map(a => a.coord).concat(hot.map(m => m.coord)).concat(rstops.map(s => s.coord));
+        if (!pts.length) {
+            svg.innerHTML = '<text x="500" y="300" text-anchor="middle" class="axis">'
+                + 'aucun compte positionné (attends un changement de map en jeu)</text>';
+            $("mmtip").style.display = "none";
+            return;
+        }
+        const xs = pts.map(c => c[0]), ys = pts.map(c => c[1]);
+        const minX = Math.min(...xs) - 1, maxX = Math.max(...xs) + 1;
+        const minY = Math.min(...ys) - 1, maxY = Math.max(...ys) + 1;
+        const cols = maxX - minX + 1, rows = maxY - minY + 1;
+        const W = 1000, H = 600, pad = 34;
+        const scale = Math.min((W - 2 * pad) / cols, (H - 2 * pad) / rows);
+        const gridW = cols * scale, gridH = rows * scale;
+        const oX = (W - gridW) / 2, oY = (H - gridH) / 2;
+        const cellX = x => oX + (x - minX) * scale;
+        const cellY = y => oY + (y - minY) * scale;
+        const px = x => cellX(x) + scale / 2;
+        const py = y => cellY(y) + scale / 2;
+        const sc = scale.toFixed(1);
+        const parts = [];
+
+        // fond de carte réelle (image déposée dans app/static/), calée sur 2 coins
+        if (bgCfg && bgCfg.img) {
+            const ix = cellX(bgCfg.x0), iy = cellY(bgCfg.y0);
+            const iw = (bgCfg.x1 - bgCfg.x0 + 1) * scale;
+            const ih = (bgCfg.y1 - bgCfg.y0 + 1) * scale;
+            parts.push(`<image href="/ui/${bgCfg.img}" x="${ix.toFixed(1)}" y="${iy.toFixed(1)}" `
+                + `width="${iw.toFixed(1)}" height="${ih.toFixed(1)}" preserveAspectRatio="none" `
+                + `opacity="${bgCfg.op ?? 0.85}" pointer-events="none"></image>`);
+        }
+
+        for (const m of hot) {
+            const hits = m.archi_hits + m.target_hits;
+            const col = m.archi_hits ? "var(--warn)" : "var(--good)";
+            const op = Math.min(0.15 + hits * 0.06, 0.55).toFixed(2);
+            const info = `Map ${m.map_id}${m.zone ? " · " + m.zone : ""} · ✦${m.archi_hits} 🎯${m.target_hits}`;
+            parts.push(`<g class="acc" data-info="${info}"><rect x="${cellX(m.coord[0]).toFixed(1)}" `
+                + `y="${cellY(m.coord[1]).toFixed(1)}" width="${sc}" height="${sc}" fill="${col}" opacity="${op}"></rect></g>`);
+        }
+
+        if (cols <= 140 && rows <= 140) {
+            const lines = [];
+            for (let i = 0; i <= cols; i++) {
+                const gx = (oX + i * scale).toFixed(1);
+                lines.push(`<line x1="${gx}" y1="${oY.toFixed(1)}" x2="${gx}" y2="${(oY + gridH).toFixed(1)}" class="grid-line"/>`);
+            }
+            for (let j = 0; j <= rows; j++) {
+                const gy = (oY + j * scale).toFixed(1);
+                lines.push(`<line x1="${oX.toFixed(1)}" y1="${gy}" x2="${(oX + gridW).toFixed(1)}" y2="${gy}" class="grid-line"/>`);
+            }
+            parts.push(lines.join(""));
+            const stepX = Math.ceil(cols / 20), stepY = Math.ceil(rows / 14);
+            for (let i = 0; i < cols; i++)
+                if (i % stepX === 0)
+                    parts.push(`<text x="${px(minX + i).toFixed(1)}" y="${(oY - 6).toFixed(1)}" class="axis" text-anchor="middle">${minX + i}</text>`);
+            for (let j = 0; j < rows; j++)
+                if (j % stepY === 0)
+                    parts.push(`<text x="${(oX - 6).toFixed(1)}" y="${(py(minY + j) + 4).toFixed(1)}" class="axis" text-anchor="end">${minY + j}</text>`);
+        }
+
+        if (route) {
+            route.segments.forEach((seg, si) => {
+                const withc = seg.filter(s => s.coord);
+                if (!withc.length) return;
+                const col = SEG_COLORS[si % SEG_COLORS.length];
+                const d = withc.map((s, i) => (i ? "L" : "M")
+                    + px(s.coord[0]).toFixed(1) + " " + py(s.coord[1]).toFixed(1)).join(" ");
+                parts.push(`<path d="${d}" fill="none" stroke="${col}" stroke-width="3" stroke-opacity="0.85" stroke-linejoin="round"></path>`);
+                const s0 = withc[0].coord;
+                parts.push(`<circle cx="${px(s0[0]).toFixed(1)}" cy="${py(s0[1]).toFixed(1)}" r="5" fill="${col}"></circle>`);
+            });
+        }
+
+        const bucket = {};
+        const r = Math.max(4, Math.min(scale * 0.28, 12));
+        for (const a of accs) {
+            const key = a.coord.join(",");
+            const n = (bucket[key] = (bucket[key] || 0) + 1) - 1;
+            const cx = px(a.coord[0]) + (n ? Math.cos(n * 2.4) * r : 0);
+            const cy = py(a.coord[1]) + (n ? Math.sin(n * 2.4) * r : 0);
+            const fill = a.target ? "var(--good)" : (a.archi ? "var(--warn)" : "var(--accent)");
+            const flag = a.target ? " · 🎯 cible" : (a.archi ? " · ✦ archi" : "");
+            const who = (a.name || a.label).replace(/[<>&"]/g, "");
+            const info = `${who} · Map ${a.map_id}${a.zone ? " · " + a.zone : ""} `
+                + `[${a.coord[0]},${a.coord[1]}] · ${a.groups} groupe(s)${flag}`;
+            const box = n ? "" : `<rect x="${cellX(a.coord[0]).toFixed(1)}" y="${cellY(a.coord[1]).toFixed(1)}" `
+                + `width="${sc}" height="${sc}" fill="var(--accent)" opacity="0.18"></rect>`;
+            // pastille "groupes de MONSTRES sur la map du perso" (rouge archi / vert cible / orange sinon)
+            // on compte via le détail de la map (groupes NON vides) — a.groups inclut les groupes
+            // vides (PNJ/joueurs) et gonflerait le compteur.
+            // un vrai groupe de mobs = au moins un monstre AU NOM RÉSOLU. Les
+            // percepteurs / joueurs / PNJ ont un id inconnu -> nom "#id" -> exclus.
+            const isMob = mo => mo && mo.name && !String(mo.name).startsWith("#");
+            const mp = (maps || []).find(m => m.map_id === a.map_id);
+            const gcount = mp
+                ? mp.groups.filter(g => (g.monsters || []).some(isMob)).length
+                : (a.groups || 0);
+            let monBadge = "";
+            if (gcount > 0) {
+                const bx = cx + r * 0.95, by = cy - r * 0.95;
+                const bcol = a.archi ? "var(--bad)" : (a.target ? "var(--good)" : "var(--warn)");
+                monBadge = `<circle cx="${bx.toFixed(1)}" cy="${by.toFixed(1)}" r="7" fill="${bcol}" `
+                    + `stroke="var(--surface)" stroke-width="1.5" pointer-events="none"></circle>`
+                    + `<text x="${bx.toFixed(1)}" y="${by.toFixed(1)}" text-anchor="middle" `
+                    + `dominant-baseline="central" style="font-size:9px;font-weight:700;fill:#fff" `
+                    + `pointer-events="none">${gcount}</text>`;
+            }
+            parts.push(`<g class="acc" data-info="${info}" data-label="${who}" `
+                + `data-coord="[${a.coord[0]},${a.coord[1]}]">${box}`
+                + `<circle cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="${r.toFixed(1)}" fill="${fill}"></circle>`
+                + `<text x="${(cx + r + 3).toFixed(1)}" y="${cy.toFixed(1)}">${who}</text>`
+                + monBadge
+                + `<title>${info}</title></g>`);
+        }
+
+        // surcouche déplacement : compte sélectionné (anneau) + destination (drapeau)
+        if (walkSel && walkSel.coord) {
+            parts.push(`<circle cx="${px(walkSel.coord[0]).toFixed(1)}" cy="${py(walkSel.coord[1]).toFixed(1)}" `
+                + `r="${(r + 6).toFixed(1)}" fill="none" stroke="var(--accent)" stroke-width="2.5" `
+                + `stroke-dasharray="4 3" pointer-events="none"></circle>`);
+        }
+        if (walkRoute.length) {
+            // chemin : perso -> étape 1 -> étape 2 ...
+            const seq = (walkSel && walkSel.coord ? [walkSel.coord] : []).concat(walkRoute);
+            if (seq.length > 1) {
+                const d = seq.map((c, i) => (i ? "L" : "M")
+                    + px(c[0]).toFixed(1) + " " + py(c[1]).toFixed(1)).join(" ");
+                parts.push(`<path d="${d}" fill="none" stroke="var(--good)" stroke-width="2" `
+                    + `stroke-dasharray="6 4" pointer-events="none"></path>`);
+            }
+            walkRoute.forEach((c, i) => {
+                parts.push(`<rect x="${cellX(c[0]).toFixed(1)}" y="${cellY(c[1]).toFixed(1)}" `
+                    + `width="${sc}" height="${sc}" fill="var(--good)" opacity="0.18" pointer-events="none"></rect>`);
+                parts.push(`<circle cx="${px(c[0]).toFixed(1)}" cy="${py(c[1]).toFixed(1)}" r="9" `
+                    + `fill="var(--good)" pointer-events="none"></circle>`);
+                parts.push(`<text x="${px(c[0]).toFixed(1)}" y="${(py(c[1]) + 4).toFixed(1)}" `
+                    + `text-anchor="middle" style="font-size:12px;font-weight:700;fill:#05230a" `
+                    + `pointer-events="none">${i + 1}</text>`);
+            });
+        }
+
+        svg.innerHTML = parts.join("");
+        mmT = {minX, minY, scale, oX, oY};
+    }
+
+    function renderTop() {
+        const hot = (maps || []).filter(m => m.archi_hits || m.target_hits)
+            .sort((a, b) => (b.archi_hits - a.archi_hits) || (b.target_hits - a.target_hits))
+            .slice(0, 8);
+        const box = $("topmaps");
+        if (!hot.length) {
+            box.style.display = "none";
+            return;
+        }
+        box.style.display = "block";
+        let rows = hot.map(m => `<tr>
+            <td>${m.map_id}</td>
+            <td>${m.coord ? "[" + m.coord[0] + "," + m.coord[1] + "]" : "—"}</td>
+            <td>${m.zone || "—"}</td>
+            <td class="num archi">${m.archi_hits || ""}</td>
+            <td class="num good">${m.target_hits || ""}</td>
+            <td class="sub">${m.last_archi_ago_s != null ? "✦ " + fmtAgo(m.last_archi_ago_s) : (m.last_target_ago_s != null ? "🎯 " + fmtAgo(m.last_target_ago_s) : "")}</td>
+        </tr>`).join("");
+        box.innerHTML = `<div class="mmhead">🔥 Top maps (apparitions observées)</div>`
+            + `<table class="tmt"><thead><tr><th>Map</th><th>Coord</th><th>Zone</th>`
+            + `<th class="num">✦ archi</th><th class="num">🎯 cible</th><th>Vu</th></tr></thead>`
+            + `<tbody>${rows}</tbody></table>`;
+    }
+
+    function refreshZoneOptions() {
+        const sel = $("rzone");
+        const zones = [...new Set([...(maps || []).map(m => m.zone),
+            ...(accounts || []).map(a => a.zone)].filter(Boolean))].sort();
+        const sig = zones.join("|");
+        if (sel.dataset.sig === sig) return;
+        sel.dataset.sig = sig;
+        const cur = sel.value;
+        sel.innerHTML = '<option value="">Auto (maps chaudes)</option>'
+            + zones.map(z => `<option value="${z.replace(/"/g, "")}">${z}</option>`).join("");
+        if ([...sel.options].some(o => o.value === cur)) sel.value = cur;
+    }
+
+    function renderRouteList() {
+        const box = $("routelist");
+        if (!route) {
+            box.textContent = "Choisis une zone (ou « Auto ») et clique Calculer.";
+            return;
+        }
+        if (!route.count) {
+            box.textContent = "Aucune map à couvrir (pas de coords / rien de chaud encore).";
+            return;
+        }
+        const warn = route.connected ? "" : ` · ⚠️ ${route.n_components} blocs séparés (zaap/téléport entre eux)`;
+        let html = `<b>${route.count} maps</b> · ${route.total_steps} pas · reboucle +${route.loop_back_steps}${warn}`;
+        route.segments.forEach((seg, si) => {
+            if (!seg.length) return;
+            const col = SEG_COLORS[si % SEG_COLORS.length];
+            const head = route.segments.length > 1
+                ? `<span style="color:${col}">■</span> Compte ${si + 1} (${seg.length} maps) : `
+                : "Ordre : ";
+            let path = "";
+            seg.forEach((s, i) => {
+                const label = s.coord ? `[${s.coord[0]},${s.coord[1]}]` : "#" + s.map_id;
+                if (i === 0) {
+                    path = label;
+                    return;
+                }
+                const prev = seg[i - 1];
+                const arrow = (prev.coord && s.coord) ? (ARROWS[compass(prev.coord, s.coord)] || "→") : "→";
+                path += ` ${arrow} ${label}`;
+            });
+            html += `<div style="margin-top:5px">${head}${path}</div>`;
+        });
+        box.innerHTML = html;
+    }
+
+    // --- Déplacement d'un compte via l'auto-clic (walker AutoIt) -------------
+    let walkSel = null;      // {label, coord:[x,y]} compte sélectionné
+    let walkRoute = [];      // [[x,y],...] cases à parcourir dans l'ordre
+    let walkAccList = [];    // comptes positionnés (index = value du <select>)
+    let tourRunning = false; // un parcours est en cours (piloté par le navigateur)
+    let tourAbort = false;   // demande d'arrêt du parcours
+
+    function svgPoint(e) {
+        const svg = $("mm");
+        const pt = svg.createSVGPoint();
+        pt.x = e.clientX;
+        pt.y = e.clientY;
+        return pt.matrixTransform(svg.getScreenCTM().inverse());
+    }
+
+    function refreshWalkAccounts() {
+        const sel = $("walkacc");
+        walkAccList = (accounts || []).filter(a => a.coord);
+        const sig = walkAccList.map(a => (a.name || a.label) + a.coord.join(",")).join("|");
+        if (sel.dataset.sig === sig) return;
+        sel.dataset.sig = sig;
+        sel.innerHTML = '<option value="">— compte —</option>'
+            + walkAccList.map((a, i) => `<option value="${i}">`
+                + `${(a.name || a.label).replace(/[<>&"]/g, "")} [${a.coord[0]},${a.coord[1]}]</option>`).join("");
+    }
+
+    function renderWalk() {
+        const from = $("walkfrom"), to = $("walkto"), go = $("walkgo"),
+            zig = $("walkzig"), clr = $("walkclear"), cancel = $("walkcancel");
+        from.textContent = walkSel
+            ? `départ : ${walkSel.label} [${walkSel.coord[0]},${walkSel.coord[1]}]`
+            : "départ : —";
+        to.textContent = walkRoute.length
+            ? `parcours (${walkRoute.length}) : ` + walkRoute.map((p, i) => `${i + 1}·[${p[0]},${p[1]}]`).join("  ")
+            : "parcours : clique des cases sur la carte";
+        go.disabled = !(walkSel && walkRoute.length && !tourRunning);
+        go.textContent = walkRoute.length > 1 ? `🚶 Parcourir (${walkRoute.length})` : "🚶 Aller";
+        zig.disabled = !(walkRoute.length > 1 && !tourRunning);
+        clr.style.display = (walkRoute.length && !tourRunning) ? "" : "none";
+        if (tourRunning) cancel.style.display = "";
+        const sel = $("walkacc");
+        if (walkSel) {
+            const i = walkAccList.findIndex(a => a.coord[0] === walkSel.coord[0] && a.coord[1] === walkSel.coord[1]);
+            if (i !== -1) sel.value = String(i);
+        }
+    }
+
+    function renderJobStatus(job, online) {
+        const cancel = $("walkcancel"), box = $("walkstatus"), on = $("walkonline");
+        if (on) {
+            on.textContent = online ? "● walker en ligne" : "● walker hors ligne";
+            on.style.color = online ? "var(--good)" : "var(--bad)";
+            on.style.borderColor = online ? "var(--good)" : "var(--bad)";
+        }
+        $("walklaunch").style.display = online ? "none" : "";   // proposer le lancement si éteint
+        if (tourRunning) return;   // pendant un parcours, c'est le tour qui pilote le statut
+        // job en attente mais walker éteint : dire clairement quoi faire
+        if (job && (job.state === "pending" || job.state === "running") && !online) {
+            cancel.style.display = "";
+            box.innerHTML = "⚠️ <b>Walker hors ligne</b> — lance <code>tools\\dofus_walker.au3</code> "
+                + `(double-clic) et le job repartira tout seul : `
+                + `${(job.label || "").replace(/[<>&"]/g, "")} → [${job.dest[0]},${job.dest[1]}].`;
+            return;
+        }
+        if (!job || (job.state !== "pending" && job.state !== "running")) {
+            cancel.style.display = "none";
+            if (job && job.state) {
+                const icon = {done: "🏁", failed: "⛔", canceled: "✖"}[job.state] || "";
+                box.textContent = `${icon} ${job.message || job.state}`;
+            }
+            return;
+        }
+        cancel.style.display = "";
+        const pos = job.pos ? `en [${job.pos[0]},${job.pos[1]}]` : "";
+        box.innerHTML = `⏳ <b>${(job.label || "").replace(/[<>&"]/g, "")}</b> → `
+            + `[${job.dest[0]},${job.dest[1]}] ${pos} `
+            + `<span class="sub">· ${(job.message || "").replace(/[<>&"]/g, "")}</span>`;
+    }
+
+    const setTourStatus = (t) => {
+        $("walkstatus").textContent = t;
+    };
+    const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+
+    // Position courante d'un compte (par nom), depuis /live/state.
+    async function accCurrentPos(label) {
+        try {
+            const s = await (await fetch("/live/state")).json();
+            const a = (s.accounts || []).find(x => (x.name === label || x.label === label) && x.coord);
+            return a ? a.coord : null;
+        } catch (e) {
+            return null;
+        }
+    }
+
+    // Attend la fin du job courant : "done" | "failed" | "canceled".
+    async function waitJobDone() {
+        for (; ;) {
+            if (tourAbort) return "canceled";
+            await sleep(1500);
+            let ws;
+            try {
+                ws = await (await fetch("/walk/state")).json();
+            } catch (e) {
+                continue;
+            }
+            const j = ws.job;
+            if (!j) return "done";
+            if (j.state === "done") return "done";
+            if (j.state === "failed") return "failed";
+            if (j.state === "canceled") return "canceled";
+        }
+    }
+
+    // Enchaîne les étapes du parcours (piloté par le navigateur, une étape = un
+    // /walk/goto ; le walker fait le A->B, on passe à l'étape suivante à l'arrivée).
+    async function runTour() {
+        if (!walkSel || !walkRoute.length || tourRunning) return;
+        tourRunning = true;
+        tourAbort = false;
+        renderWalk();
+        const label = walkSel.label, n = walkRoute.length;
+        let done = 0;
+        for (let i = 0; i < n; i++) {
+            if (tourAbort) {
+                setTourStatus(`⏹ parcours arrêté (${done}/${n})`);
+                break;
+            }
+            const [tx, ty] = walkRoute[i];
+            const pos = await accCurrentPos(label);
+            if (!pos) {
+                setTourStatus(`⛔ compte '${label}' introuvable — bouge-le en jeu.`);
+                break;
+            }
+            if (pos[0] === tx && pos[1] === ty) {
+                done++;
+                continue;
+            }
+            setTourStatus(`▶ étape ${i + 1}/${n} → [${tx},${ty}]…`);
+            let j;
+            try {
+                j = await (await fetch("/walk/goto", {
+                    method: "POST", headers: {"Content-Type": "application/json"},
+                    body: JSON.stringify({label, fx: pos[0], fy: pos[1], tx, ty}),
+                })).json();
+            } catch (e) {
+                setTourStatus("❌ réseau : " + e.message);
+                break;
+            }
+            if (!j.ok) {
+                setTourStatus(`⛔ étape ${i + 1} refusée : ${j.reason || "?"}`);
+                break;
+            }
+            const res = await waitJobDone();
+            if (res !== "done") {
+                setTourStatus(`⏹ parcours interrompu à l'étape ${i + 1} (${res}).`);
+                tourRunning = false;
+                renderWalk();
+                return;
+            }
+            done++;
+        }
+        if (!tourAbort && done === n) setTourStatus(`🏁 parcours terminé (${n} étape(s)).`);
+        tourRunning = false;
+        renderWalk();
+    }
+
+    // Réordonne le parcours en serpentin (Z) : balayage ligne par ligne, sens
+    // alterné, en partant de la ligne la plus proche du perso.
+    function serpentine() {
+        if (walkRoute.length < 2) return;
+        const rows = {};
+        walkRoute.forEach(([x, y]) => (rows[y] = rows[y] || []).push(x));
+        let ys = Object.keys(rows).map(Number).sort((a, b) => a - b);
+        const ay = walkSel ? walkSel.coord[1] : ys[0];
+        if (Math.abs(ys[ys.length - 1] - ay) < Math.abs(ys[0] - ay)) ys.reverse();
+        const out = [];
+        ys.forEach((y, i) => {
+            let xs = rows[y].slice().sort((a, b) => a - b);
+            if (i % 2 === 1) xs.reverse();
+            xs.forEach(x => out.push([x, y]));
+        });
+        walkRoute = out;
+    }
+
+    $("walkacc").onchange = () => {
+        if (tourRunning) return;
+        const i = parseInt($("walkacc").value, 10);
+        walkSel = Number.isNaN(i) ? null
+            : {label: (walkAccList[i].name || walkAccList[i].label), coord: walkAccList[i].coord};
+        walkRoute = [];
+        renderWalk();
+        renderMap();
+    };
+
+    $("walkgo").onclick = () => runTour();
+
+    $("walklaunch").onclick = () => {
+        // nécessite le protocole dofuswalker: (dofuswalker_protocol.reg, 1 fois)
+        window.location.href = "dofuswalker:run";
+        setTourStatus("▶ Lancement du walker demandé… (si rien ne se passe : installe tools\\dofuswalker_protocol.reg, ou double-clique tools\\start_walker.bat)");
+    };
+
+    $("walkzig").onclick = () => {
+        serpentine();
+        renderWalk();
+        renderMap();
+    };
+
+    $("walkclear").onclick = () => {
+        walkRoute = [];
+        renderWalk();
+        renderMap();
+    };
+
+    // --- Fond de carte réelle ------------------------------------------------
+    if (bgCfg) {
+        $("bgfile").value = bgCfg.img || "";
+        $("bgx0").value = bgCfg.x0;
+        $("bgy0").value = bgCfg.y0;
+        $("bgx1").value = bgCfg.x1;
+        $("bgy1").value = bgCfg.y1;
+        $("bgop").value = bgCfg.op ?? 0.85;
+    }
+    $("bgapply").onclick = () => {
+        const img = $("bgfile").value.trim();
+        const x0 = parseInt($("bgx0").value, 10), y0 = parseInt($("bgy0").value, 10);
+        const x1 = parseInt($("bgx1").value, 10), y1 = parseInt($("bgy1").value, 10);
+        const op = parseFloat($("bgop").value);
+        if (!img || [x0, y0, x1, y1].some(Number.isNaN)) {
+            alert("Renseigne le fichier + les 2 coins [x0,y0] (haut-gauche) et [x1,y1] (bas-droit).");
+            return;
+        }
+        bgCfg = {img, x0, y0, x1, y1, op: Number.isNaN(op) ? 0.85 : op};
+        localStorage.setItem("walkbg", JSON.stringify(bgCfg));
+        renderMap();
+    };
+    $("bgclear").onclick = () => {
+        bgCfg = null;
+        localStorage.removeItem("walkbg");
+        renderMap();
+    };
+
+    $("bgcalib").onclick = () => {
+        const img = $("bgfile").value.trim();
+        if (!img) {
+            alert("Indique d'abord le fichier image (ex : pandala.jpg).");
+            return;
+        }
+        bgCalib = {img, pts: []};
+        setTourStatus("🎯 Calage : clique un repère connu sur l'image (ex : le transporteur), tape sa coord (ex 18,-39), puis un 2e.");
+        renderMap();
+    };
+
+    // À partir de 2 repères (fraction d'image + coord jeu), déduit le rectangle
+    // monde couvert par l'image (coins HG/BD) et l'enregistre.
+    function finishCalib() {
+        const [a, b] = bgCalib.pts;
+        const r2 = v => Math.round(v * 100) / 100;
+        const sx = (b.x - a.x) / (b.fx - a.fx);          // coord monde par fraction X
+        const x0 = a.x - a.fx * sx, x1 = x0 + sx;         // fraction 0 et 1
+        const sy = (b.y - a.y) / (b.fy - a.fy);
+        const y0 = a.y - a.fy * sy, y1 = y0 + sy;
+        if (!isFinite(sx) || !isFinite(sy)) {
+            alert("Repères trop proches — recommence avec 2 lieux bien écartés.");
+            bgCalib = null;
+            renderMap();
+            return;
+        }
+        bgCfg = {img: bgCalib.img, x0: r2(x0), y0: r2(y0), x1: r2(x1), y1: r2(y1), op: (bgCfg && bgCfg.op) || 0.85};
+        localStorage.setItem("walkbg", JSON.stringify(bgCfg));
+        $("bgx0").value = bgCfg.x0;
+        $("bgy0").value = bgCfg.y0;
+        $("bgx1").value = bgCfg.x1;
+        $("bgy1").value = bgCfg.y1;
+        bgCalib = null;
+        setTourStatus(`✅ Fond calé : HG [${bgCfg.x0},${bgCfg.y0}] · BD [${bgCfg.x1},${bgCfg.y1}].`);
+        renderMap();
+    }
+
+    $("walkcancel").onclick = async () => {
+        tourAbort = true;
+        try {
+            await fetch("/walk/cancel", {method: "POST"});
+        } catch (e) {
+        }
+        setTourStatus("Annulation demandée…");
+    };
+
+    $("mm").addEventListener("click", (e) => {
+        if (bgCalib) {   // mode calage : 2 clics sur des repères connus
+            const p = svgPoint(e);
+            const v = prompt(`Repère ${bgCalib.pts.length + 1}/2 : coord [x,y] de ce lieu ? (ex: 18,-39)`);
+            if (v) {
+                const m = v.split(",").map(s => parseInt(s.trim(), 10));
+                if (m.length === 2 && !m.some(Number.isNaN)) {
+                    bgCalib.pts.push({fx: p.x / 1000, fy: p.y / 600, x: m[0], y: m[1]});
+                    if (bgCalib.pts.length >= 2) finishCalib();
+                    else {
+                        setTourStatus("Clique le 2e repère (une autre map que tu reconnais)…");
+                        renderMap();
+                    }
+                } else {
+                    alert("Format attendu : x,y  (ex : 18,-39)");
+                }
+            }
+            return;
+        }
+        if (tourRunning) return;   // pas de modif pendant un parcours
+        const g = e.target.closest(".acc");
+        if (g && g.dataset.label) {
+            walkSel = {label: g.dataset.label, coord: JSON.parse(g.dataset.coord)};
+            walkRoute = [];
+            // clic sur un perso -> demande au walker d'activer SA fenêtre (WinActivate)
+            fetch("/walk/focus", {
+                method: "POST", headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({name: g.dataset.label}),
+            }).catch(() => {
+            });
+            renderWalk();
+            renderMap();
+            return;
+        }
+        if (walkSel && mmT) {
+            const p = svgPoint(e);
+            const gx = mmT.minX + Math.floor((p.x - mmT.oX) / mmT.scale);
+            const gy = mmT.minY + Math.floor((p.y - mmT.oY) / mmT.scale);
+            const idx = walkRoute.findIndex(c => c[0] === gx && c[1] === gy);
+            if (idx >= 0) walkRoute.splice(idx, 1);   // reclic = retire l'étape
+            else walkRoute.push([gx, gy]);
+            renderWalk();
+            renderMap();
+        }
+    });
+
+    async function poll() {
+        try {
+            const r = await fetch("/live/state");
+            const s = await r.json();
+            lastFetch = Date.now();
+            maps = s.maps || [];
+            accounts = s.accounts || [];
+            exitCells = s.exit_cells || {};
+            const targets = new Set(s.target_ids || []);
+            for (const mp of maps) for (const g of mp.groups) for (const m of g.monsters) m._target = targets.has(m.id);
+            const up = new Set(maps.filter(m => m.target_present).map(m => m.map_id));
+            const fresh = [...up].filter(id => !prevUp.has(id));
+            if (!firstPoll && fresh.length) alertUp(fresh, "target");
+            prevUp = up;
+            const aUp = new Set(maps.filter(m => m.archi_present).map(m => m.map_id));
+            const aFresh = [...aUp].filter(id => !prevArchi.has(id));
+            if (!firstPoll && aFresh.length) alertUp(aFresh, "archi");
+            prevArchi = aUp;
+            firstPoll = false;
+            $("targetline").textContent = "Cible : " + (s.target_names || []).join(", ")
+                + " · ✦ " + (s.archi_ids || []).length + " archi(s) suivis";
+            $("streams").textContent = s.streams ?? 0;
+            $("lastevt").textContent = fmtAgo(s.last_event_ago_s);
+            $("refreshed").textContent = new Date().toLocaleTimeString();
+            $("livedot").style.background = (s.last_event_ago_s != null && s.last_event_ago_s < 15) ? "var(--good)" : "var(--muted)";
+        } catch (e) {
+            $("livedot").style.background = "var(--bad)";
+        }
+        try {
+            const ws = await (await fetch("/walk/state")).json();
+            renderJobStatus(ws.job, ws.walker_online);
+        } catch (e) {
+        }
+        render();
+    }
+
+    $("mm").addEventListener("mousemove", (e) => {
+        const g = e.target.closest(".acc");
+        const tip = $("mmtip");
+        if (!g) {
+            tip.style.display = "none";
+            return;
+        }
+        const r = $("mmwrap").getBoundingClientRect();
+        tip.textContent = g.getAttribute("data-info");
+        tip.style.left = (e.clientX - r.left + 14) + "px";
+        tip.style.top = (e.clientY - r.top + 14) + "px";
+        tip.style.display = "block";
+    });
+    $("mm").addEventListener("mouseleave", () => {
+        $("mmtip").style.display = "none";
+    });
+
+    $("rgo").onclick = async () => {
+        const zone = $("rzone").value;
+        const acc = Math.max(1, parseInt($("racc").value, 10) || 1);
+        const q = new URLSearchParams({accounts: String(acc)});
+        if (zone) q.set("zone", zone);
+        $("routelist").textContent = "Calcul…";
+        try {
+            route = await (await fetch("/live/route?" + q.toString())).json();
+        } catch (e) {
+            route = null;
+        }
+        renderMap();
+        renderRouteList();
+        renderNextMove();
+    };
+    $("rclear").onclick = () => {
+        route = null;
+        renderMap();
+        renderRouteList();
+        renderNextMove();
+    };
+
+    poll();
+    setInterval(poll, 1000);
+</script>
+<script src="/ui/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+
+# Secrets / config locale
+.env
+
+# Données personnelles / volumineuses / dérivées
+data/*.pcapng           # captures réseau (contiennent ta banque perso)
+data/*.pcap
+data/details/           # cache API wiki (11k+ fichiers, reproductible)
+data/*.log
+data/item_*.json        # fichiers de debug ponctuels
+
+# Outillage IDE / agent
+.idea/
+.agent-work/
+.agentbridge/
+data/live/
+
+# Artefacts divers
+*.log
+app/static/icons/   # icones d'items telechargees (reproductibles via scripts.fetch_icons)

@@ -1,0 +1,41 @@
+on(construct){
+   while(true)
+   {
+      if(!ord("\t"))
+      {
+         if(false)
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push("\x05");
+      }
+      if(!ord(§§pop()))
+      {
+         §§goto(addr1ce87);
+      }
+      §§push("\x16\x18\x14");
+      §§push(false);
+      break;
+   }
+   set(§§pop(),§§pop());
+   contentPath = "none";
+   enabled = true;
+   set("\x18\f\t",false);
+   styleName = "LightBrownPanelWindow";
+   §§push("title");
+   §§push("");
+   if(!getTimer())
+   {
+      duplicateMovieClip(§§pop(),§§pop(),§§pop());
+   }
+   else
+   {
+      addr1ce87:
+      set(§§pop(),§§pop());
+      §§goto(addr1cf02);
+   }
+   addr1cf02:
+}

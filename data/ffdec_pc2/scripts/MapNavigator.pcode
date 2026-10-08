@@ -1,0 +1,15 @@
+Push false
+Not
+If loc001b
+Push false
+Not
+If loc003e
+Jump loc0072
+loc001b:Push "ank.gapi.controls.MapNavigator"
+loc003e:GetVariable
+Push "MapNavigator", 2, "Object"
+GetVariable
+Push "registerClass"
+CallMethod
+Pop
+loc0072:

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dofus Retro — Démarrage</title>
+    <link rel="icon" type="image/svg+xml" href="/ui/favicon.svg">
+    <style>
+        :root {
+            --plane: #f9f9f7;
+            --surface: #fcfcfb;
+            --ink: #0b0b0b;
+            --ink2: #52514e;
+            --muted: #898781;
+            --grid: #e1e0d9;
+            --accent: #2a78d6;
+            --accent-soft: #cde2fb;
+            --good: #0ca30c;
+            --bad: #c0392b;
+            --chip: #f0efec;
+            --border: rgba(11, 11, 11, 0.10);
+        }
+
+        :root[data-theme="dark"] {
+            --plane: #0d0d0d;
+            --surface: #1a1a19;
+            --ink: #fff;
+            --ink2: #c3c2b7;
+            --muted: #898781;
+            --grid: #2c2c2a;
+            --accent: #3987e5;
+            --accent-soft: #184f95;
+            --good: #0ca30c;
+            --bad: #e06;
+            --chip: #242422;
+            --border: rgba(255, 255, 255, 0.10);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--plane);
+            color: var(--ink);
+            font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .wrap {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 24px 20px 60px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 20px;
+            margin: 0;
+            font-weight: 650;
+        }
+
+        a.nav {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .spacer {
+            flex: 1;
+        }
+
+        button {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            color: var(--ink2);
+            border-radius: 8px;
+            padding: 8px 11px;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        .kpis {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .tile {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px 16px;
+        }
+
+        .tile .v {
+            font-size: 22px;
+            font-weight: 680;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .tile .l {
+            color: var(--muted);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: .04em;
+            margin-top: 2px;
+        }
+
+        .dot {
+            display: inline-block;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: var(--muted);
+            margin-right: 6px;
+            vertical-align: middle;
+        }
+
+        .dot.ok {
+            background: var(--good);
+        }
+
+        .dot.bad {
+            background: var(--bad);
+        }
+
+        .step {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px 16px;
+            margin-bottom: 14px;
+            display: flex;
+            gap: 14px;
+        }
+
+        .step .n {
+            flex: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        .step h3 {
+            margin: 2px 0 6px;
+            font-size: 15px;
+        }
+
+        .step p {
+            margin: 4px 0;
+            color: var(--ink2);
+        }
+
+        .cmd {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--plane);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 7px 10px;
+            margin: 8px 0;
+            font-family: Consolas, monospace;
+            font-size: 12.5px;
+            overflow-x: auto;
+        }
+
+        .cmd code {
+            white-space: pre;
+            color: var(--ink);
+            flex: 1;
+        }
+
+        .cmd button {
+            padding: 3px 8px;
+            font-size: 11px;
+            flex: none;
+        }
+
+        .tag {
+            font-size: 11px;
+            color: var(--accent);
+            border: 1px solid var(--accent-soft);
+            border-radius: 6px;
+            padding: 1px 6px;
+        }
+
+        .foot {
+            color: var(--muted);
+            font-size: 12px;
+            margin-top: 10px;
+        }
+
+        b.good {
+            color: var(--good);
+        }
+
+        b.bad {
+            color: var(--bad);
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <header>
+        <div><h1>🚀 Démarrage &amp; mises à jour</h1></div>
+        <div class="spacer"></div>
+        <button id="refresh">↻ Statut</button>
+        <button id="theme">◐ Thème</button>
+    </header>
+
+    <section class="kpis" id="kpis"></section>
+
+    <div class="step">
+        <div class="n">1</div>
+        <div style="flex:1">
+            <h3>Démarrer l'app (base + API)</h3>
+            <p>Le plus simple : lance <b>DofusCockpit.exe</b> (à la racine du projet) → bouton
+                « <b>Démarrer DB + API</b> ». Sinon, en ligne de commande :</p>
+            <div class="cmd"><code>docker compose up -d db api</code>
+                <button data-copy="docker compose up -d db api">copier</button>
+            </div>
+            <p class="foot">Pré-requis : <b>Docker Desktop</b> lancé.</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="n">2</div>
+        <div style="flex:1">
+            <h3>Lancer la capture réseau <span class="tag">une fois, en fond</span></h3>
+            <p>Via l'exe → bouton « <b>Lancer capture</b> » (choisis ton interface). Sinon, depuis la racine du
+                projet, en PowerShell :</p>
+            <div class="cmd">
+                <code>&amp; "C:\Program Files\Wireshark\dumpcap.exe" -i Ethernet -f "tcp port 443" -b duration:5 -b
+                    files:50 -w data\live\dofus.pcapng</code>
+                <button data-copy='& "C:\Program Files\Wireshark\dumpcap.exe" -i Ethernet -f "tcp port 443" -b duration:5 -b files:50 -w data\live\dofus.pcapng'>
+                    copier
+                </button>
+            </div>
+            <p class="foot">Pré-requis : <b>Wireshark</b> installé. Laisse la capture tourner pendant que tu joues.</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="n">3</div>
+        <div style="flex:1">
+            <h3>En jeu : déclenche les mises à jour</h3>
+            <p>🏦 <b>Ouvre ta banque</b> → l'inventaire se synchronise tout seul (~10 s).</p>
+            <p>💰 <b>Ouvre l'hôtel de vente</b> et parcours des catégories → les <b>prix marché</b> se remplissent.</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="n">4</div>
+        <div style="flex:1">
+            <h3>Vérifie</h3>
+            <p>Les tuiles en haut de cette page se mettent à jour, ou va voir la
+                <a class="nav" href="bank.html">page Banque</a>. Rien à relancer : tant que la capture tourne,
+                tout se met à jour en continu.</p>
+        </div>
+    </div>
+
+    <div class="foot">💡 L'exe n'embarque pas Docker ni Wireshark (trop lourds) : il les pilote. Installe-les une fois,
+        puis l'exe fait le reste. Place <code>DofusCockpit.exe</code> à la racine du projet (à côté de
+        <code>docker-compose.yml</code>).
+    </div>
+</div>
+
+<script>
+    const $ = (s) => document.querySelector(s);
+
+    function fmt(n) {
+        return (n || 0).toLocaleString("fr-FR");
+    }
+
+    function compact(n) {
+        n = n || 0;
+        if (Math.abs(n) >= 1e6) return (n / 1e6).toFixed(2) + " M";
+        if (Math.abs(n) >= 1e3) return (n / 1e3).toFixed(1) + " k";
+        return fmt(n);
+    }
+
+    function ago(iso) {
+        if (!iso) return "jamais";
+        const s = (Date.now() - new Date(iso).getTime()) / 1000;
+        if (s < 90) return "il y a " + Math.round(s) + " s";
+        if (s < 5400) return "il y a " + Math.round(s / 60) + " min";
+        if (s < 172800) return "il y a " + Math.round(s / 3600) + " h";
+        return "le " + new Date(iso).toLocaleDateString("fr-FR");
+    }
+
+    async function refresh() {
+        let up = false, st = null;
+        try {
+            up = (await fetch("../health")).ok;
+        } catch (e) {
+            up = false;
+        }
+        if (up) {
+            try {
+                st = await fetch("../bank/status").then(r => r.json());
+            } catch (e) {
+            }
+        }
+        const tiles = [
+            [`<span class="dot ${up ? 'ok' : 'bad'}"></span>API`, up ? "en ligne" : "arrêtée"],
+            ["Objets en banque", st ? fmt(st.items) : "—"],
+            ["Valeur estimée", st ? compact(st.total_value) + " k" : "—"],
+            ["Dernière MAJ banque", st ? ago(st.last_update) : "—"],
+            ["Objets avec prix marché", st ? fmt(st.priced_items) : "—"],
+        ];
+        $("#kpis").innerHTML = tiles.map(([l, v]) =>
+            `<div class="tile"><div class="v">${v}</div><div class="l">${l}</div></div>`).join("");
+    }
+
+    document.addEventListener("click", (e) => {
+        const b = e.target.closest("button[data-copy]");
+        if (b) {
+            navigator.clipboard.writeText(b.dataset.copy).then(() => {
+                const old = b.textContent;
+                b.textContent = "✓ copié";
+                setTimeout(() => (b.textContent = old), 1200);
+            });
+        }
+    });
+    $("#refresh").addEventListener("click", refresh);
+    $("#theme").addEventListener("click", () => {
+        const r = document.documentElement;
+        r.dataset.theme = r.dataset.theme === "dark" ? "light" : "dark";
+    });
+    if (window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches) document.documentElement.dataset.theme = "dark";
+    refresh();
+    setInterval(refresh, 5000);
+</script>
+<script src="/ui/nav.js"></script>
+</body>
+</html>

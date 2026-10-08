@@ -1,0 +1,16 @@
+while(true)
+{
+   if(false)
+   {
+      if(false)
+      {
+         break;
+      }
+   }
+   else
+   {
+      gotoAndStop(3);
+   }
+   play();
+   break;
+}

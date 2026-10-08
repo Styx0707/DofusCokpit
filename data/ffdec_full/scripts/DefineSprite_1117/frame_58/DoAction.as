@@ -1,0 +1,10 @@
+if(!ord("\x02"))
+{
+   if(false)
+   {
+   }
+}
+else
+{
+   stop();
+}

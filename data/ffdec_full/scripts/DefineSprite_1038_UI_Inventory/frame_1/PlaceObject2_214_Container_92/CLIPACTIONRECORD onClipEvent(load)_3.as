@@ -1,0 +1,32 @@
+onClipEvent(load){
+   while(true)
+   {
+      if(!ord("\x07"))
+      {
+         if(!ord("\x07"))
+         {
+            break;
+         }
+      }
+      else
+      {
+         §§push("\t");
+      }
+      if(ord(§§pop()))
+      {
+         function §\x1e\x11\x0b§(eventObj)
+         {
+            _parent.dragItem({target:this});
+         }
+         if(false)
+         {
+            var §§pop() = §§pop();
+            §§goto(addre471);
+         }
+      }
+      §§push("\x1e\x11\x0b");
+      break;
+   }
+   this["\x15\x1d\x15"]("drag",eval(§§pop()));
+   addre471:
+}
