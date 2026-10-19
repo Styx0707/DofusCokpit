@@ -21,10 +21,13 @@ from app.models import (
     CraftPlan,
     CraftStep,
     Ingredient,
+    MissingBuy,
     MissingIngredient,
     NearCraftableRecipe,
+    ProfitableCraft,
     Recipe,
     StockEntry,
+    StockPull,
 )
 
 
@@ -131,6 +134,89 @@ def compute_near_craftable(
             missing_total=sum(m.missing for m in missing),
         ))
     out.sort(key=lambda r: (r.missing_kinds, r.missing_total, r.result_name.lower()))
+    return out
+
+
+def compute_profitable_crafts(
+        recipes: List[Recipe],
+        price_map: Dict[int, Optional[int]],
+        stock: Optional[List[StockEntry]] = None,
+        min_margin_pct: Optional[float] = None,
+) -> List[ProfitableCraft]:
+    """Rentabilité de chaque recette : revente du produit − coût MARCHÉ des
+    ingrédients, au prix EFFECTIF (``market_price`` sinon vendeur). Fonction PURE.
+
+    ``price_map`` = {item_id: prix_unitaire ou None}. Une recette dont le PRODUIT
+    ou un INGRÉDIENT n'a pas de prix connu est EXCLUE (non valorisable) : on ne
+    devine jamais un prix manquant.
+
+    Si ``stock`` est fourni, on calcule en plus, pour 1 craft : le coût d'achat
+    des SEULES ressources manquantes (le stock déjà possédé est traité comme
+    acquis) et combien de fois la recette est fabricable avec le stock courant.
+
+    ``min_margin_pct`` filtre sur la marge (unit_profit / unit_cost). Trié par
+    marge unitaire (``unit_profit``) décroissante.
+    """
+    stock_map = _stock_to_dict(stock) if stock else {}
+    out: List[ProfitableCraft] = []
+    for recipe in recipes:
+        if not recipe.ingredients:
+            continue
+        result_price = price_map.get(recipe.result_item_id)
+        if result_price is None:
+            continue  # produit non valorisable
+        unit_cost = 0
+        missing_buy_cost = 0
+        missing: List[MissingBuy] = []
+        from_stock: List[StockPull] = []
+        priced = True
+        for ing in recipe.ingredients:
+            unit_price = price_map.get(ing.item_id)
+            if unit_price is None:
+                priced = False
+                break  # un ingrédient non valorisable -> recette exclue
+            unit_cost += unit_price * ing.quantity
+            have = stock_map.get(ing.item_id, 0)
+            used = min(ing.quantity, have)   # prélevé sur le stock (à retirer en banque)
+            if used > 0:
+                from_stock.append(StockPull(
+                    item_id=ing.item_id, name=ing.name, qty=used,
+                    unit_price=unit_price, value=unit_price * used,
+                ))
+            short = ing.quantity - have      # reste à acheter
+            if short > 0:
+                cost = unit_price * short
+                missing_buy_cost += cost
+                missing.append(MissingBuy(
+                    item_id=ing.item_id, name=ing.name, missing=short,
+                    unit_price=unit_price, buy_cost=cost,
+                ))
+        if not priced:
+            continue
+        missing.sort(key=lambda m: m.buy_cost, reverse=True)
+        from_stock.sort(key=lambda s: s.value, reverse=True)
+        unit_revenue = result_price * recipe.result_quantity
+        unit_profit = unit_revenue - unit_cost
+        margin_pct = round(unit_profit / unit_cost * 100, 1) if unit_cost > 0 else None
+        if min_margin_pct is not None and (margin_pct is None or margin_pct < min_margin_pct):
+            continue
+        craftable_now, _ = max_crafts_for_recipe(recipe, stock_map)
+        out.append(ProfitableCraft(
+            recipe_id=recipe.recipe_id,
+            result_item_id=recipe.result_item_id,
+            result_name=recipe.result_name,
+            result_quantity=recipe.result_quantity,
+            unit_cost=unit_cost,
+            unit_revenue=unit_revenue,
+            unit_profit=unit_profit,
+            margin_pct=margin_pct,
+            craftable_now=craftable_now,
+            missing_buy_cost=missing_buy_cost,
+            profit_after_missing=unit_revenue - missing_buy_cost,
+            missing=missing,
+            from_stock=from_stock,
+        ))
+    out.sort(key=lambda c: c.unit_profit, reverse=True)
     return out
 
 

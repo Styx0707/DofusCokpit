@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dofus Retro — Zone Grobe</title>
+    <link rel="icon" type="image/svg+xml" href="/ui/favicon.svg">
+    <style>
+        :root {
+            --plane: #f9f9f7;
+            --surface: #fcfcfb;
+            --ink: #0b0b0b;
+            --ink2: #52514e;
+            --muted: #898781;
+            --grid: #e1e0d9;
+            --line: #c3c2b7;
+            --accent: #2a78d6;
+            --accent-soft: #cde2fb;
+            --chip: #f0efec;
+            --border: rgba(11, 11, 11, 0.10);
+            --shadow: rgba(11, 11, 11, 0.18);
+            --good: #0ca30c;
+            --warn: #d98a00;
+            --bad: #d6392a;
+        }
+
+        :root[data-theme="dark"] {
+            --plane: #0d0d0d;
+            --surface: #1a1a19;
+            --ink: #ffffff;
+            --ink2: #c3c2b7;
+            --muted: #898781;
+            --grid: #2c2c2a;
+            --line: #383835;
+            --accent: #3987e5;
+            --accent-soft: #184f95;
+            --chip: #242422;
+            --border: rgba(255, 255, 255, 0.10);
+            --shadow: rgba(0, 0, 0, 0.5);
+            --good: #2fbf2f;
+            --warn: #f0a728;
+            --bad: #f0584a;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--plane);
+            color: var(--ink);
+            font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+            font-size: 14px;
+            line-height: 1.45;
+        }
+
+        .wrap {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 24px 20px 60px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 6px;
+        }
+
+        h1 {
+            font-size: 20px;
+            margin: 0;
+            font-weight: 650;
+        }
+
+        .spacer {
+            flex: 1;
+        }
+
+        a.nav {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 13px;
+            margin-right: 6px;
+        }
+
+        button {
+            background: var(--surface);
+            color: var(--ink);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            padding: 6px 12px;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            border-color: var(--accent);
+        }
+
+        input.zin {
+            width: 150px;
+            background: var(--surface);
+            color: var(--ink);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            padding: 6px 10px;
+            font-size: 13px;
+        }
+
+        .status {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            color: var(--ink2);
+            font-size: 13px;
+            margin: 14px 0 18px;
+        }
+
+        .status b {
+            color: var(--ink);
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 6px;
+            background: var(--muted);
+        }
+
+        .dot.on {
+            background: var(--good);
+        }
+
+        section.panel {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px 18px;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 3px var(--shadow);
+        }
+
+        section.panel > h2 {
+            font-size: 15px;
+            margin: 0 0 12px;
+            font-weight: 650;
+        }
+
+        section.panel > h2 .sub {
+            color: var(--muted);
+            font-weight: 400;
+            font-size: 12.5px;
+            margin-left: 6px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 12px;
+        }
+
+        .card {
+            background: var(--plane);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 12px 14px;
+        }
+
+        .card.archi {
+            border-color: var(--warn);
+            box-shadow: 0 0 0 1px var(--warn);
+        }
+
+        .card h3 {
+            font-size: 14px;
+            margin: 0 0 2px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .coord {
+            color: var(--accent);
+            font-weight: 650;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .badge {
+            font-size: 11px;
+            padding: 1px 8px;
+            border-radius: 20px;
+            border: 1px solid var(--line);
+            color: var(--ink2);
+            white-space: nowrap;
+        }
+
+        .badge.archi {
+            background: transparent;
+            border-color: var(--warn);
+            color: var(--warn);
+            font-weight: 650;
+        }
+
+        .mons {
+            margin-top: 8px;
+        }
+
+        .mon {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 12px;
+            padding: 2px 8px;
+            margin: 2px 3px 2px 0;
+            border-radius: 6px;
+            background: var(--chip);
+            border: 1px solid var(--border);
+        }
+
+        .mon.archi {
+            background: var(--warn);
+            color: #2a1a00;
+            border-color: var(--warn);
+            font-weight: 650;
+        }
+
+        .mon .lv {
+            color: var(--muted);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .mon.archi .lv {
+            color: #5a3a00;
+        }
+
+        .empty {
+            color: var(--muted);
+            font-style: italic;
+        }
+
+        table.tmt {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        table.tmt th, table.tmt td {
+            text-align: left;
+            padding: 5px 8px;
+            border-bottom: 1px solid var(--grid);
+        }
+
+        table.tmt th {
+            color: var(--muted);
+            font-weight: 600;
+        }
+
+        table.tmt td.num, table.tmt th.num {
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+        }
+
+        table.tmt tr.archi td.nm {
+            color: var(--warn);
+            font-weight: 700;
+        }
+
+        .mini {
+            padding: 2px 9px;
+            font-size: 12px;
+        }
+
+        .mini.on {
+            border-color: var(--warn);
+            color: var(--warn);
+        }
+
+        .missing {
+            font-variant-numeric: tabular-nums;
+            color: var(--ink2);
+            line-height: 1.9;
+        }
+
+        .missing .m {
+            display: inline-block;
+            background: var(--chip);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 1px 7px;
+            margin: 0 4px 2px 0;
+        }
+
+        .hint {
+            color: var(--muted);
+            font-size: 12.5px;
+            margin-top: 10px;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--surface);
+            border: 1px solid var(--line);
+            color: var(--ink);
+            border-radius: 10px;
+            padding: 10px 16px;
+            box-shadow: 0 4px 16px var(--shadow);
+            font-size: 13px;
+            display: none;
+            z-index: 80;
+        }
+
+        .mapwrap {
+            position: relative;
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            background: var(--plane);
+        }
+
+        .mapwrap .mapbg {
+            width: 100%;
+            display: block;
+            opacity: 0.30;
+            filter: saturate(0.85);
+        }
+
+        .mapwrap #mm {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #mm .mm-cell {
+            cursor: pointer;
+        }
+
+        #mm .mm-cell rect {
+            stroke: var(--surface);
+            stroke-width: 1.5;
+        }
+
+        #mm .mm-cell text {
+            font-size: 15px;
+            fill: var(--ink);
+            text-anchor: middle;
+            dominant-baseline: central;
+            pointer-events: none;
+            paint-order: stroke;
+            stroke: var(--plane);
+            stroke-width: 3px;
+            font-weight: 600;
+        }
+
+        .mmtip {
+            position: absolute;
+            pointer-events: none;
+            display: none;
+            z-index: 10;
+            max-width: 320px;
+            background: var(--plane);
+            border: 1px solid var(--line);
+            border-radius: 9px;
+            padding: 8px 11px;
+            font-size: 12.5px;
+            line-height: 1.5;
+            box-shadow: 0 4px 16px var(--shadow);
+        }
+
+        .mmtip .gl {
+            border-top: 1px dashed var(--grid);
+            padding-top: 4px;
+            margin-top: 4px;
+        }
+
+        .mmtip .gl:first-of-type {
+            border-top: none;
+            margin-top: 2px;
+        }
+
+        .mmtip .tot {
+            font-variant-numeric: tabular-nums;
+            font-weight: 650;
+        }
+
+        .mmtip .over {
+            color: var(--bad);
+        }
+
+        .mmtip .mo {
+            color: var(--ink2);
+        }
+
+        .mmtip .mo.ar {
+            color: var(--warn);
+            font-weight: 650;
+        }
+
+        .maplegend {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-top: 10px;
+            font-size: 12.5px;
+            color: var(--muted);
+        }
+
+        .maplegend .sw {
+            display: inline-block;
+            width: 11px;
+            height: 11px;
+            border-radius: 3px;
+            vertical-align: -1px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <header>
+        <h1>🗺️ Zone Grobe</h1>
+        <span class="spacer"></span>
+        <a class="nav" href="/ui/live.html">Repop live</a>
+        <a class="nav" href="/ui/">Persos</a>
+        <input id="zone" class="zin" type="text" value="Grobe"
+               title="sous-chaîne de sous-zone (ex. Grobe, Pandala) ; vide = toutes">
+        <button id="reload">↻ Actualiser</button>
+        <button id="names" title="recharge les noms de monstres depuis data/monster_names.json">↻ Noms</button>
+        <button id="auto">⏸ Auto</button>
+        <button id="alerts" title="notifie quand un archimonstre apparaît, ou un groupe avec ≥ 2 Fantôme Pandikaze">🔔
+            Alertes
+        </button>
+        <button id="theme">◐</button>
+    </header>
+
+    <div class="status">
+        <span><span class="dot" id="dot"></span>Maps vues : <b id="seen">—</b></span>
+        <span>Monstres : <b id="ndist">—</b></span>
+        <span>Archis : <b id="narchi">—</b></span>
+        <span>Actualisé : <b id="refreshed">—</b></span>
+    </div>
+
+    <section class="panel" id="sec-carte">
+        <h2>Carte de la zone <span class="sub" id="cartehint"></span></h2>
+        <div class="mapwrap">
+            <img class="mapbg" id="mapbg" src="/ui/grobe_map.webp" alt="Carte de l'Île de Grobe"
+                 onerror="this.style.display='none'">
+            <svg id="mm" viewBox="0 0 1000 648" preserveAspectRatio="xMidYMid meet"></svg>
+            <div class="mmtip" id="mmtip"></div>
+        </div>
+        <div class="maplegend">
+            <span><span class="sw" style="background:var(--accent)"></span>map vue</span>
+            <span><span class="sw" style="background:var(--warn)"></span>archi présent</span>
+            <span><span class="sw" style="background:var(--good)"></span>visitée plusieurs fois</span>
+            <span style="color:var(--bad)">⚠ groupe &gt; 949 (somme niv.)</span>
+            <span>survol = groupes · clic = aller à la map ↓</span>
+        </div>
+    </section>
+
+    <section class="panel" id="sec-maps">
+        <h2>Maps de la zone <span class="sub" id="mapshint"></span></h2>
+        <div class="grid" id="maps"></div>
+    </section>
+
+    <section class="panel" id="sec-mons">
+        <h2>Monstres de la zone <span class="sub">— par fréquence ; ✦ = marquer archi, 🔤 = récupérer le nom</span></h2>
+        <table class="tmt">
+            <thead>
+            <tr>
+                <th class="num">id</th>
+                <th class="nm">nom</th>
+                <th class="num">vus</th>
+                <th>archi</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody id="montable"></tbody>
+        </table>
+    </section>
+
+    <section class="panel" id="sec-missing">
+        <h2>Maps non visitées <span class="sub" id="misshint"></span></h2>
+        <div class="missing" id="missing"></div>
+    </section>
+
+    <div class="hint" id="archihint"></div>
+</div>
+<div class="toast" id="toast"></div>
+<script src="/ui/nav.js" defer></script>
+<script>
+    "use strict";
+    const $ = id => document.getElementById(id);
+    let autorefresh = true, timer = null;
+
+    // Thème : persisté localStorage, défaut sombre (cohérent avec les autres pages).
+    (function initTheme() {
+        const saved = localStorage.getItem("theme");
+        if (saved) document.documentElement.setAttribute("data-theme", saved);
+    })();
+    $("theme").onclick = () => {
+        const cur = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", cur);
+        localStorage.setItem("theme", cur);
+    };
+
+    function toast(msg) {
+        const t = $("toast");
+        t.textContent = msg;
+        t.style.display = "block";
+        clearTimeout(t._h);
+        t._h = setTimeout(() => (t.style.display = "none"), 2600);
+    }
+
+    function esc(s) {
+        return String(s).replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
+    }
+
+    function fmtLevels(levels) {
+        if (!levels || !levels.length) return "";
+        return levels.length === 1 ? "lv" + levels[0] : "lv" + levels[0] + "-" + levels[levels.length - 1];
+    }
+
+    function monChip(m) {
+        const cls = m.archi ? "mon archi" : "mon";
+        const star = m.archi ? "✦ " : "";
+        const lv = fmtLevels(m.levels);
+        return `<span class="${cls}">${star}${esc(m.name)}` +
+            (lv ? ` <span class="lv">${lv}</span>` : "") + `</span>`;
+    }
+
+    function renderMaps(cat) {
+        const box = $("maps");
+        if (!cat.maps.length) {
+            box.innerHTML = `<div class="empty">Aucune map de cette zone capturée pour l'instant. ` +
+                `Lance <code>py scripts/frida_live.py</code> et balade-toi dans la zone.</div>`;
+            return;
+        }
+        box.innerHTML = cat.maps.map(mv => {
+            const xy = mv.coord ? `[${mv.coord[0]},${mv.coord[1]}]` : "[?,?]";
+            const mons = mv.monsters.length
+                ? mv.monsters.map(monChip).join("")
+                : `<span class="empty">aucun groupe capturé</span>`;
+            return `<div class="card ${mv.archi_present ? "archi" : ""}" data-map="${mv.map_id}">
+                <h3><span class="coord">${xy}</span>
+                    <span class="badge">map ${mv.map_id}</span>
+                    <span class="badge">${mv.visits} visite(s)</span>
+                    ${mv.archi_present ? `<span class="badge archi">✦ ARCHI</span>` : ""}
+                </h3>
+                <div class="mons">${mons}</div>
+            </div>`;
+        }).join("");
+    }
+
+    function renderMonsters(cat) {
+        const tb = $("montable");
+        if (!cat.monsters_distinct.length) {
+            tb.innerHTML = `<tr><td colspan="5" class="empty">—</td></tr>`;
+            return;
+        }
+        tb.innerHTML = cat.monsters_distinct.map(m => {
+            const unnamed = m.name.startsWith("#");
+            return `<tr class="${m.archi ? "archi" : ""}">
+                <td class="num">${m.id}</td>
+                <td class="nm">${esc(m.name)}</td>
+                <td class="num">${m.sightings}</td>
+                <td>${m.archi ? "✦" : ""}</td>
+                <td>
+                    <button class="mini ${m.archi ? "on" : ""}" data-archi="${m.id}" data-on="${m.archi ? 1 : 0}"
+                        title="${m.archi ? "retirer des archis" : "marquer comme archimonstre"}">✦</button>
+                    ${unnamed ? `<button class="mini" data-name="${m.id}" title="récupérer le nom (moon-bot)">🔤</button>` : ""}
+                </td>
+            </tr>`;
+        }).join("");
+        tb.querySelectorAll("[data-archi]").forEach(b => b.onclick = () => toggleArchi(+b.dataset.archi, b.dataset.on === "1"));
+        tb.querySelectorAll("[data-name]").forEach(b => b.onclick = () => fetchName(+b.dataset.name));
+    }
+
+    function renderMissing(cat) {
+        const box = $("missing");
+        if (cat.maps_total_in_zone == null) {
+            box.innerHTML = `<span class="empty">Filtre vide (toutes zones) : liste des maps manquantes non calculée.</span>`;
+            $("misshint").textContent = "";
+            return;
+        }
+        $("misshint").textContent = `(${cat.maps_missing.length} sur ${cat.maps_total_in_zone})`;
+        box.innerHTML = cat.maps_missing.length
+            ? cat.maps_missing.map(m => `<span class="m">${m}</span>`).join("")
+            : `<span class="empty">Toutes les maps de la zone ont été visitées. 🎉</span>`;
+    }
+
+    function renderMiniMap(cat) {
+        const svg = $("mm"), W = 1000, H = 648, pad = 46;
+        const pts = cat.maps.filter(m => Array.isArray(m.coord));
+        // image de fond : seulement quand on regarde la zone Grobe
+        $("mapbg").style.display = (cat.zone_filter || "").includes("grobe") ? "" : "none";
+        if (!pts.length) {
+            svg.innerHTML = `<text x="500" y="324" style="fill:var(--muted)" text-anchor="middle" font-size="18">Aucune map localisée pour l'instant</text>`;
+            $("cartehint").textContent = "";
+            return;
+        }
+        const xs = pts.map(m => m.coord[0]), ys = pts.map(m => m.coord[1]);
+        const minX = Math.min(...xs), maxX = Math.max(...xs);
+        const minY = Math.min(...ys), maxY = Math.max(...ys);
+        const stepX = (W - 2 * pad) / Math.max(1, maxX - minX + 1);
+        const stepY = (H - 2 * pad) / Math.max(1, maxY - minY + 1);
+        const cell = Math.min(stepX, stepY) * 0.82;
+        const cx = x => pad + (x - minX + 0.5) * stepX;
+        const cy = y => pad + (y - minY + 0.5) * stepY;   // y croît vers le sud (bas de l'écran)
+        // Décale l'image de fond d'une case vers la GAUCHE pour la caler sur la
+        // grille (1 case = stepX unités sur 1000 -> stepX/10 % de la largeur).
+        const MAP_BG_SHIFT_CELLS = 1;
+        $("mapbg").style.transform = `translateX(${(-MAP_BG_SHIFT_CELLS * stepX / 10).toFixed(2)}%)`;
+        $("cartehint").textContent = `— ${pts.length} map(s) localisée(s)`;
+        let html = "";
+        for (const m of pts) {
+            const cxv = cx(m.coord[0]), cyv = cy(m.coord[1]);
+            const x = (cxv - cell / 2).toFixed(1), y = (cyv - cell / 2).toFixed(1);
+            const fill = m.archi_present ? "var(--warn)" : (m.visits > 1 ? "var(--good)" : "var(--accent)");
+            html += `<g class="mm-cell" data-map="${m.map_id}">`
+                + `<rect x="${x}" y="${y}" width="${cell.toFixed(1)}" height="${cell.toFixed(1)}" rx="4" `
+                + `style="fill:${fill};opacity:.9"></rect>`
+                + `<text x="${cxv.toFixed(1)}" y="${cyv.toFixed(1)}">${m.coord[0]},${m.coord[1]}</text>`;
+            if (m.has_big_group) {   // indicateur « gros groupe » (somme niv > seuil)
+                html += `<text x="${(cxv + cell / 2 - 7).toFixed(1)}" y="${(cyv - cell / 2 + 9).toFixed(1)}" `
+                    + `style="fill:var(--bad);stroke:var(--plane);stroke-width:2px;font-size:19px" `
+                    + `text-anchor="middle">⚠</text>`;
+            }
+            html += `</g>`;
+        }
+        svg.innerHTML = html;
+        const byMap = {};
+        cat.maps.forEach(mm => byMap[mm.map_id] = mm);
+        const tip = $("mmtip"), wrap = tip.parentElement;
+        svg.querySelectorAll(".mm-cell").forEach(g => {
+            const m = byMap[g.dataset.map];
+            g.onclick = () => {
+                const card = document.querySelector(`.card[data-map="${g.dataset.map}"]`);
+                if (card) {
+                    card.scrollIntoView({behavior: "smooth", block: "center"});
+                    flashMap(g.dataset.map);
+                }
+            };
+            g.onmouseenter = () => {
+                tip.innerHTML = groupTipHTML(m);
+                tip.style.display = "block";
+            };
+            g.onmouseleave = () => (tip.style.display = "none");
+            g.onmousemove = ev => {
+                const r = wrap.getBoundingClientRect();
+                let px = ev.clientX - r.left + 14, py = ev.clientY - r.top + 14;
+                px = Math.min(px, r.width - tip.offsetWidth - 6);
+                py = Math.min(py, r.height - tip.offsetHeight - 6);
+                tip.style.left = Math.max(4, px) + "px";
+                tip.style.top = Math.max(4, py) + "px";
+            };
+        });
+    }
+
+    function groupTipHTML(m) {
+        let h = `<b>map ${m.map_id}</b> <span class="mo">[${m.coord[0]},${m.coord[1]}]</span>`;
+        if (!m.groups || !m.groups.length) {
+            return h + `<div class="mo" style="margin-top:3px">aucun groupe capturé actuellement</div>`;
+        }
+        for (const g of m.groups) {
+            const mons = g.monsters.map(x =>
+                `<span class="mo ${x.archi ? "ar" : ""}">${x.archi ? "✦" : ""}${esc(x.name)}` +
+                `${x.level != null ? " lv" + x.level : ""}</span>`
+            ).join(", ");
+            h += `<div class="gl">`
+                + `<span class="tot ${g.over ? "over" : ""}">Σ niv ${g.total_level}${g.over ? " ⚠" : ""}</span>`
+                + ` <span class="mo">· cel ${g.cell != null ? g.cell : "?"} · ${g.monsters.length} mob</span>`
+                + `<div>${mons}</div></div>`;
+        }
+        return h;
+    }
+
+    async function load() {
+        const zone = $("zone").value.trim();
+        try {
+            const r = await fetch("/live/zone?zone=" + encodeURIComponent(zone));
+            if (!r.ok) throw new Error("HTTP " + r.status);
+            const cat = await r.json();
+            $("dot").classList.toggle("on", cat.maps_seen > 0);
+            $("seen").textContent = cat.maps_total_in_zone
+                ? `${cat.maps_seen}/${cat.maps_total_in_zone}` : cat.maps_seen;
+            $("ndist").textContent = cat.monsters_distinct.length;
+            $("narchi").textContent = cat.archi_ids_seen.length;
+            $("refreshed").textContent = new Date().toLocaleTimeString();
+            const zlabel = cat.zone_filter ? `« ${cat.zone_filter} »` : "toutes zones";
+            $("mapshint").textContent = `— ${zlabel}`;
+            renderMiniMap(cat);
+            renderMaps(cat);
+            renderMonsters(cat);
+            renderMissing(cat);
+            $("archihint").innerHTML = cat.archi_ids_seen.length
+                ? ""
+                : `Aucun archimonstre connu (<code>data/archi_ids.json</code> vide). ` +
+                `Repère les ids d'archis dans le tableau et clique ✦ pour les marquer (le nom est récupéré auto).`;
+        } catch (e) {
+            $("refreshed").textContent = "erreur : " + e.message;
+        }
+    }
+
+    async function post(url, body) {
+        const r = await fetch(url, {
+            method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(body)
+        });
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.json();
+    }
+
+    async function toggleArchi(id, isOn) {
+        try {
+            const res = await post("/live/archi", {id, remove: isOn});
+            toast(isOn ? `Archi ${id} retiré.` : `Archi ${id} marqué${res.name ? " : " + res.name : ""}.`);
+            load();
+        } catch (e) {
+            toast("Échec archi : " + e.message);
+        }
+    }
+
+    async function fetchName(id) {
+        try {
+            const res = await post("/live/names/fetch", {id});
+            toast(res.name ? `${id} → ${res.name}` : `Nom introuvable pour ${id}.`);
+            load();
+        } catch (e) {
+            toast("Échec nom : " + e.message);
+        }
+    }
+
+    function schedule() {
+        clearInterval(timer);
+        if (autorefresh) timer = setInterval(load, 5000);
+    }
+
+    // --- Alertes (archi sur la map / groupe ≥ 2 Fantôme Pandikaze) -----------
+    let alertsOn = localStorage.getItem("grobeAlerts") === "1";
+    let alertTimer = null, lastSeq = null;
+    const notifiedAt = {};   // key -> ms : anti-spam quand on repasse sur la map
+
+    function beep() {
+        try {
+            const C = window.AudioContext || window.webkitAudioContext;
+            const ctx = new C();
+            const o = ctx.createOscillator(), g = ctx.createGain();
+            o.connect(g);
+            g.connect(ctx.destination);
+            o.type = "sine";
+            o.frequency.value = 880;
+            g.gain.setValueAtTime(0.001, ctx.currentTime);
+            g.gain.exponentialRampToValueAtTime(0.3, ctx.currentTime + 0.02);
+            g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.5);
+            o.start();
+            o.stop(ctx.currentTime + 0.5);
+        } catch (e) { /* audio indispo */
+        }
+    }
+
+    function flashMap(mapId) {
+        const card = document.querySelector(`.card[data-map="${mapId}"]`);
+        if (card) {
+            card.style.transition = "box-shadow .2s";
+            card.style.boxShadow = "0 0 0 3px var(--bad)";
+            setTimeout(() => (card.style.boxShadow = ""), 3000);
+        }
+        const rect = document.querySelector(`#mm .mm-cell[data-map="${mapId}"] rect`);
+        if (rect) {
+            rect.style.stroke = "var(--bad)";
+            rect.style.strokeWidth = "4";
+            setTimeout(() => {
+                rect.style.stroke = "";
+                rect.style.strokeWidth = "";
+            }, 3000);
+        }
+    }
+
+    function fireAlert(a) {
+        const xy = a.coord ? `[${a.coord[0]},${a.coord[1]}]` : "";
+        const icon = a.reason === "archi" ? "✦" : "⚠";
+        const title = (a.reason === "archi" ? "✦ Archimonstre !" : "⚠ Groupe repéré") +
+            (a.zone ? " — " + a.zone : "");
+        const body = `${a.label}\nmap ${a.map_id} ${xy}`;
+        if (window.Notification && Notification.permission === "granted") {
+            try {
+                new Notification(title, {body, tag: a.key, renotify: true});
+            } catch (e) {
+            }
+        }
+        toast(`${icon} ${a.label} — map ${a.map_id} ${xy}`);
+        beep();
+        flashMap(a.map_id);
+    }
+
+    async function checkAlerts() {
+        const zone = $("zone").value.trim();
+        try {
+            const since = lastSeq == null ? 0 : lastSeq;
+            const r = await fetch(`/live/zone/alerts?since=${since}&zone=${encodeURIComponent(zone)}`);
+            if (!r.ok) return;
+            const d = await r.json();
+            if (lastSeq === null) {
+                lastSeq = d.max_seq;
+                return;
+            }  // baseline : ignore l'historique
+            const now = Date.now();
+            for (const a of d.alerts) {
+                if (notifiedAt[a.key] && now - notifiedAt[a.key] < 120000) continue;  // anti-spam 2 min
+                notifiedAt[a.key] = now;
+                fireAlert(a);
+            }
+            lastSeq = d.max_seq;
+        } catch (e) { /* réseau : on réessaie au prochain tour */
+        }
+    }
+
+    function scheduleAlerts() {
+        clearInterval(alertTimer);
+        if (alertsOn) alertTimer = setInterval(checkAlerts, 4000);
+    }
+
+    function setAlerts(on) {
+        alertsOn = on;
+        localStorage.setItem("grobeAlerts", on ? "1" : "0");
+        $("alerts").textContent = on ? "🔔 Alertes ON" : "🔕 Alertes";
+        $("alerts").style.borderColor = on ? "var(--good)" : "";
+        if (on) {
+            lastSeq = null;  // rebaseline : ne notifie que les apparitions À PARTIR de maintenant
+            if (window.Notification && Notification.permission === "default") Notification.requestPermission();
+            checkAlerts();
+        }
+        scheduleAlerts();
+    }
+
+    $("alerts").onclick = () => setAlerts(!alertsOn);
+
+    $("reload").onclick = load;
+    $("names").onclick = async () => {
+        try {
+            const r = await post("/live/names/reload", {});
+            toast(`Noms rechargés (${r.monster_names} connus).`);
+            load();
+        } catch (e) {
+            toast("Échec reload noms : " + e.message);
+        }
+    };
+    $("zone").addEventListener("keydown", e => {
+        if (e.key === "Enter") load();
+    });
+    $("auto").onclick = () => {
+        autorefresh = !autorefresh;
+        $("auto").textContent = autorefresh ? "⏸ Auto" : "▶ Auto";
+        schedule();
+    };
+
+    load();
+    schedule();
+    setAlerts(alertsOn);   // restaure l'état du bouton Alertes (persisté)
+</script>
+</body>
+</html>

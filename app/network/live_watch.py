@@ -1,4 +1,4 @@
-"""Watcher de dossier pour le suivi « live » des repops.
+r"""Watcher de dossier pour le suivi « live » des repops.
 
 Un ring-buffer dumpcap (côté hôte Windows, là où la carte réseau est visible)
 écrit des fichiers .pcapng courts dans un dossier partagé (volume Docker). Ce
@@ -43,6 +43,7 @@ def watch_dir(
         stop: Optional[threading.Event] = None,
         on_bank=None,
         on_prices=None,
+        on_messages=None,
 ) -> None:
     """Boucle de surveillance (bloquante) : à lancer dans un thread daemon.
 
@@ -54,7 +55,8 @@ def watch_dir(
     seen: Dict[str, float] = {}   # chemin -> mtime déjà ingéré
     while stop is None or not stop.is_set():
         try:
-            _scan_once(monitor, directory, settle_s, seen, on_bank=on_bank, on_prices=on_prices)
+            _scan_once(monitor, directory, settle_s, seen, on_bank=on_bank,
+                       on_prices=on_prices, on_messages=on_messages)
         except Exception:
             # ne JAMAIS laisser une erreur tuer le thread (ex course avec le
             # ring-buffer dumpcap qui supprime un fichier en plein scan).
@@ -63,7 +65,8 @@ def watch_dir(
 
 
 def _scan_once(monitor: RepopMonitor, directory: str, settle_s: float,
-               seen: Dict[str, float], max_per_scan: int = 6, on_bank=None, on_prices=None) -> None:
+               seen: Dict[str, float], max_per_scan: int = 6, on_bank=None, on_prices=None,
+               on_messages=None) -> None:
     patterns = (os.path.join(directory, "*.pcapng"),
                 os.path.join(directory, "*.pcap"))
     files = sorted((f for pat in patterns for f in glob.glob(pat)),
@@ -95,7 +98,8 @@ def _scan_once(monitor: RepopMonitor, directory: str, settle_s: float,
     for path, mtime in todo:
         try:
             from app.network.pcap_feed import feed_pcap
-            summary = feed_pcap(monitor, path, on_bank=on_bank, on_prices=on_prices)
+            summary = feed_pcap(monitor, path, on_bank=on_bank, on_prices=on_prices,
+                                on_messages=on_messages)
             logger.info("Live ingest %s : %s", os.path.basename(path), summary)
         except Exception:
             logger.exception("Échec ingestion live de %s", path)
@@ -118,7 +122,8 @@ def _discard(path: str, seen: Dict[str, float]) -> None:
             pass
 
 
-def start_watcher(monitor: RepopMonitor, directory: str, on_bank=None, on_prices=None) -> threading.Event:
+def start_watcher(monitor: RepopMonitor, directory: str, on_bank=None, on_prices=None,
+                  on_messages=None) -> threading.Event:
     """Démarre le watcher dans un thread daemon. Retourne l'Event d'arrêt.
 
     `on_bank` / `on_prices` (optionnels) : callbacks d'auto-sync de la banque
@@ -126,7 +131,8 @@ def start_watcher(monitor: RepopMonitor, directory: str, on_bank=None, on_prices
     stop = threading.Event()
     thread = threading.Thread(
         target=watch_dir, args=(monitor, directory),
-        kwargs={"stop": stop, "on_bank": on_bank, "on_prices": on_prices},
+        kwargs={"stop": stop, "on_bank": on_bank, "on_prices": on_prices,
+                "on_messages": on_messages},
         name="live-watch", daemon=True,
     )
     thread.start()

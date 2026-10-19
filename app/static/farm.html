@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dofus Retro — Farm des ressources de brisage</title>
+    <link rel="icon" type="image/svg+xml" href="/ui/favicon.svg">
+    <style>
+        :root {
+            --plane: #f9f9f7;
+            --surface: #fcfcfb;
+            --ink: #0b0b0b;
+            --ink2: #52514e;
+            --muted: #898781;
+            --grid: #e1e0d9;
+            --accent: #2a78d6;
+            --accent-soft: #cde2fb;
+            --good: #0ca30c;
+            --bad: #c0392b;
+            --gold: #b8860b;
+            --chip: #f0efec;
+            --border: rgba(11, 11, 11, 0.10);
+        }
+
+        :root[data-theme="dark"] {
+            --plane: #0d0d0d;
+            --surface: #1a1a19;
+            --ink: #ffffff;
+            --ink2: #c3c2b7;
+            --muted: #898781;
+            --grid: #2c2c2a;
+            --accent: #3987e5;
+            --accent-soft: #184f95;
+            --good: #0ca30c;
+            --bad: #e4654f;
+            --gold: #e0b544;
+            --chip: #242422;
+            --border: rgba(255, 255, 255, 0.10);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--plane);
+            color: var(--ink);
+            font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+            font-size: 14px;
+            line-height: 1.45;
+        }
+
+        .wrap {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 24px 20px 60px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 20px;
+            margin: 0;
+            font-weight: 650;
+        }
+
+        a.nav {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .spacer {
+            flex: 1;
+        }
+
+        button, select, input[type="number"], input[type="search"] {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            color: var(--ink2);
+            border-radius: 8px;
+            padding: 8px 11px;
+            cursor: pointer;
+            font-size: 13px;
+            font-family: inherit;
+        }
+
+        input[type="search"] {
+            cursor: text;
+            color: var(--ink);
+            min-width: 170px;
+            font-weight: 400;
+            text-transform: none;
+            letter-spacing: normal;
+        }
+
+        input[type="number"] {
+            cursor: text;
+            color: var(--ink);
+            width: 130px;
+            font-variant-numeric: tabular-nums;
+        }
+
+        input:focus, select:focus {
+            outline: 2px solid var(--accent-soft);
+            border-color: var(--accent);
+        }
+
+        .kpis {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .tile {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px 16px;
+        }
+
+        .tile .v {
+            font-size: 25px;
+            font-weight: 680;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .tile .l {
+            color: var(--muted);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-top: 2px;
+        }
+
+        .tile .v.gold {
+            color: var(--gold);
+        }
+
+        .tile .v.good {
+            color: var(--good);
+        }
+
+        .tile .v.bad {
+            color: var(--bad);
+        }
+
+        .panel {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 6px 4px;
+            margin-bottom: 18px;
+        }
+
+        .panel h2 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--ink2);
+            margin: 12px 14px 8px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .panel h2 .spacer {
+            flex: 1;
+        }
+
+        .params {
+            display: flex;
+            gap: 22px;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            margin: 4px 14px 14px;
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .field label {
+            color: var(--muted);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .field .hint {
+            color: var(--muted);
+            font-size: 11px;
+            max-width: 240px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 7px 14px;
+            font-size: 13.5px;
+            border-top: 1px solid var(--grid);
+        }
+
+        th {
+            color: var(--muted);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            font-weight: 600;
+            border-top: none;
+            cursor: pointer;
+            user-select: none;
+            white-space: nowrap;
+        }
+
+        th.num, td.num {
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+        }
+
+        tbody tr:hover {
+            background: color-mix(in srgb, var(--accent) 6%, transparent);
+        }
+
+        tfoot td {
+            border-top: 2px solid var(--grid);
+            font-weight: 650;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .iname {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .iname img {
+            width: 26px;
+            height: 26px;
+            object-fit: contain;
+        }
+
+        .ph {
+            width: 26px;
+            height: 26px;
+            border-radius: 6px;
+            background: var(--chip);
+            display: inline-block;
+            flex: none;
+        }
+
+        .sub {
+            color: var(--muted);
+            font-size: 11.5px;
+        }
+
+        .pos {
+            color: var(--good);
+        }
+
+        .neg {
+            color: var(--bad);
+        }
+
+        .tag {
+            font-size: 10px;
+            border-radius: 5px;
+            padding: 1px 6px;
+            border: 1px solid var(--border);
+            color: var(--muted);
+            white-space: nowrap;
+        }
+
+        /* badges de source */
+        .badge {
+            font-size: 11px;
+            border-radius: 6px;
+            padding: 2px 8px;
+            white-space: nowrap;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .badge.harvest {
+            background: color-mix(in srgb, var(--good) 16%, var(--surface));
+            color: var(--good);
+            border: 1px solid color-mix(in srgb, var(--good) 35%, transparent);
+        }
+
+        .badge.drop {
+            background: color-mix(in srgb, var(--gold) 16%, var(--surface));
+            color: var(--gold);
+            border: 1px solid color-mix(in srgb, var(--gold) 38%, transparent);
+        }
+
+        .badge.unknown {
+            background: var(--chip);
+            color: var(--muted);
+            border: 1px solid var(--border);
+        }
+
+        /* chips de lieux de farm */
+        .spots {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .spot {
+            font-size: 11px;
+            border-radius: 999px;
+            padding: 2px 9px;
+            border: 1px solid var(--border);
+            color: var(--ink2);
+            background: var(--chip);
+            white-space: nowrap;
+        }
+
+        .spot.zone {
+            border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+            color: var(--accent);
+        }
+
+        .spot.live, .spot.drop {
+            background: color-mix(in srgb, var(--good) 15%, var(--surface));
+            border-color: color-mix(in srgb, var(--good) 45%, transparent);
+            color: var(--good);
+        }
+
+        .spot .via {
+            opacity: .6;
+            font-size: 9.5px;
+            margin-left: 4px;
+            text-transform: uppercase;
+        }
+
+        .spot.none {
+            color: var(--muted);
+            font-style: italic;
+            border-style: dashed;
+        }
+
+        .foot {
+            color: var(--muted);
+            font-size: 12px;
+            margin-top: 20px;
+        }
+
+        .foot code {
+            background: var(--chip);
+            padding: 1px 5px;
+            border-radius: 5px;
+        }
+
+        .empty {
+            color: var(--muted);
+            padding: 10px 14px;
+        }
+
+        .warn {
+            background: color-mix(in srgb, var(--gold) 12%, var(--surface));
+            border: 1px solid color-mix(in srgb, var(--gold) 40%, transparent);
+            border-radius: 10px;
+            padding: 10px 14px;
+            margin-bottom: 18px;
+            font-size: 13px;
+            color: var(--ink2);
+        }
+
+        .grouprow {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 6px 14px;
+            border-top: 1px solid var(--grid);
+        }
+
+        .grouprow .nm {
+            font-weight: 600;
+        }
+
+        .bar {
+            height: 7px;
+            border-radius: 4px;
+            background: var(--accent);
+            opacity: .5;
+        }
+
+        /* classement des zones */
+        .zrow {
+            display: flex;
+            gap: 12px;
+            padding: 10px 14px;
+            border-top: 1px solid var(--grid);
+        }
+
+        .zrank {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--muted);
+            min-width: 26px;
+            text-align: center;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .zrow:first-child .zrank {
+            color: var(--gold);
+        }
+
+        .zmain {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .zhead {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+        }
+
+        .zscore {
+            font-weight: 700;
+            color: var(--gold);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .ztrack {
+            height: 6px;
+            border-radius: 4px;
+            background: var(--grid);
+            margin: 5px 0 7px;
+            overflow: hidden;
+        }
+
+        .ztrack > span {
+            display: block;
+            height: 100%;
+            background: var(--gold);
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <header>
+        <div><h1>🧺 Farm — ressources de brisage</h1>
+            <a class="nav" href="brisage.html">← Brisage Ga Pa</a>
+            &nbsp; <a class="nav" href="profit.html">Crafts rentables</a>
+            &nbsp; <a class="nav" href="grobe.html">Zone live</a>
+        </div>
+        <div class="spacer"></div>
+        <button id="refresh">↻ Rafraîchir</button>
+        <button id="theme">◐ Thème</button>
+    </header>
+
+    <div class="warn" id="note"></div>
+
+    <section class="kpis" id="kpis"></section>
+
+    <section class="panel"><h2>Paramètres</h2>
+        <div class="params">
+            <div class="field">
+                <label for="coef">Coefficient de brisage</label>
+                <input type="number" id="coef" min="0" max="4000" step="0.5">
+                <span class="hint">Sert à déterminer quelles cibles sont rentables (même formule que la page Brisage).</span>
+            </div>
+            <div class="field">
+                <label for="price">Prix unitaire Ga Pa</label>
+                <input type="number" id="price" min="0" step="1000">
+                <span class="hint">Prix de revente de la rune : fixe la rentabilité d'une cible.</span>
+            </div>
+            <div class="field">
+                <label for="maxlvl">Niveau max</label>
+                <input type="number" id="maxlvl" min="1" max="200" step="1">
+                <span class="hint">Équipements +PA craftables jusqu'à ce niveau.</span>
+            </div>
+            <div class="field">
+                <label for="crafts">Crafts / cible</label>
+                <input type="number" id="crafts" min="1" max="10000" step="1" value="1">
+                <span class="hint">Exemplaires à fabriquer par cible (quantités de ressources × ce nombre).</span>
+            </div>
+            <div class="field">
+                <label for="basis">Base</label>
+                <select id="basis">
+                    <option value="unit">Crafts/cible (fixe)</option>
+                    <option value="bank">Max rentable (banque)</option>
+                </select>
+                <span class="hint">« Max rentable » = nb de crafts qui restent rentables en épuisant la banque.</span>
+            </div>
+            <div class="field">
+                <label><input type="checkbox" id="onlyprof" checked> Cibles rentables uniquement</label>
+                <span class="hint">Ne garder que les équipements dont l'achat des ressources est rentable à briser.</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel"><h2>🏆 Cibles les plus rentables à farmer
+        <span class="spacer"></span>
+        <span class="sub">rendement = Ga Pa/craft ÷ combats · clique une colonne pour trier (ex. « Récolte » croissant)</span>
+    </h2>
+        <table>
+            <thead>
+            <tr>
+                <th data-tsort="name">Objet</th>
+                <th class="num" data-tsort="level">niv</th>
+                <th class="num" data-tsort="ga_pa_rate">Ga Pa/craft</th>
+                <th class="num" data-tsort="harvest">Récolte</th>
+                <th class="num" data-tsort="butins">Butins</th>
+                <th class="num" data-tsort="zones">Zones</th>
+                <th class="num" data-tsort="fights">Combats/craft</th>
+                <th class="num" data-tsort="gapa_per_100">Ga Pa/100 cbt</th>
+                <th data-tsort="bottleneck">Goulot (le + dur)</th>
+            </tr>
+            </thead>
+            <tbody id="trank"></tbody>
+        </table>
+    </section>
+
+    <section class="panel"><h2>🎯 Meilleures zones pour des Ga Pa rapides
+        <span class="spacer"></span>
+        <span class="sub">score = Σ (taux de drop × valeur Ga Pa) des butins de la zone</span>
+    </h2>
+        <div id="zoneranking"></div>
+    </section>
+
+    <section class="panel"><h2>Où farmer — par métier de récolte
+        <span class="spacer"></span>
+        <span class="sub">ressources fiables (type de l'objet)</span>
+    </h2>
+        <div id="byprof"></div>
+    </section>
+
+    <section class="panel"><h2>Où farmer — par zone
+        <span class="spacer"></span>
+        <span class="sub"><span class="pos">vert = butin confirmé (xixou) ou vu en live</span></span>
+    </h2>
+        <div id="byzone"></div>
+    </section>
+
+    <section class="panel"><h2>Ressources à réunir
+        <input type="search" id="filter" placeholder="filtrer (ex. arakne)…" autocomplete="off">
+        <span class="spacer"></span>
+        <span class="sub" id="tgtnote"></span>
+    </h2>
+        <table>
+            <thead>
+            <tr>
+                <th data-sort="name">Ressource</th>
+                <th data-sort="source_kind">Source</th>
+                <th data-sort="pa">Pour +PA</th>
+                <th class="num" data-sort="qty_needed">Besoin</th>
+                <th class="num" data-sort="to_buy">À réunir</th>
+                <th class="num" data-sort="best_rate">Taux max</th>
+                <th class="num" data-sort="buy_cost">Coût achat</th>
+                <th data-sort="spots">Où farmer</th>
+            </tr>
+            </thead>
+            <tbody id="rows"></tbody>
+            <tfoot id="foot"></tfoot>
+        </table>
+    </section>
+
+    <div class="foot">
+        <b>Comment c'est calculé.</b> On part des équipements <b>+PA rentables</b> à briser (page
+        <a class="nav" href="brisage.html">Brisage</a>), on <b>aplatit leurs recettes jusqu'aux matières
+        premières</b> (ressources sans recette) et on somme les quantités.
+        <br>
+        <b>Source</b> : <span class="badge harvest">Métier</span> = récolte (déduit du <i>type</i> de l'objet :
+        Minerai → Mineur, Bois/Écorce/Racine → Bûcheron, Fleur/Plante → Alchimiste, Poisson → Pêcheur,
+        Céréale → Paysan) — <b>fiable</b>. <span class="badge drop">Butin</span> = tombe d'un monstre.
+        <span class="badge unknown">?</span> = type générique indéterminé.
+        <br>
+        <b>Où farmer</b> : pour les butins, on utilise en priorité les <b>vraies tables de drop</b> de
+        <a class="nav" href="https://xixou.io" target="_blank" rel="noopener">xixou.io</a> (monstre exact + <b>taux</b>
+        +
+        zones), ingérées dans <code>data/drops.json</code> via <code>scripts/ingest_drops.py</code>. Les chips verts
+        (monstre + %, zones) sont donc <b>fiables</b> ; le taux est celui du serveur de référence xixou (sur ton
+        émulateur il peut différer). Une zone vue via le sniffer porte <span class="spot drop">live</span>.
+        <b>À défaut</b> de drop connu, on retombe sur un rapprochement <i>par nom</i> (chips bleus « zone/monstre »,
+        ex. « Pollen de Blop » → <i>Prairie des Blops</i>) — à vérifier. « inconnu — voir wiki » = aucune piste.
+        <br>
+        <b>À réunir</b> = besoin − stock banque ; <b>Coût achat</b> = à réunir × prix HDV (ce que coûterait l'achat
+        plutôt que le farm). Paramètres mémorisés dans ce navigateur.
+    </div>
+</div>
+
+<script src="/ui/nav.js" defer></script>
+<script>
+    const $ = (s) => document.querySelector(s);
+    let DATA = {
+        resources: [],
+        targets: [],
+        by_profession: [],
+        by_zone: [],
+        totals: {},
+        params: {},
+        missing_targets: []
+    };
+    let sortKey = "buy_cost", sortDir = -1;
+
+    const LS = {
+        coef: "farm.coef",
+        price: "farm.price",
+        maxlvl: "farm.maxlvl",
+        crafts: "farm.crafts",
+        basis: "farm.basis",
+        onlyprof: "farm.onlyprof"
+    };
+
+    function esc(s) {
+        return (s ?? "").toString().replace(/[&<>"]/g, c => ({
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;'
+        }[c]));
+    }
+
+    function fmt(n) {
+        return Math.round(n || 0).toLocaleString("fr-FR");
+    }
+
+    function compact(n) {
+        n = n || 0;
+        if (Math.abs(n) >= 1e6) return (n / 1e6).toFixed(2) + " M";
+        if (Math.abs(n) >= 1e3) return (n / 1e3).toFixed(1) + " k";
+        return fmt(n);
+    }
+
+    function ico(x) {
+        return x.icon ? `<img src="${esc(x.icon)}" alt="" loading="lazy">` : `<span class="ph"></span>`;
+    }
+
+    function params() {
+        const qs = new URLSearchParams();
+        const coef = parseFloat($("#coef").value), price = parseInt($("#price").value, 10),
+            maxlvl = parseInt($("#maxlvl").value, 10), crafts = parseInt($("#crafts").value, 10);
+        if (isFinite(coef)) qs.set("coef", coef);
+        if (isFinite(price)) qs.set("price", price);
+        if (isFinite(maxlvl)) qs.set("max_level", maxlvl);
+        if (isFinite(crafts)) qs.set("crafts", crafts);
+        qs.set("basis", $("#basis").value);
+        qs.set("only_profitable", $("#onlyprof").checked);
+        return qs.toString();
+    }
+
+    function saveParams() {
+        localStorage.setItem(LS.coef, $("#coef").value);
+        localStorage.setItem(LS.price, $("#price").value);
+        localStorage.setItem(LS.maxlvl, $("#maxlvl").value);
+        localStorage.setItem(LS.crafts, $("#crafts").value);
+        localStorage.setItem(LS.basis, $("#basis").value);
+        localStorage.setItem(LS.onlyprof, $("#onlyprof").checked ? "1" : "0");
+    }
+
+    async function load() {
+        DATA = await fetch("../farm/plan?" + params()).then(r => r.json());
+        if ($("#coef").value === "") $("#coef").value = DATA.params.coef ?? 3;
+        if ($("#price").value === "") $("#price").value = DATA.params.ga_pa_price ?? "";
+        if ($("#maxlvl").value === "") $("#maxlvl").value = DATA.params.max_level ?? 120;
+        renderNote();
+        renderKpis();
+        renderTargetRanking();
+        renderZoneRanking();
+        renderGroups();
+        renderRows();
+    }
+
+    let tsortKey = "gapa_per_100", tsortDir = -1;
+
+    function tcmp(a, b) {
+        let x = a[tsortKey], y = b[tsortKey];
+        if (tsortKey === "bottleneck") {
+            x = a.bottleneck ? a.bottleneck.rate : 999;
+            y = b.bottleneck ? b.bottleneck.rate : 999;
+        }
+        if (x == null) return 1;
+        if (y == null) return -1;
+        if (typeof x === "string") return tsortDir * x.localeCompare(y, "fr");
+        return tsortDir * (x - y);
+    }
+
+    function renderTargetRanking() {
+        const ts = (DATA.target_ranking || []).slice().sort(tcmp);
+        const box = $("#trank");
+        if (!ts.length) {
+            box.innerHTML = `<tr><td colspan="9" class="empty">Aucune cible rentable avec ces paramètres.</td></tr>`;
+            return;
+        }
+        box.innerHTML = ts.map(t => {
+            const b = t.bottleneck;
+            const bl = b
+                ? `${esc(b.name)} <b>${b.rate}%</b> <span class="sub">(${esc(b.monster)} @ ${esc(b.zone)})</span>`
+                : `<span class="sub">—</span>`;
+            const eff = t.gapa_per_100 == null ? `<span class="sub">?</span>` : `<b>${t.gapa_per_100.toFixed(2)}</b>`;
+            return `<tr>
+                <td><b>${esc(t.name)}</b>${t.needs_eau ? ` <span class="tag" title="nécessite aussi de l'Eau">+Eau</span>` : ""}</td>
+                <td class="num">${t.level ?? ""}</td>
+                <td class="num">${(t.ga_pa_rate ?? 0).toFixed(3)}</td>
+                <td class="num ${t.harvest ? "" : "pos"}">${t.harvest}</td>
+                <td class="num">${t.butins}</td>
+                <td class="num">${t.zones}</td>
+                <td class="num">${fmt(t.fights)}</td>
+                <td class="num">${eff}</td>
+                <td>${bl}</td>
+            </tr>`;
+        }).join("");
+    }
+
+    // ascendant pour les critères « moins = mieux », descendant pour « plus = mieux »
+    const TSORT_ASC = new Set(["name", "level", "harvest", "zones", "fights", "bottleneck"]);
+    document.querySelectorAll("th[data-tsort]").forEach(th => th.onclick = () => {
+        const k = th.dataset.tsort;
+        if (tsortKey === k) tsortDir = -tsortDir; else {
+            tsortKey = k;
+            tsortDir = TSORT_ASC.has(k) ? 1 : -1;
+        }
+        renderTargetRanking();
+    });
+
+    function renderZoneRanking() {
+        const zs = DATA.zone_ranking || [];
+        const box = $("#zoneranking");
+        if (!zs.length) {
+            box.innerHTML = `<div class="empty">Aucune zone de butin à classer (butins introuvables ou ressources déjà en banque).</div>`;
+            return;
+        }
+        const max = Math.max(...zs.map(z => z.score), 0.0001);
+        box.innerHTML = zs.map((z, i) => `
+            <div class="zrow">
+                <span class="zrank">${i + 1}</span>
+                <div class="zmain">
+                    <div class="zhead">
+                        <b>${esc(z.zone)}</b>
+                        <span class="sub">· ${z.resource_count} butin(s) · ${z.target_count} cible(s)</span>
+                        <span class="spacer"></span>
+                        <span class="zscore" title="rendement Ga Pa relatif">${z.score.toFixed(2)}</span>
+                    </div>
+                    <div class="ztrack"><span style="width:${Math.round(z.score / max * 100)}%"></span></div>
+                    <div class="spots">${(z.resources || []).map(r =>
+            `<span class="spot drop">${esc(r.name)}<span class="via">${r.rate}%</span></span>`).join("")}</div>
+                    ${(z.monsters || []).length ? `<div class="sub" style="margin-top:4px">Monstres : ${z.monsters.map(esc).join(", ")}</div>` : ""}
+                </div>
+            </div>`).join("");
+    }
+
+    function renderNote() {
+        const t = DATA.totals || {};
+        let note = `<b>${t.targets || 0}</b> cibles rentables → <b>${t.resources || 0}</b> ressources-feuilles à réunir. ` +
+            `<b>${t.harvest || 0}</b> de métier (récolte), <b>${t.drop || 0}</b> de butin. ` +
+            `Ajuste le coefficient / prix Ga Pa / niveau max ci-dessous.`;
+        const miss = DATA.missing_targets || [];
+        if (miss.length) note += ` <br>⚠️ Fiches absentes de <code>data/details</code> : ${miss.join(", ")}.`;
+        if (!(DATA.resources || []).length) note += ` <br>Aucune ressource : aucune cible rentable avec ces paramètres (décoche « cibles rentables uniquement » ou ajuste le prix Ga Pa).`;
+        $("#note").innerHTML = note;
+
+        const tg = DATA.targets || [];
+        $("#tgtnote").innerHTML = tg.length
+            ? "cibles les + rapides : " + tg.slice(0, 5).map(t =>
+            `${esc(t.name)} (${(t.ga_pa_rate ?? 0).toFixed(2)} Ga Pa/craft)`).join(", ") + (tg.length > 5 ? ` +${tg.length - 5}` : "")
+            : "";
+    }
+
+    function renderKpis() {
+        const t = DATA.totals || {};
+        const tiles = [
+            {l: "Cibles rentables", v: fmt(t.targets), cls: ""},
+            {l: "Ressources", v: fmt(t.resources), cls: ""},
+            {l: "De métier", v: fmt(t.harvest), cls: "good"},
+            {l: "Butins localisés", v: `${fmt(t.drop_confirmed)}/${fmt(t.drop)}`, cls: "gold"},
+            {l: "Coût d'achat total", v: compact(t.to_buy_cost), cls: "gold"},
+            {l: "Sans prix connu", v: fmt(t.unpriced), cls: t.unpriced ? "bad" : ""},
+        ];
+        $("#kpis").innerHTML = tiles.map(x => `<div class="tile"><div class="v ${x.cls}">${x.v}</div><div class="l">${x.l}</div></div>`).join("");
+    }
+
+    function renderGroups() {
+        const profs = DATA.by_profession || [];
+        const maxP = Math.max(1, ...profs.map(g => g.resources));
+        $("#byprof").innerHTML = profs.length ? profs.map(g => `
+            <div class="grouprow">
+                <span class="nm" style="min-width:150px">${esc(g.profession)}</span>
+                <span class="sub">${g.resources} ressource(s)</span>
+                <span class="bar" style="width:${(g.resources / maxP * 160) | 0}px"></span>
+                <span class="spacer"></span>
+                <span class="sub">achat ${compact(g.to_buy_cost)} k·</span>
+            </div>`).join("") : `<div class="empty">Aucune ressource de métier.</div>`;
+
+        const zones = DATA.by_zone || [];
+        const maxZ = Math.max(1, ...zones.map(g => g.resources));
+        $("#byzone").innerHTML = zones.length ? zones.slice(0, 25).map(g => `
+            <div class="grouprow">
+                <span class="nm" style="min-width:220px">${g.confirmed ? "🟢 " : ""}${esc(g.zone)}</span>
+                <span class="sub">${g.resources} ressource(s)</span>
+                <span class="bar" style="width:${(g.resources / maxZ * 160) | 0}px"></span>
+            </div>`).join("") : `<div class="empty">Aucune zone rapprochée.</div>`;
+    }
+
+    const SRC = {
+        harvest: r => `<span class="badge harvest">${esc(r.profession || "Métier")}</span>`,
+        drop: () => `<span class="badge drop">Butin</span>`,
+        unknown: () => `<span class="badge unknown">?</span>`,
+    };
+
+    function spotsHtml(r) {
+        if (r.source_kind === "harvest") return `<span class="sub">récolte (${esc(r.profession || "")})</span>`;
+        const sp = r.spots || [];
+        if (!sp.length) return `<span class="spot none">inconnu — voir wiki</span>`;
+        return `<div class="spots">` + sp.map(s => {
+            const conf = (s.via === "drop" || s.via === "live");
+            const cls = "spot" + (conf ? " drop" : (s.kind === "zone" ? " zone" : ""));
+            let tag;
+            if (s.kind === "monster") tag = (s.rate != null ? s.rate + "%" : (s.via === "drop" ? "butin" : "monstre"));
+            else tag = (s.via === "live" ? "live" : (s.via === "drop" ? "butin" : "zone"));
+            return `<span class="${cls}">${esc(s.label)}<span class="via">${tag}</span></span>`;
+        }).join("") + `</div>`;
+    }
+
+    // Meilleur taux de drop d'une ressource (max sur ses monstres), null si récolte/inconnu.
+    function bestRate(r) {
+        const rates = (r.spots || []).filter(s => s.kind === "monster" && s.rate != null).map(s => s.rate);
+        return rates.length ? Math.max(...rates) : null;
+    }
+
+    // Cibles +PA qui utilisent la ressource (noms via DATA.targets), triées par Ga Pa/craft.
+    function paCell(r) {
+        const map = TMAP();
+        const ts = (r.used_in || []).map(id => map[id]).filter(Boolean)
+            .sort((a, b) => (b.ga_pa_rate || 0) - (a.ga_pa_rate || 0));
+        if (!ts.length) return `<span class="sub">—</span>`;
+        const shown = ts.slice(0, 2).map(t =>
+            `<span class="spot" title="${(t.ga_pa_rate ?? 0).toFixed(2)} Ga Pa/craft">${esc(t.name)}</span>`).join(" ");
+        return `<div class="spots">${shown}${ts.length > 2 ? `<span class="sub">+${ts.length - 2}</span>` : ""}</div>`;
+    }
+
+    let _tmap = null;
+
+    function TMAP() {
+        if (!_tmap) _tmap = Object.fromEntries((DATA.targets || []).map(t => [t.item_id, t]));
+        return _tmap;
+    }
+
+    function cmp(a, b) {
+        let x, y;
+        if (sortKey === "spots") {
+            x = (a.spots || []).length;
+            y = (b.spots || []).length;
+        } else if (sortKey === "pa") {
+            x = (a.used_in || []).length;
+            y = (b.used_in || []).length;
+        } else if (sortKey === "best_rate") {
+            x = bestRate(a);
+            y = bestRate(b);
+        } else if (sortKey === "source_kind") {
+            x = a.source_kind + (a.profession || "");
+            y = b.source_kind + (b.profession || "");
+        } else {
+            x = a[sortKey];
+            y = b[sortKey];
+        }
+        if (x == null) return 1;
+        if (y == null) return -1;
+        if (typeof x === "string") return sortDir * x.localeCompare(y, "fr");
+        return sortDir * (x - y);
+    }
+
+    function renderRows() {
+        _tmap = null;
+        const q = ($("#filter").value || "").trim().toLowerCase();
+        let rows = (DATA.resources || []).slice();
+        if (q) rows = rows.filter(r => (r.name || "").toLowerCase().includes(q)
+            || (r.type || "").toLowerCase().includes(q)
+            || (r.spots || []).some(s => (s.label || "").toLowerCase().includes(q)));
+        rows.sort(cmp);
+        const body = $("#rows");
+        if (!rows.length) {
+            body.innerHTML = `<tr><td colspan="8" class="empty">${q ? "Aucune ressource ne correspond au filtre." : "Rien à farmer."}</td></tr>`;
+            $("#foot").innerHTML = "";
+            return;
+        }
+        body.innerHTML = rows.map(r => {
+            const cost = r.buy_cost == null ? `<span class="sub">?</span>` : fmt(r.buy_cost);
+            const br = bestRate(r);
+            const rate = r.source_kind === "harvest" ? `<span class="sub">récolte</span>`
+                : (br == null ? `<span class="sub">?</span>` : `<b>${br}%</b>`);
+            return `<tr>
+                <td><span class="iname">${ico(r)}<span><b>${esc(r.name)}</b><br><span class="sub">${esc(r.type || "")}</span></span></span></td>
+                <td>${(SRC[r.source_kind] || SRC.unknown)(r)}</td>
+                <td>${paCell(r)}</td>
+                <td class="num">${fmt(r.qty_needed)}</td>
+                <td class="num ${r.to_buy ? "" : "pos"}">${fmt(r.to_buy)}</td>
+                <td class="num">${rate}</td>
+                <td class="num">${cost}</td>
+                <td>${spotsHtml(r)}</td>
+            </tr>`;
+        }).join("");
+        const t = DATA.totals || {};
+        $("#foot").innerHTML = `<tr><td>${rows.length} ressource(s)</td><td></td><td></td>
+            <td class="num"></td><td class="num"></td><td class="num"></td>
+            <td class="num">${fmt(t.to_buy_cost)}</td><td></td></tr>`;
+    }
+
+    document.querySelectorAll("th[data-sort]").forEach(th => th.onclick = () => {
+        const k = th.dataset.sort;
+        if (sortKey === k) sortDir = -sortDir; else {
+            sortKey = k;
+            sortDir = (k === "name" || k === "source_kind") ? 1 : -1;
+        }
+        renderRows();
+    });
+
+    $("#filter").addEventListener("input", renderRows);   // filtrage client (pas de refetch)
+
+    $("#refresh").onclick = () => {
+        saveParams();
+        load();
+    };
+    ["coef", "price", "maxlvl", "crafts"].forEach(id => $("#" + id).addEventListener("change", () => {
+        saveParams();
+        load();
+    }));
+    $("#basis").addEventListener("change", () => {
+        saveParams();
+        load();
+    });
+    $("#onlyprof").addEventListener("change", () => {
+        saveParams();
+        load();
+    });
+
+    $("#theme").onclick = () => {
+        const root = document.documentElement;
+        const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        root.setAttribute("data-theme", next);
+        localStorage.setItem("theme", next);
+    };
+
+    (function init() {
+        const th = localStorage.getItem("theme");
+        if (th) document.documentElement.setAttribute("data-theme", th);
+        $("#coef").value = localStorage.getItem(LS.coef) ?? "";
+        $("#price").value = localStorage.getItem(LS.price) ?? "";
+        $("#maxlvl").value = localStorage.getItem(LS.maxlvl) ?? "";
+        $("#crafts").value = localStorage.getItem(LS.crafts) ?? "1";
+        $("#basis").value = localStorage.getItem(LS.basis) ?? "unit";
+        $("#onlyprof").checked = (localStorage.getItem(LS.onlyprof) ?? "1") === "1";
+        load();
+    })();
+</script>
+</body>
+</html>

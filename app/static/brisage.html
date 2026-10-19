@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dofus Retro — Brisage Ga Pa</title>
+    <link rel="icon" type="image/svg+xml" href="/ui/favicon.svg">
+    <style>
+        :root {
+            --plane: #f9f9f7;
+            --surface: #fcfcfb;
+            --ink: #0b0b0b;
+            --ink2: #52514e;
+            --muted: #898781;
+            --grid: #e1e0d9;
+            --accent: #2a78d6;
+            --accent-soft: #cde2fb;
+            --good: #0ca30c;
+            --bad: #c0392b;
+            --gold: #b8860b;
+            --chip: #f0efec;
+            --border: rgba(11, 11, 11, 0.10);
+        }
+
+        :root[data-theme="dark"] {
+            --plane: #0d0d0d;
+            --surface: #1a1a19;
+            --ink: #ffffff;
+            --ink2: #c3c2b7;
+            --muted: #898781;
+            --grid: #2c2c2a;
+            --accent: #3987e5;
+            --accent-soft: #184f95;
+            --good: #0ca30c;
+            --bad: #e4654f;
+            --gold: #e0b544;
+            --chip: #242422;
+            --border: rgba(255, 255, 255, 0.10);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--plane);
+            color: var(--ink);
+            font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+            font-size: 14px;
+            line-height: 1.45;
+        }
+
+        .wrap {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 24px 20px 60px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 20px;
+            margin: 0;
+            font-weight: 650;
+        }
+
+        a.nav {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .spacer {
+            flex: 1;
+        }
+
+        button, select, input[type="number"], input[type="search"] {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            color: var(--ink2);
+            border-radius: 8px;
+            padding: 8px 11px;
+            cursor: pointer;
+            font-size: 13px;
+            font-family: inherit;
+        }
+
+        input[type="number"] {
+            cursor: text;
+            color: var(--ink);
+            width: 130px;
+            font-variant-numeric: tabular-nums;
+        }
+
+        input:focus, select:focus {
+            outline: 2px solid var(--accent-soft);
+            border-color: var(--accent);
+        }
+
+        .kpis {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .tile {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px 16px;
+        }
+
+        .tile .v {
+            font-size: 25px;
+            font-weight: 680;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .tile .l {
+            color: var(--muted);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-top: 2px;
+        }
+
+        .tile .v.gold {
+            color: var(--gold);
+        }
+
+        .tile .v.good {
+            color: var(--good);
+        }
+
+        .tile .v.bad {
+            color: var(--bad);
+        }
+
+        .panel {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 6px 4px;
+            margin-bottom: 18px;
+        }
+
+        .panel h2 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--ink2);
+            margin: 12px 14px 8px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .panel h2 .spacer {
+            flex: 1;
+        }
+
+        .params {
+            display: flex;
+            gap: 22px;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            margin: 4px 14px 14px;
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .field label {
+            color: var(--muted);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .field .hint {
+            color: var(--muted);
+            font-size: 11px;
+            max-width: 230px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 7px 14px;
+            font-size: 13.5px;
+            border-top: 1px solid var(--grid);
+        }
+
+        th {
+            color: var(--muted);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            font-weight: 600;
+            border-top: none;
+            cursor: pointer;
+            user-select: none;
+            white-space: nowrap;
+        }
+
+        th.num, td.num {
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+        }
+
+        tbody tr.main {
+            cursor: pointer;
+        }
+
+        tbody tr.main:hover {
+            background: color-mix(in srgb, var(--accent) 6%, transparent);
+        }
+
+        tfoot td {
+            border-top: 2px solid var(--grid);
+            font-weight: 650;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .iname {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .iname img {
+            width: 26px;
+            height: 26px;
+            object-fit: contain;
+        }
+
+        .ph {
+            width: 26px;
+            height: 26px;
+            border-radius: 6px;
+            background: var(--chip);
+            display: inline-block;
+            flex: none;
+        }
+
+        .sub {
+            color: var(--muted);
+            font-size: 11.5px;
+        }
+
+        .pa {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .pos {
+            color: var(--good);
+        }
+
+        .neg {
+            color: var(--bad);
+        }
+
+        .tag {
+            font-size: 10px;
+            border-radius: 5px;
+            padding: 1px 6px;
+            border: 1px solid var(--border);
+            color: var(--muted);
+            white-space: nowrap;
+        }
+
+        .ing {
+            background: color-mix(in srgb, var(--accent) 4%, transparent);
+        }
+
+        .ing td {
+            padding: 0;
+            border-top: none;
+        }
+
+        .ingwrap {
+            padding: 8px 14px 12px 48px;
+        }
+
+        .ingtable {
+            width: auto;
+        }
+
+        .ingtable td, .ingtable th {
+            border-top: none;
+            padding: 3px 16px 3px 0;
+            font-size: 12.5px;
+        }
+
+        .ok {
+            color: var(--good);
+        }
+
+        .short {
+            color: var(--bad);
+        }
+
+        .foot {
+            color: var(--muted);
+            font-size: 12px;
+            margin-top: 20px;
+        }
+
+        .foot code {
+            background: var(--chip);
+            padding: 1px 5px;
+            border-radius: 5px;
+        }
+
+        .empty {
+            color: var(--muted);
+            padding: 10px 14px;
+        }
+
+        .warn {
+            background: color-mix(in srgb, var(--gold) 12%, var(--surface));
+            border: 1px solid color-mix(in srgb, var(--gold) 40%, transparent);
+            border-radius: 10px;
+            padding: 10px 14px;
+            margin-bottom: 18px;
+            font-size: 13px;
+            color: var(--ink2);
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <header>
+        <div><h1>🔨 Brisage — Rune Ga Pa</h1>
+            <a class="nav" href="bank.html">← Banque</a>
+            &nbsp; <a class="nav" href="profit.html">Crafts rentables</a>
+        </div>
+        <div class="spacer"></div>
+        <button id="refresh">↻ Rafraîchir</button>
+        <button id="theme">◐ Thème</button>
+    </header>
+
+    <div class="warn" id="note"></div>
+
+    <section class="kpis" id="kpis"></section>
+
+    <section class="panel"><h2>Paramètres de brisage</h2>
+        <div class="params">
+            <div class="field">
+                <label for="coef">Coefficient de brisage</label>
+                <input type="number" id="coef" min="0" max="4000" step="0.5">
+                <span class="hint">Multiplicateur global (≈ 3 en Retro ; défaut 3 → Kam Assutra ≈ 8,49 %,
+                    Rat Noir ≈ 48 %). Monte-le si ton serveur booste les drops. Le taux par objet croît
+                    ≈ au carré de son niveau.</span>
+            </div>
+            <div class="field">
+                <label for="price">Prix unitaire Ga Pa</label>
+                <input type="number" id="price" min="0" step="1000">
+                <span class="hint">Kamas par Rune Ga Pa revendue (prix HDV). Sert au calcul des kamas potentiels.</span>
+            </div>
+            <div class="field">
+                <label for="maxlvl">Niveau max</label>
+                <input type="number" id="maxlvl" min="1" max="200" step="1">
+                <span class="hint">Auto-découvre tous les équipements +PA craftables jusqu'à ce niveau.</span>
+            </div>
+            <div class="field">
+                <label><input type="checkbox" id="bankfree"> Stock banque gratuit</label>
+                <span class="hint">Ne compte PAS les ressources déjà en banque : on n'achète que le
+                    manquant. Les colonnes Coût/Marge passent en « hors banque ».</span>
+            </div>
+            <div class="field">
+                <span class="sub" id="runenote"></span>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel"><h2>Recettes +PA → Ga Pa
+        <span class="spacer"></span>
+        <span class="sub">clique une ligne pour voir les ingrédients</span>
+    </h2>
+        <table>
+            <thead>
+            <tr>
+                <th data-sort="name">Objet</th>
+                <th class="num" data-sort="pa_value">PA</th>
+                <th class="num" data-sort="ga_pa_rate">Taux Ga Pa</th>
+                <th class="num" data-sort="unit_revenue">Revenu/craft</th>
+                <th class="num" data-sort="unit_cost" id="h_cost">Coût/craft</th>
+                <th class="num" data-sort="unit_margin" id="h_margin">Marge/craft</th>
+                <th class="num" data-sort="craftable_now">Crafts dispo</th>
+                <th class="num" data-sort="max_profitable_crafts">Max crafts (banque)</th>
+                <th class="num" data-sort="max_profit_total">Profit max (banque)</th>
+            </tr>
+            </thead>
+            <tbody id="rows"></tbody>
+            <tfoot id="foot"></tfoot>
+        </table>
+    </section>
+
+    <div class="foot">
+        <b>Modèle (formule de brisage Dofus).</b> Ces équipements « +1 PA » cassés produisent la
+        <b>Rune Ga Pa</b> (item&nbsp;1557). Le taux d'obtention <b>croît avec le niveau</b> de l'objet :
+        <br>
+        <code>poids_ligne = PA × 100 × niveau × 0,015 + 1</code> &nbsp;·&nbsp;
+        <code>Taux Ga Pa = niveau × poids_ligne × coef / (100 × 1000)</code>
+        &nbsp;(poids d'1 PA = 100, rune Ga = ×10 → poids Ga Pa = 1000 ; le niveau compte deux fois → ≈ quadratique)
+        <br>
+        <code>Revenu/craft = Taux × prix Ga Pa</code> &nbsp;·&nbsp;
+        <code>Coût/craft = Σ min(achat HDV, coût de craft) des ressources d'1 craft</code>
+        <br>
+        Chaque ressource craftable est valorisée au <b>moins cher entre l'acheter et la crafter</b> (récursif) :
+        p.&nbsp;ex. <b>La Broche Céleste</b>, ingrédient du Collier du Rat Noir, est comptée à son coût de craft
+        si c'est plus économique que son prix HDV. Clique une ligne pour voir, par ingrédient, le détail
+        <i>achat vs craft</i> et le <b>Prix max achat</b> = plafond à ne pas dépasser à l'achat (le prix HDV
+        au-delà duquel 1 craft n'est plus rentable, les autres ressources à leur coût). Le prix HDV affiché
+        passe en <span class="neg">rouge</span> s'il dépasse ce plafond.
+        <br>
+        <b>Indicateur d'achat</b> : <code>Marge/craft = Revenu/craft − Coût/craft</code> →
+        <b>✅ rentable</b> d'acheter les ressources pour crafter puis briser, <b>❌</b> sinon (marge négative).
+        <br>
+        <b>Scénario « stock banque gratuit »</b> (case à cocher) : les ressources déjà en banque ne coûtent rien,
+        on n'achète que le manquant. <b>Max crafts (banque)</b> = nb de crafts qui restent rentables en épuisant la
+        banque (coût marginal croissant quand le stock s'épuise), et <b>Profit max (banque)</b> = kamas générés à ce
+        nombre. <b>∞</b> = rentable même en rachetant tout (revenu ≥ coût plein) → à crafter sans limite.
+        <br>
+        Recette / niveau / valeur PA viennent du cache <code>data/details</code> ; stock de banque et prix de la base
+        (prix effectif = marché sinon vendeur). Le <b>coefficient de brisage</b> (dynamique, propre au serveur /
+        émulateur) et le <b>prix Ga Pa</b> sont à calibrer et mémorisés dans ce navigateur.
+        Source&nbsp;: forums JOL « Les taux de brisage ».
+    </div>
+</div>
+
+<script>
+    const $ = (s) => document.querySelector(s);
+    let DATA = {rows: [], totals: {}, rune: {}, params: {}, missing_targets: []};
+    let sortKey = "max_profit_total", sortDir = -1;
+    const expanded = new Set();
+
+    const LS_COEF = "brisage.coef", LS_PRICE = "brisage.price", LS_MAXLVL = "brisage.maxlvl",
+        LS_BANK = "brisage.bankfree";
+    const bankFree = () => $("#bankfree").checked;
+
+    function esc(s) {
+        return (s ?? "").toString().replace(/[&<>"]/g, c => ({
+            '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'
+        }[c]));
+    }
+
+    function fmt(n) {
+        return Math.round(n || 0).toLocaleString("fr-FR");
+    }
+
+    function compact(n) {
+        n = n || 0;
+        if (Math.abs(n) >= 1e9) return (n / 1e9).toFixed(2) + " G";
+        if (Math.abs(n) >= 1e6) return (n / 1e6).toFixed(2) + " M";
+        if (Math.abs(n) >= 1e3) return (n / 1e3).toFixed(1) + " k";
+        return fmt(n);
+    }
+
+    function ico(x) {
+        return x.icon ? `<img src="${esc(x.icon)}" alt="" loading="lazy">` : `<span class="ph"></span>`;
+    }
+
+    function params() {
+        const coef = parseFloat($("#coef").value);
+        const price = parseInt($("#price").value, 10);
+        const maxlvl = parseInt($("#maxlvl").value, 10);
+        const qs = new URLSearchParams();
+        if (isFinite(coef)) qs.set("coef", coef);
+        if (isFinite(price)) qs.set("price", price);
+        if (isFinite(maxlvl)) qs.set("max_level", maxlvl);
+        return qs.toString();
+    }
+
+    async function load() {
+        DATA = await fetch("../brisage/pa?" + params()).then(r => r.json());
+        // Première fois : pré-remplir les champs depuis les valeurs résolues serveur.
+        if ($("#coef").value === "") $("#coef").value = DATA.params.coef ?? 3;
+        if ($("#price").value === "") $("#price").value = DATA.params.ga_pa_price ?? "";
+        if ($("#maxlvl").value === "") $("#maxlvl").value = DATA.params.max_level ?? 120;
+        renderRune();
+        renderKpis();
+        renderRows();
+    }
+
+    function renderRune() {
+        const r = DATA.rune || {};
+        const src = r.priced ? "prix marché (dump HDV)" : "pas de prix marché connu — valeur à renseigner";
+        $("#runenote").innerHTML = `${ico(r)} <b>${esc(r.name || "Rune Ga Pa")}</b> · ${src}`;
+        const miss = DATA.missing_targets || [];
+        const n = (DATA.rows || []).length;
+        const mx = DATA.params?.max_level ?? 120;
+        let note = `<b>${n}</b> équipements <b>+PA</b> craftables (niveau ≤ ${mx}) cassables en <b>Rune Ga Pa</b>, ` +
+            "triés par rentabilité d'achat. Le taux d'obtention dépend du <b>niveau</b> de l'objet ; " +
+            "ajuste le <b>coefficient</b>, le <b>prix Ga Pa</b> et le <b>niveau max</b> ci-dessous.";
+        if (miss.length) note += ` <br>⚠️ Fiches absentes du cache <code>data/details</code> : ${miss.join(", ")}.`;
+        $("#note").innerHTML = note;
+    }
+
+    function renderKpis() {
+        const t = DATA.totals || {};
+        const unb = t.bank_unbounded || 0;
+        const tiles = [
+            ["Recettes suivies", fmt(t.recipes), ""],
+            ["Rentables à l'achat", `${fmt(t.profitable_buys)}/${fmt(t.recipes)}`,
+                (t.profitable_buys || 0) > 0 ? "good" : "bad"],
+            ["Rentables via banque", `${fmt(t.bank_profitable)}/${fmt(t.recipes)}`,
+                (t.bank_profitable || 0) > 0 ? "good" : "bad"],
+            ["Profit max (banque)", compact(t.bank_profit_total) + (unb ? ` +${unb}∞` : ""), "gold"],
+            ["Crafts possibles (banque)", fmt(t.craftable_now), ""],
+        ];
+        $("#kpis").innerHTML = tiles.map(([l, v, c]) =>
+            `<div class="tile"><div class="v ${c}">${v}</div><div class="l">${l}</div></div>`).join("");
+    }
+
+    function sortVal(r, k) {
+        // "illimité" (rentable même en rachetant tout) passe en tête sur les colonnes banque.
+        if ((k === "max_profit_total" || k === "max_profitable_crafts") && r.bank_unbounded) return Infinity;
+        return r[k] ?? -Infinity;
+    }
+
+    function sortedRows() {
+        const rows = (DATA.rows || []).slice();
+        rows.sort((a, b) => {
+            if (sortKey === "name") {
+                const x = (a.name || "").toLowerCase(), y = (b.name || "").toLowerCase();
+                return x < y ? -sortDir : x > y ? sortDir : 0;
+            }
+            return (sortVal(a, sortKey) - sortVal(b, sortKey)) * sortDir;
+        });
+        return rows;
+    }
+
+    function ingRows(r) {
+        const body = r.ingredients.map(i => {
+            const enough = i.available >= i.quantity;
+            const srcTag = i.source === "craft"
+                ? `<span class="pos">⚒ craft</span>`
+                : (i.source === "buy" ? `achat` : `—`);
+            const kept = i.unit_price != null
+                ? `${srcTag} ${fmt(i.unit_price)} k` : `<span class="sub">sans prix</span>`;
+            const mx = i.max_unit_price;
+            const mxCell = mx == null ? `<span class="sub">—</span>`
+                : (mx <= 0 ? `<span class="neg">0 — jamais</span>` : `<b>${fmt(mx)}</b> k`);
+            // Achat HDV coloré : vert si sous le plafond, rouge si au-dessus (pas rentable).
+            const buyClass = (i.buy_price != null && mx != null)
+                ? (i.buy_price > mx ? "neg" : "ok") : "";
+            return `<tr>
+                <td>${esc(i.name)}</td>
+                <td class="num">${fmt(i.quantity)}/craft</td>
+                <td class="num ${enough ? "ok" : "short"}">${fmt(i.available)}</td>
+                <td class="num ${buyClass}">${i.buy_price != null ? fmt(i.buy_price) + " k" : "—"}</td>
+                <td class="num ${i.source === "craft" ? "pos" : ""}">${i.craft_cost != null ? fmt(i.craft_cost) + " k" : "—"}</td>
+                <td class="num">${kept}</td>
+                <td class="num" title="prix d'achat max avant de perdre la rentabilité">${mxCell}</td>
+            </tr>`;
+        }).join("");
+        return `<tr class="ing"><td colspan="9"><div class="ingwrap">
+            <table class="ingtable">
+            <thead><tr><th>Ingrédient</th><th class="num">Qté</th><th class="num">Banque</th>
+                <th class="num">Achat HDV</th><th class="num">Craft</th><th class="num">Retenu (min)</th>
+                <th class="num">Prix max achat</th></tr></thead>
+            <tbody>${body}</tbody></table>
+        </div></td></tr>`;
+    }
+
+    function renderRows() {
+        const rows = sortedRows();
+        const bf = bankFree();
+        $("#h_cost").textContent = bf ? "Coût/craft (hors banque)" : "Coût/craft";
+        $("#h_margin").textContent = bf ? "Marge/craft (hors banque)" : "Marge/craft";
+        const sub = (x) => `<span class="sub" title="un ingrédient sans prix connu">${x}</span>`;
+
+        $("#rows").innerHTML = rows.map(r => {
+            const costV = bf ? r.bank_unit_cost : r.unit_cost;
+            const marginV = bf ? r.bank_unit_margin : r.unit_margin;
+            const cost = costV == null ? sub("—") : compact(costV) + " k";
+            const margeCell = marginV == null ? sub("—")
+                : `<span class="${marginV >= 0 ? "pos" : "neg"}">${marginV >= 0 ? "✅" : "❌"} ${compact(marginV)} k`
+                + (!bf && r.margin_pct != null ? ` <span class="sub">(${r.margin_pct}%)</span>` : "") + "</span>";
+            const maxCrafts = r.bank_unbounded ? `<span class="pos" title="rentable même en rachetant tout">∞</span>`
+                : (r.max_profitable_crafts == null ? sub("—") : fmt(r.max_profitable_crafts));
+            const maxProfit = r.bank_unbounded ? `<span class="pos" title="rentable sans limite">∞</span>`
+                : (r.max_profit_total == null ? sub("—")
+                    : `<span class="${r.max_profit_total >= 0 ? "pos" : "neg"}">${compact(r.max_profit_total)} k</span>`);
+            const lim = r.craftable_now === 0 && r.limiting_item_name
+                ? `<div class="sub">0 — manque ${esc(r.limiting_item_name)}</div>`
+                : (r.limiting_item_name ? `<div class="sub">limité par ${esc(r.limiting_item_name)}</div>` : "");
+            const open = expanded.has(r.item_id);
+            const main = `<tr class="main" data-id="${r.item_id}">
+                <td><span class="iname">${ico(r)}<span>${esc(r.name)}
+                    <div class="sub">${esc(r.type || "")}${r.level ? " · niv " + r.level : ""}</div></span></span></td>
+                <td class="num"><span class="pa">+${r.pa_value}</span></td>
+                <td class="num" title="niveau ${r.level ?? "?"} · Ga Pa attendues (lot) : ${fmt(r.expected_ga_pa)}">${(r.ga_pa_rate * 100).toFixed(2)}%</td>
+                <td class="num">${compact(r.unit_revenue)} k</td>
+                <td class="num">${cost}</td>
+                <td class="num">${margeCell}</td>
+                <td class="num">${fmt(r.craftable_now)}${lim}</td>
+                <td class="num">${maxCrafts}</td>
+                <td class="num">${maxProfit}</td>
+            </tr>`;
+            return main + (open ? ingRows(r) : "");
+        }).join("") || `<tr><td colspan="9" class="empty">Aucune recette.</td></tr>`;
+
+        const t = DATA.totals || {};
+        const profCount = bf ? t.bank_profitable : t.profitable_buys;
+        const unb = t.bank_unbounded || 0;
+        $("#foot").innerHTML = rows.length ? `<tr>
+            <td>Total (${fmt(t.recipes)})</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="num ${(profCount || 0) > 0 ? "pos" : "neg"}">${fmt(profCount)}/${fmt(t.recipes)} rentables</td>
+            <td class="num">${fmt(t.craftable_now)}</td>
+            <td></td>
+            <td class="num">${compact(t.bank_profit_total)} k${unb ? " +" + unb + "∞" : ""}</td>
+        </tr>` : "";
+
+        $("#rows").querySelectorAll("tr.main").forEach(tr => tr.addEventListener("click", () => {
+            const id = +tr.dataset.id;
+            if (expanded.has(id)) expanded.delete(id); else expanded.add(id);
+            renderRows();
+        }));
+    }
+
+    // --- interactions ---
+    let deb = 0;
+
+    function reloadDebounced() {
+        clearTimeout(deb);
+        deb = setTimeout(() => {
+            localStorage.setItem(LS_COEF, $("#coef").value);
+            localStorage.setItem(LS_PRICE, $("#price").value);
+            localStorage.setItem(LS_MAXLVL, $("#maxlvl").value);
+            load();
+        }, 350);
+    }
+
+    $("#coef").addEventListener("input", reloadDebounced);
+    $("#price").addEventListener("input", reloadDebounced);
+    $("#maxlvl").addEventListener("input", reloadDebounced);
+    $("#bankfree").addEventListener("change", () => {   // client-only : la donnée est déjà là
+        localStorage.setItem(LS_BANK, $("#bankfree").checked ? "1" : "0");
+        renderRows();
+    });
+    $("#refresh").addEventListener("click", load);
+    document.querySelectorAll("th[data-sort]").forEach(th => th.addEventListener("click", () => {
+        const k = th.dataset.sort;
+        if (sortKey === k) sortDir = -sortDir;
+        else {
+            sortKey = k;
+            sortDir = (k === "name") ? 1 : -1;
+        }
+        renderRows();
+    }));
+    $("#theme").addEventListener("click", () => {
+        const r = document.documentElement;
+        r.dataset.theme = r.dataset.theme === "dark" ? "light" : "dark";
+    });
+    if (window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches) document.documentElement.dataset.theme = "dark";
+
+    // Valeurs mémorisées (sinon le serveur fournit les défauts au 1er chargement).
+    const savedCoef = localStorage.getItem(LS_COEF);
+    const savedPrice = localStorage.getItem(LS_PRICE);
+    const savedMax = localStorage.getItem(LS_MAXLVL);
+    if (savedCoef !== null) $("#coef").value = savedCoef;
+    if (savedPrice !== null) $("#price").value = savedPrice;
+    if (savedMax !== null) $("#maxlvl").value = savedMax;
+    if (localStorage.getItem(LS_BANK) === "1") $("#bankfree").checked = true;
+
+    load();
+</script>
+<script src="/ui/nav.js"></script>
+</body>
+</html>

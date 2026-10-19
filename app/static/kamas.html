@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dofus Retro — Spots kamas</title>
+    <link rel="icon" type="image/svg+xml" href="/ui/favicon.svg">
+    <style>
+        :root {
+            --plane: #f9f9f7;
+            --surface: #fcfcfb;
+            --ink: #0b0b0b;
+            --ink2: #52514e;
+            --muted: #898781;
+            --grid: #e1e0d9;
+            --accent: #2a78d6;
+            --accent-soft: #cde2fb;
+            --good: #0ca30c;
+            --bad: #c0392b;
+            --gold: #b8860b;
+            --chip: #f0efec;
+            --border: rgba(11, 11, 11, 0.10);
+        }
+
+        :root[data-theme="dark"] {
+            --plane: #0d0d0d;
+            --surface: #1a1a19;
+            --ink: #fff;
+            --ink2: #c3c2b7;
+            --muted: #898781;
+            --grid: #2c2c2a;
+            --accent: #3987e5;
+            --accent-soft: #184f95;
+            --good: #0ca30c;
+            --bad: #e4654f;
+            --gold: #e0b544;
+            --chip: #242422;
+            --border: rgba(255, 255, 255, 0.10);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--plane);
+            color: var(--ink);
+            font-size: 14px;
+            font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+            line-height: 1.45;
+        }
+
+        .wrap {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 24px 20px 60px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 20px;
+            margin: 0;
+            font-weight: 650;
+        }
+
+        a.nav {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .spacer {
+            flex: 1;
+        }
+
+        button, select, input[type="number"] {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            color: var(--ink2);
+            border-radius: 8px;
+            padding: 8px 11px;
+            cursor: pointer;
+            font-size: 13px;
+            font-family: inherit;
+        }
+
+        input[type="number"] {
+            cursor: text;
+            color: var(--ink);
+            width: 110px;
+            font-variant-numeric: tabular-nums;
+        }
+
+        input:focus, select:focus {
+            outline: 2px solid var(--accent-soft);
+            border-color: var(--accent);
+        }
+
+        .kpis {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .tile {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px 16px;
+        }
+
+        .tile .v {
+            font-size: 25px;
+            font-weight: 680;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .tile .l {
+            color: var(--muted);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-top: 2px;
+        }
+
+        .tile .v.gold {
+            color: var(--gold);
+        }
+
+        .tile .v.good {
+            color: var(--good);
+        }
+
+        .tile .v.bad {
+            color: var(--bad);
+        }
+
+        .panel {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 6px 4px;
+            margin-bottom: 18px;
+        }
+
+        .panel h2 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--ink2);
+            margin: 12px 14px 8px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .params {
+            display: flex;
+            gap: 22px;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            margin: 4px 14px 14px;
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .field label {
+            color: var(--muted);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .field .hint {
+            color: var(--muted);
+            font-size: 11px;
+            max-width: 260px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 7px 14px;
+            font-size: 13.5px;
+            border-top: 1px solid var(--grid);
+        }
+
+        th {
+            color: var(--muted);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            font-weight: 600;
+            border-top: none;
+            cursor: pointer;
+            user-select: none;
+            white-space: nowrap;
+        }
+
+        th.num, td.num {
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+        }
+
+        tbody tr:hover {
+            background: color-mix(in srgb, var(--accent) 6%, transparent);
+        }
+
+        .sub {
+            color: var(--muted);
+            font-size: 11.5px;
+        }
+
+        .k {
+            color: var(--gold);
+            font-weight: 650;
+        }
+
+        .spots {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .spot {
+            font-size: 11px;
+            border-radius: 999px;
+            padding: 2px 9px;
+            border: 1px solid var(--border);
+            color: var(--ink2);
+            background: var(--chip);
+            white-space: nowrap;
+        }
+
+        .spot .via {
+            opacity: .6;
+            font-size: 9.5px;
+            margin-left: 4px;
+        }
+
+        .empty {
+            color: var(--muted);
+            padding: 10px 14px;
+        }
+
+        .warn {
+            background: color-mix(in srgb, var(--gold) 12%, var(--surface));
+            border: 1px solid color-mix(in srgb, var(--gold) 40%, transparent);
+            border-radius: 10px;
+            padding: 10px 14px;
+            margin-bottom: 18px;
+            font-size: 13px;
+            color: var(--ink2);
+        }
+
+        .foot {
+            color: var(--muted);
+            font-size: 12px;
+            margin-top: 20px;
+        }
+
+        .foot code {
+            background: var(--chip);
+            padding: 1px 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <header>
+        <div><h1>💰 Spots kamas — valeur des drops / combat</h1>
+            <a class="nav" href="farm.html">← Farm brisage</a>
+            &nbsp; <a class="nav" href="grobe.html">Zone live</a>
+        </div>
+        <div class="spacer"></div>
+        <button id="refresh">↻ Rafraîchir</button>
+        <button id="theme">◐ Thème</button>
+    </header>
+
+    <div class="warn" id="note"></div>
+    <section class="kpis" id="kpis"></section>
+
+    <section class="panel"><h2>Filtre</h2>
+        <div class="params">
+            <div class="field">
+                <label for="lvl">Niveau max du perso</label>
+                <input type="number" id="lvl" min="1" max="200" step="1" placeholder="tous">
+                <span class="hint">Ne garde que les monstres de niveau ≤ ce seuil (vide = tous). Vise le farm accessible.</span>
+            </div>
+            <div class="field">
+                <label for="pmax">Prix unitaire max</label>
+                <input type="number" id="pmax" min="0" step="100000" value="1000000">
+                <span class="hint">Garde-fou anti-prix HDV aberrant : ignore les drops au prix unitaire au-dessus (0 = désactivé). Monte-le si tu cibles des ressources vraiment chères.</span>
+            </div>
+            <div class="field">
+                <label><input type="checkbox" id="nospecial" checked> Farmables seulement</label>
+                <span class="hint">Exclut coffres, boss événementiels/quotidiens (« …d'Halouine », Dopeuls), prismes et percepteurs — non farmables en boucle.</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel"><h2>Meilleurs monstres à farmer
+        <span class="spacer"></span>
+        <span class="sub">clique une colonne pour trier · « Kamas/niv » = rapport bas niveau</span>
+    </h2>
+        <table>
+            <thead>
+            <tr>
+                <th data-sort="name">Monstre</th>
+                <th class="num" data-sort="level_min">niv</th>
+                <th class="num" data-sort="value_per_fight">Kamas/combat</th>
+                <th class="num" data-sort="value_per_level">Kamas/niv</th>
+                <th data-sort="zones">Zones</th>
+                <th data-sort="top">Meilleurs drops (espérance/combat)</th>
+            </tr>
+            </thead>
+            <tbody id="mrows"></tbody>
+        </table>
+    </section>
+
+    <section class="panel"><h2>Meilleures zones
+        <span class="spacer"></span>
+        <span class="sub">meilleur monstre accessible de la zone</span>
+    </h2>
+        <table>
+            <thead>
+            <tr>
+                <th data-zsort="zone">Zone</th>
+                <th class="num" data-zsort="best_value">Kamas/combat (top)</th>
+                <th data-zsort="best_monster">Meilleur monstre</th>
+                <th class="num" data-zsort="best_level">niv</th>
+                <th class="num" data-zsort="monster_count">monstres</th>
+            </tr>
+            </thead>
+            <tbody id="zrows"></tbody>
+        </table>
+    </section>
+
+    <div class="foot">
+        <b>Comment c'est calculé.</b> Pour chaque monstre : <b>Kamas/combat</b> = Σ sur ses drops de
+        <code>taux × prix HDV</code> (espérance de kamas par kill) ; <b>Kamas/niv</b> = Kamas/combat ÷ niveau
+        (favorise les monstres faibles qui lâchent cher). Les <b>prix</b> viennent de ta base (dump HDV, comme la
+        page Brisage) ; un drop sans prix connu est ignoré. Les <b>drops/zones/niveaux</b> viennent du bestiaire
+        <a class="nav" href="https://xixou.io" target="_blank" rel="noopener">xixou.io</a>
+        (<code>data/monsters.json</code>, <code>scripts/ingest_monsters.py</code>).
+        <br>
+        ⚠️ Estimation comparative : ignore la <b>taille des groupes</b> (plusieurs monstres/combat → plus de drops),
+        la <b>PP</b> (prospection) et les <b>quantités &gt; 1</b> par kill. Sert à comparer les spots, pas à chiffrer un
+        gain exact.
+    </div>
+</div>
+
+<script src="/ui/nav.js" defer></script>
+<script>
+    const $ = (s) => document.querySelector(s);
+    let DATA = {monsters: [], zones: [], coverage: {}, params: {}};
+    let sortKey = "value_per_level", sortDir = -1;
+    let zsortKey = "best_value", zsortDir = -1;
+
+    function esc(s) {
+        return (s ?? "").toString().replace(/[&<>"]/g, c => ({
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;'
+        }[c]));
+    }
+
+    function fmt(n) {
+        return Math.round(n || 0).toLocaleString("fr-FR");
+    }
+
+    function compact(n) {
+        n = n || 0;
+        if (Math.abs(n) >= 1e6) return (n / 1e6).toFixed(2) + " M";
+        if (Math.abs(n) >= 1e3) return (n / 1e3).toFixed(1) + " k";
+        return fmt(n);
+    }
+
+    async function load() {
+        const qs = new URLSearchParams();
+        const lvl = parseInt($("#lvl").value, 10);
+        if (isFinite(lvl)) qs.set("level_max", lvl);
+        const pmax = parseInt($("#pmax").value, 10);
+        if (isFinite(pmax)) qs.set("price_max", pmax);
+        qs.set("exclude_special", $("#nospecial").checked);
+        DATA = await fetch("../farm/kamas?" + qs.toString()).then(r => r.json());
+        renderNote();
+        renderKpis();
+        renderMonsters();
+        renderZones();
+    }
+
+    function renderNote() {
+        const c = DATA.coverage || {};
+        if (!c.has_bestiary) {
+            $("#note").innerHTML = `⚠️ Bestiaire absent : lance <code>py scripts/ingest_monsters.py</code> pour générer <code>data/monsters.json</code>.`;
+            return;
+        }
+        if (!c.items_priced) {
+            $("#note").innerHTML = `⚠️ Aucun prix HDV en base : importe un dump HDV. Sans prix, impossible de valoriser les drops.`;
+            return;
+        }
+        const lvl = DATA.params?.level_max, pm = DATA.params?.price_max;
+        let s = `Bestiaire : <b>${fmt(c.monsters_total)}</b> monstres · <b>${fmt(c.items_priced)}</b> items avec prix HDV. ` +
+            (lvl ? `Filtré aux monstres de <b>niveau ≤ ${lvl}</b>.` : `Tous niveaux (mets un niveau max pour cibler ton perso).`);
+        if (c.outliers_skipped) s += ` <b>${fmt(c.outliers_skipped)}</b> drops ignorés (prix &gt; ${compact(pm)}, probablement aberrants).`;
+        if (c.specials_skipped) s += ` <b>${fmt(c.specials_skipped)}</b> monstres non farmables écartés (coffres/boss/prismes).`;
+        $("#note").innerHTML = s;
+    }
+
+    function renderKpis() {
+        const m = DATA.monsters || [], z = DATA.zones || [];
+        const best = m[0];
+        const tiles = [
+            {l: "Monstres classés", v: fmt(m.length), cls: ""},
+            {l: "Zones classées", v: fmt(z.length), cls: ""},
+            {l: "Top kamas/combat", v: best ? compact(best.value_per_fight) : "—", cls: "gold"},
+            {l: "Meilleur spot", v: best ? "" : "—", cls: ""},
+        ];
+        $("#kpis").innerHTML = tiles.map((x, i) =>
+            `<div class="tile"><div class="v ${x.cls}">${i === 3 && best ? `<span style="font-size:15px">${esc(best.name)}</span>` : x.v}</div><div class="l">${x.l}</div></div>`).join("");
+    }
+
+    function dropsHtml(mo) {
+        return `<div class="spots">` + (mo.top_drops || []).map(d =>
+            `<span class="spot">${esc(d.name)}<span class="via">${d.rate}% · ${compact(d.ev)}k</span></span>`).join("") + `</div>`;
+    }
+
+    function mcmp(a, b) {
+        let x = a[sortKey], y = b[sortKey];
+        if (sortKey === "zones") {
+            x = (a.zones || []).length;
+            y = (b.zones || []).length;
+        }
+        if (sortKey === "top") {
+            x = (a.top_drops?.[0]?.ev) || 0;
+            y = (b.top_drops?.[0]?.ev) || 0;
+        }
+        if (x == null) return 1;
+        if (y == null) return -1;
+        if (typeof x === "string") return sortDir * x.localeCompare(y, "fr");
+        return sortDir * (x - y);
+    }
+
+    function renderMonsters() {
+        const rows = (DATA.monsters || []).slice().sort(mcmp);
+        const body = $("#mrows");
+        if (!rows.length) {
+            body.innerHTML = `<tr><td colspan="6" class="empty">Aucun monstre (bestiaire ou prix manquants).</td></tr>`;
+            return;
+        }
+        body.innerHTML = rows.map(mo => {
+            const lv = mo.level_min == null ? "?" : (mo.level_max && mo.level_max !== mo.level_min ? `${mo.level_min}–${mo.level_max}` : mo.level_min);
+            const zones = (mo.zones || []).slice(0, 2).map(esc).join(", ") + ((mo.zones || []).length > 2 ? ` <span class="sub">+${mo.zones.length - 2}</span>` : "");
+            return `<tr>
+                <td><b>${esc(mo.name)}</b></td>
+                <td class="num">${lv}</td>
+                <td class="num k">${fmt(mo.value_per_fight)}</td>
+                <td class="num">${fmt(mo.value_per_level)}</td>
+                <td>${zones || `<span class="sub">?</span>`}</td>
+                <td>${dropsHtml(mo)}</td>
+            </tr>`;
+        }).join("");
+    }
+
+    function zcmp(a, b) {
+        let x = a[zsortKey], y = b[zsortKey];
+        if (x == null) return 1;
+        if (y == null) return -1;
+        if (typeof x === "string") return zsortDir * x.localeCompare(y, "fr");
+        return zsortDir * (x - y);
+    }
+
+    function renderZones() {
+        const rows = (DATA.zones || []).slice().sort(zcmp);
+        const body = $("#zrows");
+        if (!rows.length) {
+            body.innerHTML = `<tr><td colspan="5" class="empty">Aucune zone.</td></tr>`;
+            return;
+        }
+        body.innerHTML = rows.map(z => `<tr>
+            <td><b>${esc(z.zone)}</b></td>
+            <td class="num k">${fmt(z.best_value)}</td>
+            <td>${esc(z.best_monster || "")}</td>
+            <td class="num">${z.best_level ?? "?"}</td>
+            <td class="num">${z.monster_count}</td>
+        </tr>`).join("");
+    }
+
+    document.querySelectorAll("th[data-sort]").forEach(th => th.onclick = () => {
+        const k = th.dataset.sort;
+        if (sortKey === k) sortDir = -sortDir; else {
+            sortKey = k;
+            sortDir = (k === "name") ? 1 : -1;
+        }
+        renderMonsters();
+    });
+    document.querySelectorAll("th[data-zsort]").forEach(th => th.onclick = () => {
+        const k = th.dataset.zsort;
+        if (zsortKey === k) zsortDir = -zsortDir; else {
+            zsortKey = k;
+            zsortDir = (k === "zone" || k === "best_monster") ? 1 : -1;
+        }
+        renderZones();
+    });
+
+    $("#refresh").onclick = load;
+    $("#lvl").addEventListener("change", () => {
+        localStorage.setItem("kamas.lvl", $("#lvl").value);
+        load();
+    });
+    $("#pmax").addEventListener("change", () => {
+        localStorage.setItem("kamas.pmax", $("#pmax").value);
+        load();
+    });
+    $("#nospecial").addEventListener("change", () => {
+        localStorage.setItem("kamas.nospecial", $("#nospecial").checked ? "1" : "0");
+        load();
+    });
+    $("#theme").onclick = () => {
+        const root = document.documentElement, next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        root.setAttribute("data-theme", next);
+        localStorage.setItem("theme", next);
+    };
+
+    (function init() {
+        const th = localStorage.getItem("theme");
+        if (th) document.documentElement.setAttribute("data-theme", th);
+        $("#lvl").value = localStorage.getItem("kamas.lvl") ?? "";
+        $("#pmax").value = localStorage.getItem("kamas.pmax") ?? "1000000";
+        $("#nospecial").checked = (localStorage.getItem("kamas.nospecial") ?? "1") === "1";
+        load();
+    })();
+</script>
+</body>
+</html>

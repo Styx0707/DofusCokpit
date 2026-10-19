@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 from typing import Dict, List, Optional, Tuple
 
 BANK_MESSAGE_PREFIX = "EL"
@@ -29,8 +30,12 @@ FIGHTER_PM_PREFIX = "PM~"
 # Hôtel de vente (HDV) — serveur->client (format identifié par capture réelle,
 # data/hdv.pcapng, 2026-10-08) :
 #  - EHP<gid>|<prixMoyen>                         : prix MOYEN unitaire (kamas)
-#  - EHl<gid>|<?>;;<lot1>;<lot10>;<lot100>;<gid>  : prix TOTAL des lots 1/10/100 en vente
-#    (virgule = séparateur décimal du client ; lot de 1 = prix unitaire courant)
+#  - EHl<gid>|…  : prix en vente. DEUX sous-formats (virgule = décimale client) :
+#      * RESSOURCE empilable : <qty>;;<lot1>;<lot10>;<lot100>;<gid>
+#        (prix TOTAL des lots 1/10/100 ; lot de 1 = prix unitaire courant)
+#      * ÉQUIPEMENT (objet à stats, non empilable) : LISTE de tous les ordres de
+#        vente individuels -> <inst>;<stats#…>;<prix>,0;;;<gid>|<inst2>;…;<prix2>,0;;;<gid>|…
+#        Le 1er ordre N'EST PAS le moins cher -> il FAUT prendre le MIN des prix.
 #  - EHL<cat>|<gid>;<gid>;…                       : liste des gids d'une catégorie
 HDV_AVG_PRICE_PREFIX = "EHP"
 HDV_ITEM_PRICE_PREFIX = "EHl"
@@ -256,25 +261,36 @@ def parse_hdv_avg_price(payload: str) -> Optional[Tuple[int, int]]:
         return None
 
 
+# Prix dans un message EHl : un champ ``;<entier>,0`` (virgule = décimale client).
+# Ancré sur ``;`` en tête pour ne pas confondre avec un bonus de stat (``…+49,7b``),
+# les stats étant séparées par des virgules À L'INTÉRIEUR d'un seul champ ``;…;``.
+_HDV_PRICE_RE = re.compile(r";(\d+),0(?=;|$)")
+
+
 def parse_hdv_item_prices(payload: str) -> Optional[Dict[str, Optional[int]]]:
-    """Corps d'un message 'EHl' (préfixe retiré) :
-    ``<gid>|<?>;;<lot1>;<lot10>;<lot100>;<gid>``. Les prix sont les TOTAUX des lots
-    actuellement en vente (lot de 1 = prix unitaire le plus bas). La virgule est le
-    séparateur décimal du client -> on garde la partie entière.
-    -> {item_id, x1, x10, x100} (valeur absente = None)."""
+    """Corps d'un message 'EHl' (préfixe retiré) -> ``{item_id, price}`` où ``price``
+    est le PREMIER PRIX, càd le PLUS BAS actuellement en vente (None si absent).
+
+    Gère les deux sous-formats (cf. en-tête du module) :
+
+    * ÉQUIPEMENT (présence de ``#`` = stats) : le corps est une LISTE d'ordres de
+      vente ``<inst>;<stats>;<prix>,0;;;<gid>|…``. Le 1er ordre n'est pas le moins
+      cher -> on prend le MIN de tous les prix ``;<n>,0``.
+    * RESSOURCE empilable : ``<qty>;;<lot1>;<lot10>;<lot100>;<gid>`` -> on prend le
+      lot de 1 (``fields[2]``), le prix unitaire courant ; absent -> None (repli sur
+      le prix moyen EHP géré par l'appelant).
+    """
     gid, sep, rest = payload.partition("|")
     if not sep or not gid.strip().isdigit():
         return None
-    fields = rest.split(";")
-
-    def num(i: int) -> Optional[int]:
-        if i < len(fields):
-            tok = fields[i].split(",")[0].strip()
-            if tok.isdigit():
-                return int(tok)
-        return None
-
-    return {"item_id": int(gid), "x1": num(2), "x10": num(3), "x100": num(4)}
+    if "#" in rest:  # équipement : liste d'ordres -> le moins cher
+        prices = [int(m) for m in _HDV_PRICE_RE.findall(rest)]
+        price: Optional[int] = min(prices) if prices else None
+    else:            # ressource empilable : lot de 1 (premier prix)
+        fields = rest.split(";")
+        tok = fields[2].split(",")[0].strip() if len(fields) > 2 else ""
+        price = int(tok) if tok.isdigit() else None
+    return {"item_id": int(gid), "price": price}
 
 
 def parse_character_list(payload: str) -> List[dict]:

@@ -502,6 +502,7 @@
         <span class="spacer"></span>
         <a class="nav" href="/ui/">Persos</a>
         <a class="nav" href="/ui/board.html">Comptes</a>
+        <a class="nav" href="/ui/grobe.html">Zone Grobe</a>
         <a class="nav" href="/ui/dungeon.html">Donjons</a>
         <a class="nav" href="/ui/build.html">Build</a>
         <button id="alerts">🔔 Alertes</button>
@@ -530,7 +531,8 @@
         </div>
         <div class="coordset" id="bgctrl" style="flex-wrap:wrap">
             <span>fond :</span>
-            <input id="bgfile" placeholder="pandala.jpg" style="width:120px" title="fichier déposé dans app/static/">
+            <input id="bgfile" placeholder="pandala.webp" style="width:120px"
+                   title="fichier déposé dans app/static/ (défaut: pandala.webp)">
             <span>coin HG</span>
             <input id="bgx0" type="number" placeholder="x0" style="width:46px">
             <input id="bgy0" type="number" placeholder="y0" style="width:46px">
@@ -596,6 +598,9 @@
         bgCfg = JSON.parse(localStorage.getItem("walkbg") || "null");
     } catch (e) {
     }
+    // Fond par défaut : carte de l'Île de Pandala (app/static/pandala.webp).
+    // Coins APPROXIMATIFS -> cale précisément avec « 🎯 Caler (2 pts) » puis Appliquer.
+    if (!bgCfg) bgCfg = {img: "pandala.webp", x0: 12, y0: -56, x1: 41, y1: -28, op: 0.5};
     let bgCalib = null; // mode calage en cours {img, pts:[{fx,fy,x,y}]}
     const SEG_COLORS = ["#3987e5", "#f0a728", "#2fbf2f", "#e05a8a", "#9b6cf0", "#31c7c7", "#d6584a", "#c9a227"];
     const ARROWS = {N: "↑", S: "↓", E: "→", O: "←", NE: "↗", NO: "↖", SE: "↘", SO: "↙", "-": "·"};

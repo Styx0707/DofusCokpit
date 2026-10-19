@@ -1,0 +1,2093 @@
+{
+ "848": {
+  "name": "Vieil Os de Dragoeuf",
+  "slug": "vieil-os-de-dragoeuf",
+  "sources": []
+ },
+ "649": {
+  "name": "Poils de Wo Wabbit",
+  "slug": "poils-de-wo-wabbit",
+  "sources": [
+   {
+    "monster": "Wo Wabbit",
+    "slug": "wo-wabbit",
+    "rate": 11,
+    "zones": [
+     "Sous-terrains des Wabbits",
+     "Ile des Wabbits",
+     "Ilot des Wabbits",
+     "Île du château des Wabbits"
+    ]
+   }
+  ]
+ },
+ "2288": {
+  "name": "Patte de Wabbit",
+  "slug": "patte-de-wabbit",
+  "sources": [
+   {
+    "monster": "Wabbit",
+    "slug": "wabbit",
+    "rate": 19,
+    "zones": [
+     "Sous-terrains des Wabbits",
+     "Ile des Wabbits",
+     "Ilot des Wabbits",
+     "Île du château des Wabbits"
+    ]
+   }
+  ]
+ },
+ "360": {
+  "name": "Oreilles du Tiwabbit",
+  "slug": "oreilles-du-tiwabbit",
+  "sources": [
+   {
+    "monster": "Tiwabbit",
+    "slug": "tiwabbit",
+    "rate": 5,
+    "zones": [
+     "Sous-terrains des Wabbits",
+     "Ile des Wabbits",
+     "Ilot des Wabbits",
+     "Île du château des Wabbits"
+    ]
+   }
+  ]
+ },
+ "305": {
+  "name": "Dent de Wabbit",
+  "slug": "dent-de-wabbit",
+  "sources": [
+   {
+    "monster": "Wabbit",
+    "slug": "wabbit",
+    "rate": 32,
+    "zones": [
+     "Sous-terrains des Wabbits",
+     "Ile des Wabbits",
+     "Ilot des Wabbits",
+     "Île du château des Wabbits"
+    ]
+   },
+   {
+    "monster": "Wo Wabbit",
+    "slug": "wo-wabbit",
+    "rate": 24,
+    "zones": [
+     "Sous-terrains des Wabbits",
+     "Ile des Wabbits",
+     "Ilot des Wabbits",
+     "Île du château des Wabbits"
+    ]
+   },
+   {
+    "monster": "Black Wabbit",
+    "slug": "black-wabbit",
+    "rate": 20,
+    "zones": [
+     "Sous-terrains des Wabbits",
+     "Ile des Wabbits",
+     "Ilot des Wabbits",
+     "Île du château des Wabbits"
+    ]
+   },
+   {
+    "monster": "Black Tiwabbit",
+    "slug": "black-tiwabbit",
+    "rate": 10,
+    "zones": [
+     "Sous-terrains des Wabbits",
+     "Ile des Wabbits",
+     "Ilot des Wabbits",
+     "Île du château des Wabbits"
+    ]
+   },
+   {
+    "monster": "Tiwabbit",
+    "slug": "tiwabbit",
+    "rate": 5,
+    "zones": [
+     "Sous-terrains des Wabbits",
+     "Ile des Wabbits",
+     "Ilot des Wabbits",
+     "Île du château des Wabbits"
+    ]
+   }
+  ]
+ },
+ "418": {
+  "name": "Poils de Barbe du Grand Pa Wabbit",
+  "slug": "poils-de-barbe-du-grand-pa-wabbit",
+  "sources": [
+   {
+    "monster": "Grand Pa Wabbit",
+    "slug": "grand-pa-wabbit",
+    "rate": 19,
+    "zones": [
+     "Sous-terrains des Wabbits",
+     "Ile des Wabbits",
+     "Ilot des Wabbits",
+     "Île du château des Wabbits"
+    ]
+   }
+  ]
+ },
+ "311": {
+  "name": "Eau",
+  "slug": "eau",
+  "sources": [
+   {
+    "monster": "Boulanger Sombre",
+    "slug": "boulanger-sombre",
+    "rate": 100,
+    "zones": [
+     "Façade de Brâkmar",
+     "Territoire des Bandits",
+     "Passage vers Brâkmar"
+    ]
+   },
+   {
+    "monster": "Crabe",
+    "slug": "crabe",
+    "rate": 95,
+    "zones": [
+     "Port de Madrestam",
+     "Baie de Cania",
+     "Donjon Ensablé",
+     "Rivage du golfe sufokien"
+    ]
+   },
+   {
+    "monster": "Crabe Imprudent",
+    "slug": "crabe-imprudent",
+    "rate": 95,
+    "zones": [
+     "Lac"
+    ]
+   },
+   {
+    "monster": "Kralamoure Géant",
+    "slug": "kralamoure-geant",
+    "rate": 20,
+    "zones": [
+     "Tourbière nauséabonde"
+    ]
+   },
+   {
+    "monster": "Gelée Bleue",
+    "slug": "gelee-bleue",
+    "rate": 10,
+    "zones": [
+     "La péninsule des gelées"
+    ]
+   }
+  ]
+ },
+ "846": {
+  "name": "Oeuf de Dragoeuf Noir",
+  "slug": "oeuf-de-dragoeuf-noir",
+  "sources": [
+   {
+    "monster": "DragOeuf Noir Eveillé",
+    "slug": "dragoeuf-noir-eveille",
+    "rate": 30,
+    "zones": [
+     "La presqu'île des Dragoeufs",
+     "Sanctuaire des Dragoeufs",
+     "Village des Dragoeufs",
+     "Sous terrain des Dragoeufs"
+    ]
+   }
+  ]
+ },
+ "844": {
+  "name": "Oeuf de Dragoeuf de Saphir",
+  "slug": "oeuf-de-dragoeuf-de-saphir",
+  "sources": [
+   {
+    "monster": "DragOeuf de Saphir Eveillé",
+    "slug": "dragoeuf-de-saphir-eveille",
+    "rate": 10,
+    "zones": [
+     "La presqu'île des Dragoeufs",
+     "Sanctuaire des Dragoeufs",
+     "Village des Dragoeufs",
+     "Sous terrain des Dragoeufs"
+    ]
+   }
+  ]
+ },
+ "845": {
+  "name": "Oeuf de Dragoeuf Doré",
+  "slug": "oeuf-de-dragoeuf-dore",
+  "sources": [
+   {
+    "monster": "DragOeuf Doré Eveillé",
+    "slug": "dragoeuf-dore-eveille",
+    "rate": 25,
+    "zones": [
+     "La presqu'île des Dragoeufs",
+     "Sanctuaire des Dragoeufs",
+     "Village des Dragoeufs",
+     "Sous terrain des Dragoeufs"
+    ]
+   }
+  ]
+ },
+ "847": {
+  "name": "Oeuf de Dragoeuf Blanc",
+  "slug": "oeuf-de-dragoeuf-blanc",
+  "sources": [
+   {
+    "monster": "DragOeuf Blanc",
+    "slug": "dragoeuf-blanc",
+    "rate": 25,
+    "zones": [
+     "La presqu'île des Dragoeufs",
+     "Sanctuaire des Dragoeufs",
+     "Village des Dragoeufs",
+     "Sous terrain des Dragoeufs"
+    ]
+   },
+   {
+    "monster": "DragOeuf Blanc Eveillé",
+    "slug": "dragoeuf-blanc-eveille",
+    "rate": 25,
+    "zones": [
+     "La presqu'île des Dragoeufs",
+     "Sanctuaire des Dragoeufs",
+     "Village des Dragoeufs",
+     "Sous terrain des Dragoeufs"
+    ]
+   }
+  ]
+ },
+ "292": {
+  "name": "Testicules du Mulou",
+  "slug": "testicules-du-mulou",
+  "sources": [
+   {
+    "monster": "Mulou",
+    "slug": "mulou",
+    "rate": 1,
+    "zones": [
+     "La montagne des Craqueleurs",
+     "Souterrain",
+     "Bois de Litneg",
+     "Orée de la forêt des Abraknydes"
+    ]
+   },
+   {
+    "monster": "Mulou d'Halouine",
+    "slug": "mulou-d-halouine",
+    "rate": 1,
+    "zones": []
+   }
+  ]
+ },
+ "901": {
+  "name": "Cuir du Cochon de Lait",
+  "slug": "cuir-du-cochon-de-lait",
+  "sources": [
+   {
+    "monster": "Cochon de Lait",
+    "slug": "cochon-de-lait",
+    "rate": 9,
+    "zones": [
+     "Territoire des Porcos",
+     "Souterrain",
+     "Labyrinthe du Dragon Cochon"
+    ]
+   }
+  ]
+ },
+ "2275": {
+  "name": "Cuir de Porkass",
+  "slug": "cuir-de-porkass",
+  "sources": [
+   {
+    "monster": "Cavalier Porkass",
+    "slug": "cavalier-porkass",
+    "rate": 34,
+    "zones": [
+     "Plaines Rocheuses",
+     "Plaine des Porkass"
+    ]
+   },
+   {
+    "monster": "Berger Porkass",
+    "slug": "berger-porkass",
+    "rate": 30,
+    "zones": [
+     "Plaines Rocheuses",
+     "Plaine des Porkass"
+    ]
+   }
+  ]
+ },
+ "6475": {
+  "name": "Casque Cassé du Chafer",
+  "slug": "casque-casse-du-chafer",
+  "sources": [
+   {
+    "monster": "Chafer Fantassin",
+    "slug": "chafer-fantassin",
+    "rate": 0,
+    "zones": [
+     "Le cimetière"
+    ]
+   },
+   {
+    "monster": "Chafer Fantassin d'Halouine",
+    "slug": "chafer-fantassin-d-halouine",
+    "rate": 0,
+    "zones": [
+     "Le cimetière"
+    ]
+   },
+   {
+    "monster": "Kruorre le Chafer Haï",
+    "slug": "kruorre-le-chafer-hai",
+    "rate": 0,
+    "zones": [
+     "Bois de Litneg"
+    ]
+   }
+  ]
+ },
+ "2479": {
+  "name": "Crête de Porkass",
+  "slug": "crete-de-porkass",
+  "sources": [
+   {
+    "monster": "Berger Porkass",
+    "slug": "berger-porkass",
+    "rate": 1,
+    "zones": [
+     "Plaines Rocheuses",
+     "Plaine des Porkass"
+    ]
+   }
+  ]
+ },
+ "757": {
+  "name": "Gelée Bleutée",
+  "slug": "gelee-bleutee",
+  "sources": [
+   {
+    "monster": "Gelée Royale Bleue",
+    "slug": "gelee-royale-bleue",
+    "rate": 100,
+    "zones": [
+     "La gelaxième dimension"
+    ]
+   },
+   {
+    "monster": "Gelée Bleue",
+    "slug": "gelee-bleue",
+    "rate": 20,
+    "zones": [
+     "La péninsule des gelées"
+    ]
+   }
+  ]
+ },
+ "368": {
+  "name": "Gelée à la Fraise",
+  "slug": "gelee-a-la-fraise",
+  "sources": [
+   {
+    "monster": "Gelée Royale Fraise",
+    "slug": "gelee-royale-fraise",
+    "rate": 100,
+    "zones": [
+     "La gelaxième dimension"
+    ]
+   },
+   {
+    "monster": "Gelée Fraise",
+    "slug": "gelee-fraise",
+    "rate": 8,
+    "zones": [
+     "La péninsule des gelées"
+    ]
+   }
+  ]
+ },
+ "2241": {
+  "name": "Gelée Menthe Royale",
+  "slug": "gelee-menthe-royale",
+  "sources": [
+   {
+    "monster": "Gelée Royale Menthe",
+    "slug": "gelee-royale-menthe",
+    "rate": 20,
+    "zones": [
+     "La gelaxième dimension"
+    ]
+   }
+  ]
+ },
+ "2437": {
+  "name": "Gelée Citron Royale",
+  "slug": "gelee-citron-royale",
+  "sources": [
+   {
+    "monster": "Gelée Royale Citron",
+    "slug": "gelee-royale-citron",
+    "rate": 20,
+    "zones": [
+     "La gelaxième dimension"
+    ]
+   }
+  ]
+ },
+ "2242": {
+  "name": "Gelée Fraise Royale",
+  "slug": "gelee-fraise-royale",
+  "sources": [
+   {
+    "monster": "Gelée Royale Fraise",
+    "slug": "gelee-royale-fraise",
+    "rate": 20,
+    "zones": [
+     "La gelaxième dimension"
+    ]
+   }
+  ]
+ },
+ "370": {
+  "name": "Gelée Bleutée Royale",
+  "slug": "gelee-bleutee-royale",
+  "sources": [
+   {
+    "monster": "Gelée Royale Bleue",
+    "slug": "gelee-royale-bleue",
+    "rate": 5,
+    "zones": [
+     "La gelaxième dimension"
+    ]
+   }
+  ]
+ },
+ "2618": {
+  "name": "Kokopaille",
+  "slug": "kokopaille",
+  "sources": [
+   {
+    "monster": "Boomba saoulé",
+    "slug": "boomba-saoule",
+    "rate": 14,
+    "zones": [
+     "Ile des naufragés",
+     "Mer"
+    ]
+   },
+   {
+    "monster": "Canon Dorf débutant",
+    "slug": "canon-dorf-debutant",
+    "rate": 14,
+    "zones": [
+     "Ile des naufragés",
+     "Mer"
+    ]
+   },
+   {
+    "monster": "Tikokoko",
+    "slug": "tikokoko",
+    "rate": 14,
+    "zones": [
+     "La plage de Moon",
+     "Ile des naufragés"
+    ]
+   },
+   {
+    "monster": "Kokoko",
+    "slug": "kokoko",
+    "rate": 10,
+    "zones": [
+     "La plage de Moon",
+     "Ile des naufragés"
+    ]
+   },
+   {
+    "monster": "NodKoko",
+    "slug": "nodkoko",
+    "rate": 10,
+    "zones": [
+     "La plage de Moon",
+     "Ile des naufragés"
+    ]
+   }
+  ]
+ },
+ "2611": {
+  "name": "Carapace Jaune Vide",
+  "slug": "carapace-jaune-vide",
+  "sources": [
+   {
+    "monster": "Tortue Jaune",
+    "slug": "tortue-jaune",
+    "rate": 18,
+    "zones": [
+     "La plage de Moon"
+    ]
+   }
+  ]
+ },
+ "2613": {
+  "name": "Carapace Bleue Vide",
+  "slug": "carapace-bleue-vide",
+  "sources": [
+   {
+    "monster": "Tortue Bleue",
+    "slug": "tortue-bleue",
+    "rate": 18,
+    "zones": [
+     "La plage de Moon"
+    ]
+   }
+  ]
+ },
+ "2610": {
+  "name": "Carapace Rouge Vide",
+  "slug": "carapace-rouge-vide",
+  "sources": [
+   {
+    "monster": "Tortue Rouge",
+    "slug": "tortue-rouge",
+    "rate": 18,
+    "zones": [
+     "La plage de Moon"
+    ]
+   }
+  ]
+ },
+ "2609": {
+  "name": "Carapace Verte Vide",
+  "slug": "carapace-verte-vide",
+  "sources": [
+   {
+    "monster": "Tortue Verte",
+    "slug": "tortue-verte",
+    "rate": 20,
+    "zones": [
+     "La plage de Moon"
+    ]
+   }
+  ]
+ },
+ "2630": {
+  "name": "Pot de Gloutovore",
+  "slug": "pot-de-gloutovore",
+  "sources": [
+   {
+    "monster": "Gloutovore",
+    "slug": "gloutovore",
+    "rate": 4,
+    "zones": [
+     "La jungle profonde de Moon"
+    ]
+   }
+  ]
+ },
+ "369": {
+  "name": "Gelée à la Menthe",
+  "slug": "gelee-a-la-menthe",
+  "sources": [
+   {
+    "monster": "Gelée Royale Menthe",
+    "slug": "gelee-royale-menthe",
+    "rate": 100,
+    "zones": [
+     "La gelaxième dimension"
+    ]
+   },
+   {
+    "monster": "Gelée Menthe",
+    "slug": "gelee-menthe",
+    "rate": 12,
+    "zones": [
+     "La péninsule des gelées"
+    ]
+   }
+  ]
+ },
+ "367": {
+  "name": "Oeuf de Tofu",
+  "slug": "oeuf-de-tofu",
+  "sources": [
+   {
+    "monster": "Batofu",
+    "slug": "batofu",
+    "rate": 35,
+    "zones": []
+   },
+   {
+    "monster": "Tofu",
+    "slug": "tofu",
+    "rate": 35,
+    "zones": [
+     "Le champ des Ingalsses",
+     "Le berceau",
+     "Le coin des Tofus"
+    ]
+   },
+   {
+    "monster": "Tofu d'Halouine",
+    "slug": "tofu-d-halouine",
+    "rate": 35,
+    "zones": []
+   },
+   {
+    "monster": "Tofu Malade",
+    "slug": "tofu-malade",
+    "rate": 35,
+    "zones": []
+   },
+   {
+    "monster": "Tofu Noir",
+    "slug": "tofu-noir",
+    "rate": 35,
+    "zones": []
+   }
+  ]
+ },
+ "3208": {
+  "name": "Slip de Bwork Archer",
+  "slug": "slip-de-bwork-archer",
+  "sources": [
+   {
+    "monster": "Bwork Archer",
+    "slug": "bwork-archer",
+    "rate": 13,
+    "zones": [
+     "Campement des Bworks",
+     "La forêt maléfique",
+     "Gisgoul, le village devasté",
+     "Montagne basse des Craqueleurs"
+    ]
+   }
+  ]
+ },
+ "2492": {
+  "name": "Chaîne de l'Ouginak",
+  "slug": "chaine-de-l-ouginak",
+  "sources": [
+   {
+    "monster": "Ouginak",
+    "slug": "ouginak",
+    "rate": 3,
+    "zones": [
+     "Lande de Sidimote"
+    ]
+   }
+  ]
+ },
+ "8252": {
+  "name": "Plume de Corbac Apprivoisé",
+  "slug": "plume-de-corbac-apprivoise",
+  "sources": [
+   {
+    "monster": "Corbac Apprivoisé",
+    "slug": "corbac-apprivoise",
+    "rate": 5,
+    "zones": [
+     "La bibliothèque du Maître Corbac"
+    ]
+   },
+   {
+    "monster": "Horace le Corbac Apprivoisé",
+    "slug": "horace-le-corbac-apprivoise",
+    "rate": 5,
+    "zones": [
+     "La bibliothèque du Maître Corbac"
+    ]
+   }
+  ]
+ },
+ "1663": {
+  "name": "Ecaille de Crocodaille",
+  "slug": "ecaille-de-crocodaille",
+  "sources": [
+   {
+    "monster": "Crocodaille",
+    "slug": "crocodaille",
+    "rate": 30,
+    "zones": [
+     "Le marécage",
+     "Marécages nauséabonds",
+     "Marécages sans fond"
+    ]
+   }
+  ]
+ },
+ "1613": {
+  "name": "Ecaille de Chef Crocodaille",
+  "slug": "ecaille-de-chef-crocodaille",
+  "sources": [
+   {
+    "monster": "Chef Crocodaille",
+    "slug": "chef-crocodaille",
+    "rate": 30,
+    "zones": [
+     "Le marécage",
+     "Marécages sans fond"
+    ]
+   }
+  ]
+ },
+ "2296": {
+  "name": "Bouclier Reptilien",
+  "slug": "bouclier-reptilien",
+  "sources": [
+   {
+    "monster": "Chef Crocodaille",
+    "slug": "chef-crocodaille",
+    "rate": 0,
+    "zones": [
+     "Le marécage",
+     "Marécages sans fond"
+    ]
+   }
+  ]
+ },
+ "519": {
+  "name": "Poudre de Perlinpainpain",
+  "slug": "poudre-de-perlinpainpain",
+  "sources": [
+   {
+    "monster": "Arakne",
+    "slug": "arakne",
+    "rate": 54,
+    "zones": [
+     "La forêt d'Amakna",
+     "La forêt maléfique",
+     "Le temple Osamodas",
+     "Le temple Eniripsa",
+     "Souterrain",
+     "Le berceau",
+     "Forêt des Abraknydes",
+     "Le coin des Tofus",
+     "Village de Pandala",
+     "Orée de la forêt des Abraknydes",
+     "Orée de la Millifutaie"
+    ]
+   },
+   {
+    "monster": "Larve Bleue",
+    "slug": "larve-bleue",
+    "rate": 54,
+    "zones": [
+     "Port de Madrestam",
+     "La montagne des Craqueleurs",
+     "Le champ des Ingalsses",
+     "La forêt d'Amakna",
+     "Bord de la fôret maléfique",
+     "Forêt des Abraknydes",
+     "Le coin des Tofus",
+     "Village de Pandala",
+     "La jungle profonde de Moon",
+     "Forêt des Abraknydes Sombres",
+     "Orée de la forêt des Abraknydes",
+     "Plaine des Scarafeuilles",
+     "Donjon des Champs - Salle 2",
+     "Donjon des Champs - Salle 3",
+     "Donjon des Champs - Salle 4"
+    ]
+   },
+   {
+    "monster": "Larve Orange",
+    "slug": "larve-orange",
+    "rate": 54,
+    "zones": [
+     "La montagne des Craqueleurs",
+     "Le champ des Ingalsses",
+     "La forêt d'Amakna",
+     "Bord de la fôret maléfique",
+     "Forêt des Abraknydes",
+     "Le coin des Tofus",
+     "La jungle profonde de Moon",
+     "Forêt des Abraknydes Sombres",
+     "Orée de la forêt des Abraknydes",
+     "Plaine des Scarafeuilles",
+     "Donjon des Champs - Salle 4",
+     "Donjon des Champs - Salle 7",
+     "Montagne basse des Craqueleurs"
+    ]
+   },
+   {
+    "monster": "Larve Verte",
+    "slug": "larve-verte",
+    "rate": 54,
+    "zones": [
+     "La montagne des Craqueleurs",
+     "Le champ des Ingalsses",
+     "La forêt d'Amakna",
+     "Bord de la fôret maléfique",
+     "Forêt des Abraknydes",
+     "Le coin des Tofus",
+     "La jungle profonde de Moon",
+     "Forêt des Abraknydes Sombres",
+     "Orée de la forêt des Abraknydes",
+     "Plaine des Scarafeuilles",
+     "Donjon des Champs - Salle 3",
+     "Donjon des Champs - Salle 4",
+     "Donjon des Champs - Salle 7",
+     "Montagne basse des Craqueleurs"
+    ]
+   },
+   {
+    "monster": "Moskito",
+    "slug": "moskito",
+    "rate": 54,
+    "zones": [
+     "La montagne des Craqueleurs",
+     "Le champ des Ingalsses",
+     "La forêt d'Amakna",
+     "Bord de la fôret maléfique",
+     "Le berceau",
+     "Le coin des Tofus",
+     "Pandala Neutre",
+     "Bordure d'Aerdala",
+     "Village de Pandala",
+     "Orée de la forêt des Abraknydes",
+     "Donjon des Champs - Salle 1",
+     "Donjon des Champs - Salle 2",
+     "Donjon des Champs - Salle 3",
+     "Donjon des Champs - Salle 6",
+     "Montagne basse des Craqueleurs"
+    ]
+   }
+  ]
+ },
+ "8757": {
+  "name": "Maillot de corps de Barbroussa",
+  "slug": "maillot-de-corps-de-barbroussa",
+  "sources": [
+   {
+    "monster": "Barbroussa",
+    "slug": "barbroussa",
+    "rate": 15,
+    "zones": [
+     "L'arche d'Otomaï",
+     "Cale de l'arche d'Otomaï"
+    ]
+   }
+  ]
+ },
+ "8682": {
+  "name": "Peau de Mob l'Eponge",
+  "slug": "peau-de-mob-l-eponge",
+  "sources": [
+   {
+    "monster": "Mob l'Eponge",
+    "slug": "mob-l-eponge",
+    "rate": 5,
+    "zones": [
+     "Donjon Ensablé"
+    ]
+   }
+  ]
+ },
+ "8995": {
+  "name": "Etoffe de Gourlo le Terrible",
+  "slug": "etoffe-de-gourlo-le-terrible",
+  "sources": [
+   {
+    "monster": "Gourlo le Terrible",
+    "slug": "gourlo-le-terrible",
+    "rate": 2,
+    "zones": [
+     "Cale de l'arche d'Otomaï"
+    ]
+   }
+  ]
+ },
+ "2511": {
+  "name": "Cuir de Sanglier des Plaines",
+  "slug": "cuir-de-sanglier-des-plaines",
+  "sources": [
+   {
+    "monster": "Ganos",
+    "slug": "ganos",
+    "rate": 58,
+    "zones": [
+     "Forêt de Cania"
+    ]
+   },
+   {
+    "monster": "Sanglier Des Plaines",
+    "slug": "sanglier-des-plaines",
+    "rate": 58,
+    "zones": [
+     "Forêt de Cania"
+    ]
+   }
+  ]
+ },
+ "304": {
+  "name": "Cuir de Bouftou",
+  "slug": "cuir-de-bouftou",
+  "sources": [
+   {
+    "monster": "Ballotin le Bouftou",
+    "slug": "ballotin-le-bouftou",
+    "rate": 60,
+    "zones": []
+   },
+   {
+    "monster": "Bouftou",
+    "slug": "bouftou",
+    "rate": 60,
+    "zones": [
+     "La forêt d'Amakna",
+     "Le coin des Bouftous",
+     "Le temple Féca",
+     "Le berceau",
+     "Donjon des Bouftous",
+     "Elevage de Bouftous du Château d'Amakna"
+    ]
+   },
+   {
+    "monster": "Bouftou d'Halouine",
+    "slug": "bouftou-d-halouine",
+    "rate": 60,
+    "zones": []
+   },
+   {
+    "monster": "Petit Bouftou",
+    "slug": "petit-bouftou",
+    "rate": 60,
+    "zones": []
+   }
+  ]
+ },
+ "486": {
+  "name": "Cuir de Sanglier",
+  "slug": "cuir-de-sanglier",
+  "sources": [
+   {
+    "monster": "Jeune Sanglier",
+    "slug": "jeune-sanglier",
+    "rate": 60,
+    "zones": []
+   },
+   {
+    "monster": "Sanglier",
+    "slug": "sanglier",
+    "rate": 60,
+    "zones": [
+     "La forêt d'Amakna",
+     "Bord de la fôret maléfique",
+     "La Millifutaie",
+     "La campagne"
+    ]
+   },
+   {
+    "monster": "Sanglier d'Halouine",
+    "slug": "sanglier-d-halouine",
+    "rate": 60,
+    "zones": [
+     "Bord de la fôret maléfique",
+     "Forêt d'Astrub",
+     "La campagne",
+     "La forêt d'Amakna",
+     "La Millifutaie"
+    ]
+   }
+  ]
+ },
+ "883": {
+  "name": "Cuir de Boufton Blanc",
+  "slug": "cuir-de-boufton-blanc",
+  "sources": [
+   {
+    "monster": "Boufton Blanc",
+    "slug": "boufton-blanc",
+    "rate": 80,
+    "zones": [
+     "La forêt d'Amakna",
+     "Le coin des Bouftous",
+     "Le temple Féca",
+     "Le berceau",
+     "Donjon des Bouftous",
+     "Elevage de Bouftous du Château d'Amakna"
+    ]
+   },
+   {
+    "monster": "Jeune Boufton Blanc",
+    "slug": "jeune-boufton-blanc",
+    "rate": 80,
+    "zones": []
+   }
+  ]
+ },
+ "887": {
+  "name": "Cuir du Chef de Guerre Bouftou",
+  "slug": "cuir-du-chef-de-guerre-bouftou",
+  "sources": [
+   {
+    "monster": "Chef de Guerre Bouftou",
+    "slug": "chef-de-guerre-bouftou",
+    "rate": 25,
+    "zones": [
+     "Le coin des Bouftous",
+     "Le berceau",
+     "Donjon des Bouftous"
+    ]
+   },
+   {
+    "monster": "Petit Chef de Guerre Bouftou",
+    "slug": "petit-chef-de-guerre-bouftou",
+    "rate": 25,
+    "zones": []
+   }
+  ]
+ },
+ "884": {
+  "name": "Cuir de Boufton Noir",
+  "slug": "cuir-de-boufton-noir",
+  "sources": [
+   {
+    "monster": "Boufton Noir",
+    "slug": "boufton-noir",
+    "rate": 80,
+    "zones": [
+     "La forêt d'Amakna",
+     "Le coin des Bouftous",
+     "Le temple Féca",
+     "Le berceau",
+     "Donjon des Bouftous",
+     "Elevage de Bouftous du Château d'Amakna"
+    ]
+   },
+   {
+    "monster": "Jeune Boufton Noir",
+    "slug": "jeune-boufton-noir",
+    "rate": 80,
+    "zones": []
+   }
+  ]
+ },
+ "1775": {
+  "name": "Bout de Blop Griotte",
+  "slug": "bout-de-blop-griotte",
+  "sources": [
+   {
+    "monster": "Blop Griotte",
+    "slug": "blop-griotte",
+    "rate": 60,
+    "zones": [
+     "Plaine de Cania",
+     "Route de Bonta",
+     "Massif de Cania",
+     "Prairie des Blops",
+     "Donjon des Blops"
+    ]
+   },
+   {
+    "monster": "Blopignon",
+    "slug": "blopignon",
+    "rate": 24,
+    "zones": [
+     "Donjon des Blops"
+    ]
+   },
+   {
+    "monster": "Gloutoblop",
+    "slug": "gloutoblop",
+    "rate": 24,
+    "zones": [
+     "Donjon des Blops"
+    ]
+   },
+   {
+    "monster": "Tronkoblop",
+    "slug": "tronkoblop",
+    "rate": 24,
+    "zones": [
+     "Donjon des Blops"
+    ]
+   },
+   {
+    "monster": "Biblop Griotte",
+    "slug": "biblop-griotte",
+    "rate": 20,
+    "zones": [
+     "Plaine de Cania",
+     "Route de Bonta",
+     "Massif de Cania",
+     "Prairie des Blops"
+    ]
+   }
+  ]
+ },
+ "2556": {
+  "name": "Pollen de Blop",
+  "slug": "pollen-de-blop",
+  "sources": [
+   {
+    "monster": "Blop Coco",
+    "slug": "blop-coco",
+    "rate": 30,
+    "zones": [
+     "Plaine de Cania",
+     "Route de Bonta",
+     "Massif de Cania",
+     "Prairie des Blops",
+     "Donjon des Blops"
+    ]
+   },
+   {
+    "monster": "Blop Griotte",
+    "slug": "blop-griotte",
+    "rate": 30,
+    "zones": [
+     "Plaine de Cania",
+     "Route de Bonta",
+     "Massif de Cania",
+     "Prairie des Blops",
+     "Donjon des Blops"
+    ]
+   },
+   {
+    "monster": "Blop Indigo",
+    "slug": "blop-indigo",
+    "rate": 30,
+    "zones": [
+     "Plaine de Cania",
+     "Route de Bonta",
+     "Massif de Cania",
+     "Prairie des Blops",
+     "Donjon des Blops"
+    ]
+   },
+   {
+    "monster": "Blop Reinette",
+    "slug": "blop-reinette",
+    "rate": 30,
+    "zones": [
+     "Plaine de Cania",
+     "Route de Bonta",
+     "Massif de Cania",
+     "Prairie des Blops",
+     "Donjon des Blops"
+    ]
+   }
+  ]
+ },
+ "1773": {
+  "name": "Bout de Blop Reinette",
+  "slug": "bout-de-blop-reinette",
+  "sources": [
+   {
+    "monster": "Blop Reinette",
+    "slug": "blop-reinette",
+    "rate": 60,
+    "zones": [
+     "Plaine de Cania",
+     "Route de Bonta",
+     "Massif de Cania",
+     "Prairie des Blops",
+     "Donjon des Blops"
+    ]
+   },
+   {
+    "monster": "Blopignon",
+    "slug": "blopignon",
+    "rate": 24,
+    "zones": [
+     "Donjon des Blops"
+    ]
+   },
+   {
+    "monster": "Gloutoblop",
+    "slug": "gloutoblop",
+    "rate": 24,
+    "zones": [
+     "Donjon des Blops"
+    ]
+   },
+   {
+    "monster": "Tronkoblop",
+    "slug": "tronkoblop",
+    "rate": 24,
+    "zones": [
+     "Donjon des Blops"
+    ]
+   },
+   {
+    "monster": "Biblop Reinette",
+    "slug": "biblop-reinette",
+    "rate": 20,
+    "zones": [
+     "Plaine de Cania",
+     "Route de Bonta",
+     "Massif de Cania",
+     "Prairie des Blops"
+    ]
+   }
+  ]
+ },
+ "1770": {
+  "name": "Bout de Blop Coco",
+  "slug": "bout-de-blop-coco",
+  "sources": [
+   {
+    "monster": "Blop Coco",
+    "slug": "blop-coco",
+    "rate": 60,
+    "zones": [
+     "Plaine de Cania",
+     "Route de Bonta",
+     "Massif de Cania",
+     "Prairie des Blops",
+     "Donjon des Blops"
+    ]
+   },
+   {
+    "monster": "Blopignon",
+    "slug": "blopignon",
+    "rate": 24,
+    "zones": [
+     "Donjon des Blops"
+    ]
+   },
+   {
+    "monster": "Gloutoblop",
+    "slug": "gloutoblop",
+    "rate": 24,
+    "zones": [
+     "Donjon des Blops"
+    ]
+   },
+   {
+    "monster": "Tronkoblop",
+    "slug": "tronkoblop",
+    "rate": 24,
+    "zones": [
+     "Donjon des Blops"
+    ]
+   },
+   {
+    "monster": "Biblop Coco",
+    "slug": "biblop-coco",
+    "rate": 20,
+    "zones": [
+     "Plaine de Cania",
+     "Route de Bonta",
+     "Massif de Cania",
+     "Prairie des Blops"
+    ]
+   }
+  ]
+ },
+ "1777": {
+  "name": "Bout de Blop Indigo",
+  "slug": "bout-de-blop-indigo",
+  "sources": [
+   {
+    "monster": "Blop Indigo",
+    "slug": "blop-indigo",
+    "rate": 60,
+    "zones": [
+     "Plaine de Cania",
+     "Route de Bonta",
+     "Massif de Cania",
+     "Prairie des Blops",
+     "Donjon des Blops"
+    ]
+   },
+   {
+    "monster": "Blopignon",
+    "slug": "blopignon",
+    "rate": 24,
+    "zones": [
+     "Donjon des Blops"
+    ]
+   },
+   {
+    "monster": "Gloutoblop",
+    "slug": "gloutoblop",
+    "rate": 24,
+    "zones": [
+     "Donjon des Blops"
+    ]
+   },
+   {
+    "monster": "Tronkoblop",
+    "slug": "tronkoblop",
+    "rate": 24,
+    "zones": [
+     "Donjon des Blops"
+    ]
+   },
+   {
+    "monster": "Biblop Indigo",
+    "slug": "biblop-indigo",
+    "rate": 20,
+    "zones": [
+     "Plaine de Cania",
+     "Route de Bonta",
+     "Massif de Cania",
+     "Prairie des Blops"
+    ]
+   }
+  ]
+ },
+ "2252": {
+  "name": "Dent en Or du Craqueleur",
+  "slug": "dent-en-or-du-craqueleur",
+  "sources": [
+   {
+    "monster": "Craqueleur des plaines",
+    "slug": "craqueleur-des-plaines",
+    "rate": 8,
+    "zones": [
+     "Massif de Cania",
+     "Plaines Rocheuses"
+    ]
+   },
+   {
+    "monster": "Craqueleur",
+    "slug": "craqueleur",
+    "rate": 6,
+    "zones": [
+     "La montagne des Craqueleurs",
+     "Montagne basse des Craqueleurs"
+    ]
+   },
+   {
+    "monster": "Craqueleur d'Halouine",
+    "slug": "craqueleur-d-halouine",
+    "rate": 6,
+    "zones": []
+   }
+  ]
+ },
+ "479": {
+  "name": "Ivoire",
+  "slug": "ivoire",
+  "sources": [
+   {
+    "monster": "Dragon Cochon",
+    "slug": "dragon-cochon",
+    "rate": 38,
+    "zones": [
+     "Labyrinthe du Dragon Cochon"
+    ]
+   },
+   {
+    "monster": "Cochon de Farle",
+    "slug": "cochon-de-farle",
+    "rate": 1,
+    "zones": [
+     "Labyrinthe du Dragon Cochon"
+    ]
+   },
+   {
+    "monster": "Don Dorgan",
+    "slug": "don-dorgan",
+    "rate": 1,
+    "zones": [
+     "Labyrinthe du Dragon Cochon"
+    ]
+   },
+   {
+    "monster": "Don Duss Ang",
+    "slug": "don-duss-ang",
+    "rate": 1,
+    "zones": [
+     "Labyrinthe du Dragon Cochon"
+    ]
+   },
+   {
+    "monster": "Bworkette",
+    "slug": "bworkette",
+    "rate": 0,
+    "zones": [
+     "Donjon du Bworker"
+    ]
+   }
+  ]
+ },
+ "8390": {
+  "name": "Peau de Cochon de Farle",
+  "slug": "peau-de-cochon-de-farle",
+  "sources": [
+   {
+    "monster": "Cochon de Farle",
+    "slug": "cochon-de-farle",
+    "rate": 5,
+    "zones": [
+     "Labyrinthe du Dragon Cochon"
+    ]
+   }
+  ]
+ },
+ "8388": {
+  "name": "Peau de Bworkette",
+  "slug": "peau-de-bworkette",
+  "sources": [
+   {
+    "monster": "Bworkette",
+    "slug": "bworkette",
+    "rate": 14,
+    "zones": [
+     "Donjon du Bworker"
+    ]
+   },
+   {
+    "monster": "Mama Bwork",
+    "slug": "mama-bwork",
+    "rate": 14,
+    "zones": [
+     "Donjon du Bworker"
+    ]
+   },
+   {
+    "monster": "Bworker",
+    "slug": "bworker",
+    "rate": 5,
+    "zones": [
+     "Donjon du Bworker"
+    ]
+   }
+  ]
+ },
+ "2646": {
+  "name": "Slip en cuir de Cochon de Lait",
+  "slug": "slip-en-cuir-de-cochon-de-lait",
+  "sources": [
+   {
+    "monster": "Cochon de Lait",
+    "slug": "cochon-de-lait",
+    "rate": 0,
+    "zones": [
+     "Territoire des Porcos",
+     "Souterrain",
+     "Labyrinthe du Dragon Cochon"
+    ]
+   }
+  ]
+ },
+ "2287": {
+  "name": "Cuir Noir",
+  "slug": "cuir-noir",
+  "sources": [
+   {
+    "monster": "Aermyne 'Braco' Scalptaras",
+    "slug": "aermyne-braco-scalptaras",
+    "rate": 2,
+    "zones": [
+     "Bordure de Terrdala"
+    ]
+   },
+   {
+    "monster": "Pandit",
+    "slug": "pandit",
+    "rate": 1,
+    "zones": [
+     "Bordure d'Aerdala",
+     "Bordure de Terrdala"
+    ]
+   }
+  ]
+ },
+ "8323": {
+  "name": "Cuir de Déminoboule",
+  "slug": "cuir-de-deminoboule",
+  "sources": [
+   {
+    "monster": "Déminoboule",
+    "slug": "deminoboule",
+    "rate": 24,
+    "zones": [
+     "Le labyrinthe du Minotoror"
+    ]
+   }
+  ]
+ },
+ "8393": {
+  "name": "Poil de Dragon Cochon",
+  "slug": "poil-de-dragon-cochon",
+  "sources": [
+   {
+    "monster": "Dragon Cochon",
+    "slug": "dragon-cochon",
+    "rate": 1,
+    "zones": [
+     "Labyrinthe du Dragon Cochon"
+    ]
+   }
+  ]
+ },
+ "2322": {
+  "name": "Crocs de Rats",
+  "slug": "crocs-de-rats",
+  "sources": [
+   {
+    "monster": "Milirat d'Egoutant malade",
+    "slug": "milirat-d-egoutant-malade",
+    "rate": 60,
+    "zones": []
+   },
+   {
+    "monster": "Chaman d'Egoutant",
+    "slug": "chaman-d-egoutant",
+    "rate": 14,
+    "zones": [
+     "Egout de Bonta",
+     "Egout de Brâkmar",
+     "Souterrain du Château d'Amakna",
+     "Donjon des Rats de Bonta",
+     "Donjon des Rats de Brâkmar",
+     "Donjon des Rats du Château d'Amakna"
+    ]
+   },
+   {
+    "monster": "Rat Batteur",
+    "slug": "rat-batteur",
+    "rate": 14,
+    "zones": [
+     "Donjon des Rats de Brâkmar",
+     "Donjon des Rats du Château d'Amakna"
+    ]
+   },
+   {
+    "monster": "Rat d'Egoutant",
+    "slug": "rat-d-egoutant",
+    "rate": 14,
+    "zones": [
+     "Egout de Bonta",
+     "Egout de Brâkmar",
+     "Souterrain du Château d'Amakna",
+     "Donjon des Rats de Bonta",
+     "Donjon des Rats de Brâkmar",
+     "Donjon des Rats du Château d'Amakna"
+    ]
+   },
+   {
+    "monster": "Rat de Marais",
+    "slug": "rat-de-marais",
+    "rate": 14,
+    "zones": [
+     "Donjon des Rats de Brâkmar",
+     "Donjon des Rats du Château d'Amakna"
+    ]
+   }
+  ]
+ },
+ "2491": {
+  "name": "Oeil d'Ouginak",
+  "slug": "oeil-d-ouginak",
+  "sources": [
+   {
+    "monster": "Ouginak",
+    "slug": "ouginak",
+    "rate": 20,
+    "zones": [
+     "Lande de Sidimote"
+    ]
+   }
+  ]
+ },
+ "2320": {
+  "name": "Collier Cassé d'Ouginak",
+  "slug": "collier-casse-d-ouginak",
+  "sources": [
+   {
+    "monster": "Ouginak",
+    "slug": "ouginak",
+    "rate": 1,
+    "zones": [
+     "Lande de Sidimote"
+    ]
+   }
+  ]
+ },
+ "8485": {
+  "name": "Etoffe du Rat Noir",
+  "slug": "etoffe-du-rat-noir",
+  "sources": [
+   {
+    "monster": "Rat Noir",
+    "slug": "rat-noir",
+    "rate": 14,
+    "zones": [
+     "Donjon des Rats de Brâkmar",
+     "Donjon des Rats du Château d'Amakna"
+    ]
+   }
+  ]
+ },
+ "2323": {
+  "name": "Colonne Vertébrale",
+  "slug": "colonne-vertebrale",
+  "sources": [
+   {
+    "monster": "Chafer",
+    "slug": "chafer",
+    "rate": 4,
+    "zones": [
+     "Le cimetière",
+     "La forêt maléfique",
+     "Cimetière de Bonta",
+     "Cimetière des Torturés"
+    ]
+   },
+   {
+    "monster": "Chafer Archer",
+    "slug": "chafer-archer",
+    "rate": 4,
+    "zones": [
+     "La forêt maléfique",
+     "Cimetière de Bonta",
+     "Cimetière des Torturés",
+     "Forêt des Abraknydes Sombres"
+    ]
+   },
+   {
+    "monster": "Chafer Invisible",
+    "slug": "chafer-invisible",
+    "rate": 4,
+    "zones": [
+     "Le cimetière",
+     "La forêt maléfique",
+     "Cimetière de Bonta",
+     "Cimetière des Torturés",
+     "Forêt des Abraknydes Sombres"
+    ]
+   },
+   {
+    "monster": "Chafer Lancier",
+    "slug": "chafer-lancier",
+    "rate": 4,
+    "zones": [
+     "Cimetière de Bonta",
+     "Cimetière des Torturés",
+     "Forêt des Abraknydes Sombres"
+    ]
+   },
+   {
+    "monster": "Rib",
+    "slug": "rib",
+    "rate": 4,
+    "zones": [
+     "Le cimetière",
+     "La forêt maléfique",
+     "Cimetière de Bonta"
+    ]
+   }
+  ]
+ },
+ "8489": {
+  "name": "Dent de Rat Blanc",
+  "slug": "dent-de-rat-blanc",
+  "sources": [
+   {
+    "monster": "Rat Blanc",
+    "slug": "rat-blanc",
+    "rate": 14,
+    "zones": [
+     "Donjon des Rats de Bonta",
+     "Donjon des Rats du Château d'Amakna"
+    ]
+   }
+  ]
+ },
+ "8801": {
+  "name": "Etoffe de Ouassingue",
+  "slug": "etoffe-de-ouassingue",
+  "sources": [
+   {
+    "monster": "Bourbassingue",
+    "slug": "bourbassingue",
+    "rate": 15,
+    "zones": [
+     "Tourbière sans fond",
+     "Tourbière nauséabonde"
+    ]
+   },
+   {
+    "monster": "La Ouassingue",
+    "slug": "la-ouassingue",
+    "rate": 15,
+    "zones": [
+     "Le champ du repos"
+    ]
+   },
+   {
+    "monster": "Le Ouassingue",
+    "slug": "le-ouassingue",
+    "rate": 15,
+    "zones": [
+     "Le champ du repos"
+    ]
+   },
+   {
+    "monster": "Le Ouassingue Entourbé",
+    "slug": "le-ouassingue-entourbe",
+    "rate": 15,
+    "zones": [
+     "Tourbière sans fond",
+     "Tourbière nauséabonde"
+    ]
+   },
+   {
+    "monster": "Tourbassingue",
+    "slug": "tourbassingue",
+    "rate": 15,
+    "zones": [
+     "Tourbière sans fond",
+     "Tourbière nauséabonde"
+    ]
+   }
+  ]
+ },
+ "8811": {
+  "name": "Faux menton du Bourbassingue",
+  "slug": "faux-menton-du-bourbassingue",
+  "sources": [
+   {
+    "monster": "Bourbassingue",
+    "slug": "bourbassingue",
+    "rate": 1,
+    "zones": [
+     "Tourbière sans fond",
+     "Tourbière nauséabonde"
+    ]
+   }
+  ]
+ },
+ "8810": {
+  "name": "Tourbe séchée de Tourbassingue",
+  "slug": "tourbe-sechee-de-tourbassingue",
+  "sources": [
+   {
+    "monster": "Tourbassingue",
+    "slug": "tourbassingue",
+    "rate": 1,
+    "zones": [
+     "Tourbière sans fond",
+     "Tourbière nauséabonde"
+    ]
+   }
+  ]
+ },
+ "8807": {
+  "name": "Jus de Ouassingue",
+  "slug": "jus-de-ouassingue",
+  "sources": [
+   {
+    "monster": "La Ouassingue",
+    "slug": "la-ouassingue",
+    "rate": 1,
+    "zones": [
+     "Le champ du repos"
+    ]
+   },
+   {
+    "monster": "Le Ouassingue",
+    "slug": "le-ouassingue",
+    "rate": 1,
+    "zones": [
+     "Le champ du repos"
+    ]
+   },
+   {
+    "monster": "Le Ouassingue Entourbé",
+    "slug": "le-ouassingue-entourbe",
+    "rate": 1,
+    "zones": [
+     "Tourbière sans fond",
+     "Tourbière nauséabonde"
+    ]
+   }
+  ]
+ },
+ "2632": {
+  "name": "Glouto Rhum",
+  "slug": "glouto-rhum",
+  "sources": [
+   {
+    "monster": "Gloutovore",
+    "slug": "gloutovore",
+    "rate": 10,
+    "zones": [
+     "La jungle profonde de Moon"
+    ]
+   }
+  ]
+ },
+ "8809": {
+  "name": "Culotte à l'envers du Roissingue",
+  "slug": "culotte-a-l-envers-du-roissingue",
+  "sources": [
+   {
+    "monster": "Roissingue",
+    "slug": "roissingue",
+    "rate": 1,
+    "zones": [
+     "Tourbière sans fond",
+     "Tourbière nauséabonde"
+    ]
+   }
+  ]
+ },
+ "365": {
+  "name": "Patte d'Arakne",
+  "slug": "patte-d-arakne",
+  "sources": [
+   {
+    "monster": "Arakne Agressive",
+    "slug": "arakne-agressive",
+    "rate": 75,
+    "zones": [
+     "Bord de la fôret maléfique",
+     "Forêt des Abraknydes",
+     "Souterrain du Château d'Amakna",
+     "La Millifutaie",
+     "Le chemin de fer abandonné",
+     "La campagne"
+    ]
+   },
+   {
+    "monster": "Arakne",
+    "slug": "arakne",
+    "rate": 50,
+    "zones": [
+     "La forêt d'Amakna",
+     "La forêt maléfique",
+     "Le temple Osamodas",
+     "Le temple Eniripsa",
+     "Souterrain",
+     "Le berceau",
+     "Forêt des Abraknydes",
+     "Le coin des Tofus",
+     "Village de Pandala",
+     "Orée de la forêt des Abraknydes",
+     "Orée de la Millifutaie"
+    ]
+   },
+   {
+    "monster": "Arakne Immature",
+    "slug": "arakne-immature",
+    "rate": 50,
+    "zones": []
+   },
+   {
+    "monster": "Arakne Malade",
+    "slug": "arakne-malade",
+    "rate": 50,
+    "zones": []
+   }
+  ]
+ },
+ "8800": {
+  "name": "Etoffe Zoth",
+  "slug": "etoffe-zoth",
+  "sources": [
+   {
+    "monster": "Disciple Zoth",
+    "slug": "disciple-zoth",
+    "rate": 5,
+    "zones": [
+     "Village des Zoths"
+    ]
+   },
+   {
+    "monster": "Gamine Zoth",
+    "slug": "gamine-zoth",
+    "rate": 5,
+    "zones": [
+     "Village des Zoths"
+    ]
+   },
+   {
+    "monster": "Guerrier Zoth",
+    "slug": "guerrier-zoth",
+    "rate": 5,
+    "zones": [
+     "Village des Zoths"
+    ]
+   },
+   {
+    "monster": "Maître Zoth",
+    "slug": "maitre-zoth",
+    "rate": 5,
+    "zones": [
+     "Village des Zoths"
+    ]
+   },
+   {
+    "monster": "Sergent Zoth",
+    "slug": "sergent-zoth",
+    "rate": 5,
+    "zones": [
+     "Village des Zoths"
+    ]
+   }
+  ]
+ },
+ "2278": {
+  "name": "Tissu Invisible",
+  "slug": "tissu-invisible",
+  "sources": [
+   {
+    "monster": "Chafer Invisible",
+    "slug": "chafer-invisible",
+    "rate": 10,
+    "zones": [
+     "Le cimetière",
+     "La forêt maléfique",
+     "Cimetière de Bonta",
+     "Cimetière des Torturés",
+     "Forêt des Abraknydes Sombres"
+    ]
+   }
+  ]
+ },
+ "2273": {
+  "name": "Tissu Pourpre",
+  "slug": "tissu-pourpre",
+  "sources": [
+   {
+    "monster": "Bwork Mage",
+    "slug": "bwork-mage",
+    "rate": 15,
+    "zones": [
+     "Campement des Bworks",
+     "La forêt maléfique",
+     "Gisgoul, le village devasté",
+     "Montagne basse des Craqueleurs"
+    ]
+   }
+  ]
+ },
+ "8808": {
+  "name": "Etoffe du Roissingue",
+  "slug": "etoffe-du-roissingue",
+  "sources": [
+   {
+    "monster": "Roissingue",
+    "slug": "roissingue",
+    "rate": 15,
+    "zones": [
+     "Tourbière sans fond",
+     "Tourbière nauséabonde"
+    ]
+   }
+  ]
+ },
+ "2281": {
+  "name": "Tissu Sanguin",
+  "slug": "tissu-sanguin",
+  "sources": [
+   {
+    "monster": "Vampire Dupyr",
+    "slug": "vampire-dupyr",
+    "rate": 2,
+    "zones": []
+   },
+   {
+    "monster": "Maître Vampire",
+    "slug": "maitre-vampire",
+    "rate": 0,
+    "zones": [
+     "Les cryptes",
+     "Cimetière des Torturés"
+    ]
+   },
+   {
+    "monster": "Vampire",
+    "slug": "vampire",
+    "rate": 0,
+    "zones": [
+     "Les cryptes",
+     "Cimetière des Torturés"
+    ]
+   }
+  ]
+ },
+ "8250": {
+  "name": "Poil de Renarbo",
+  "slug": "poil-de-renarbo",
+  "sources": [
+   {
+    "monster": "Renarbo",
+    "slug": "renarbo",
+    "rate": 5,
+    "zones": [
+     "La bibliothèque du Maître Corbac"
+    ]
+   },
+   {
+    "monster": "Rono le Renarbo",
+    "slug": "rono-le-renarbo",
+    "rate": 5,
+    "zones": [
+     "La bibliothèque du Maître Corbac"
+    ]
+   }
+  ]
+ },
+ "840": {
+  "name": "Poils du Minotoror",
+  "slug": "poils-du-minotoror",
+  "sources": [
+   {
+    "monster": "Minotoror",
+    "slug": "minotoror",
+    "rate": 20,
+    "zones": [
+     "Le labyrinthe du Minotoror"
+    ]
+   }
+  ]
+ },
+ "2998": {
+  "name": "Laine du Minotoror",
+  "slug": "laine-du-minotoror",
+  "sources": [
+   {
+    "monster": "Minotoror",
+    "slug": "minotoror",
+    "rate": 10,
+    "zones": [
+     "Le labyrinthe du Minotoror"
+    ]
+   }
+  ]
+ },
+ "2999": {
+  "name": "Cuir de Minotoror",
+  "slug": "cuir-de-minotoror",
+  "sources": [
+   {
+    "monster": "Minotoror",
+    "slug": "minotoror",
+    "rate": 2,
+    "zones": [
+     "Le labyrinthe du Minotoror"
+    ]
+   }
+  ]
+ },
+ "2667": {
+  "name": "Queue de Minotoror",
+  "slug": "queue-de-minotoror",
+  "sources": [
+   {
+    "monster": "Minotoror",
+    "slug": "minotoror",
+    "rate": 1,
+    "zones": [
+     "Le labyrinthe du Minotoror"
+    ]
+   }
+  ]
+ }
+}

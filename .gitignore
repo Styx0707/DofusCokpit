@@ -11,6 +11,7 @@ __pycache__/
 data/*.pcapng           # captures réseau (contiennent ta banque perso)
 data/*.pcap
 data/details/           # cache API wiki (11k+ fichiers, reproductible)
+data/cache_xixou/        # cache HTML xixou.io (reproductible via scripts/ingest_drops.py)
 data/*.log
 data/item_*.json        # fichiers de debug ponctuels
 

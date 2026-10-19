@@ -1,7 +1,12 @@
 """Tests du moteur d'optimisation — aucune DB ni réseau requis (fonctions pures)."""
 from __future__ import annotations
 
-from app.core.optimizer import compute_craftable, compute_near_craftable, simulate_crafting_plan
+from app.core.optimizer import (
+    compute_craftable,
+    compute_near_craftable,
+    compute_profitable_crafts,
+    simulate_crafting_plan,
+)
 from app.models import Ingredient, Recipe, StockEntry
 
 
@@ -97,3 +102,68 @@ def test_plan_uses_intermediate_product_as_virtual_resource():
     crafted = {s.result_name: s.crafted for s in plan.steps}
     assert crafted["Lingot"] == 3
     assert crafted["Epee"] == 1  # rendu possible par les lingots virtuels
+
+
+def test_profitable_crafts_margin_and_sorting():
+    # Epee : 2 bois (10) + 1 fer (50) = 70 de coût, revente 200 -> marge +130.
+    # Dague : 3 bois (10) = 30 de coût, revente 40 -> marge +10.
+    recipes = [
+        _recipe(100, 900, "Epee", [(1, 2), (2, 1)]),
+        _recipe(101, 901, "Dague", [(1, 3)]),
+    ]
+    price_map = {1: 10, 2: 50, 900: 200, 901: 40}
+
+    res = compute_profitable_crafts(recipes, price_map)
+
+    assert [r.result_name for r in res] == ["Epee", "Dague"]  # trié par profit décroissant
+    epee = res[0]
+    assert epee.unit_cost == 70 and epee.unit_revenue == 200 and epee.unit_profit == 130
+    assert epee.margin_pct == round(130 / 70 * 100, 1)
+
+
+def test_profitable_crafts_excludes_unpriced_recipes():
+    recipes = [
+        _recipe(100, 900, "Epee", [(1, 2), (2, 1)]),   # ingrédient 2 sans prix -> exclue
+        _recipe(101, 901, "Dague", [(1, 3)]),          # produit 901 sans prix  -> exclue
+        _recipe(102, 902, "Hache", [(1, 1)]),          # tout valorisable       -> incluse
+    ]
+    price_map = {1: 10, 900: 200, 902: 50}  # pas de prix pour 2 ni 901
+
+    res = compute_profitable_crafts(recipes, price_map)
+
+    assert [r.result_name for r in res] == ["Hache"]
+
+
+def test_profitable_crafts_missing_cost_uses_stock():
+    # 1 craft = 2 bois + 1 fer. En stock : 2 bois, 0 fer -> n'acheter que le fer.
+    recipes = [_recipe(100, 900, "Epee", [(1, 2), (2, 1)])]
+    price_map = {1: 10, 2: 50, 900: 200}
+    stock = [StockEntry(1, "Bois", 2)]
+
+    res = compute_profitable_crafts(recipes, price_map, stock)
+
+    epee = res[0]
+    assert epee.unit_cost == 70               # coût plein des ingrédients
+    assert epee.missing_buy_cost == 50        # seul le fer manque (2 bois déjà en stock)
+    assert epee.profit_after_missing == 150   # 200 - 50
+    assert epee.craftable_now == 0            # pas de fer -> 0 craft possible tout de suite
+    # détail des ressources à acheter : seulement le fer (le bois est en stock)
+    assert len(epee.missing) == 1
+    fer = epee.missing[0]
+    assert (fer.item_id, fer.missing, fer.unit_price, fer.buy_cost) == (2, 1, 50, 50)
+    # détail des ressources à retirer en banque : les 2 bois déjà possédés
+    assert len(epee.from_stock) == 1
+    bois = epee.from_stock[0]
+    assert (bois.item_id, bois.qty, bois.unit_price, bois.value) == (1, 2, 10, 20)
+
+
+def test_profitable_crafts_min_margin_filter():
+    recipes = [
+        _recipe(100, 900, "Epee", [(1, 2), (2, 1)]),  # marge ~186 %
+        _recipe(101, 901, "Dague", [(1, 3)]),         # marge ~33 %
+    ]
+    price_map = {1: 10, 2: 50, 900: 200, 901: 40}
+
+    res = compute_profitable_crafts(recipes, price_map, min_margin_pct=100)
+
+    assert [r.result_name for r in res] == ["Epee"]  # Dague sous le seuil -> exclue

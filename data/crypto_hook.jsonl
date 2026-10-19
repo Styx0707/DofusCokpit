@@ -1,0 +1,196 @@
+{"ev":"hook-loaded","pid":17380,"argv":["C:\\Users\\vip19\\AppData\\Local\\Ankama\\Retro\\Dofus Retro.exe","--port=26116","--gameName=retro"],"t":1791824614722}
+{"ev":"socket.connect","arg":"[\n  { path: '\\\\\\\\?\\\\pipe\\\\discord-ipc-0' },\n  [Function],\n  [Symbol(normalizedArgs)]: true\n]","t":1791824615078}
+{"ev":"socket.connect","arg":"[\n  { path: '\\\\\\\\?\\\\pipe\\\\discord-ipc-1' },\n  [Function],\n  [Symbol(normalizedArgs)]: true\n]","t":1791824615113}
+{"ev":"socket.connect","arg":"[\n  { port: '26116', host: 'localhost', timeout: 0 },\n  null,\n  [Symbol(normalizedArgs)]: true\n]","t":1791824615117}
+{"ev":"socket.connect","arg":"[\n  { path: '\\\\\\\\?\\\\pipe\\\\discord-ipc-2' },\n  [Function],\n  [Symbol(normalizedArgs)]: true\n]","t":1791824615177}
+{"ev":"socket.connect","arg":"[\n  { path: '\\\\\\\\?\\\\pipe\\\\discord-ipc-3' },\n  [Function],\n  [Symbol(normalizedArgs)]: true\n]","t":1791824615196}
+{"ev":"socket.connect","arg":"[\n  { path: '\\\\\\\\?\\\\pipe\\\\discord-ipc-4' },\n  [Function],\n  [Symbol(normalizedArgs)]: true\n]","t":1791824615197}
+{"ev":"socket.connect","arg":"[\n  { path: '\\\\\\\\?\\\\pipe\\\\discord-ipc-5' },\n  [Function],\n  [Symbol(normalizedArgs)]: true\n]","t":1791824615201}
+{"ev":"socket.connect","arg":"[\n  { path: '\\\\\\\\?\\\\pipe\\\\discord-ipc-6' },\n  [Function],\n  [Symbol(normalizedArgs)]: true\n]","t":1791824615202}
+{"ev":"socket.connect","arg":"[\n  { path: '\\\\\\\\?\\\\pipe\\\\discord-ipc-7' },\n  [Function],\n  [Symbol(normalizedArgs)]: true\n]","t":1791824615203}
+{"ev":"socket.connect","arg":"[\n  { path: '\\\\\\\\?\\\\pipe\\\\discord-ipc-8' },\n  [Function],\n  [Symbol(normalizedArgs)]: true\n]","t":1791824615203}
+{"ev":"socket.connect","arg":"[\n  { path: '\\\\\\\\?\\\\pipe\\\\discord-ipc-9' },\n  [Function],\n  [Symbol(normalizedArgs)]: true\n]","t":1791824615204}
+{"ev":"socket.connect","arg":"[\n  { path: '\\\\\\\\?\\\\pipe\\\\discord-ipc-10' },\n  [Function],\n  [Symbol(normalizedArgs)]: true\n]","t":1791824615204}
+{"ev":"socket.write","remote":"?:?","len":279,"hex":"244f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a4f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a496e707574456e636f64696e67203d205b53797374656d2e546578742e456e636f64696e675d3a3a55544638203b204765742d43696d496e7374616e63652057696e33325f62696f73207c2073656c656374204465736372697074696f6e2c56657273696f6e2c4d616e7566616374757265722c407b6e3d2252656c6561736544617465223b653d7b245f2e52656c65617365446174652e546f537472696e672822797979792d4d4d2d646422297d7d2c4275696c644e756d6265722c53657269616c4e756d626572207c20666c0d0a","prev":"$OutputEncoding = [System.Console]::OutputEncoding = [System.Console]::InputEncoding = [System.Text.Encoding]::UTF8 ; Get-CimInstance Win32_bios | select Descri","t":1791824615824}
+{"ev":"socket.write","remote":"?:?","len":6,"hex":"657869740d0a","prev":"exit\r\n","t":1791824615824}
+{"ev":"socket.write","remote":"?:?","len":347,"hex":"244f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a4f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a496e707574456e636f64696e67203d205b53797374656d2e546578742e456e636f64696e675d3a3a55544638203b204765742d43696d496e7374616e63652057696e33325f506879736963616c4d656d6f7279207c2073656c656374204461746157696474682c546f74616c57696474682c43617061636974792c42616e6b4c6162656c2c4d656d6f7279547970652c534d42494f534d656d6f7279547970652c436f6e66696775726564436c6f636b53706565642c466f726d466163746f722c4d616e7566616374757265722c506172744e756d6265722c53657269616c4e756d6265722c436f6e66696775726564566f6c746167652c4d696e566f6c746167652c4d6178566f6c74616765207c20666c0d0a","prev":"$OutputEncoding = [System.Console]::OutputEncoding = [System.Console]::InputEncoding = [System.Text.Encoding]::UTF8 ; Get-CimInstance Win32_PhysicalMemory | sel","t":1791824615830}
+{"ev":"socket.write","remote":"?:?","len":6,"hex":"657869740d0a","prev":"exit\r\n","t":1791824615830}
+{"ev":"socket.write","remote":"?:?","len":220,"hex":"244f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a4f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a496e707574456e636f64696e67203d205b53797374656d2e546578742e456e636f64696e675d3a3a55544638203b204765742d43696d496e7374616e63652057696e33325f436f6d707574657253797374656d50726f64756374207c2073656c656374204e616d652c56656e646f722c56657273696f6e2c4964656e74696679696e674e756d6265722c55554944207c20666c0d0a","prev":"$OutputEncoding = [System.Console]::OutputEncoding = [System.Console]::InputEncoding = [System.Text.Encoding]::UTF8 ; Get-CimInstance Win32_ComputerSystemProduc","t":1791824615835}
+{"ev":"socket.write","remote":"?:?","len":6,"hex":"657869740d0a","prev":"exit\r\n","t":1791824615835}
+{"ev":"socket.write","remote":"?:?","len":182,"hex":"244f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a4f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a496e707574456e636f64696e67203d205b53797374656d2e546578742e456e636f64696e675d3a3a55544638203b204765742d43696d496e7374616e63652057696e33325f436f6d707574657253797374656d50726f64756374207c2073656c6563742055554944207c20666c0d0a","prev":"$OutputEncoding = [System.Console]::OutputEncoding = [System.Console]::InputEncoding = [System.Text.Encoding]::UTF8 ; Get-CimInstance Win32_ComputerSystemProduc","t":1791824615841}
+{"ev":"socket.write","remote":"?:?","len":6,"hex":"657869740d0a","prev":"exit\r\n","t":1791824615842}
+{"ev":"socket.write","remote":"?:?","len":252,"hex":"244f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a4f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a496e707574456e636f64696e67203d205b53797374656d2e546578742e456e636f64696e675d3a3a55544638203b204765742d43696d496e7374616e63652057696e33325f4f7065726174696e6753797374656d207c2073656c6563742043617074696f6e2c53657269616c4e756d6265722c4275696c644e756d6265722c536572766963655061636b4d616a6f7256657273696f6e2c536572766963655061636b4d696e6f7256657273696f6e207c20666c0d0a","prev":"$OutputEncoding = [System.Console]::OutputEncoding = [System.Console]::InputEncoding = [System.Text.Encoding]::UTF8 ; Get-CimInstance Win32_OperatingSystem | se","t":1791824615849}
+{"ev":"socket.write","remote":"?:?","len":6,"hex":"657869740d0a","prev":"exit\r\n","t":1791824615849}
+{"ev":"socket.write","remote":"?:?","len":176,"hex":"244f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a4f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a496e707574456e636f64696e67203d205b53797374656d2e546578742e456e636f64696e675d3a3a55544638203b20284765742d43696d496e7374616e63652057696e33325f436f6d707574657253797374656d292e48797065727669736f7250726573656e740d0a","prev":"$OutputEncoding = [System.Console]::OutputEncoding = [System.Console]::InputEncoding = [System.Text.Encoding]::UTF8 ; (Get-CimInstance Win32_ComputerSystem).Hyp","t":1791824615858}
+{"ev":"socket.write","remote":"?:?","len":6,"hex":"657869740d0a","prev":"exit\r\n","t":1791824615858}
+{"ev":"socket.write","remote":"?:?","len":228,"hex":"244f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a4f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a496e707574456e636f64696e67203d205b53797374656d2e546578742e456e636f64696e675d3a3a55544638203b204164642d54797065202d417373656d626c794e616d652053797374656d2e57696e646f77732e466f726d733b205b53797374656d2e57696e646f77732e466f726d732e53797374656d496e666f726d6174696f6e5d3a3a5465726d696e616c53657276657253657373696f6e0d0a","prev":"$OutputEncoding = [System.Console]::OutputEncoding = [System.Console]::InputEncoding = [System.Text.Encoding]::UTF8 ; Add-Type -AssemblyName System.Windows.Form","t":1791824615866}
+{"ev":"socket.write","remote":"?:?","len":6,"hex":"657869740d0a","prev":"exit\r\n","t":1791824615867}
+{"ev":"socket.write","remote":"?:?","len":314,"hex":"244f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a4f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a496e707574456e636f64696e67203d205b53797374656d2e546578742e456e636f64696e675d3a3a55544638203b204765742d43696d496e7374616e63652057696e33325f70726f636573736f72207c2073656c656374204e616d652c205265766973696f6e2c204c32436163686553697a652c204c33436163686553697a652c204d616e7566616374757265722c204d6178436c6f636b53706565642c204465736372697074696f6e2c20557067726164654d6574686f642c2043617074696f6e2c204e756d6265724f664c6f676963616c50726f636573736f72732c204e756d6265724f66436f726573207c20666c0d0a","prev":"$OutputEncoding = [System.Console]::OutputEncoding = [System.Console]::InputEncoding = [System.Text.Encoding]::UTF8 ; Get-CimInstance Win32_processor | select N","t":1791824616088}
+{"ev":"socket.write","remote":"?:?","len":6,"hex":"657869740d0a","prev":"exit\r\n","t":1791824616089}
+{"ev":"socket.write","remote":"?:?","len":197,"hex":"244f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a4f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a496e707574456e636f64696e67203d205b53797374656d2e546578742e456e636f64696e675d3a3a55544638203b204765742d43696d496e7374616e63652057696e33325f43616368654d656d6f7279207c2073656c656374204361636865547970652c496e7374616c6c656453697a652c4c6576656c207c20666c0d0a","prev":"$OutputEncoding = [System.Console]::OutputEncoding = [System.Console]::InputEncoding = [System.Text.Encoding]::UTF8 ; Get-CimInstance Win32_CacheMemory | select","t":1791824616098}
+{"ev":"socket.write","remote":"?:?","len":6,"hex":"657869740d0a","prev":"exit\r\n","t":1791824616099}
+{"ev":"socket.write","remote":"?:?","len":176,"hex":"244f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a4f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a496e707574456e636f64696e67203d205b53797374656d2e546578742e456e636f64696e675d3a3a55544638203b20284765742d43696d496e7374616e63652057696e33325f436f6d707574657253797374656d292e48797065727669736f7250726573656e740d0a","prev":"$OutputEncoding = [System.Console]::OutputEncoding = [System.Console]::InputEncoding = [System.Text.Encoding]::UTF8 ; (Get-CimInstance Win32_ComputerSystem).Hyp","t":1791824616108}
+{"ev":"socket.write","remote":"?:?","len":6,"hex":"657869740d0a","prev":"exit\r\n","t":1791824616109}
+{"ev":"socket.write","remote":"?:?","len":203,"hex":"244f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a4f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a496e707574456e636f64696e67203d205b53797374656d2e546578742e456e636f64696e675d3a3a55544638203b204765742d43696d496e7374616e6365204d535f53797374656d696e666f726d6174696f6e202d4e616d6573706163652022726f6f742f776d6922207c2073656c6563742073797374656d736b75207c20666c200d0a","prev":"$OutputEncoding = [System.Console]::OutputEncoding = [System.Console]::InputEncoding = [System.Text.Encoding]::UTF8 ; Get-CimInstance MS_Systeminformation -Name","t":1791824616581}
+{"ev":"socket.write","remote":"?:?","len":6,"hex":"657869740d0a","prev":"exit\r\n","t":1791824616581}
+{"ev":"socket.write","remote":"?:?","len":196,"hex":"244f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a4f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a496e707574456e636f64696e67203d205b53797374656d2e546578742e456e636f64696e675d3a3a55544638203b204765742d43696d496e7374616e63652057696e33325f62696f73207c2073656c6563742056657273696f6e2c2053657269616c4e756d6265722c20534d42494f5342494f5356657273696f6e0d0a","prev":"$OutputEncoding = [System.Console]::OutputEncoding = [System.Console]::InputEncoding = [System.Text.Encoding]::UTF8 ; Get-CimInstance Win32_bios | select Versio","t":1791824617015}
+{"ev":"socket.write","remote":"?:?","len":6,"hex":"657869740d0a","prev":"exit\r\n","t":1791824617015}
+{"ev":"socket.write","remote":"127.0.0.1:26116","len":93,"hex":"8001000100000007636f6e6e656374000000010b000100000005726574726f0b0002000000046d61696e0800030000006f0b00040000002465636231636134652d313830642d343634322d383666662d62363032353030396261373100","prev":"\u0001\u0000\u0001\u0000\u0000\u0000\u0007connect\u0000\u0000\u0000\u0001\u000b\u0000\u0001\u0000\u0000\u0000\u0005retro\u000b\u0000\u0002\u0000\u0000\u0000\u0004main\b\u0000\u0003\u0000\u0000\u0000o\u000b\u0000\u0004\u0000\u0000\u0000$ecb1ca4e-180d-4642-86ff-b6025009ba71\u0000","t":1791824617857}
+{"ev":"socket.write","remote":"127.0.0.1:26116","len":80,"hex":"8001000100000011617574685f67657447616d65546f6b656e000000020b00010000002465636231636134652d313830642d343634322d383666662d6236303235303039626137310800020000006500","prev":"\u0001\u0000\u0001\u0000\u0000\u0000\u0011auth_getGameToken\u0000\u0000\u0000\u0002\u000b\u0000\u0001\u0000\u0000\u0000$ecb1ca4e-180d-4642-86ff-b6025009ba71\b\u0000\u0002\u0000\u0000\u0000e\u0000","t":1791824617900}
+{"ev":"randomBytes","size":4,"hex":"affb4415","t":1791824618691}
+{"ev":"randomBytes","size":4,"hex":"d345d5e2","t":1791824618692}
+{"ev":"randomBytes","size":4,"hex":"5baeb13c","t":1791824618692}
+{"ev":"randomBytes","size":4,"hex":"2b9ac8b8","t":1791824618692}
+{"ev":"hook-loaded","pid":14596,"argv":["C:\\Users\\vip19\\AppData\\Local\\Ankama\\Retro\\Dofus Retro.exe","--port=26116","--gameName=retro"],"t":1791824619188}
+{"ev":"socket.connect","arg":"[\n  { path: '\\\\\\\\?\\\\pipe\\\\discord-ipc-0' },\n  [Function],\n  [Symbol(normalizedArgs)]: true\n]","t":1791824619552}
+{"ev":"socket.connect","arg":"[\n  { path: '\\\\\\\\?\\\\pipe\\\\discord-ipc-1' },\n  [Function],\n  [Symbol(normalizedArgs)]: true\n]","t":1791824619588}
+{"ev":"socket.connect","arg":"[\n  { port: '26116', host: 'localhost', timeout: 0 },\n  null,\n  [Symbol(normalizedArgs)]: true\n]","t":1791824619592}
+{"ev":"socket.connect","arg":"[\n  { path: '\\\\\\\\?\\\\pipe\\\\discord-ipc-2' },\n  [Function],\n  [Symbol(normalizedArgs)]: true\n]","t":1791824619656}
+{"ev":"socket.connect","arg":"[\n  { path: '\\\\\\\\?\\\\pipe\\\\discord-ipc-3' },\n  [Function],\n  [Symbol(normalizedArgs)]: true\n]","t":1791824619674}
+{"ev":"socket.connect","arg":"[\n  { path: '\\\\\\\\?\\\\pipe\\\\discord-ipc-4' },\n  [Function],\n  [Symbol(normalizedArgs)]: true\n]","t":1791824619676}
+{"ev":"socket.connect","arg":"[\n  { path: '\\\\\\\\?\\\\pipe\\\\discord-ipc-5' },\n  [Function],\n  [Symbol(normalizedArgs)]: true\n]","t":1791824619680}
+{"ev":"socket.connect","arg":"[\n  { path: '\\\\\\\\?\\\\pipe\\\\discord-ipc-6' },\n  [Function],\n  [Symbol(normalizedArgs)]: true\n]","t":1791824619681}
+{"ev":"socket.connect","arg":"[\n  { path: '\\\\\\\\?\\\\pipe\\\\discord-ipc-7' },\n  [Function],\n  [Symbol(normalizedArgs)]: true\n]","t":1791824619681}
+{"ev":"socket.connect","arg":"[\n  { path: '\\\\\\\\?\\\\pipe\\\\discord-ipc-8' },\n  [Function],\n  [Symbol(normalizedArgs)]: true\n]","t":1791824619682}
+{"ev":"socket.connect","arg":"[\n  { path: '\\\\\\\\?\\\\pipe\\\\discord-ipc-9' },\n  [Function],\n  [Symbol(normalizedArgs)]: true\n]","t":1791824619683}
+{"ev":"socket.connect","arg":"[\n  { path: '\\\\\\\\?\\\\pipe\\\\discord-ipc-10' },\n  [Function],\n  [Symbol(normalizedArgs)]: true\n]","t":1791824619684}
+{"ev":"socket.write","remote":"?:?","len":279,"hex":"244f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a4f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a496e707574456e636f64696e67203d205b53797374656d2e546578742e456e636f64696e675d3a3a55544638203b204765742d43696d496e7374616e63652057696e33325f62696f73207c2073656c656374204465736372697074696f6e2c56657273696f6e2c4d616e7566616374757265722c407b6e3d2252656c6561736544617465223b653d7b245f2e52656c65617365446174652e546f537472696e672822797979792d4d4d2d646422297d7d2c4275696c644e756d6265722c53657269616c4e756d626572207c20666c0d0a","prev":"$OutputEncoding = [System.Console]::OutputEncoding = [System.Console]::InputEncoding = [System.Text.Encoding]::UTF8 ; Get-CimInstance Win32_bios | select Descri","t":1791824620290}
+{"ev":"socket.write","remote":"?:?","len":6,"hex":"657869740d0a","prev":"exit\r\n","t":1791824620291}
+{"ev":"socket.write","remote":"?:?","len":347,"hex":"244f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a4f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a496e707574456e636f64696e67203d205b53797374656d2e546578742e456e636f64696e675d3a3a55544638203b204765742d43696d496e7374616e63652057696e33325f506879736963616c4d656d6f7279207c2073656c656374204461746157696474682c546f74616c57696474682c43617061636974792c42616e6b4c6162656c2c4d656d6f7279547970652c534d42494f534d656d6f7279547970652c436f6e66696775726564436c6f636b53706565642c466f726d466163746f722c4d616e7566616374757265722c506172744e756d6265722c53657269616c4e756d6265722c436f6e66696775726564566f6c746167652c4d696e566f6c746167652c4d6178566f6c74616765207c20666c0d0a","prev":"$OutputEncoding = [System.Console]::OutputEncoding = [System.Console]::InputEncoding = [System.Text.Encoding]::UTF8 ; Get-CimInstance Win32_PhysicalMemory | sel","t":1791824620296}
+{"ev":"socket.write","remote":"?:?","len":6,"hex":"657869740d0a","prev":"exit\r\n","t":1791824620296}
+{"ev":"socket.write","remote":"?:?","len":220,"hex":"244f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a4f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a496e707574456e636f64696e67203d205b53797374656d2e546578742e456e636f64696e675d3a3a55544638203b204765742d43696d496e7374616e63652057696e33325f436f6d707574657253797374656d50726f64756374207c2073656c656374204e616d652c56656e646f722c56657273696f6e2c4964656e74696679696e674e756d6265722c55554944207c20666c0d0a","prev":"$OutputEncoding = [System.Console]::OutputEncoding = [System.Console]::InputEncoding = [System.Text.Encoding]::UTF8 ; Get-CimInstance Win32_ComputerSystemProduc","t":1791824620302}
+{"ev":"socket.write","remote":"?:?","len":6,"hex":"657869740d0a","prev":"exit\r\n","t":1791824620302}
+{"ev":"socket.write","remote":"?:?","len":182,"hex":"244f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a4f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a496e707574456e636f64696e67203d205b53797374656d2e546578742e456e636f64696e675d3a3a55544638203b204765742d43696d496e7374616e63652057696e33325f436f6d707574657253797374656d50726f64756374207c2073656c6563742055554944207c20666c0d0a","prev":"$OutputEncoding = [System.Console]::OutputEncoding = [System.Console]::InputEncoding = [System.Text.Encoding]::UTF8 ; Get-CimInstance Win32_ComputerSystemProduc","t":1791824620308}
+{"ev":"socket.write","remote":"?:?","len":6,"hex":"657869740d0a","prev":"exit\r\n","t":1791824620308}
+{"ev":"socket.write","remote":"?:?","len":252,"hex":"244f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a4f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a496e707574456e636f64696e67203d205b53797374656d2e546578742e456e636f64696e675d3a3a55544638203b204765742d43696d496e7374616e63652057696e33325f4f7065726174696e6753797374656d207c2073656c6563742043617074696f6e2c53657269616c4e756d6265722c4275696c644e756d6265722c536572766963655061636b4d616a6f7256657273696f6e2c536572766963655061636b4d696e6f7256657273696f6e207c20666c0d0a","prev":"$OutputEncoding = [System.Console]::OutputEncoding = [System.Console]::InputEncoding = [System.Text.Encoding]::UTF8 ; Get-CimInstance Win32_OperatingSystem | se","t":1791824620314}
+{"ev":"socket.write","remote":"?:?","len":6,"hex":"657869740d0a","prev":"exit\r\n","t":1791824620314}
+{"ev":"socket.write","remote":"?:?","len":176,"hex":"244f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a4f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a496e707574456e636f64696e67203d205b53797374656d2e546578742e456e636f64696e675d3a3a55544638203b20284765742d43696d496e7374616e63652057696e33325f436f6d707574657253797374656d292e48797065727669736f7250726573656e740d0a","prev":"$OutputEncoding = [System.Console]::OutputEncoding = [System.Console]::InputEncoding = [System.Text.Encoding]::UTF8 ; (Get-CimInstance Win32_ComputerSystem).Hyp","t":1791824620321}
+{"ev":"socket.write","remote":"?:?","len":6,"hex":"657869740d0a","prev":"exit\r\n","t":1791824620322}
+{"ev":"socket.write","remote":"?:?","len":228,"hex":"244f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a4f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a496e707574456e636f64696e67203d205b53797374656d2e546578742e456e636f64696e675d3a3a55544638203b204164642d54797065202d417373656d626c794e616d652053797374656d2e57696e646f77732e466f726d733b205b53797374656d2e57696e646f77732e466f726d732e53797374656d496e666f726d6174696f6e5d3a3a5465726d696e616c53657276657253657373696f6e0d0a","prev":"$OutputEncoding = [System.Console]::OutputEncoding = [System.Console]::InputEncoding = [System.Text.Encoding]::UTF8 ; Add-Type -AssemblyName System.Windows.Form","t":1791824620329}
+{"ev":"socket.write","remote":"?:?","len":6,"hex":"657869740d0a","prev":"exit\r\n","t":1791824620330}
+{"ev":"socket.write","remote":"?:?","len":314,"hex":"244f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a4f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a496e707574456e636f64696e67203d205b53797374656d2e546578742e456e636f64696e675d3a3a55544638203b204765742d43696d496e7374616e63652057696e33325f70726f636573736f72207c2073656c656374204e616d652c205265766973696f6e2c204c32436163686553697a652c204c33436163686553697a652c204d616e7566616374757265722c204d6178436c6f636b53706565642c204465736372697074696f6e2c20557067726164654d6574686f642c2043617074696f6e2c204e756d6265724f664c6f676963616c50726f636573736f72732c204e756d6265724f66436f726573207c20666c0d0a","prev":"$OutputEncoding = [System.Console]::OutputEncoding = [System.Console]::InputEncoding = [System.Text.Encoding]::UTF8 ; Get-CimInstance Win32_processor | select N","t":1791824620515}
+{"ev":"socket.write","remote":"?:?","len":6,"hex":"657869740d0a","prev":"exit\r\n","t":1791824620515}
+{"ev":"socket.write","remote":"?:?","len":197,"hex":"244f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a4f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a496e707574456e636f64696e67203d205b53797374656d2e546578742e456e636f64696e675d3a3a55544638203b204765742d43696d496e7374616e63652057696e33325f43616368654d656d6f7279207c2073656c656374204361636865547970652c496e7374616c6c656453697a652c4c6576656c207c20666c0d0a","prev":"$OutputEncoding = [System.Console]::OutputEncoding = [System.Console]::InputEncoding = [System.Text.Encoding]::UTF8 ; Get-CimInstance Win32_CacheMemory | select","t":1791824620525}
+{"ev":"socket.write","remote":"?:?","len":6,"hex":"657869740d0a","prev":"exit\r\n","t":1791824620525}
+{"ev":"socket.write","remote":"?:?","len":176,"hex":"244f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a4f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a496e707574456e636f64696e67203d205b53797374656d2e546578742e456e636f64696e675d3a3a55544638203b20284765742d43696d496e7374616e63652057696e33325f436f6d707574657253797374656d292e48797065727669736f7250726573656e740d0a","prev":"$OutputEncoding = [System.Console]::OutputEncoding = [System.Console]::InputEncoding = [System.Text.Encoding]::UTF8 ; (Get-CimInstance Win32_ComputerSystem).Hyp","t":1791824620535}
+{"ev":"socket.write","remote":"?:?","len":6,"hex":"657869740d0a","prev":"exit\r\n","t":1791824620535}
+{"ev":"socket.write","remote":"?:?","len":203,"hex":"244f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a4f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a496e707574456e636f64696e67203d205b53797374656d2e546578742e456e636f64696e675d3a3a55544638203b204765742d43696d496e7374616e6365204d535f53797374656d696e666f726d6174696f6e202d4e616d6573706163652022726f6f742f776d6922207c2073656c6563742073797374656d736b75207c20666c200d0a","prev":"$OutputEncoding = [System.Console]::OutputEncoding = [System.Console]::InputEncoding = [System.Text.Encoding]::UTF8 ; Get-CimInstance MS_Systeminformation -Name","t":1791824621112}
+{"ev":"socket.write","remote":"?:?","len":6,"hex":"657869740d0a","prev":"exit\r\n","t":1791824621113}
+{"ev":"socket.write","remote":"?:?","len":196,"hex":"244f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a4f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a496e707574456e636f64696e67203d205b53797374656d2e546578742e456e636f64696e675d3a3a55544638203b204765742d43696d496e7374616e63652057696e33325f62696f73207c2073656c6563742056657273696f6e2c2053657269616c4e756d6265722c20534d42494f5342494f5356657273696f6e0d0a","prev":"$OutputEncoding = [System.Console]::OutputEncoding = [System.Console]::InputEncoding = [System.Text.Encoding]::UTF8 ; Get-CimInstance Win32_bios | select Versio","t":1791824621514}
+{"ev":"socket.write","remote":"?:?","len":6,"hex":"657869740d0a","prev":"exit\r\n","t":1791824621515}
+{"ev":"socket.write","remote":"127.0.0.1:26116","len":93,"hex":"8001000100000007636f6e6e656374000000010b000100000005726574726f0b0002000000046d61696e080003000000700b00040000002462376664633030332d346462352d343766362d613330392d37336366653164623433376400","prev":"\u0001\u0000\u0001\u0000\u0000\u0000\u0007connect\u0000\u0000\u0000\u0001\u000b\u0000\u0001\u0000\u0000\u0000\u0005retro\u000b\u0000\u0002\u0000\u0000\u0000\u0004main\b\u0000\u0003\u0000\u0000\u0000p\u000b\u0000\u0004\u0000\u0000\u0000$b7fdc003-4db5-47f6-a309-73cfe1db437d\u0000","t":1791824622421}
+{"ev":"socket.write","remote":"127.0.0.1:26116","len":80,"hex":"8001000100000011617574685f67657447616d65546f6b656e000000020b00010000002462376664633030332d346462352d343766362d613330392d3733636665316462343337640800020000006500","prev":"\u0001\u0000\u0001\u0000\u0000\u0000\u0011auth_getGameToken\u0000\u0000\u0000\u0002\u000b\u0000\u0001\u0000\u0000\u0000$b7fdc003-4db5-47f6-a309-73cfe1db437d\b\u0000\u0002\u0000\u0000\u0000e\u0000","t":1791824622469}
+{"ev":"randomBytes","size":4,"hex":"bb1304b7","t":1791824623340}
+{"ev":"randomBytes","size":4,"hex":"c379d07d","t":1791824623340}
+{"ev":"randomBytes","size":4,"hex":"618a8338","t":1791824623340}
+{"ev":"randomBytes","size":4,"hex":"59b70bd5","t":1791824623341}
+{"ev":"randomBytes","size":4,"hex":"ddba2eb7","t":1791824625049}
+{"ev":"randomBytes","size":4,"hex":"d5debdcc","t":1791824625049}
+{"ev":"randomBytes","size":4,"hex":"aedda8a4","t":1791824625049}
+{"ev":"randomBytes","size":4,"hex":"9c79eddb","t":1791824625049}
+{"ev":"randomBytes","size":4,"hex":"f281ea4c","t":1791824626941}
+{"ev":"randomBytes","size":4,"hex":"8dea4866","t":1791824626942}
+{"ev":"randomBytes","size":4,"hex":"ff787044","t":1791824626942}
+{"ev":"randomBytes","size":4,"hex":"bc3d66af","t":1791824626942}
+{"ev":"socket.write","remote":"?:?","len":385,"hex":"244f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a4f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a496e707574456e636f64696e67203d205b53797374656d2e546578742e456e636f64696e675d3a3a55544638203b204765742d43696d496e7374616e63652057696e33325f50726f63657373207c2073656c6563742d4f626a6563742050726f6365737349642c506172656e7450726f6365737349642c457865637574696f6e53746174652c43617074696f6e2c436f6d6d616e644c696e652c45786563757461626c65506174682c557365724d6f646554696d652c4b65726e656c4d6f646554696d652c576f726b696e6753657453697a652c5072696f726974792c5061676546696c6555736167652c20407b6e3d224372656174696f6e44617465223b653d7b245f2e4372656174696f6e446174652e546f537472696e672822797979792d4d4d2d64642048483a6d6d3a737322297d7d207c20666c0d0a","prev":"$OutputEncoding = [System.Console]::OutputEncoding = [System.Console]::InputEncoding = [System.Text.Encoding]::UTF8 ; Get-CimInstance Win32_Process | select-Obj","t":1791824627551}
+{"ev":"socket.write","remote":"?:?","len":6,"hex":"657869740d0a","prev":"exit\r\n","t":1791824627551}
+{"ev":"randomBytes","size":4,"hex":"97c677a3","t":1791824628577}
+{"ev":"randomBytes","size":4,"hex":"8a0e94dc","t":1791824628577}
+{"ev":"randomBytes","size":4,"hex":"6fb17959","t":1791824628577}
+{"ev":"randomBytes","size":4,"hex":"00f489af","t":1791824628578}
+{"ev":"randomBytes","size":4,"hex":"39e66bd4","t":1791824628579}
+{"ev":"randomBytes","size":4,"hex":"76088c64","t":1791824628579}
+{"ev":"randomBytes","size":4,"hex":"2a590ccf","t":1791824628580}
+{"ev":"randomBytes","size":4,"hex":"d2097585","t":1791824628580}
+{"ev":"randomBytes","size":4,"hex":"37e8d255","t":1791824628592}
+{"ev":"randomBytes","size":4,"hex":"682350f7","t":1791824628593}
+{"ev":"randomBytes","size":4,"hex":"ff93920b","t":1791824628593}
+{"ev":"randomBytes","size":4,"hex":"ee995e6a","t":1791824628593}
+{"ev":"randomBytes","size":4,"hex":"9a3f5917","t":1791824628641}
+{"ev":"randomBytes","size":4,"hex":"de506a3a","t":1791824628641}
+{"ev":"randomBytes","size":4,"hex":"5e334cdc","t":1791824628641}
+{"ev":"randomBytes","size":4,"hex":"a77cec09","t":1791824628641}
+{"ev":"randomBytes","size":4,"hex":"cf180019","t":1791824628652}
+{"ev":"randomBytes","size":4,"hex":"b19f3b68","t":1791824628652}
+{"ev":"randomBytes","size":4,"hex":"cddf11ce","t":1791824628653}
+{"ev":"randomBytes","size":4,"hex":"8ba144c5","t":1791824628653}
+{"ev":"socket.write","remote":"?:?","len":87,"hex":"484b4355253543536f6674776172652535434d6963726f736f667425354357696e646f77732532304e5425354343757272656e7456657273696f6e253543417070436f6d706174466c6167732535434c61796572730d0a","prev":"HKCU%5CSoftware%5CMicrosoft%5CWindows%20NT%5CCurrentVersion%5CAppCompatFlags%5CLayers\r\n","t":1791824628673}
+{"ev":"socket.write","remote":"?:?","len":77,"hex":"4325334125354355736572732535437669703139253543417070446174612535434c6f63616c253543416e6b616d61253543526574726f253543446f667573253230526574726f2e6578650d0a","prev":"C%3A%5CUsers%5Cvip19%5CAppData%5CLocal%5CAnkama%5CRetro%5CDofus%20Retro.exe\r\n","t":1791824628673}
+{"ev":"socket.write","remote":"?:?","len":20,"hex":"2537452532304849474844504941574152450d0a","prev":"%7E%20HIGHDPIAWARE\r\n","t":1791824628674}
+{"ev":"socket.write","remote":"?:?","len":8,"hex":"5245475f535a0d0a","prev":"REG_SZ\r\n","t":1791824628674}
+{"ev":"socket.write","remote":"?:?","len":2,"hex":"0d0a","prev":"\r\n","t":1791824628674}
+{"ev":"randomBytes","size":4,"hex":"079c3ca0","t":1791824628710}
+{"ev":"randomBytes","size":4,"hex":"a3e68e33","t":1791824628710}
+{"ev":"randomBytes","size":4,"hex":"977fb07b","t":1791824628711}
+{"ev":"randomBytes","size":4,"hex":"b2661a5e","t":1791824628711}
+{"ev":"randomBytes","size":4,"hex":"34f4f7f5","t":1791824628951}
+{"ev":"randomBytes","size":4,"hex":"e5d93ca8","t":1791824628952}
+{"ev":"randomBytes","size":4,"hex":"ff2fc3bd","t":1791824628952}
+{"ev":"randomBytes","size":4,"hex":"0c9a4601","t":1791824628952}
+{"ev":"randomBytes","size":4,"hex":"b5a9ca1c","t":1791824629418}
+{"ev":"randomBytes","size":4,"hex":"3586011f","t":1791824629418}
+{"ev":"randomBytes","size":4,"hex":"5ffb3885","t":1791824629419}
+{"ev":"randomBytes","size":4,"hex":"328f63a0","t":1791824629419}
+{"ev":"socket.write","remote":"?:?","len":385,"hex":"244f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a4f7574707574456e636f64696e67203d205b53797374656d2e436f6e736f6c655d3a3a496e707574456e636f64696e67203d205b53797374656d2e546578742e456e636f64696e675d3a3a55544638203b204765742d43696d496e7374616e63652057696e33325f50726f63657373207c2073656c6563742d4f626a6563742050726f6365737349642c506172656e7450726f6365737349642c457865637574696f6e53746174652c43617074696f6e2c436f6d6d616e644c696e652c45786563757461626c65506174682c557365724d6f646554696d652c4b65726e656c4d6f646554696d652c576f726b696e6753657453697a652c5072696f726974792c5061676546696c6555736167652c20407b6e3d224372656174696f6e44617465223b653d7b245f2e4372656174696f6e446174652e546f537472696e672822797979792d4d4d2d64642048483a6d6d3a737322297d7d207c20666c0d0a","prev":"$OutputEncoding = [System.Console]::OutputEncoding = [System.Console]::InputEncoding = [System.Text.Encoding]::UTF8 ; Get-CimInstance Win32_Process | select-Obj","t":1791824630090}
+{"ev":"socket.write","remote":"?:?","len":6,"hex":"657869740d0a","prev":"exit\r\n","t":1791824630090}
+{"ev":"randomBytes","size":4,"hex":"f13f8356","t":1791824630857}
+{"ev":"randomBytes","size":4,"hex":"46124621","t":1791824630857}
+{"ev":"randomBytes","size":4,"hex":"ee5fe44b","t":1791824630857}
+{"ev":"randomBytes","size":4,"hex":"476da688","t":1791824630857}
+{"ev":"randomBytes","size":4,"hex":"8ae1b7bb","t":1791824631126}
+{"ev":"randomBytes","size":4,"hex":"01adff9a","t":1791824631127}
+{"ev":"randomBytes","size":4,"hex":"4324ba55","t":1791824631127}
+{"ev":"randomBytes","size":4,"hex":"f73b0834","t":1791824631127}
+{"ev":"randomBytes","size":4,"hex":"4aaa5675","t":1791824631129}
+{"ev":"randomBytes","size":4,"hex":"8f26367a","t":1791824631129}
+{"ev":"randomBytes","size":4,"hex":"9a7f44cf","t":1791824631129}
+{"ev":"randomBytes","size":4,"hex":"40149b90","t":1791824631129}
+{"ev":"randomBytes","size":4,"hex":"7ade884f","t":1791824631142}
+{"ev":"randomBytes","size":4,"hex":"11369de2","t":1791824631142}
+{"ev":"randomBytes","size":4,"hex":"13cc6384","t":1791824631142}
+{"ev":"randomBytes","size":4,"hex":"21e1f1ff","t":1791824631143}
+{"ev":"randomBytes","size":4,"hex":"761dd2f2","t":1791824631192}
+{"ev":"randomBytes","size":4,"hex":"049325bf","t":1791824631192}
+{"ev":"randomBytes","size":4,"hex":"cb225c00","t":1791824631193}
+{"ev":"randomBytes","size":4,"hex":"329b552d","t":1791824631193}
+{"ev":"randomBytes","size":4,"hex":"74a59fbb","t":1791824631202}
+{"ev":"randomBytes","size":4,"hex":"ab490046","t":1791824631203}
+{"ev":"randomBytes","size":4,"hex":"c03b2719","t":1791824631203}
+{"ev":"randomBytes","size":4,"hex":"edbdcf44","t":1791824631203}
+{"ev":"socket.write","remote":"?:?","len":87,"hex":"484b4355253543536f6674776172652535434d6963726f736f667425354357696e646f77732532304e5425354343757272656e7456657273696f6e253543417070436f6d706174466c6167732535434c61796572730d0a","prev":"HKCU%5CSoftware%5CMicrosoft%5CWindows%20NT%5CCurrentVersion%5CAppCompatFlags%5CLayers\r\n","t":1791824631224}
+{"ev":"socket.write","remote":"?:?","len":77,"hex":"4325334125354355736572732535437669703139253543417070446174612535434c6f63616c253543416e6b616d61253543526574726f253543446f667573253230526574726f2e6578650d0a","prev":"C%3A%5CUsers%5Cvip19%5CAppData%5CLocal%5CAnkama%5CRetro%5CDofus%20Retro.exe\r\n","t":1791824631224}
+{"ev":"socket.write","remote":"?:?","len":20,"hex":"2537452532304849474844504941574152450d0a","prev":"%7E%20HIGHDPIAWARE\r\n","t":1791824631225}
+{"ev":"socket.write","remote":"?:?","len":8,"hex":"5245475f535a0d0a","prev":"REG_SZ\r\n","t":1791824631225}
+{"ev":"socket.write","remote":"?:?","len":2,"hex":"0d0a","prev":"\r\n","t":1791824631225}
+{"ev":"randomBytes","size":4,"hex":"80019718","t":1791824631485}
+{"ev":"randomBytes","size":4,"hex":"c91e07fa","t":1791824631486}
+{"ev":"randomBytes","size":4,"hex":"88ed2e88","t":1791824631486}
+{"ev":"randomBytes","size":4,"hex":"131e3758","t":1791824631486}
+{"ev":"randomBytes","size":4,"hex":"b816b119","t":1791824631848}
+{"ev":"randomBytes","size":4,"hex":"c2314b78","t":1791824631848}
+{"ev":"randomBytes","size":4,"hex":"cd6bd4fe","t":1791824631848}
+{"ev":"randomBytes","size":4,"hex":"4609d7b3","t":1791824631849}
+{"ev":"randomBytes","size":4,"hex":"28aaec3a","t":1791824633881}
+{"ev":"randomBytes","size":4,"hex":"b8bc2f14","t":1791824633882}
+{"ev":"randomBytes","size":4,"hex":"0cb2b8a2","t":1791824633882}
+{"ev":"randomBytes","size":4,"hex":"591a86e4","t":1791824633882}
+{"ev":"randomBytes","size":4,"hex":"b4299c20","t":1791824634816}
+{"ev":"randomBytes","size":4,"hex":"546a99ed","t":1791824634816}
+{"ev":"randomBytes","size":4,"hex":"0ade5876","t":1791824634816}
+{"ev":"randomBytes","size":4,"hex":"47e639d1","t":1791824634816}
+{"ev":"randomBytes","size":4,"hex":"9d55c088","t":1791824637818}
+{"ev":"randomBytes","size":4,"hex":"71b3c503","t":1791824637819}
+{"ev":"randomBytes","size":4,"hex":"b7aa5111","t":1791824637819}
+{"ev":"randomBytes","size":4,"hex":"6fc37c3e","t":1791824637819}
+{"ev":"randomBytes","size":4,"hex":"ee249458","t":1791824638843}
+{"ev":"randomBytes","size":4,"hex":"60dc51a9","t":1791824638843}
+{"ev":"randomBytes","size":4,"hex":"a5f6d643","t":1791824638843}
+{"ev":"randomBytes","size":4,"hex":"b16ed8a2","t":1791824638844}
+{"ev":"randomBytes","size":4,"hex":"c8d1b812","t":1791824642691}
+{"ev":"randomBytes","size":4,"hex":"a00d9e72","t":1791824642692}
+{"ev":"randomBytes","size":4,"hex":"1ea550eb","t":1791824642692}
+{"ev":"randomBytes","size":4,"hex":"22e43656","t":1791824642692}
+{"ev":"randomBytes","size":4,"hex":"41d7a048","t":1791824643788}
+{"ev":"randomBytes","size":4,"hex":"8eb382a5","t":1791824643789}
+{"ev":"randomBytes","size":4,"hex":"bbd8ecbd","t":1791824643789}
+{"ev":"randomBytes","size":4,"hex":"55dd2d80","t":1791824643789}

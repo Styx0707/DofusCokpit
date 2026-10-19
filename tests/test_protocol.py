@@ -57,12 +57,25 @@ def test_parse_hdv_avg_price_rejects_garbage():
     assert parse_hdv_avg_price("1022|") is None          # prix manquant
 
 
-def test_parse_hdv_item_prices_real():
-    # 'EHl<gid>|<?>;;<lot1>;<lot10>;<lot100>;<gid>' ; virgule = décimale client.
+def test_parse_hdv_item_prices_resource():
+    # RESSOURCE empilable : '<qty>;;<lot1>;<lot10>;<lot100>;<gid>'. On retient le
+    # lot de 1 (prix unitaire courant) ; virgule = décimale client.
     assert parse_hdv_item_prices("376|756;;19,0;138,0;2688,0;376") == {
-        "item_id": 376, "x1": 19, "x10": 138, "x100": 2688}
-    # lots partiels : champs vides -> None
+        "item_id": 376, "price": 19}
     assert parse_hdv_item_prices("1022|37048;;190,0;;;1022") == {
-        "item_id": 1022, "x1": 190, "x10": None, "x100": None}
+        "item_id": 1022, "price": 190}
+    # pas de lot de 1 en vente -> price None (l'appelant retombe sur le prix moyen).
     assert parse_hdv_item_prices("2586|2476;;;847,0;7996,0;2586") == {
-        "item_id": 2586, "x1": None, "x10": 847, "x100": 7996}
+        "item_id": 2586, "price": None}
+
+
+def test_parse_hdv_item_prices_equipment_takes_min():
+    # ÉQUIPEMENT : liste d'ordres '<inst>;<stats#…>;<prix>,0;;;<gid>|…'. Le 1er ordre
+    # (29999999) N'EST PAS le moins cher -> on doit retenir le MIN (23000000).
+    payload = ("8991|487581;76#31##0d0+49,f1#3##0d0+3;29999999,0;;;8991"
+               "|364034;76#26##0d0+38;24500000,0;;;8991"
+               "|364022;76#21##0d0+33;23000000,0;;;8991"
+               "|183708728;76#32##0d0+50;134999969,0;;;8991")
+    assert parse_hdv_item_prices(payload) == {"item_id": 8991, "price": 23000000}
+    # les bonus de stats (… +49,f1 …) ne doivent JAMAIS être pris pour un prix.
+    assert parse_hdv_item_prices("8991|1;76#31##0d0+49;5000,0;;;8991")["price"] == 5000
